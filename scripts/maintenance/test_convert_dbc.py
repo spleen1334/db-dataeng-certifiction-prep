@@ -33,6 +33,20 @@ class ConversionTests(unittest.TestCase):
             self.assertEqual(cell["cell_type"], kind)
             self.assertEqual(cell["metadata"]["archived_databricks"]["original_command"], source)
 
+    def test_error_scaffold_is_not_a_historical_failure(self):
+        command = {"command": "x = 1", "error": None, "errorSummary": None,
+                   "baseErrorDetails": {"scaffold": True}}
+        cell = converter.command_cells(command, 0, "python")[0]
+        self.assertEqual(cell["outputs"], [])
+        self.assertEqual(cell["metadata"]["archived_databricks"]["original_errors"],
+                         {"error": None, "errorSummary": None,
+                          "baseErrorDetails": {"scaffold": True}})
+        command["errorSummary"] = "Historical failure"
+        cell = converter.command_cells(command, 0, "python")[0]
+        self.assertEqual(len(cell["outputs"]), 1)
+        self.assertIn("Historical archived error", cell["outputs"][0]["data"]["text/plain"])
+        self.assertIn("Historical failure", cell["outputs"][0]["data"]["text/plain"])
+
     def test_nested_empty_and_unknown(self):
         payload = {"type": "listResults", "data": [
             {"type": "table", "schema": {"fields": [{"name": "a"}]}, "data": [[1]]},

@@ -110,7 +110,7 @@ def command_cells(command, index, language):
     outputs = render_result(command.get("results"))
     errors = metadata["archived_databricks"]["original_errors"]
     visible_errors = {k: v for k, v in errors.items() if v}
-    if visible_errors:
+    if command.get("error") or command.get("errorSummary"):
         outputs.append(text_output("Historical archived error:\n" + pretty(visible_errors)))
     if md:
         cell = markdown(source[magic.end():], metadata)

@@ -42,7 +42,7 @@
       "member": "dea-course/dea01-databricks-lakehouse-platform/3.Databricks Utilities.python",
       "member_sha256": "ffd09d41d41621b165dda08b9d7cb94e019e3b49eee40a6b404ab51acd6a1e4c",
       "output": "notebooks/course/dea01-databricks-lakehouse-platform/3.Databricks Utilities.ipynb",
-      "output_count": 9
+      "output_count": 8
     },
     {
       "aliases": [],
@@ -53,7 +53,7 @@
       "member": "dea-course/dea01-databricks-lakehouse-platform/4.Debugging Notebooks.python",
       "member_sha256": "66f4e41cfaa55b0769ce52fd881cee3a06f1b7a8fe48303de11f89d827e0492e",
       "output": "notebooks/course/dea01-databricks-lakehouse-platform/4.Debugging Notebooks.ipynb",
-      "output_count": 4
+      "output_count": 2
     },
     {
       "aliases": [],
@@ -103,12 +103,12 @@
       "aliases": [],
       "archive": "docs/originals/dea-course-v5.dbc",
       "archive_sha256": "23908dc947dc9279b1176575fa5b0966281fca608509c6fed3deca7700146488",
-      "cell_count": 11,
+      "cell_count": 10,
       "command_count": 9,
       "member": "dea-course/dea03-etl-with-apache-spark-streaming/02. Ingest Customers Auto Loader.python",
       "member_sha256": "4bc1bd068daf850d2ed69a79ff79e015153f73d81e5dcb3683e098dbc5292cb0",
       "output": "notebooks/course/dea03-etl-with-apache-spark-streaming/02. Ingest Customers Auto Loader.ipynb",
-      "output_count": 1
+      "output_count": 0
     },
     {
       "aliases": [],
@@ -119,7 +119,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark-streaming/03. Ingest Customers Auto Loader File Options.python",
       "member_sha256": "b2f4b1557ba5e168b85cc424cce158bbcd3ec491f1581355d81232ce9173ff2b",
       "output": "notebooks/course/dea03-etl-with-apache-spark-streaming/03. Ingest Customers Auto Loader File Options.ipynb",
-      "output_count": 7
+      "output_count": 5
     },
     {
       "aliases": [],
@@ -130,7 +130,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark-streaming/04. Ingest Customers Auto Loader Schema Evolution.python",
       "member_sha256": "0b14c3e4bc2a8ddb988cd8bd6851da93d4e563e96dc91db4d22cdb44cc5f4ca1",
       "output": "notebooks/course/dea03-etl-with-apache-spark-streaming/04. Ingest Customers Auto Loader Schema Evolution.ipynb",
-      "output_count": 8
+      "output_count": 6
     },
     {
       "aliases": [],
@@ -141,7 +141,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/01. Set-up Project Environment.sql",
       "member_sha256": "46d4b71307ce09960adaa01e0c4f04a13cc42df8f40fb3551923dbe327fdb5a5",
       "output": "notebooks/course/dea03-etl-with-apache-spark/01. Set-up Project Environment.ipynb",
-      "output_count": 10
+      "output_count": 9
     },
     {
       "aliases": [],
@@ -152,7 +152,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/02. Extract Customers Data - JSON.sql",
       "member_sha256": "c82b98665aac6794eee4c037a09d10525baf39b783749e4015db741997990972",
       "output": "notebooks/course/dea03-etl-with-apache-spark/02. Extract Customers Data - JSON.ipynb",
-      "output_count": 12
+      "output_count": 11
     },
     {
       "aliases": [],
@@ -174,7 +174,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
       "member_sha256": "e2338e005946ae2093af1dbd15a5d592e53d15928dbc0152a99d8f2f0f6333a9",
       "output": "notebooks/course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.ipynb",
-      "output_count": 6
+      "output_count": 5
     },
     {
       "aliases": [],
@@ -185,7 +185,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/05. Extract Addresses Data - CSV via read_files Function.sql",
       "member_sha256": "eedf52648375f884faf521b91b1bd4f0599644d036afce0d97c3883a19356e9e",
       "output": "notebooks/course/dea03-etl-with-apache-spark/05. Extract Addresses Data - CSV via read_files Function.ipynb",
-      "output_count": 5
+      "output_count": 4
     },
     {
       "aliases": [],
@@ -196,7 +196,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/06. Extract Payments Data - CSV via External Table.sql",
       "member_sha256": "01765d32266221e036d3d6cd4e3bedb3492f6d11115e1f04dfa02d046a43bb51",
       "output": "notebooks/course/dea03-etl-with-apache-spark/06. Extract Payments Data - CSV via External Table.ipynb",
-      "output_count": 9
+      "output_count": 7
     },
     {
       "aliases": [],
@@ -251,7 +251,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/11. Transform Payments Data.sql",
       "member_sha256": "5dc1a33927f4efb28cc228a5501b243d723575a1547d80670a92183b5f8a5e15",
       "output": "notebooks/course/dea03-etl-with-apache-spark/11. Transform Payments Data.ipynb",
-      "output_count": 6
+      "output_count": 5
     },
     {
       "aliases": [],
@@ -262,7 +262,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/12. Transform Refunds Data.sql",
       "member_sha256": "6c611a4014c44383375dd5ced5a4b4ad6a8f98adaeeae2a16ce7a58c70be4677",
       "output": "notebooks/course/dea03-etl-with-apache-spark/12. Transform Refunds Data.ipynb",
-      "output_count": 8
+      "output_count": 7
     },
     {
       "aliases": [],
@@ -273,7 +273,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
       "member_sha256": "3a408919609517705120804d04fcc4cd77e3910558282852d471d8d87c5187d0",
       "output": "notebooks/course/dea03-etl-with-apache-spark/13. Transform Memberships Data.ipynb",
-      "output_count": 5
+      "output_count": 4
     },
     {
       "aliases": [],
@@ -284,7 +284,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/14. Transform Addresses Data.sql",
       "member_sha256": "a4df71489169be8b7f4b315978f5e07edd77b4be513b41a0655fee63f6272458",
       "output": "notebooks/course/dea03-etl-with-apache-spark/14. Transform Addresses Data.ipynb",
-      "output_count": 6
+      "output_count": 4
     },
     {
       "aliases": [],
@@ -317,7 +317,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/17. Transform Orders Data - Explode Arrays.sql",
       "member_sha256": "e8980cda738d0fa20ddf73fbafc6053dd827e858e8abc1aa65e9629fc8712248",
       "output": "notebooks/course/dea03-etl-with-apache-spark/17. Transform Orders Data - Explode Arrays.ipynb",
-      "output_count": 8
+      "output_count": 7
     },
     {
       "aliases": [],
@@ -361,7 +361,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/21. Higher Order Functions.sql",
       "member_sha256": "bed908ea12281150c307840fc07a5f540af444204a591f7cbc85fe4c63682d8e",
       "output": "notebooks/course/dea03-etl-with-apache-spark/21. Higher Order Functions.ipynb",
-      "output_count": 16
+      "output_count": 14
     },
     {
       "aliases": [],
@@ -405,7 +405,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/Py05. Extract Addresses Data - CSV.python",
       "member_sha256": "1a1df721674ba4ebd955c24eebbfae2baebc92106e1f5e0e381145b24e153d81",
       "output": "notebooks/course/dea03-etl-with-apache-spark/Py05. Extract Addresses Data - CSV.ipynb",
-      "output_count": 4
+      "output_count": 3
     },
     {
       "aliases": [],
@@ -416,7 +416,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/Py06. Extract Payments Data - CSV.python",
       "member_sha256": "9c30db6539ef84cff23769d3d4632112be0ce29a47cb39cef0695550c79c0b78",
       "output": "notebooks/course/dea03-etl-with-apache-spark/Py06. Extract Payments Data - CSV.ipynb",
-      "output_count": 8
+      "output_count": 6
     },
     {
       "aliases": [],
@@ -427,7 +427,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/Py07. Extract Refunds Data - via JDBC.python",
       "member_sha256": "dd57e59b96a98dbfb2a91fb132644c6de6a51a8c30933defd4a19fa38f5c7100",
       "output": "notebooks/course/dea03-etl-with-apache-spark/Py07. Extract Refunds Data - via JDBC.ipynb",
-      "output_count": 4
+      "output_count": 3
     },
     {
       "aliases": [],
@@ -438,7 +438,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/Py10. Transform Customers Data.python",
       "member_sha256": "611ce6039af7708ac306dcfe60768b8cf1620be12c735d0eb23658b1dbff2d71",
       "output": "notebooks/course/dea03-etl-with-apache-spark/Py10. Transform Customers Data.ipynb",
-      "output_count": 14
+      "output_count": 13
     },
     {
       "aliases": [],
@@ -449,7 +449,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/Py11. Transform Payments Data.python",
       "member_sha256": "1795e81446cdbcaabefc7eb993a40ffcbec5ce652aa93b854df2a3296e2c8c84",
       "output": "notebooks/course/dea03-etl-with-apache-spark/Py11. Transform Payments Data.ipynb",
-      "output_count": 6
+      "output_count": 5
     },
     {
       "aliases": [],
@@ -460,7 +460,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/Py12. Transform Refunds Data.python",
       "member_sha256": "922a2450af8c69f3bc4fbe5fc4cf0baf9d5b99595718f979c03957116582b0fb",
       "output": "notebooks/course/dea03-etl-with-apache-spark/Py12. Transform Refunds Data.ipynb",
-      "output_count": 6
+      "output_count": 5
     },
     {
       "aliases": [],
@@ -482,7 +482,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/Py14. Transform Addresses Data.python",
       "member_sha256": "f3e54a1d36050ebafce3a77932baac510c89d4009f6d991d1ba1381bc92b1c68",
       "output": "notebooks/course/dea03-etl-with-apache-spark/Py14. Transform Addresses Data.ipynb",
-      "output_count": 6
+      "output_count": 4
     },
     {
       "aliases": [],
@@ -504,7 +504,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/Py17. Transform Orders Data - Explode Arrays.python",
       "member_sha256": "c6f3aa13191226d7491c2f31fa8651ed3e3f23d4df74930a0c3415e2563f57c6",
       "output": "notebooks/course/dea03-etl-with-apache-spark/Py17. Transform Orders Data - Explode Arrays.ipynb",
-      "output_count": 10
+      "output_count": 8
     },
     {
       "aliases": [],
@@ -526,7 +526,7 @@
       "member": "dea-course/dea03-etl-with-apache-spark/Py19. Monthly Order Summary.python",
       "member_sha256": "fab030e2ddc5e119be0fc1b66f685d42e40a44251b251e019cbc7703049078df",
       "output": "notebooks/course/dea03-etl-with-apache-spark/Py19. Monthly Order Summary.ipynb",
-      "output_count": 5
+      "output_count": 4
     },
     {
       "aliases": [],
@@ -559,7 +559,7 @@
       "member": "dea-course/dea04-delta-lake/03. Create Table - Table & Column Properties.sql",
       "member_sha256": "6c2b015e99a759f8c584ee5645ce5cda9bcbe61bed73819ec033b6a9f4e5b2f1",
       "output": "notebooks/course/dea04-delta-lake/03. Create Table - Table & Column Properties.ipynb",
-      "output_count": 11
+      "output_count": 10
     },
     {
       "aliases": [],
@@ -570,7 +570,7 @@
       "member": "dea-course/dea04-delta-lake/04. Create or Replace & CTAS.sql",
       "member_sha256": "daca2ee11db1f09d1b6fa968f0c592c044c574518609fbdeb426f33e5b24abbc",
       "output": "notebooks/course/dea04-delta-lake/04. Create or Replace & CTAS.ipynb",
-      "output_count": 14
+      "output_count": 13
     },
     {
       "aliases": [],
@@ -592,7 +592,7 @@
       "member": "dea-course/dea04-delta-lake/06. COPY INTO And MERGE Commands.sql",
       "member_sha256": "d4a7a0ebb76d1a9a5076def8ee591b5d38739224a6d53667e00a62990ee84ba8",
       "output": "notebooks/course/dea04-delta-lake/06. COPY INTO And MERGE Commands.ipynb",
-      "output_count": 7
+      "output_count": 6
     },
     {
       "aliases": [],
@@ -603,7 +603,7 @@
       "member": "dea-course/dea04-delta-lake/07. OPTIMIZE and ZORDER - Compaction.sql",
       "member_sha256": "c2dbf58c572da020a1c33687e5c04cbf1d294dce0ae4c0cb06cadc0d4d6a29d4",
       "output": "notebooks/course/dea04-delta-lake/07. OPTIMIZE and ZORDER - Compaction.ipynb",
-      "output_count": 11
+      "output_count": 10
     },
     {
       "aliases": [],
@@ -614,7 +614,7 @@
       "member": "dea-course/dea04-delta-lake/08. VACUUM - Remove unused files.sql",
       "member_sha256": "e96ecb51cb8238684a6bdf0ecd5e83a576cd1cd4810e13e6d395d29c2f380c0d",
       "output": "notebooks/course/dea04-delta-lake/08. VACUUM - Remove unused files.ipynb",
-      "output_count": 7
+      "output_count": 5
     },
     {
       "aliases": [],
@@ -643,7 +643,7 @@
       "member": "dea-course/dea05-databricks-jobs/01. bronze_companies.sql",
       "member_sha256": "e3f7f59ec2d2bd8f972c7981fd56b731e51cda0bf3116b3c8bb7a05560de8c89",
       "output": "notebooks/course/dea05-databricks-jobs/01. bronze_companies.ipynb",
-      "output_count": 3
+      "output_count": 2
     },
     {
       "aliases": [
@@ -661,7 +661,7 @@
       "member": "dea-course/dea05-databricks-jobs/02. silver_companies.sql",
       "member_sha256": "88a95f4d1917a186bace9643d187a13a25ba4f27b7ff81528ee2eaf92df8909f",
       "output": "notebooks/course/dea05-databricks-jobs/02. silver_companies.ipynb",
-      "output_count": 3
+      "output_count": 2
     },
     {
       "aliases": [
@@ -679,7 +679,7 @@
       "member": "dea-course/dea05-databricks-jobs/03. gold_companies.sql",
       "member_sha256": "e4ee1c5997a360bad2e174d20dac11c10117e7086b5a7550dbc0dbdffa9b5a39",
       "output": "notebooks/course/dea05-databricks-jobs/03. gold_companies.ipynb",
-      "output_count": 3
+      "output_count": 2
     },
     {
       "aliases": [],
@@ -690,7 +690,7 @@
       "member": "dea-course/dea06-delta-live-tables/01. Set-up Project Environment.sql",
       "member_sha256": "a78d87e9b868cfb08c531ac40961607b205e6b494fbbf379391a4958304fcc88",
       "output": "notebooks/course/dea06-delta-live-tables/01. Set-up Project Environment.ipynb",
-      "output_count": 9
+      "output_count": 8
     },
     {
       "aliases": [],
@@ -767,7 +767,7 @@
       "member": "dea-course/dea09-data-security/02.Row Filters and Column Masks.sql",
       "member_sha256": "f39910236bf7f79d6ee4556e222a4af45d81eb3d801ac264561c91bf316ec2f1",
       "output": "notebooks/course/dea09-data-security/02.Row Filters and Column Masks.ipynb",
-      "output_count": 13
+      "output_count": 12
     },
     {
       "aliases": [],
@@ -778,7 +778,7 @@
       "member": "dea-course/dea09-data-security/03.ABAC Policies with Governed Tags.sql",
       "member_sha256": "a2b1732abc67a4d936d180fb79bd2580161de5393c75b9f1012481d92c3ae577",
       "output": "notebooks/course/dea09-data-security/03.ABAC Policies with Governed Tags.ipynb",
-      "output_count": 11
+      "output_count": 10
     }
   ]
 }

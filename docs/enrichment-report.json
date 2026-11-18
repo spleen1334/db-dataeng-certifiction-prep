@@ -1,0 +1,3201 @@
+{
+  "version": 1,
+  "notebooks": [
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/bundle-demo/dab_demo_notebook.ipynb",
+      "reviewed_lesson_title": "dab_demo_notebook",
+      "operation_annotations": [
+        {
+          "original_cell_index": 1,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "window",
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 3
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea01-databricks-lakehouse-platform/1.Notebooks Introduction.ipynb",
+      "reviewed_lesson_title": "1.Notebooks Introduction",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 2
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea01-databricks-lakehouse-platform/2.1 Environment Variables and Functions.ipynb",
+      "reviewed_lesson_title": "2.1 Environment Variables and Functions",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "utilities"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 2
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea01-databricks-lakehouse-platform/2.Magic Commands.ipynb",
+      "reviewed_lesson_title": "2.Magic Commands",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 14,
+          "operations": [
+            "utilities"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 4
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea01-databricks-lakehouse-platform/3.Databricks Utilities.ipynb",
+      "reviewed_lesson_title": "3.Databricks Utilities",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "utilities",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 12,
+          "operations": [
+            "utilities"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 8
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea01-databricks-lakehouse-platform/4.Debugging Notebooks.ipynb",
+      "reviewed_lesson_title": "4.Debugging Notebooks",
+      "operation_annotations": [],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 1
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea01-databricks-lakehouse-platform/db-git-folders-demo/1.git-demo-notebook.ipynb",
+      "reviewed_lesson_title": "1.git-demo-notebook",
+      "operation_annotations": [],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 1
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea02-unity-catalog/1.Introduction to Unity Catalog.ipynb",
+      "reviewed_lesson_title": "1.Introduction to Unity Catalog",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 2
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea02-unity-catalog/2.Configure Access to Cloud Storage.ipynb",
+      "reviewed_lesson_title": "2.Configure Access to Cloud Storage",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "security"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 3
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/01. Set-up Project Environment.ipynb",
+      "reviewed_lesson_title": "01. Set-up Project Environment",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "security"
+          ]
+        },
+        {
+          "original_cell_index": 14,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 16,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 21,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 23,
+          "operations": [
+            "utilities"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/addresses/addresses_2024_10.tsv",
+        "data/gizmobox/addresses/addresses_2024_11.tsv",
+        "data/gizmobox/addresses/addresses_2024_12.tsv",
+        "data/gizmobox/addresses/addresses_2025_01.tsv"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 11
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/02. Extract Customers Data - JSON.ipynb",
+      "reviewed_lesson_title": "02. Extract Customers Data - JSON",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 14,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 17,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 19,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 22,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 24,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 27,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 29,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/customers/customers_2024_10.json",
+        "data/gizmobox/customers/customers_2024_11.json",
+        "data/gizmobox/customers/customers_2024_12.json",
+        "data/gizmobox/customers/customers_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 16
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/03. Extract Orders Data - Complex JSON as Text.ipynb",
+      "reviewed_lesson_title": "03. Extract Orders Data - Complex JSON as Text",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/orders/orders_2024_10.json",
+        "data/gizmobox/orders/orders_2024_11.json",
+        "data/gizmobox/orders/orders_2024_12.json",
+        "data/gizmobox/orders/orders_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 10
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.ipynb",
+      "reviewed_lesson_title": "04. Extract Memberships Data - Images",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 12,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/memberships/2024-10/2344.png",
+        "data/gizmobox/memberships/2024-10/3409.png",
+        "data/gizmobox/memberships/2024-10/3889.png",
+        "data/gizmobox/memberships/2024-10/4858.png",
+        "data/gizmobox/memberships/2024-10/5011.png",
+        "data/gizmobox/memberships/2024-10/5028.png",
+        "data/gizmobox/memberships/2024-10/5816.png",
+        "data/gizmobox/memberships/2024-10/6627.png",
+        "data/gizmobox/memberships/2024-10/7207.png",
+        "data/gizmobox/memberships/2024-10/8539.png",
+        "data/gizmobox/memberships/2024-10/8580.png",
+        "data/gizmobox/memberships/2024-10/9018.png",
+        "data/gizmobox/memberships/2024-10/9084.png",
+        "data/gizmobox/memberships/2024-10/9179.png",
+        "data/gizmobox/memberships/2024-10/9247.png",
+        "data/gizmobox/memberships/2024-10/9263.png",
+        "data/gizmobox/memberships/2024-10/9706.png",
+        "data/gizmobox/memberships/2024-11/1987.png",
+        "data/gizmobox/memberships/2024-11/2054.png",
+        "data/gizmobox/memberships/2024-11/2703.png",
+        "data/gizmobox/memberships/2024-11/3712.png",
+        "data/gizmobox/memberships/2024-11/3892.png",
+        "data/gizmobox/memberships/2024-11/4468.png",
+        "data/gizmobox/memberships/2024-11/4761.png",
+        "data/gizmobox/memberships/2024-11/4914.png",
+        "data/gizmobox/memberships/2024-11/4996.png",
+        "data/gizmobox/memberships/2024-11/5204.png",
+        "data/gizmobox/memberships/2024-11/7123.png",
+        "data/gizmobox/memberships/2024-11/7295.png",
+        "data/gizmobox/memberships/2024-11/7803.png",
+        "data/gizmobox/memberships/2024-12/1211.png",
+        "data/gizmobox/memberships/2024-12/2141.png",
+        "data/gizmobox/memberships/2024-12/2639.png",
+        "data/gizmobox/memberships/2024-12/3084.png",
+        "data/gizmobox/memberships/2024-12/3532.png",
+        "data/gizmobox/memberships/2024-12/5592.png",
+        "data/gizmobox/memberships/2024-12/6384.png",
+        "data/gizmobox/memberships/2024-12/6406.png",
+        "data/gizmobox/memberships/2024-12/6973.png",
+        "data/gizmobox/memberships/2024-12/7829.png",
+        "data/gizmobox/memberships/2024-12/7997.png",
+        "data/gizmobox/memberships/2024-12/9687.png",
+        "data/gizmobox/memberships/2025-01/3295.png",
+        "data/gizmobox/memberships/2025-01/4973.png",
+        "data/gizmobox/memberships/2025-01/5953.png",
+        "data/gizmobox/memberships/2025-01/6167.png",
+        "data/gizmobox/memberships/2025-01/7007.png",
+        "data/gizmobox/memberships/2025-01/8845.png",
+        "data/gizmobox/memberships/2025-01/9150.png",
+        "data/gizmobox/memberships/2025-01/9605.png"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 56
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/05. Extract Addresses Data - CSV via read_files Function.ipynb",
+      "reviewed_lesson_title": "05. Extract Addresses Data - CSV via read_files Function",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/addresses/addresses_2024_10.tsv",
+        "data/gizmobox/addresses/addresses_2024_11.tsv",
+        "data/gizmobox/addresses/addresses_2024_12.tsv",
+        "data/gizmobox/addresses/addresses_2025_01.tsv"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 9
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/06. Extract Payments Data - CSV via External Table.ipynb",
+      "reviewed_lesson_title": "06. Extract Payments Data - CSV via External Table",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/payments/payments_2024_10.csv",
+        "data/gizmobox/payments/payments_2024_11.csv",
+        "data/gizmobox/payments/payments_2024_12.csv",
+        "data/gizmobox/payments/payments_2025_01.csv"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 10
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/07. Extract Refunds Data - via JDBC.ipynb",
+      "reviewed_lesson_title": "07. Extract Refunds Data - via JDBC",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "jdbc"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/refunds/refunds_azure_sql_ddl.sql"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 6
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/08. Extract Data using Python.ipynb",
+      "reviewed_lesson_title": "08. Extract Data using Python",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/customers/customers_2024_10.json",
+        "data/gizmobox/customers/customers_2024_11.json",
+        "data/gizmobox/customers/customers_2024_12.json",
+        "data/gizmobox/customers/customers_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 10
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/09. Data Profiling.ipynb",
+      "reviewed_lesson_title": "09. Data Profiling",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "utilities",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 16,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 19,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 8
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/10. Transform Customers Data.ipynb",
+      "reviewed_lesson_title": "10. Transform Customers Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "aggregate",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 12,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 15,
+          "operations": [
+            "aggregate",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 17,
+          "operations": [
+            "join",
+            "aggregate",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 20,
+          "operations": [
+            "join",
+            "aggregate",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 23,
+          "operations": [
+            "join",
+            "aggregate",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 25,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 27,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/customers/customers_2024_10.json",
+        "data/gizmobox/customers/customers_2024_11.json",
+        "data/gizmobox/customers/customers_2024_12.json",
+        "data/gizmobox/customers/customers_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 16
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/11. Transform Payments Data.ipynb",
+      "reviewed_lesson_title": "11. Transform Payments Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/payments/payments_2024_10.csv",
+        "data/gizmobox/payments/payments_2024_11.csv",
+        "data/gizmobox/payments/payments_2024_12.csv",
+        "data/gizmobox/payments/payments_2025_01.csv"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 10
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/12. Transform Refunds Data.ipynb",
+      "reviewed_lesson_title": "12. Transform Refunds Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 15,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 8
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/13. Transform Memberships Data.ipynb",
+      "reviewed_lesson_title": "13. Transform Memberships Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/memberships/2024-10/2344.png",
+        "data/gizmobox/memberships/2024-10/3409.png",
+        "data/gizmobox/memberships/2024-10/3889.png",
+        "data/gizmobox/memberships/2024-10/4858.png",
+        "data/gizmobox/memberships/2024-10/5011.png",
+        "data/gizmobox/memberships/2024-10/5028.png",
+        "data/gizmobox/memberships/2024-10/5816.png",
+        "data/gizmobox/memberships/2024-10/6627.png",
+        "data/gizmobox/memberships/2024-10/7207.png",
+        "data/gizmobox/memberships/2024-10/8539.png",
+        "data/gizmobox/memberships/2024-10/8580.png",
+        "data/gizmobox/memberships/2024-10/9018.png",
+        "data/gizmobox/memberships/2024-10/9084.png",
+        "data/gizmobox/memberships/2024-10/9179.png",
+        "data/gizmobox/memberships/2024-10/9247.png",
+        "data/gizmobox/memberships/2024-10/9263.png",
+        "data/gizmobox/memberships/2024-10/9706.png",
+        "data/gizmobox/memberships/2024-11/1987.png",
+        "data/gizmobox/memberships/2024-11/2054.png",
+        "data/gizmobox/memberships/2024-11/2703.png",
+        "data/gizmobox/memberships/2024-11/3712.png",
+        "data/gizmobox/memberships/2024-11/3892.png",
+        "data/gizmobox/memberships/2024-11/4468.png",
+        "data/gizmobox/memberships/2024-11/4761.png",
+        "data/gizmobox/memberships/2024-11/4914.png",
+        "data/gizmobox/memberships/2024-11/4996.png",
+        "data/gizmobox/memberships/2024-11/5204.png",
+        "data/gizmobox/memberships/2024-11/7123.png",
+        "data/gizmobox/memberships/2024-11/7295.png",
+        "data/gizmobox/memberships/2024-11/7803.png",
+        "data/gizmobox/memberships/2024-12/1211.png",
+        "data/gizmobox/memberships/2024-12/2141.png",
+        "data/gizmobox/memberships/2024-12/2639.png",
+        "data/gizmobox/memberships/2024-12/3084.png",
+        "data/gizmobox/memberships/2024-12/3532.png",
+        "data/gizmobox/memberships/2024-12/5592.png",
+        "data/gizmobox/memberships/2024-12/6384.png",
+        "data/gizmobox/memberships/2024-12/6406.png",
+        "data/gizmobox/memberships/2024-12/6973.png",
+        "data/gizmobox/memberships/2024-12/7829.png",
+        "data/gizmobox/memberships/2024-12/7997.png",
+        "data/gizmobox/memberships/2024-12/9687.png",
+        "data/gizmobox/memberships/2025-01/3295.png",
+        "data/gizmobox/memberships/2025-01/4973.png",
+        "data/gizmobox/memberships/2025-01/5953.png",
+        "data/gizmobox/memberships/2025-01/6167.png",
+        "data/gizmobox/memberships/2025-01/7007.png",
+        "data/gizmobox/memberships/2025-01/8845.png",
+        "data/gizmobox/memberships/2025-01/9150.png",
+        "data/gizmobox/memberships/2025-01/9605.png"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 55
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/14. Transform Addresses Data.ipynb",
+      "reviewed_lesson_title": "14. Transform Addresses Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/addresses/addresses_2024_10.tsv",
+        "data/gizmobox/addresses/addresses_2024_11.tsv",
+        "data/gizmobox/addresses/addresses_2024_12.tsv",
+        "data/gizmobox/addresses/addresses_2025_01.tsv"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 9
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/15. Query Orders Data - JSON Strings.ipynb",
+      "reviewed_lesson_title": "15. Query Orders Data - JSON Strings",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 14,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/orders/orders_2024_10.json",
+        "data/gizmobox/orders/orders_2024_11.json",
+        "data/gizmobox/orders/orders_2024_12.json",
+        "data/gizmobox/orders/orders_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 11
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/16. Transform Orders Data - String to JSON.ipynb",
+      "reviewed_lesson_title": "16. Transform Orders Data - String to JSON",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "schema",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "schema",
+            "json-array",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "schema",
+            "ctas",
+            "json-array",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 15,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/orders/orders_2024_10.json",
+        "data/gizmobox/orders/orders_2024_11.json",
+        "data/gizmobox/orders/orders_2024_12.json",
+        "data/gizmobox/orders/orders_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 12
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/17. Transform Orders Data - Explode Arrays.ipynb",
+      "reviewed_lesson_title": "17. Transform Orders Data - Explode Arrays",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "ctas",
+            "json-array",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "json-array",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 16,
+          "operations": [
+            "ctas",
+            "json-array",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 18,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/orders/orders_2024_10.json",
+        "data/gizmobox/orders/orders_2024_11.json",
+        "data/gizmobox/orders/orders_2024_12.json",
+        "data/gizmobox/orders/orders_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 13
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/18. Join Customer Address.ipynb",
+      "reviewed_lesson_title": "18. Join Customer Address",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "join",
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/addresses/addresses_2024_10.tsv",
+        "data/gizmobox/addresses/addresses_2024_11.tsv",
+        "data/gizmobox/addresses/addresses_2024_12.tsv",
+        "data/gizmobox/addresses/addresses_2025_01.tsv",
+        "data/gizmobox/customers/customers_2024_10.json",
+        "data/gizmobox/customers/customers_2024_11.json",
+        "data/gizmobox/customers/customers_2024_12.json",
+        "data/gizmobox/customers/customers_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 13
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/19. Monthly Order Summary.ipynb",
+      "reviewed_lesson_title": "19. Monthly Order Summary",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "ctas",
+            "aggregate",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/orders/orders_2024_10.json",
+        "data/gizmobox/orders/orders_2024_11.json",
+        "data/gizmobox/orders/orders_2024_12.json",
+        "data/gizmobox/orders/orders_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 9
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/20. User Defined Functions.ipynb",
+      "reviewed_lesson_title": "20. User Defined Functions",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "udf"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "udf"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/payments/payments_2024_10.csv",
+        "data/gizmobox/payments/payments_2024_11.csv",
+        "data/gizmobox/payments/payments_2024_12.csv",
+        "data/gizmobox/payments/payments_2025_01.csv"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 9
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/21. Higher Order Functions.ipynb",
+      "reviewed_lesson_title": "21. Higher Order Functions",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "json-array",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 12,
+          "operations": [
+            "json-array",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 15,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 18,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 20,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 23,
+          "operations": [
+            "json-array",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 26,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 32,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 34,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 37,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 40,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 43,
+          "operations": [
+            "json-array",
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 15
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py02. Extract Customers Data - JSON.ipynb",
+      "reviewed_lesson_title": "Py02. Extract Customers Data - JSON",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 12,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 14,
+          "operations": [
+            "ctas",
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 16,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/customers/customers_2024_10.json",
+        "data/gizmobox/customers/customers_2024_11.json",
+        "data/gizmobox/customers/customers_2024_12.json",
+        "data/gizmobox/customers/customers_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 13
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py03. Extract Orders Data - Complex JSON as Text.ipynb",
+      "reviewed_lesson_title": "Py03. Extract Orders Data - Complex JSON as Text",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/orders/orders_2024_10.json",
+        "data/gizmobox/orders/orders_2024_11.json",
+        "data/gizmobox/orders/orders_2024_12.json",
+        "data/gizmobox/orders/orders_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 9
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.ipynb",
+      "reviewed_lesson_title": "Py04. Extract Memberships Data - Images",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/memberships/2024-10/2344.png",
+        "data/gizmobox/memberships/2024-10/3409.png",
+        "data/gizmobox/memberships/2024-10/3889.png",
+        "data/gizmobox/memberships/2024-10/4858.png",
+        "data/gizmobox/memberships/2024-10/5011.png",
+        "data/gizmobox/memberships/2024-10/5028.png",
+        "data/gizmobox/memberships/2024-10/5816.png",
+        "data/gizmobox/memberships/2024-10/6627.png",
+        "data/gizmobox/memberships/2024-10/7207.png",
+        "data/gizmobox/memberships/2024-10/8539.png",
+        "data/gizmobox/memberships/2024-10/8580.png",
+        "data/gizmobox/memberships/2024-10/9018.png",
+        "data/gizmobox/memberships/2024-10/9084.png",
+        "data/gizmobox/memberships/2024-10/9179.png",
+        "data/gizmobox/memberships/2024-10/9247.png",
+        "data/gizmobox/memberships/2024-10/9263.png",
+        "data/gizmobox/memberships/2024-10/9706.png",
+        "data/gizmobox/memberships/2024-11/1987.png",
+        "data/gizmobox/memberships/2024-11/2054.png",
+        "data/gizmobox/memberships/2024-11/2703.png",
+        "data/gizmobox/memberships/2024-11/3712.png",
+        "data/gizmobox/memberships/2024-11/3892.png",
+        "data/gizmobox/memberships/2024-11/4468.png",
+        "data/gizmobox/memberships/2024-11/4761.png",
+        "data/gizmobox/memberships/2024-11/4914.png",
+        "data/gizmobox/memberships/2024-11/4996.png",
+        "data/gizmobox/memberships/2024-11/5204.png",
+        "data/gizmobox/memberships/2024-11/7123.png",
+        "data/gizmobox/memberships/2024-11/7295.png",
+        "data/gizmobox/memberships/2024-11/7803.png",
+        "data/gizmobox/memberships/2024-12/1211.png",
+        "data/gizmobox/memberships/2024-12/2141.png",
+        "data/gizmobox/memberships/2024-12/2639.png",
+        "data/gizmobox/memberships/2024-12/3084.png",
+        "data/gizmobox/memberships/2024-12/3532.png",
+        "data/gizmobox/memberships/2024-12/5592.png",
+        "data/gizmobox/memberships/2024-12/6384.png",
+        "data/gizmobox/memberships/2024-12/6406.png",
+        "data/gizmobox/memberships/2024-12/6973.png",
+        "data/gizmobox/memberships/2024-12/7829.png",
+        "data/gizmobox/memberships/2024-12/7997.png",
+        "data/gizmobox/memberships/2024-12/9687.png",
+        "data/gizmobox/memberships/2025-01/3295.png",
+        "data/gizmobox/memberships/2025-01/4973.png",
+        "data/gizmobox/memberships/2025-01/5953.png",
+        "data/gizmobox/memberships/2025-01/6167.png",
+        "data/gizmobox/memberships/2025-01/7007.png",
+        "data/gizmobox/memberships/2025-01/8845.png",
+        "data/gizmobox/memberships/2025-01/9150.png",
+        "data/gizmobox/memberships/2025-01/9605.png"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 55
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py05. Extract Addresses Data - CSV.ipynb",
+      "reviewed_lesson_title": "Py05. Extract Addresses Data - CSV",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/addresses/addresses_2024_10.tsv",
+        "data/gizmobox/addresses/addresses_2024_11.tsv",
+        "data/gizmobox/addresses/addresses_2024_12.tsv",
+        "data/gizmobox/addresses/addresses_2025_01.tsv"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 7
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py06. Extract Payments Data - CSV.ipynb",
+      "reviewed_lesson_title": "Py06. Extract Payments Data - CSV",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "schema",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/payments/payments_2024_10.csv",
+        "data/gizmobox/payments/payments_2024_11.csv",
+        "data/gizmobox/payments/payments_2024_12.csv",
+        "data/gizmobox/payments/payments_2025_01.csv"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 8
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py07. Extract Refunds Data - via JDBC.ipynb",
+      "reviewed_lesson_title": "Py07. Extract Refunds Data - via JDBC",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "jdbc",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/refunds/refunds_azure_sql_ddl.sql"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 5
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py10. Transform Customers Data.ipynb",
+      "reviewed_lesson_title": "Py10. Transform Customers Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "json-array"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "json-array"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "aggregate",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 14,
+          "operations": [
+            "join",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 16,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 19,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 12
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py11. Transform Payments Data.ipynb",
+      "reviewed_lesson_title": "Py11. Transform Payments Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/payments/payments_2024_10.csv",
+        "data/gizmobox/payments/payments_2024_11.csv",
+        "data/gizmobox/payments/payments_2024_12.csv",
+        "data/gizmobox/payments/payments_2025_01.csv"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 9
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py12. Transform Refunds Data.ipynb",
+      "reviewed_lesson_title": "Py12. Transform Refunds Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/refunds/refunds_azure_sql_ddl.sql"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 7
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.ipynb",
+      "reviewed_lesson_title": "Py13. Transform Memberships Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/memberships/2024-10/2344.png",
+        "data/gizmobox/memberships/2024-10/3409.png",
+        "data/gizmobox/memberships/2024-10/3889.png",
+        "data/gizmobox/memberships/2024-10/4858.png",
+        "data/gizmobox/memberships/2024-10/5011.png",
+        "data/gizmobox/memberships/2024-10/5028.png",
+        "data/gizmobox/memberships/2024-10/5816.png",
+        "data/gizmobox/memberships/2024-10/6627.png",
+        "data/gizmobox/memberships/2024-10/7207.png",
+        "data/gizmobox/memberships/2024-10/8539.png",
+        "data/gizmobox/memberships/2024-10/8580.png",
+        "data/gizmobox/memberships/2024-10/9018.png",
+        "data/gizmobox/memberships/2024-10/9084.png",
+        "data/gizmobox/memberships/2024-10/9179.png",
+        "data/gizmobox/memberships/2024-10/9247.png",
+        "data/gizmobox/memberships/2024-10/9263.png",
+        "data/gizmobox/memberships/2024-10/9706.png",
+        "data/gizmobox/memberships/2024-11/1987.png",
+        "data/gizmobox/memberships/2024-11/2054.png",
+        "data/gizmobox/memberships/2024-11/2703.png",
+        "data/gizmobox/memberships/2024-11/3712.png",
+        "data/gizmobox/memberships/2024-11/3892.png",
+        "data/gizmobox/memberships/2024-11/4468.png",
+        "data/gizmobox/memberships/2024-11/4761.png",
+        "data/gizmobox/memberships/2024-11/4914.png",
+        "data/gizmobox/memberships/2024-11/4996.png",
+        "data/gizmobox/memberships/2024-11/5204.png",
+        "data/gizmobox/memberships/2024-11/7123.png",
+        "data/gizmobox/memberships/2024-11/7295.png",
+        "data/gizmobox/memberships/2024-11/7803.png",
+        "data/gizmobox/memberships/2024-12/1211.png",
+        "data/gizmobox/memberships/2024-12/2141.png",
+        "data/gizmobox/memberships/2024-12/2639.png",
+        "data/gizmobox/memberships/2024-12/3084.png",
+        "data/gizmobox/memberships/2024-12/3532.png",
+        "data/gizmobox/memberships/2024-12/5592.png",
+        "data/gizmobox/memberships/2024-12/6384.png",
+        "data/gizmobox/memberships/2024-12/6406.png",
+        "data/gizmobox/memberships/2024-12/6973.png",
+        "data/gizmobox/memberships/2024-12/7829.png",
+        "data/gizmobox/memberships/2024-12/7997.png",
+        "data/gizmobox/memberships/2024-12/9687.png",
+        "data/gizmobox/memberships/2025-01/3295.png",
+        "data/gizmobox/memberships/2025-01/4973.png",
+        "data/gizmobox/memberships/2025-01/5953.png",
+        "data/gizmobox/memberships/2025-01/6167.png",
+        "data/gizmobox/memberships/2025-01/7007.png",
+        "data/gizmobox/memberships/2025-01/8845.png",
+        "data/gizmobox/memberships/2025-01/9150.png",
+        "data/gizmobox/memberships/2025-01/9605.png"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 54
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py14. Transform Addresses Data.ipynb",
+      "reviewed_lesson_title": "Py14. Transform Addresses Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "aggregate",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/addresses/addresses_2024_10.tsv",
+        "data/gizmobox/addresses/addresses_2024_11.tsv",
+        "data/gizmobox/addresses/addresses_2024_12.tsv",
+        "data/gizmobox/addresses/addresses_2025_01.tsv"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 8
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py16. Transform Orders Data - String to JSON.ipynb",
+      "reviewed_lesson_title": "Py16. Transform Orders Data - String to JSON",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "schema",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "schema",
+            "json-array",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/orders/orders_2024_10.json",
+        "data/gizmobox/orders/orders_2024_11.json",
+        "data/gizmobox/orders/orders_2024_12.json",
+        "data/gizmobox/orders/orders_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 11
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py17. Transform Orders Data - Explode Arrays.ipynb",
+      "reviewed_lesson_title": "Py17. Transform Orders Data - Explode Arrays",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "json-array",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "json-array",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/orders/orders_2024_10.json",
+        "data/gizmobox/orders/orders_2024_11.json",
+        "data/gizmobox/orders/orders_2024_12.json",
+        "data/gizmobox/orders/orders_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 12
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py18. Join Customer Address.ipynb",
+      "reviewed_lesson_title": "Py18. Join Customer Address",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "join",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 5
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark/Py19. Monthly Order Summary.ipynb",
+      "reviewed_lesson_title": "Py19. Monthly Order Summary",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "aggregate",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/orders/orders_2024_10.json",
+        "data/gizmobox/orders/orders_2024_11.json",
+        "data/gizmobox/orders/orders_2024_12.json",
+        "data/gizmobox/orders/orders_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 9
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark-streaming/01. Ingest Customers Stream.ipynb",
+      "reviewed_lesson_title": "01. Ingest Customers Stream",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "stream",
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "stream",
+            "checkpoint"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "stream"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/customers/customers_2024_10.json",
+        "data/gizmobox/customers/customers_2024_11.json",
+        "data/gizmobox/customers/customers_2024_12.json",
+        "data/gizmobox/customers/customers_2025_01.json",
+        "data/gizmobox/customers_stream/customers_2024_10.json",
+        "data/gizmobox/customers_stream/customers_2024_11.json",
+        "data/gizmobox/customers_stream/customers_2024_12.json",
+        "data/gizmobox/customers_stream/customers_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 13
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark-streaming/02. Ingest Customers Auto Loader.ipynb",
+      "reviewed_lesson_title": "02. Ingest Customers Auto Loader",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "stream",
+            "autoloader"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "stream",
+            "checkpoint"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "stream"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/customers/customers_2024_10.json",
+        "data/gizmobox/customers/customers_2024_11.json",
+        "data/gizmobox/customers/customers_2024_12.json",
+        "data/gizmobox/customers/customers_2025_01.json",
+        "data/gizmobox/customers_autoloader/customers_2024_10.json",
+        "data/gizmobox/customers_autoloader/customers_2024_11.json",
+        "data/gizmobox/customers_autoloader/customers_2024_12.json",
+        "data/gizmobox/customers_autoloader/customers_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 13
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark-streaming/03. Ingest Customers Auto Loader File Options.ipynb",
+      "reviewed_lesson_title": "03. Ingest Customers Auto Loader File Options",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "stream",
+            "autoloader"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "stream",
+            "checkpoint"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "stream"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/customers/customers_2024_10.json",
+        "data/gizmobox/customers/customers_2024_11.json",
+        "data/gizmobox/customers/customers_2024_12.json",
+        "data/gizmobox/customers/customers_2025_01.json",
+        "data/gizmobox/customers_autoloader/customers_2024_10.json",
+        "data/gizmobox/customers_autoloader/customers_2024_11.json",
+        "data/gizmobox/customers_autoloader/customers_2024_12.json",
+        "data/gizmobox/customers_autoloader/customers_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 13
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea03-etl-with-apache-spark-streaming/04. Ingest Customers Auto Loader Schema Evolution.ipynb",
+      "reviewed_lesson_title": "04. Ingest Customers Auto Loader Schema Evolution",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "stream",
+            "autoloader",
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "stream",
+            "checkpoint"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "stream"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/customers/customers_2024_10.json",
+        "data/gizmobox/customers/customers_2024_11.json",
+        "data/gizmobox/customers/customers_2024_12.json",
+        "data/gizmobox/customers/customers_2025_01.json",
+        "data/gizmobox/customers_autoloader/customers_2024_10.json",
+        "data/gizmobox/customers_autoloader/customers_2024_11.json",
+        "data/gizmobox/customers_autoloader/customers_2024_12.json",
+        "data/gizmobox/customers_autoloader/customers_2025_01.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 13
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea04-delta-lake/01. Transaction Log.ipynb",
+      "reviewed_lesson_title": "01. Transaction Log",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 16,
+          "operations": [
+            "write"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 5
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea04-delta-lake/02. History and Time Travel.ipynb",
+      "reviewed_lesson_title": "02. History and Time Travel",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "delta-history",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "delta-history",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "delta-history",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 14,
+          "operations": [
+            "delta-history"
+          ]
+        },
+        {
+          "original_cell_index": 16,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 7
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea04-delta-lake/03. Create Table - Table & Column Properties.ipynb",
+      "reviewed_lesson_title": "03. Create Table - Table & Column Properties",
+      "operation_annotations": [
+        {
+          "original_cell_index": 16,
+          "operations": [
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 18,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 23,
+          "operations": [
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 25,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 5
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea04-delta-lake/04. Create or Replace & CTAS.ipynb",
+      "reviewed_lesson_title": "04. Create or Replace & CTAS",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 18,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 28,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 5
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea04-delta-lake/05. Insert Overwrite.ipynb",
+      "reviewed_lesson_title": "05. Insert Overwrite",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "write",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "write",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "write",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 15,
+          "operations": [
+            "write",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 19,
+          "operations": [
+            "write",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 21,
+          "operations": [
+            "write",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 23,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 9
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea04-delta-lake/06. COPY INTO And MERGE Commands.ipynb",
+      "reviewed_lesson_title": "06. COPY INTO And MERGE Commands",
+      "operation_annotations": [
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "schema",
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 16,
+          "operations": [
+            "merge",
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 18,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/stock_prices/stock_prices_day1.json",
+        "data/stock_prices/stock_prices_day2.json",
+        "data/stock_prices/stock_prices_day3.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 8
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea04-delta-lake/07. OPTIMIZE and ZORDER - Compaction.ipynb",
+      "reviewed_lesson_title": "07. OPTIMIZE and ZORDER - Compaction",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "optimize"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "write",
+            "optimize"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "write",
+            "optimize"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "write",
+            "optimize"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "write",
+            "optimize"
+          ]
+        },
+        {
+          "original_cell_index": 16,
+          "operations": [
+            "optimize"
+          ]
+        },
+        {
+          "original_cell_index": 19,
+          "operations": [
+            "optimize"
+          ]
+        },
+        {
+          "original_cell_index": 21,
+          "operations": [
+            "delta-history",
+            "optimize",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 24,
+          "operations": [
+            "optimize"
+          ]
+        },
+        {
+          "original_cell_index": 26,
+          "operations": [
+            "optimize"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 11
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea04-delta-lake/08. VACUUM - Remove unused files.ipynb",
+      "reviewed_lesson_title": "08. VACUUM - Remove unused files",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "optimize"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "vacuum",
+            "optimize"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "vacuum",
+            "optimize"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "optimize",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "delta-history",
+            "optimize",
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 6
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea04-delta-lake/Z01. Q&A List Storage Location.ipynb",
+      "reviewed_lesson_title": "Z01. Q&A List Storage Location",
+      "operation_annotations": [
+        {
+          "original_cell_index": 1,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "utilities"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 3
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea05-databricks-jobs/01. bronze_companies.ipynb",
+      "reviewed_lesson_title": "01. bronze_companies",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "ctas",
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/top_tech_companies/top_tech_companies_1.csv",
+        "data/top_tech_companies/top_tech_companies_2.csv"
+      ],
+      "related_input_attributions": [
+        {
+          "path": "data/top_tech_companies/top_tech_companies_1.csv",
+          "attribution": "curated related companies learning input",
+          "schema_compatible": true,
+          "original_remote_contents_verified": false,
+          "automatic_source_match": false
+        },
+        {
+          "path": "data/top_tech_companies/top_tech_companies_2.csv",
+          "attribution": "curated related companies learning input",
+          "schema_compatible": true,
+          "original_remote_contents_verified": false,
+          "automatic_source_match": false
+        }
+      ],
+      "external_input_claim": false,
+      "enriched_cell_count": 5
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea05-databricks-jobs/02. silver_companies.ipynb",
+      "reviewed_lesson_title": "02. silver_companies",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "write",
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/top_tech_companies/top_tech_companies_1.csv",
+        "data/top_tech_companies/top_tech_companies_2.csv"
+      ],
+      "related_input_attributions": [
+        {
+          "path": "data/top_tech_companies/top_tech_companies_1.csv",
+          "attribution": "curated related companies learning input",
+          "schema_compatible": true,
+          "original_remote_contents_verified": false,
+          "automatic_source_match": false
+        },
+        {
+          "path": "data/top_tech_companies/top_tech_companies_2.csv",
+          "attribution": "curated related companies learning input",
+          "schema_compatible": true,
+          "original_remote_contents_verified": false,
+          "automatic_source_match": false
+        }
+      ],
+      "external_input_claim": false,
+      "enriched_cell_count": 5
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea05-databricks-jobs/03. gold_companies.ipynb",
+      "reviewed_lesson_title": "03. gold_companies",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "ctas",
+            "aggregate",
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/top_tech_companies/top_tech_companies_1.csv",
+        "data/top_tech_companies/top_tech_companies_2.csv"
+      ],
+      "related_input_attributions": [
+        {
+          "path": "data/top_tech_companies/top_tech_companies_1.csv",
+          "attribution": "curated related companies learning input",
+          "schema_compatible": true,
+          "original_remote_contents_verified": false,
+          "automatic_source_match": false
+        },
+        {
+          "path": "data/top_tech_companies/top_tech_companies_2.csv",
+          "attribution": "curated related companies learning input",
+          "schema_compatible": true,
+          "original_remote_contents_verified": false,
+          "automatic_source_match": false
+        }
+      ],
+      "external_input_claim": false,
+      "enriched_cell_count": 5
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea06-delta-live-tables/01. Set-up Project Environment.ipynb",
+      "reviewed_lesson_title": "01. Set-up Project Environment",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "security"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "utilities"
+          ]
+        },
+        {
+          "original_cell_index": 14,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 19,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 21,
+          "operations": [
+            "utilities"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 6
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea06-delta-live-tables/02. Process Customers Data.ipynb",
+      "reviewed_lesson_title": "02. Process Customers Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "stream",
+            "autoloader",
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "stream",
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "stream",
+            "scd"
+          ]
+        },
+        {
+          "original_cell_index": 12,
+          "operations": [
+            "stream",
+            "scd"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/circuitbox/customers/customers_day1.json",
+        "data/circuitbox/customers/customers_day2.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 7
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea06-delta-live-tables/03. Process Addresses Data.ipynb",
+      "reviewed_lesson_title": "03. Process Addresses Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "stream",
+            "autoloader",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 7,
+          "operations": [
+            "stream",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 10,
+          "operations": [
+            "stream",
+            "scd"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "scd"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/circuitbox/addresses/addresses_day1.csv",
+        "data/circuitbox/addresses/addresses_day2.csv"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 7
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea06-delta-live-tables/04. Process Orders Data.ipynb",
+      "reviewed_lesson_title": "04. Process Orders Data",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "stream",
+            "autoloader",
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "stream",
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "stream",
+            "ctas",
+            "json-array",
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/circuitbox/orders/orders_day1.json",
+        "data/circuitbox/orders/orders_day2.json"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 6
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea06-delta-live-tables/05. Create Customer Order Summary.ipynb",
+      "reviewed_lesson_title": "05. Create Customer Order Summary",
+      "operation_annotations": [
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "join",
+            "ctas",
+            "aggregate",
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 2
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea08-delta-sharing-and-lakehouse-federation/01.Configure Query Federation.ipynb",
+      "reviewed_lesson_title": "01.Configure Query Federation",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "jdbc"
+          ]
+        },
+        {
+          "original_cell_index": 4,
+          "operations": [
+            "jdbc"
+          ]
+        },
+        {
+          "original_cell_index": 6,
+          "operations": [
+            "schema",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 8,
+          "operations": [
+            "join",
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/gizmobox/payments/payments_2024_10.csv",
+        "data/gizmobox/payments/payments_2024_11.csv",
+        "data/gizmobox/payments/payments_2024_12.csv",
+        "data/gizmobox/payments/payments_2025_01.csv",
+        "data/gizmobox/refunds/refunds_azure_sql_ddl.sql"
+      ],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 11
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea09-data-security/01.Dynamic Views for Data Level Security.ipynb",
+      "reviewed_lesson_title": "01.Dynamic Views for Data Level Security",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 5,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 13,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 16,
+          "operations": [
+            "security",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 18,
+          "operations": [
+            "security",
+            "ctas",
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 21,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 8
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea09-data-security/02.Row Filters and Column Masks.ipynb",
+      "reviewed_lesson_title": "02.Row Filters and Column Masks",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 14,
+          "operations": [
+            "security",
+            "udf"
+          ]
+        },
+        {
+          "original_cell_index": 17,
+          "operations": [
+            "security"
+          ]
+        },
+        {
+          "original_cell_index": 21,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 24,
+          "operations": [
+            "security",
+            "udf"
+          ]
+        },
+        {
+          "original_cell_index": 27,
+          "operations": [
+            "security"
+          ]
+        },
+        {
+          "original_cell_index": 31,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 10
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/course/dea09-data-security/03.ABAC Policies with Governed Tags.ipynb",
+      "reviewed_lesson_title": "03.ABAC Policies with Governed Tags",
+      "operation_annotations": [
+        {
+          "original_cell_index": 3,
+          "operations": [
+            "schema"
+          ]
+        },
+        {
+          "original_cell_index": 9,
+          "operations": [
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 11,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 17,
+          "operations": [
+            "profiling"
+          ]
+        },
+        {
+          "original_cell_index": 26,
+          "operations": [
+            "write"
+          ]
+        },
+        {
+          "original_cell_index": 28,
+          "operations": [
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [],
+      "related_input_attributions": [],
+      "external_input_claim": false,
+      "enriched_cell_count": 7
+    },
+    {
+      "path": "/Users/anatolij.p/Programming/Data Engineering/Databricks/Udemy Databricks Certification Prep/notebooks/db-connect/companies_report.ipynb",
+      "reviewed_lesson_title": "companies_report",
+      "operation_annotations": [
+        {
+          "original_cell_index": 2,
+          "operations": [
+            "aggregate",
+            "profiling"
+          ]
+        }
+      ],
+      "snapshot_paths": [
+        "data/top_tech_companies/top_tech_companies_1.csv",
+        "data/top_tech_companies/top_tech_companies_2.csv"
+      ],
+      "related_input_attributions": [
+        {
+          "path": "data/top_tech_companies/top_tech_companies_1.csv",
+          "attribution": "curated related companies learning input",
+          "schema_compatible": true,
+          "original_remote_contents_verified": false,
+          "automatic_source_match": false
+        },
+        {
+          "path": "data/top_tech_companies/top_tech_companies_2.csv",
+          "attribution": "curated related companies learning input",
+          "schema_compatible": true,
+          "original_remote_contents_verified": false,
+          "automatic_source_match": false
+        }
+      ],
+      "external_input_claim": false,
+      "enriched_cell_count": 4
+    }
+  ]
+}
