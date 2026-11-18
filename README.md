@@ -1,5 +1,11 @@
 # Databricks certification learning repository
 
+Inspired by the Udemy course **Databricks Certified Data Engineer Associate:
+Ultimate Preparation Course + Practice Exam** by **Ramesh Retnasamy /
+CloudBox Academy**, for preparing for the Databricks Certified Data Engineer
+Associate certification. The author's course slides are kept locally and are
+not included in this repository.
+
 Read the lecture slides alongside archived notebooks, example queries, and
 supplied datasets. **No local Spark installation is required for reading.**
 Examples may require Databricks and external services to execute.

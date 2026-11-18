@@ -10,3 +10,6 @@ venv/
 *.pem
 *.key
 .work/
+
+# Author's course slides: keep local copies out of Git.
+Databricks+Certified+Data+Engineer+Associate+Course+V7.pdf
