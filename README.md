@@ -13,6 +13,10 @@ Examples may require Databricks and external services to execute.
 4. Use the [certification reference](docs/guide-findings.md) to distinguish
    course coverage from the supplied exam objectives.
 
+Notebooks show code with compact, prepopulated result previews. See the
+[reading guide](docs/notebook-reading.md) for how complete data is preserved
+outside the notebook body and what works without running a kernel.
+
 ## Layout
 
 | Directory | Purpose |

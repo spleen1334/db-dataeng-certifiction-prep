@@ -96,3 +96,19 @@ is [artifacts/metadata/validation-report.json](artifacts/metadata/validation-rep
 - No local Spark setup or cloud workload execution.
 - No fabricated saved outputs or claims of full embedded data when sources are absent.
 - AI-assisted preparation remains blocked until separate explicit approval.
+
+## Reading-experience revision
+
+The original preservation-heavy notebook generation above was completed, but
+its full input snapshots and duplicated result metadata made the reading copies
+too long. The approved revision separates preservation from presentation.
+
+- [x] Add static escaped HTML table previews with plain-text alternatives.
+- [ ] Externalize complete archived payloads and use lightweight notebook references.
+- [ ] Remove complete raw-input/image snapshots from the normal reading flow.
+- [ ] Replace repeated generic notes with selective operation-specific explanations.
+- [ ] Review representative SQL, profiling, image, join, and standalone samples.
+- [ ] Regenerate all 71 study notebooks and verify source/full-payload fidelity.
+- [ ] Record notebook size reduction and viewer-testing limitations.
+
+Commit each verified batch. Do not execute course workloads or initiate AI preparation.

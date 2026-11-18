@@ -3,6 +3,7 @@
 import base64
 import binascii
 import html
+from html.parser import HTMLParser
 import re
 
 MAX_ROWS = 10
@@ -113,6 +114,97 @@ def _safe_image(mime, value):
         return False
 
 
+def _text(value):
+    """Normalize notebook MIME strings, which may be split into lines."""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, list) and all(isinstance(part, str) for part in value):
+        return "".join(value)
+    return None
+
+
+class _ArchivedTable(HTMLParser):
+    """Extract text cells from the first table, discarding all HTML attributes."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.tables = 0
+        self.depth = 0
+        self.ignored = 0
+        self.in_head = False
+        self.row = None
+        self.cell = None
+        self.rows = []
+        self.headers = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ("script", "style"):
+            self.ignored += 1
+            return
+        if self.ignored:
+            return
+        if tag == "table":
+            self.depth += 1
+            if self.depth == 1:
+                self.tables += 1
+        if self.tables != 1 or self.depth != 1:
+            return
+        if tag == "thead":
+            self.in_head = True
+        elif tag == "tr":
+            self.row = []
+        elif tag in ("td", "th") and self.row is not None:
+            self.cell = []
+        elif tag == "br" and self.cell is not None:
+            self.cell.append("\n")
+
+    def handle_endtag(self, tag):
+        if tag in ("script", "style") and self.ignored:
+            self.ignored -= 1
+            return
+        if self.ignored:
+            return
+        if self.tables == 1 and self.depth == 1:
+            if tag in ("td", "th") and self.cell is not None:
+                self.row.append("".join(self.cell).strip())
+                self.cell = None
+            elif tag == "tr" and self.row is not None:
+                if self.in_head and not self.headers:
+                    self.headers = self.row
+                elif not self.in_head:
+                    self.rows.append(self.row)
+                self.row = None
+            elif tag == "thead":
+                self.in_head = False
+        if tag == "table" and self.depth:
+            self.depth -= 1
+
+    def handle_data(self, data):
+        if not self.ignored and self.cell is not None and self.depth == 1:
+            self.cell.append(data)
+
+
+def _html_table(value):
+    text = _text(value)
+    if not text:
+        return None
+    parser = _ArchivedTable()
+    try:
+        parser.feed(text)
+        parser.close()
+    except (ValueError, AssertionError):
+        return None
+    if not parser.tables or not (parser.headers or parser.rows):
+        return None
+    output = _table({"schema": [{"name": name} for name in parser.headers],
+                     "data": parser.rows})
+    if parser.tables > 1:
+        notice = " Additional archived tables omitted. " + REFERENCE
+        output["data"]["text/plain"] += "\n" + notice.strip()
+        output["data"]["text/html"] += "<p>" + html.escape(notice.strip()) + "</p>"
+    return output
+
+
 def render_result(result):
     """Return bounded nbformat display_data previews of saved results."""
     outputs = []
@@ -144,19 +236,23 @@ def render_result(result):
         elif kind in ("text", "ansi") and isinstance(data, str):
             outputs.append(_output("Archived output:\n" + _value(data) + "\n" + REFERENCE))
         elif kind == "mimeBundle" and isinstance(data, dict):
+            table = _html_table(data.get("text/html"))
             image = next(((mime, value) for mime, value in data.items()
                           if _safe_image(mime, value)), None)
-            if image:
+            plain = _text(data.get("text/plain"))
+            if table:
+                outputs.append(table)
+            elif image:
                 mime, value = image
                 outputs.append({"output_type": "display_data", "metadata": {},
                                 "data": {"text/plain": "Archived image. " + REFERENCE,
                                          mime: value}})
-            elif isinstance(data.get("text/plain"), str):
-                outputs.append(_output("Archived output:\n" + _value(data["text/plain"]) + "\n" + REFERENCE))
+            elif plain:
+                outputs.append(_output("Archived output:\n" + _value(plain) + "\n" + REFERENCE))
             else:
                 outputs.append(_output("Archived rich output omitted. " + REFERENCE))
         elif kind in ("html", "htmlSandbox"):
-            outputs.append(_output("Archived HTML output omitted. " + REFERENCE))
+            outputs.append(_html_table(data) or _output("Archived HTML output omitted. " + REFERENCE))
         else:
             outputs.append(_output("Archived output omitted. " + REFERENCE))
 

@@ -3,6 +3,7 @@
 - [Guide findings](guide-findings.md): supplied exam scope and preparation-method reference.
 - [Learning reference](learning-reference/README.md): course concepts and PDF pages.
 - [Notebook index](notebook-index.md): course-ordered lesson links and Jobs aliases.
+- [Reading notebooks](notebook-reading.md): compact saved results and full-data access.
 - [Exam coverage map](certification/coverage.md): partial topic-level alignment.
 - [Known limitations](known-limitations.md): missing assets and original defects.
 - [Conversion report](../artifacts/reports/conversion-report.md): representation, preserved outputs, and exceptions.

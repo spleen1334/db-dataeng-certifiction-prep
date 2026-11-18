@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """Add deterministic, source-aware reading notes without executing archived lessons."""
 import argparse
-import base64
 import copy
-import hashlib
 import json
 from pathlib import Path
 import re
+import os
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[2]
-VERSION = 1
+VERSION = 2
 TEACHING_EXAMPLES = {
     "join": "Two left rows and three right rows with the same matching key yield six joined rows.",
     "json-array": "Exploding an array [a, b] yields two rows for that input row.",
@@ -171,29 +171,15 @@ def enrich(notebook, path, root=ROOT, catalog=None):
                 if not any(item["path"] == entry["path"] for item in entries):
                     entries.append(entry)
         entries.sort(key=lambda item: item["path"])
-    intro = (
-        f"{title}\n\n### Learning objectives\n"
-        f"Follow **{title}** from its source inputs through its operations to the archived results.\n"
-        + ("- Explain " + ", ".join(name for name, _ in found) + " as used in this lesson.\n" if found else
-           "- Distinguish notebook setup, inline examples and their saved observations.\n")
-        + "\n### Source-specific learning focus\n" + lesson_summary(text, found) + "\n"
-        + "\n### Input/output interpretation\n"
-        "Original source and outputs are preserved unchanged and were not executed. "
-        "Saved tables, HTML displays and errors are archived generated outputs, not supplied datasets. "
-        "Inline literals are examples already present in the source. "
-        "Cloud storage, remote tables, catalogs, services and checkpoints are unavailable locally unless "
-        "a supplied snapshot is explicitly listed below; no external input is claimed available.\n")
-    targets = safe_targets(cells)
-    if targets:
-        intro += ("\nSQL relation identifiers referenced in source (inputs and/or destinations; "
-                  "not a claim that these objects exist locally): "
-                  + ", ".join(f"`{name}`" for name in targets) + ".\n")
+    added = [learning_cell("overview", "")]
+    # Keep the overview short; full inputs stay immutable on disk.
+    added[0]["source"] = (f"## {title} — objective\n\n"
+                          + lesson_summary(text, found[:2]) + "\n\n"
+                          "Historical results; no code executed.")
     if Path(path).stem == "companies_report":
-        intro += "\nThe remote companies table is absent from the supplied inputs; its archived results cannot be independently reproduced from local data.\n"
-    if "bundle" in str(path).lower():
-        intro += "\nThe bundle demo uses inline example data; archived HTML displays show historical rendering, not an external input or a new execution.\n"
-    added = [learning_cell("overview", intro)]
+        added[0]["source"] += "\nThe remote companies table is absent; related local files do not establish remote-state equivalence."
     snapshot_paths = []
+    input_groups = {}
     for entry in entries:
         relative = Path("data") / entry["path"]
         target = (root / relative).resolve()
@@ -201,31 +187,22 @@ def enrich(notebook, path, root=ROOT, catalog=None):
             raise ValueError("Unsafe catalog path")
         if not target.is_file():
             raise FileNotFoundError(relative)
-        raw = target.read_bytes()
-        digest = hashlib.sha256(raw).hexdigest()
-        heading = f"supplied input snapshot\n\nPath: `{relative.as_posix()}`\n\nSHA-256: `{digest}`\n\n"
-        if entry["path"] in related_paths:
-            heading += (
-                "**Related supplied companies learning input (explicit curated attribution, "
-                "not an automatic source-token match):** schema-compatible columns "
-                "`company_name,founded_date,country`; not verified to be identical to "
-                "the original remote table or landing contents. No execution equivalence "
-                "or exact source provenance is claimed.\n\n")
-        key = "snapshot-" + hashlib.sha256(str(relative).encode()).hexdigest()[:16]
-        if target.suffix.lower() == ".png":
-            name = target.name
-            cell = learning_cell(key, heading + f"![Supplied image](attachment:{name})",
-                                 attachments={name: {"image/png": base64.b64encode(raw).decode("ascii")}})
-        else:
-            cell = learning_cell(key, heading + "Complete supplied text (not generated output):\n\n"
-                                 + fenced(raw.decode("utf-8"), target.suffix.lstrip(".")))
-        added.append(cell)
+        group = input_groups.setdefault(target.parent, {"count": 0, "related": False})
+        group["count"] += 1
+        group["related"] |= entry["path"] in related_paths
         snapshot_paths.append(relative.as_posix())
+    for directory, group in sorted(input_groups.items()):
+        link = quote(Path(os.path.relpath(directory, Path(path).resolve().parent)).as_posix()) + "/"
+        label = directory.relative_to((root / "data").resolve()).as_posix()
+        heading = f"\n- [Original inputs: {label}]({link}) — {group['count']} files."
+        if group["related"]:
+            heading += " Related schema-compatible companies inputs; not verified to be identical to remote state."
+        added[0]["source"] += heading
     corrections = []
     if re.search(r"payments", text, re.I) and re.search(r"header[^\n]{0,30}true", text, re.I):
         corrections.append("Payments files are headerless. Corrective commentary: header=true consumes the first payment as a header; use header=false with explicit columns in a separate corrected experiment.")
     if any(e.get("malformed_line_numbers") for e in entries):
-        corrections.append("Supplied orders JSONL includes malformed lines. Corrective commentary: inspect corrupt-record handling before interpreting parsed row counts; the complete raw snapshot above intentionally preserves these defects.")
+        corrections.append("Supplied orders JSONL includes malformed lines; inspect corrupt-record handling before interpreting row counts. Original files are linked above.")
     if "refund" in text.lower():
         corrections.append("Refunds setup SQL contains a NOT NULL. typo: the period must be removed in a separate corrected copy before database setup. The supplied SQL is setup, not remote Refunds table contents.")
     if corrections:
@@ -236,20 +213,22 @@ def enrich(notebook, path, root=ROOT, catalog=None):
         code = source(cell)
         is_command = bool(cell.get("metadata", {}).get("archived_databricks")) or cell.get("cell_type") == "code"
         if is_command and not re.match(r"\s*%md", code) and not cell.get("metadata", {}).get("archived_output_only"):
-            notes = operations(code)
+            notes = [(name, note) for name, note in operations(code)
+                     if name in {"join", "merge", "window", "scd", "json-array", "vacuum"}
+                     and name not in {op for a in annotations for op in a["operations"]}][:1]
+            if len(annotations) >= 3:
+                notes = []
             if notes:
                 result.append(learning_cell(f"operation-{index:04d}",
                     "before source operation\n\n" + "\n\n".join(
-                        f"**{name}**: {note}" +
-                        ("\n\n**Unexecuted teaching example (illustrative, not an archived or generated result):** "
-                         + TEACHING_EXAMPLES[name] if name in TEACHING_EXAMPLES else "")
+                         f"**{name}**: {note}"
                         for name, note in notes)))
                 annotations.append({"original_cell_index": index, "operations": [n for n, _ in notes]})
         result.append(cell)
     original["cells"] = result
     original.setdefault("metadata", {})["learning_enriched"] = True
     report = dict(path=str(path), reviewed_lesson_title=title,
-                  operation_annotations=annotations, snapshot_paths=snapshot_paths,
+                  operation_annotations=annotations, input_paths=snapshot_paths,
                   related_input_attributions=[
                       {"path": "data/" + item,
                        "attribution": "curated related companies learning input",

@@ -12,6 +12,8 @@ observation, not evidence of a current execution.
   necessarily the total number of rows in the original source table.
 - Keep complete inputs in `data/` and original materials in `materials/`.
   Do not repeat whole JSON files or image collections before the lesson.
+- Group input references by dataset folder with a file count; do not replace
+  50 embedded images with another 50-link preamble.
 - Preserve full archived payloads outside the reading notebooks, with provenance
   references rather than duplicate result JSON in cell metadata.
 - Retain explanations that teach a particular operation; avoid repeating generic
@@ -42,3 +44,25 @@ before regenerating the whole collection.
 When a viewer or optional package is unavailable in the verification environment,
 record that limitation rather than describing structural or browser checks as
 an actual VS Code/Jupyter application test.
+
+### Preview limits
+
+Tables show up to 10 archived rows, preserving all columns. Individual values are
+limited to 200 characters; nested/binary values receive explicit omission labels.
+The renderer shows up to 20 result outputs, followed by summaries of omitted or
+empty results. Full values remain available in the referenced archive payload.
+Original active HTML is not executed to reproduce a historical display.
+Saved HTML tables can be rebuilt from their cell text only, discarding original
+scripts, styling, and attributes.
+
+### Rendering checks
+
+A synthetic static Chromium check confirmed all 17 columns remained present in
+a wide table, 10 of 13 saved rows were shown, horizontal scrolling worked, and
+null/truncated/nested/binary markers were visible. The generated output contained
+no scripts or HTML event attributes.
+
+This is **not** an application-level VS Code or Jupyter Notebook test. Jupyter
+is not installed in the verification environment; no dependencies were installed
+to claim otherwise. Both viewers support standard saved notebook MIME outputs,
+but their trust policies and rendering can differ.

@@ -28,7 +28,7 @@ class EnrichmentTests(unittest.TestCase):
         self.assertIn("join", report["operation_annotations"][0]["operations"])
         self.assertIn("Join", report["reviewed_lesson_title"])
 
-    def test_complete_attributed_snapshots(self):
+    def test_linked_attributed_inputs_not_embedded(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             folder = root / "data/gizmobox/orders"
@@ -46,10 +46,11 @@ class EnrichmentTests(unittest.TestCase):
             nb, report = enrich(self.notebook("read_files('/gizmobox/orders/')"),
                                 Path("Join.ipynb"), root, {"files": entries})
             prose = "\n".join(c["source"] for c in nb["cells"] if c["metadata"].get("learning_enriched"))
-            self.assertIn(raw.decode(), prose)
-            self.assertIn(hashlib.sha256(raw).hexdigest(), prose)
+            self.assertNotIn(raw.decode(), prose)
+            self.assertIn("Original inputs: gizmobox/orders", prose)
+            self.assertIn("1 files", prose)
             self.assertNotIn("unrelated", prose)
-            self.assertEqual(report["snapshot_paths"], ["data/gizmobox/orders/part.json"])
+            self.assertEqual(report["input_paths"], ["data/gizmobox/orders/part.json"])
             self.assertIn("malformed", prose)
             self.assertFalse(report["external_input_claim"])
 
@@ -59,8 +60,8 @@ class EnrichmentTests(unittest.TestCase):
             "readStream.option('checkpointLocation','x')\nVACUUM t"),
             Path("lesson.ipynb"))
         notes = "\n".join(c["source"] for c in nb["cells"] if c["metadata"].get("learning_enriched"))
-        for word in ("MERGE", "Checkpoint", "VACUUM"):
-            self.assertIn(word, notes)
+        self.assertIn("MERGE", notes)
+        self.assertLessEqual(len(report["operation_annotations"]), 3)
         self.assertNotIn("do-not-copy", notes)
         self.assertTrue(report["operation_annotations"])
 
@@ -73,9 +74,8 @@ class EnrichmentTests(unittest.TestCase):
                              if c["metadata"].get("learning_enriched"))
         self.assertNotIn("remote companies table is absent", notes(course))
         self.assertIn("remote companies table is absent", notes(standalone))
-        self.assertIn("yield six", notes(course))
-        self.assertIn("Unexecuted teaching example", notes(course))
-        self.assertIn("`bronze_companies`", notes(course))
+        self.assertNotIn("Unexecuted teaching example", notes(course))
+        self.assertIn("cardinality", notes(course))
 
     def test_relation_extraction_ignores_markdown_comments_and_outputs(self):
         nb = self.notebook("%md\nJoin customer_address table which comes from customer")

@@ -59,6 +59,32 @@ class PresentationTests(unittest.TestCase):
         self.assertIn("red", result["text/plain"])
         self.assertNotIn("\x1b", result["text/plain"])
 
+    def test_html_table_rebuilt_without_active_markup(self):
+        markup = ('<table onclick="bad()"><thead><tr><th>Name &amp; value</th>'
+                  '<th>Result</th></tr></thead><tbody>'
+                  '<tr><th>row &lt;1&gt;</th><td>safe<script>bad()</script>'
+                  '<style>bad</style><img src=x onerror="bad()"> &amp; sound</td></tr>'
+                  '</tbody></table><table><tr><td>second</td></tr></table>')
+        data = render_result({"type": "mimeBundle", "data": {
+            "text/html": [markup[:80], markup[80:]], "text/plain": ["fallback"]}})[0]["data"]
+        self.assertIn("Name &amp; value", data["text/html"])
+        self.assertIn("row &lt;1&gt;", data["text/html"])
+        self.assertIn("safe &amp; sound", data["text/html"])
+        self.assertIn("Name & value", data["text/plain"])
+        self.assertIn("1 of 1 saved rows", data["text/plain"])
+        self.assertIn("Additional archived tables omitted", data["text/plain"])
+        self.assertNotIn("onclick", data["text/html"])
+        self.assertNotIn("onerror", data["text/html"])
+        self.assertNotIn("<script", data["text/html"])
+        self.assertNotIn("bad()", data["text/plain"])
+
+    def test_mime_list_text_fallback(self):
+        output = render_result({"type": "mimeBundle", "data": {
+            "text/html": ["<div>not a table</div>"],
+            "text/plain": ["first ", "line"]}})[0]["data"]
+        self.assertIn("first line", output["text/plain"])
+        self.assertNotIn("text/html", output)
+
 
 if __name__ == "__main__":
     unittest.main()

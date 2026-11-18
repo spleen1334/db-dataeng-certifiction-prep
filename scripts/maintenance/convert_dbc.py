@@ -6,6 +6,25 @@ import json
 from pathlib import Path, PurePosixPath
 import re
 import zipfile
+import base64
+import os
+import copy
+from urllib.parse import quote
+
+
+def compact_result(result):
+    if __package__:
+        from .notebook_presentation import render_result
+    else:
+        from notebook_presentation import render_result
+    return render_result(result)
+
+
+def payload_document(raw, provenance):
+    """Exact member bytes plus decoded document; never log payload contents."""
+    return {"schema_version": 1, "provenance": provenance,
+            "source_base64": base64.b64encode(raw).decode("ascii"),
+            "document": json.loads(raw)}
 
 
 def digest(data):
@@ -91,14 +110,17 @@ def has_populated_table(result):
             and any(has_populated_table(item) for item in data))
 
 
-def command_cells(command, index, language):
+def command_cells(command, index, language, payload_ref=None):
     source = command.get("command", "")
     metadata = {"archived_databricks": {"original_array_index": index,
                 "guid": command.get("guid"), "position": command.get("position"),
-                "language": language, "original_command": source,
-                "original_results": command.get("results"),
-                "original_errors": {k: v for k, v in command.items()
-                                    if "error" in k.lower()}}}
+                "language": language}}
+    if payload_ref:
+        metadata["archived_databricks"]["payload_ref"] = payload_ref
+    else:
+        metadata["archived_databricks"].update(
+            original_command=source, original_results=command.get("results"),
+            original_errors={k: v for k, v in command.items() if "error" in k.lower()})
     magic = re.match(r"^\s*%([\w-]+)[^\S\n]*(?:\n)?", source)
     md = magic and magic.group(1).lower() in ("md", "md-sandbox")
     runnable = language.lower() == "python" and not magic
@@ -107,11 +129,17 @@ def command_cells(command, index, language):
         code = source[magic.end():]
     else:
         code = source
-    outputs = render_result(command.get("results"))
-    errors = metadata["archived_databricks"]["original_errors"]
+    outputs = (compact_result if payload_ref else render_result)(command.get("results"))
+    errors = {k: v for k, v in command.items() if "error" in k.lower()}
     visible_errors = {k: v for k, v in errors.items() if v}
     if command.get("error") or command.get("errorSummary"):
-        outputs.append(text_output("Historical archived error:\n" + pretty(visible_errors)))
+        if payload_ref:
+            summary = command.get("errorSummary") or command.get("error")
+            if not isinstance(summary, str):
+                summary = "Command failed; full error details in linked payload."
+            outputs.append(text_output("Historical error: " + summary[:600]))
+        else:
+            outputs.append(text_output("Historical archived error:\n" + pretty(visible_errors)))
     if md:
         cell = markdown(source[magic.end():], metadata)
     elif runnable:
@@ -131,13 +159,18 @@ def command_cells(command, index, language):
     return cells
 
 
-def convert(document, provenance):
+def convert(document, provenance, payload_ref=None):
     language = document.get("language", "python")
     intro = ("# Archived Databricks example\n\n"
              "Historical source and outputs, not locally executable. Nothing was run during conversion. "
              "Databricks services, datasets and original image assets may be unavailable; image references "
              "are preserved, not downloaded. Outputs and errors are archived, not new execution.")
     cells = [markdown(intro)]
+    if payload_ref:
+        cells = [markdown(f"# {Path(provenance['member']).stem}\n\n"
+                          "Read the original source and historical results; nothing was executed.\n\n"
+                          f"[Full original payload]({quote(payload_ref)})")]
+        provenance = dict(provenance, payload_ref=payload_ref, presentation_version=1)
     commands = document.get("commands", [])
     def order(pair):
         try:
@@ -145,7 +178,7 @@ def convert(document, provenance):
         except (ValueError, TypeError):
             return (float(pair[0]), pair[0])
     for index, command in sorted(enumerate(commands), key=order):
-        cells.extend(command_cells(command, index, language))
+        cells.extend(command_cells(command, index, language, payload_ref))
     return {"nbformat": 4, "nbformat_minor": 5,
             "metadata": {"archived_databricks": provenance,
                          "kernelspec": {"display_name": "Python 3", "language": "python",
@@ -166,6 +199,38 @@ def members(path):
             if isinstance(doc, dict) and isinstance(doc.get("commands"), list):
                 records.append((name, raw, doc))
     return records
+
+
+def compact_standalone(raw, provenance, payload_ref):
+    """Keep source exact; adapt nbformat output bundles to the compact renderer."""
+    notebook = copy.deepcopy(json.loads(raw))
+    for cell in notebook["cells"]:
+        if cell.get("cell_type") != "code":
+            continue
+        outputs = []
+        for output in cell.get("outputs", []):
+            kind = output.get("output_type")
+            if kind in ("display_data", "execute_result"):
+                bundle = {mime: "".join(value) if mime.startswith("text/") and isinstance(value, list)
+                          else value for mime, value in output.get("data", {}).items()}
+                result = {"type": "mimeBundle", "data": bundle}
+            elif kind == "stream":
+                value = output.get("text", "")
+                result = {"type": "text", "data": "".join(value) if isinstance(value, list) else value}
+            else:
+                result = {"type": "text", "data": "Historical error: " + str(output.get("evalue", ""))[:600]}
+            outputs.extend(compact_result(result))
+        cell["outputs"] = outputs
+        cell["execution_count"] = None
+    notebook["cells"].insert(0, markdown(
+        "# " + Path(provenance["member"]).stem + "\n\n"
+        "Original source and compact historical results; nothing executed.\n\n"
+        f"[Full original payload]({quote(payload_ref)})"))
+    notebook.setdefault("metadata", {})["archived_standalone"] = dict(
+        provenance, payload_ref=payload_ref, presentation_version=1)
+    for index, cell in enumerate(notebook["cells"]):
+        cell["id"] = f"standalone-{index:04d}"
+    return notebook
 
 
 def resolve_archive(name):
@@ -196,6 +261,9 @@ def main(argv=None):
     parser.add_argument("--manifest", type=Path)
     parser.add_argument("--sample", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
+    parser.add_argument("--compact", action="store_true",
+                        help="Externalize exact originals and render compact study results")
+    parser.add_argument("--payload-dir", type=Path)
     parser.add_argument("--check", "--dry-run", dest="check", action="store_true")
     args = parser.parse_args(argv)
     archive = args.archive or resolve_archive("dea-course-v5.dbc")
@@ -240,7 +308,15 @@ def main(argv=None):
                        [c.get("results") for c in doc["commands"]]]
         provenance = {"archive": str(archive), "archive_sha256": archive_hash,
                       "member": name, "member_sha256": digest(raw), "aliases": matched}
-        notebook = convert(doc, provenance)
+        if args.compact:
+            payload_target = (args.payload_dir or args.output.parent / "artifacts/notebook-payloads") / relative.with_suffix(".json")
+            payload_content = pretty(payload_document(raw, provenance)) + "\n"
+            reference = Path(os.path.relpath(payload_target, target.parent)).as_posix()
+            notebook = convert(doc, provenance, reference)
+            notebook["metadata"]["archived_databricks"]["payload_sha256"] = digest(payload_content.encode("utf-8"))
+            plan.append((payload_target, payload_content))
+        else:
+            notebook = convert(doc, provenance)
         entry = dict(provenance, output=str(target), command_count=len(doc["commands"]),
                      cell_count=len(notebook["cells"]),
                      output_count=sum(len(c.get("outputs", [])) for c in notebook["cells"]))

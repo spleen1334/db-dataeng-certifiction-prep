@@ -120,8 +120,34 @@ def preserved_cells(actual, expected):
     return cleaned == expected["cells"]
 
 
+def compact_payload_errors(nb, path, raw, provenance):
+    """Compare external exact bytes and visible source against the immutable archive."""
+    errors = []
+    meta = nb.get("metadata", {}).get("archived_databricks", {})
+    try:
+        payload_raw = (path.parent / meta["payload_ref"]).read_bytes()
+        payload = json.loads(payload_raw)
+        if convert_dbc.digest(payload_raw) != meta["payload_sha256"]:
+            errors.append("payload checksum")
+        if (base64.b64decode(payload["source_base64"], validate=True) != raw
+                or payload["document"] != json.loads(raw)
+                or payload["provenance"] != provenance):
+            errors.append("payload original fidelity")
+        expected = convert_dbc.convert(json.loads(raw), provenance, meta["payload_ref"])
+        if not preserved_cells(nb, expected):
+            errors.append("compact source or output fidelity")
+    except (OSError, ValueError, KeyError, TypeError):
+        errors.append("missing or invalid external payload")
+    return errors
+
+
 def local_links(path, root):
     content = path.read_text(encoding="utf-8")
+    return local_link_errors(content, path, root)
+
+
+def local_link_errors(content, path, root):
+    """Count missing local links in Markdown, including notebook-added cells."""
     content = re.sub(r"```.*?```|~~~.*?~~~", "", content, flags=re.S)
     targets = re.findall(r"!?\[[^\]]*\]\(\s*(<[^>]+>|[^\s)]+)", content)
     targets += re.findall(r"^\s*\[[^\]]+\]:\s*(<[^>]+>|\S+)", content, re.M)
@@ -204,7 +230,7 @@ def enrichment_errors(nb, report):
                           for c in added)
     if operation_cells != len(annotations):
         errors.append("operation annotation count")
-    if not isinstance(report.get("snapshot_paths"), list):
+    if not isinstance(report.get("input_paths", report.get("snapshot_paths")), list):
         errors.append("snapshot paths")
     return errors
 
@@ -253,6 +279,12 @@ def validate(root):
               entry["member_sha256"] == convert_dbc.digest(raw), "primary provenance")
         expected = convert_dbc.convert(doc, provenance)
         nb = load(target)
+        if nb.get("metadata", {}).get("archived_databricks", {}).get("presentation_version"):
+            check(not compact_payload_errors(nb, target, raw, provenance), "compact payload fidelity")
+            expected = convert_dbc.convert(doc, provenance, nb["metadata"]["archived_databricks"]["payload_ref"])
+            provenance = dict(provenance, **{
+                k: nb["metadata"]["archived_databricks"][k]
+                for k in ("payload_ref", "payload_sha256", "presentation_version")})
         check(not notebook_errors(nb), "invalid course notebook")
         check(preserved_cells(nb, expected), "changed original course cells")
         check(nb["metadata"].get("archived_databricks") == provenance, "notebook provenance")
@@ -284,7 +316,25 @@ def validate(root):
         destinations.add(target)
         nb = load(target)
         check(not notebook_errors(nb), "invalid standalone notebook")
-        check(preserved_cells(nb, load(safe(asset["new"]))), "changed standalone cells")
+        standalone_meta = nb.get("metadata", {}).get("archived_standalone")
+        if standalone_meta:
+            original_raw = safe(asset["new"]).read_bytes()
+            provenance = {k: standalone_meta[k] for k in ("member", "original", "member_sha256")}
+            try:
+                payload_raw = (target.parent / standalone_meta["payload_ref"]).read_bytes()
+                payload = json.loads(payload_raw)
+                check(convert_dbc.digest(payload_raw) == standalone_meta["payload_sha256"],
+                      "standalone payload checksum")
+                check(base64.b64decode(payload["source_base64"], validate=True) == original_raw
+                      and payload["document"] == json.loads(original_raw)
+                      and payload["provenance"] == provenance, "standalone payload fidelity")
+                expected = convert_dbc.compact_standalone(original_raw, provenance,
+                                                        standalone_meta["payload_ref"])
+                check(preserved_cells(nb, expected), "changed compact standalone source or outputs")
+            except (OSError, ValueError, KeyError, TypeError):
+                check(False, "missing standalone payload")
+        else:
+            check(preserved_cells(nb, load(safe(asset["new"]))), "changed standalone cells")
     actual = {p.resolve() for p in (root / "notebooks").rglob("*.ipynb")
               if not any(x in ("samples", ".ipynb_checkpoints") for x in p.parts)}
     check(len(destinations) == 71 and actual == destinations, "canonical study coverage")
@@ -300,17 +350,32 @@ def validate(root):
     snapshot_records = {safe(item["path"]): item for item in reports}
     check(len(reports) == len(snapshot_records) == 71 and set(snapshot_records) == destinations,
           "enrichment report coverage")
-    enriched = snapshot_count = 0
+    enriched = snapshot_count = input_reference_count = notebook_broken_links = 0
     for target in destinations:
         nb = load(target)
         item = snapshot_records.get(target, {})
         check(not enrichment_errors(nb, item), "enrichment report consistency")
-        paths = item.get("snapshot_paths", [])
-        check(snapshots_valid(nb, root, paths),
-              "snapshot completeness or hash")
-        snapshot_count += len(paths)
+        paths = item.get("input_paths", item.get("snapshot_paths", []))
+        if "input_paths" in item:
+            input_reference_count += len(paths)
+            check(all(safe(p).is_file() for p in paths), "missing linked original input")
+            check(not any(c.get("attachments") for c in nb["cells"]
+                          if c.get("metadata", {}).get("learning_enriched")), "embedded input image")
+        else:
+            check(snapshots_valid(nb, root, paths), "snapshot completeness or hash")
+            snapshot_count += len(paths)
+        for cell in nb["cells"]:
+            if (cell.get("cell_type") == "markdown"
+                    and (cell.get("metadata", {}).get("learning_enriched")
+                         or cell.get("id") in ("archive-0000", "standalone-0000"))):
+                source = cell["source"]
+                notebook_broken_links += local_link_errors(
+                    "".join(source) if isinstance(source, list) else source, target, root)
         enriched += nb.get("metadata", {}).get("learning_enriched") is True
-    evidence.update(enriched_notebooks=enriched, input_snapshots=snapshot_count)
+    check(notebook_broken_links == 0, "missing local notebook links")
+    evidence.update(enriched_notebooks=enriched, input_references=input_reference_count,
+                    embedded_input_snapshots=snapshot_count,
+                    broken_notebook_links=notebook_broken_links)
     check(enriched == 71, "enriched notebook coverage")
     broken = 0
     for path in root.rglob("*.md"):

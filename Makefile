@@ -1,17 +1,26 @@
 PYTHON ?= python3
 
-.PHONY: help inventory convert-sample convert catalog catalog-check index index-check enrich enrich-check validate verify test
+.PHONY: help inventory convert-sample convert clean-samples clean-samples-check refresh-notebooks catalog catalog-check index index-check enrich enrich-check validate verify test
 help:
-	@printf '%s\n' 'make inventory      Verify original asset checksums' 'make convert-sample Create three sample notebooks in .work/ (once)' 'make convert        Create course notebooks (once; refuses overwrites)' 'make catalog        Regenerate the dataset catalog' 'make catalog-check  Verify catalog freshness' 'make index          Regenerate notebook navigation' 'make index-check    Verify notebook navigation freshness' 'make enrich         Add/update labelled learning notes and input snapshots' 'make enrich-check   Verify enrichment freshness without writing' 'make validate       Check notebook fidelity, original hashes, catalog and links' 'make verify         Run unit tests and all read-only checks' 'make test           Run maintenance unit tests'
+	@printf '%s\n' 'make inventory      Verify original asset checksums' 'make convert-sample Create compact samples in .work/ (once)' 'make convert        Create compact course notebooks (once; refuses overwrites)' 'make refresh-notebooks Explicit guarded canonical refresh; refuses learner edits' 'make catalog        Regenerate the dataset catalog' 'make catalog-check  Verify catalog freshness' 'make index          Regenerate notebook navigation' 'make index-check    Verify notebook navigation freshness' 'make enrich         Add concise learning notes and original-input links' 'make enrich-check   Verify enrichment freshness without writing' 'make validate       Check notebook fidelity, original hashes, catalog and links' 'make verify         Run unit tests and all read-only checks' 'make test           Run maintenance unit tests'
 
 inventory:
 	$(PYTHON) scripts/maintenance/inventory.py
 
 convert-sample:
-	$(PYTHON) scripts/maintenance/convert_dbc.py --sample --output .work/sample-notebooks --manifest .work/sample-conversion.json
+	$(PYTHON) scripts/maintenance/convert_dbc.py --compact --sample --output .work/sample-notebooks --payload-dir .work/artifacts/notebook-payloads --manifest .work/sample-conversion.json
 
 convert:
-	$(PYTHON) scripts/maintenance/convert_dbc.py --manifest artifacts/metadata/conversion-manifest.json
+	$(PYTHON) scripts/maintenance/convert_dbc.py --compact --payload-dir artifacts/notebook-payloads --manifest artifacts/metadata/conversion-manifest.json
+
+refresh-notebooks:
+	$(PYTHON) scripts/maintenance/clean_notebooks.py --install
+
+clean-samples:
+	$(PYTHON) scripts/maintenance/clean_notebooks.py
+
+clean-samples-check:
+	$(PYTHON) scripts/maintenance/clean_notebooks.py --check
 
 catalog:
 	$(PYTHON) scripts/maintenance/catalog_data.py
