@@ -1,0 +1,2943 @@
+{
+  "version": 1,
+  "path_base": "data/",
+  "files": [
+    {
+      "path": "circuitbox/addresses/addresses_day1.csv",
+      "bytes": 772,
+      "sha256": "52ef2bd805cb67c39f04fa83c36b3820627e709904520858f1d79fd54671a327",
+      "format": "csv",
+      "records": 10,
+      "columns": [
+        "customer_id",
+        "address_line_1",
+        "city",
+        "state",
+        "postcode",
+        "created_date"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          6
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": true,
+      "family": "circuitbox",
+      "dataset": "addresses",
+      "lessons": [
+        "dea-course/dea06-delta-live-tables/03. Process Addresses Data.python",
+        "dea-course/dea06-delta-live-tables/05. Create Customer Order Summary.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "circuitbox/addresses/addresses_day2.csv",
+      "bytes": 479,
+      "sha256": "b39f1e2d89f68564db4df92102118c8270a1ac7190494c7dc5488f2b3c3fd8c6",
+      "format": "csv",
+      "records": 6,
+      "columns": [
+        "customer_id",
+        "address_line_1",
+        "city",
+        "state",
+        "postcode",
+        "created_date"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          6
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": true,
+      "family": "circuitbox",
+      "dataset": "addresses",
+      "lessons": [
+        "dea-course/dea06-delta-live-tables/03. Process Addresses Data.python",
+        "dea-course/dea06-delta-live-tables/05. Create Customer Order Summary.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "circuitbox/customers/customers_day1.json",
+      "bytes": 1743,
+      "sha256": "877701de9fc03ce84fb0c14c7a64a48444595a9251b9f2bd4414a6b6a0ad0512",
+      "format": "jsonl",
+      "records": 10,
+      "columns": [
+        "created_date",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_date": [
+          "str"
+        ],
+        "customer_id": [
+          "int"
+        ],
+        "customer_name": [
+          "null",
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "null",
+          "str"
+        ],
+        "telephone": [
+          "null",
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 10,
+      "family": "circuitbox",
+      "dataset": "customers",
+      "lessons": [
+        "dea-course/dea06-delta-live-tables/02. Process Customers Data.sql",
+        "dea-course/dea06-delta-live-tables/05. Create Customer Order Summary.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "circuitbox/customers/customers_day2.json",
+      "bytes": 1277,
+      "sha256": "b24ecb34aaee37bda161ef5798360dbc94b6abbfc8413d91c7f0c0d73d4d4d39",
+      "format": "jsonl",
+      "records": 7,
+      "columns": [
+        "created_date",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_date": [
+          "str"
+        ],
+        "customer_id": [
+          "int"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "str"
+        ],
+        "telephone": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 7,
+      "family": "circuitbox",
+      "dataset": "customers",
+      "lessons": [
+        "dea-course/dea06-delta-live-tables/02. Process Customers Data.sql",
+        "dea-course/dea06-delta-live-tables/05. Create Customer Order Summary.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "circuitbox/orders/orders_day1.json",
+      "bytes": 3152,
+      "sha256": "e653657907fe6cbaeeec87124fb53c86a955f26add32da619eac1c5d5f5e9904",
+      "format": "jsonl",
+      "records": 12,
+      "columns": [
+        "customer_id",
+        "items",
+        "order_id",
+        "order_status",
+        "order_timestamp",
+        "payment_method"
+      ],
+      "schema_hints": {
+        "customer_id": [
+          "int"
+        ],
+        "items": [
+          "list"
+        ],
+        "order_id": [
+          "int"
+        ],
+        "order_status": [
+          "str"
+        ],
+        "order_timestamp": [
+          "str"
+        ],
+        "payment_method": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 12,
+      "family": "circuitbox",
+      "dataset": "orders",
+      "lessons": [
+        "dea-course/dea06-delta-live-tables/04. Process Orders Data.sql",
+        "dea-course/dea06-delta-live-tables/05. Create Customer Order Summary.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "circuitbox/orders/orders_day2.json",
+      "bytes": 985,
+      "sha256": "814e6982853274d17de0e58559268b915725e6803d70c99011fff199a852fadf",
+      "format": "jsonl",
+      "records": 4,
+      "columns": [
+        "customer_id",
+        "items",
+        "order_id",
+        "order_status",
+        "order_timestamp",
+        "payment_method"
+      ],
+      "schema_hints": {
+        "customer_id": [
+          "int"
+        ],
+        "items": [
+          "list"
+        ],
+        "order_id": [
+          "int"
+        ],
+        "order_status": [
+          "str"
+        ],
+        "order_timestamp": [
+          "str"
+        ],
+        "payment_method": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 4,
+      "family": "circuitbox",
+      "dataset": "orders",
+      "lessons": [
+        "dea-course/dea06-delta-live-tables/04. Process Orders Data.sql",
+        "dea-course/dea06-delta-live-tables/05. Create Customer Order Summary.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/addresses/addresses_2024_10.tsv",
+      "bytes": 2361,
+      "sha256": "d0f4b133989d5dd066a2e55c38311a4eb608ea4576f1c9db8dcda9c9d9714c74",
+      "format": "tsv",
+      "records": 34,
+      "columns": [
+        "customer_id",
+        "address_type",
+        "address_line_1",
+        "city",
+        "state",
+        "postcode"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          6
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": true,
+      "family": "gizmobox",
+      "dataset": "addresses",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/01. Set-up Project Environment.sql",
+        "dea-course/dea03-etl-with-apache-spark/05. Extract Addresses Data - CSV via read_files Function.sql",
+        "dea-course/dea03-etl-with-apache-spark/08. Extract Data using Python.python",
+        "dea-course/dea03-etl-with-apache-spark/14. Transform Addresses Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/18. Join Customer Address.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py05. Extract Addresses Data - CSV.python",
+        "dea-course/dea03-etl-with-apache-spark/Py14. Transform Addresses Data.python",
+        "dea-course/dea03-etl-with-apache-spark/Py18. Join Customer Address.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/addresses/addresses_2024_11.tsv",
+      "bytes": 1735,
+      "sha256": "75fb10dfa3f34b860121b016d6244c4f387205b4f5ceaaf583314f7062ab3645",
+      "format": "tsv",
+      "records": 26,
+      "columns": [
+        "customer_id",
+        "address_type",
+        "address_line_1",
+        "city",
+        "state",
+        "postcode"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          6
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": true,
+      "family": "gizmobox",
+      "dataset": "addresses",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/01. Set-up Project Environment.sql",
+        "dea-course/dea03-etl-with-apache-spark/05. Extract Addresses Data - CSV via read_files Function.sql",
+        "dea-course/dea03-etl-with-apache-spark/08. Extract Data using Python.python",
+        "dea-course/dea03-etl-with-apache-spark/14. Transform Addresses Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/18. Join Customer Address.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py05. Extract Addresses Data - CSV.python",
+        "dea-course/dea03-etl-with-apache-spark/Py14. Transform Addresses Data.python",
+        "dea-course/dea03-etl-with-apache-spark/Py18. Join Customer Address.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/addresses/addresses_2024_12.tsv",
+      "bytes": 1706,
+      "sha256": "06d7613373a872a3814f678c90d35022dc42ed08569d1c638591d38270fe6f98",
+      "format": "tsv",
+      "records": 24,
+      "columns": [
+        "customer_id",
+        "address_type",
+        "address_line_1",
+        "city",
+        "state",
+        "postcode"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          6
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": true,
+      "family": "gizmobox",
+      "dataset": "addresses",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/01. Set-up Project Environment.sql",
+        "dea-course/dea03-etl-with-apache-spark/05. Extract Addresses Data - CSV via read_files Function.sql",
+        "dea-course/dea03-etl-with-apache-spark/08. Extract Data using Python.python",
+        "dea-course/dea03-etl-with-apache-spark/14. Transform Addresses Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/18. Join Customer Address.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py05. Extract Addresses Data - CSV.python",
+        "dea-course/dea03-etl-with-apache-spark/Py14. Transform Addresses Data.python",
+        "dea-course/dea03-etl-with-apache-spark/Py18. Join Customer Address.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/addresses/addresses_2025_01.tsv",
+      "bytes": 1136,
+      "sha256": "e2b9d6003690d9a36ddf5809fd0c1ebc0c69b50e0fff0bb31e67f5b397b24dde",
+      "format": "tsv",
+      "records": 16,
+      "columns": [
+        "customer_id",
+        "address_type",
+        "address_line_1",
+        "city",
+        "state",
+        "postcode"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          6
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": true,
+      "family": "gizmobox",
+      "dataset": "addresses",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/01. Set-up Project Environment.sql",
+        "dea-course/dea03-etl-with-apache-spark/05. Extract Addresses Data - CSV via read_files Function.sql",
+        "dea-course/dea03-etl-with-apache-spark/08. Extract Data using Python.python",
+        "dea-course/dea03-etl-with-apache-spark/14. Transform Addresses Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/18. Join Customer Address.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py05. Extract Addresses Data - CSV.python",
+        "dea-course/dea03-etl-with-apache-spark/Py14. Transform Addresses Data.python",
+        "dea-course/dea03-etl-with-apache-spark/Py18. Join Customer Address.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers/customers_2024_10.json",
+      "bytes": 4389,
+      "sha256": "5bffe1ac1be63e53e5b83f9e7a2d2772f0a6a828a4abd987ed3b4e6ade71c51f",
+      "format": "jsonl",
+      "records": 20,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int",
+          "null"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "null",
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "null",
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 20,
+      "family": "gizmobox",
+      "dataset": "customers",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/01. Ingest Customers Stream.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/02. Ingest Customers Auto Loader.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/03. Ingest Customers Auto Loader File Options.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/04. Ingest Customers Auto Loader Schema Evolution.python",
+        "dea-course/dea03-etl-with-apache-spark/02. Extract Customers Data - JSON.sql",
+        "dea-course/dea03-etl-with-apache-spark/08. Extract Data using Python.python",
+        "dea-course/dea03-etl-with-apache-spark/09. Data Profiling.sql",
+        "dea-course/dea03-etl-with-apache-spark/10. Transform Customers Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/18. Join Customer Address.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py02. Extract Customers Data - JSON.python",
+        "dea-course/dea03-etl-with-apache-spark/Py10. Transform Customers Data.python",
+        "dea-course/dea03-etl-with-apache-spark/Py18. Join Customer Address.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers/customers_2024_11.json",
+      "bytes": 3327,
+      "sha256": "0975ad63cfa55e46459057fc15f8cd08e2acbe2b0a7adfaf5af1c413d286f0e8",
+      "format": "jsonl",
+      "records": 15,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int",
+          "null"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "null",
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 15,
+      "family": "gizmobox",
+      "dataset": "customers",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/01. Ingest Customers Stream.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/02. Ingest Customers Auto Loader.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/03. Ingest Customers Auto Loader File Options.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/04. Ingest Customers Auto Loader Schema Evolution.python",
+        "dea-course/dea03-etl-with-apache-spark/02. Extract Customers Data - JSON.sql",
+        "dea-course/dea03-etl-with-apache-spark/08. Extract Data using Python.python",
+        "dea-course/dea03-etl-with-apache-spark/09. Data Profiling.sql",
+        "dea-course/dea03-etl-with-apache-spark/10. Transform Customers Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/18. Join Customer Address.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py02. Extract Customers Data - JSON.python",
+        "dea-course/dea03-etl-with-apache-spark/Py10. Transform Customers Data.python",
+        "dea-course/dea03-etl-with-apache-spark/Py18. Join Customer Address.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers/customers_2024_12.json",
+      "bytes": 3081,
+      "sha256": "15d60911a261098d415d009b534c406eaa1b414b32a8b6dd0e787c3ce183c8df",
+      "format": "jsonl",
+      "records": 14,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "null",
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "null",
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 14,
+      "family": "gizmobox",
+      "dataset": "customers",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/01. Ingest Customers Stream.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/02. Ingest Customers Auto Loader.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/03. Ingest Customers Auto Loader File Options.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/04. Ingest Customers Auto Loader Schema Evolution.python",
+        "dea-course/dea03-etl-with-apache-spark/02. Extract Customers Data - JSON.sql",
+        "dea-course/dea03-etl-with-apache-spark/08. Extract Data using Python.python",
+        "dea-course/dea03-etl-with-apache-spark/09. Data Profiling.sql",
+        "dea-course/dea03-etl-with-apache-spark/10. Transform Customers Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/18. Join Customer Address.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py02. Extract Customers Data - JSON.python",
+        "dea-course/dea03-etl-with-apache-spark/Py10. Transform Customers Data.python",
+        "dea-course/dea03-etl-with-apache-spark/Py18. Join Customer Address.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers/customers_2025_01.json",
+      "bytes": 2868,
+      "sha256": "40102069938c0783dde49047c9dcf9015113aa828ff6f6c176c9a1355422131c",
+      "format": "jsonl",
+      "records": 13,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "null",
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 13,
+      "family": "gizmobox",
+      "dataset": "customers",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/01. Ingest Customers Stream.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/02. Ingest Customers Auto Loader.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/03. Ingest Customers Auto Loader File Options.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/04. Ingest Customers Auto Loader Schema Evolution.python",
+        "dea-course/dea03-etl-with-apache-spark/02. Extract Customers Data - JSON.sql",
+        "dea-course/dea03-etl-with-apache-spark/08. Extract Data using Python.python",
+        "dea-course/dea03-etl-with-apache-spark/09. Data Profiling.sql",
+        "dea-course/dea03-etl-with-apache-spark/10. Transform Customers Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/18. Join Customer Address.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py02. Extract Customers Data - JSON.python",
+        "dea-course/dea03-etl-with-apache-spark/Py10. Transform Customers Data.python",
+        "dea-course/dea03-etl-with-apache-spark/Py18. Join Customer Address.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers_autoloader/customers_2024_10.json",
+      "bytes": 4389,
+      "sha256": "5bffe1ac1be63e53e5b83f9e7a2d2772f0a6a828a4abd987ed3b4e6ade71c51f",
+      "format": "jsonl",
+      "records": 20,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int",
+          "null"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "null",
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "null",
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 20,
+      "family": "gizmobox",
+      "dataset": "customers_autoloader",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/02. Ingest Customers Auto Loader.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/03. Ingest Customers Auto Loader File Options.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/04. Ingest Customers Auto Loader Schema Evolution.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers_autoloader/customers_2024_11.json",
+      "bytes": 3327,
+      "sha256": "0975ad63cfa55e46459057fc15f8cd08e2acbe2b0a7adfaf5af1c413d286f0e8",
+      "format": "jsonl",
+      "records": 15,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int",
+          "null"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "null",
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 15,
+      "family": "gizmobox",
+      "dataset": "customers_autoloader",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/02. Ingest Customers Auto Loader.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/03. Ingest Customers Auto Loader File Options.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/04. Ingest Customers Auto Loader Schema Evolution.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers_autoloader/customers_2024_12.json",
+      "bytes": 3081,
+      "sha256": "15d60911a261098d415d009b534c406eaa1b414b32a8b6dd0e787c3ce183c8df",
+      "format": "jsonl",
+      "records": 14,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "null",
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "null",
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 14,
+      "family": "gizmobox",
+      "dataset": "customers_autoloader",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/02. Ingest Customers Auto Loader.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/03. Ingest Customers Auto Loader File Options.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/04. Ingest Customers Auto Loader Schema Evolution.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers_autoloader/customers_2025_01.json",
+      "bytes": 2868,
+      "sha256": "40102069938c0783dde49047c9dcf9015113aa828ff6f6c176c9a1355422131c",
+      "format": "jsonl",
+      "records": 13,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "null",
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 13,
+      "family": "gizmobox",
+      "dataset": "customers_autoloader",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/02. Ingest Customers Auto Loader.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/03. Ingest Customers Auto Loader File Options.python",
+        "dea-course/dea03-etl-with-apache-spark-streaming/04. Ingest Customers Auto Loader Schema Evolution.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers_stream/customers_2024_10.json",
+      "bytes": 4389,
+      "sha256": "5bffe1ac1be63e53e5b83f9e7a2d2772f0a6a828a4abd987ed3b4e6ade71c51f",
+      "format": "jsonl",
+      "records": 20,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int",
+          "null"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "null",
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "null",
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 20,
+      "family": "gizmobox",
+      "dataset": "customers_stream",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/01. Ingest Customers Stream.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers_stream/customers_2024_11.json",
+      "bytes": 3327,
+      "sha256": "0975ad63cfa55e46459057fc15f8cd08e2acbe2b0a7adfaf5af1c413d286f0e8",
+      "format": "jsonl",
+      "records": 15,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int",
+          "null"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "null",
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 15,
+      "family": "gizmobox",
+      "dataset": "customers_stream",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/01. Ingest Customers Stream.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers_stream/customers_2024_12.json",
+      "bytes": 3081,
+      "sha256": "15d60911a261098d415d009b534c406eaa1b414b32a8b6dd0e787c3ce183c8df",
+      "format": "jsonl",
+      "records": 14,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "null",
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "null",
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 14,
+      "family": "gizmobox",
+      "dataset": "customers_stream",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/01. Ingest Customers Stream.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/customers_stream/customers_2025_01.json",
+      "bytes": 2868,
+      "sha256": "40102069938c0783dde49047c9dcf9015113aa828ff6f6c176c9a1355422131c",
+      "format": "jsonl",
+      "records": 13,
+      "columns": [
+        "created_timestamp",
+        "customer_id",
+        "customer_name",
+        "date_of_birth",
+        "email",
+        "member_since",
+        "telephone"
+      ],
+      "schema_hints": {
+        "created_timestamp": [
+          "str"
+        ],
+        "customer_id": [
+          "int"
+        ],
+        "customer_name": [
+          "str"
+        ],
+        "date_of_birth": [
+          "str"
+        ],
+        "email": [
+          "str"
+        ],
+        "member_since": [
+          "str"
+        ],
+        "telephone": [
+          "null",
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 13,
+      "family": "gizmobox",
+      "dataset": "customers_stream",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark-streaming/01. Ingest Customers Stream.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/2344.png",
+      "bytes": 28051,
+      "sha256": "0952ac19c3e470ab96537ca443165f7025838657565b2f1acd1e134cd886451a",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/3409.png",
+      "bytes": 30053,
+      "sha256": "aa633fde3bbff037e178ce7f2610a284725fff3d2e7a024f8aefa4741f03ec5f",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/3889.png",
+      "bytes": 26708,
+      "sha256": "d7c1e08e185673927f4933167c52042024f7afd2f09ac41f369f3ca5003c01f9",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/4858.png",
+      "bytes": 28578,
+      "sha256": "aaffd5e0fbccf82c00e8c2f3467293174c0c73334be1f8ad6098719a257da024",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/5011.png",
+      "bytes": 27999,
+      "sha256": "26c004714d3bf73455b7c724d7ea4ff51bc15d50ed5de1a47cae9d6dfb10ca12",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/5028.png",
+      "bytes": 26098,
+      "sha256": "f6b3d385d5b03361cbf81f48fb70056f7a9cbbf043520a2e51e6e97a1737b3fa",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/5816.png",
+      "bytes": 28393,
+      "sha256": "6eb5378b1ecc797a2014a117ca09dc776f9c0ba5b0d7dffd6fd25a5b655a3abf",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/6627.png",
+      "bytes": 28367,
+      "sha256": "e5f2cf2d089e42dba32b2ca0c22e4e4c7afb1ec6b01926ca5bdeb8311826f1d2",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/7207.png",
+      "bytes": 28981,
+      "sha256": "2069a2174fe571e1c4db526092eeaace5b1dd2ad16bfcdbd21fc4dfad825e0d1",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/8539.png",
+      "bytes": 28550,
+      "sha256": "aa47ecd075762e08abc29459852e39e492d904b2173996fcb54b788db588b5b2",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/8580.png",
+      "bytes": 28454,
+      "sha256": "678c356edc2f11edf380fcfce1ab7417c0b48295acaa9295c8b6608dac460e8c",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/9018.png",
+      "bytes": 28641,
+      "sha256": "2b2e72fec8382088601f69314662d63820664aaf7aae0d9c18862c0d93604e62",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/9084.png",
+      "bytes": 27683,
+      "sha256": "e993009cb1c60624776a2eb98cbca95cfd0aeb7046fe12299add503e993143d2",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/9179.png",
+      "bytes": 29127,
+      "sha256": "76bb787aeb19f24dc86efecd6642c46f78b1400ac6004471fcd65d752e7256de",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/9247.png",
+      "bytes": 27285,
+      "sha256": "613cc639dad38f2f6812853483c81d47fa323bd8b3f48c49859794897decb0db",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/9263.png",
+      "bytes": 25608,
+      "sha256": "db3a6b2cd09eaa6a990e68a06e50a6478f5864f0ba06500adadeb7da88f29d9b",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-10/9706.png",
+      "bytes": 27980,
+      "sha256": "c164ccf6eabc2285be8ce9d42c52e9870624b81129c4b884e898b722ec0553ee",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/1987.png",
+      "bytes": 27988,
+      "sha256": "04d885e81bf3497482b9dc164e9a58e62d2fdabaa7a4b0841d7c8d65433c463a",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/2054.png",
+      "bytes": 28186,
+      "sha256": "f09b92a9d75a1a50d009bf06e965297d1dbc093b36c683c61eab1553ca877970",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/2703.png",
+      "bytes": 26446,
+      "sha256": "4ce67069dde6a1f63079fd36855e13b5c4aab6f166af2224842629220ea53fcd",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/3712.png",
+      "bytes": 28137,
+      "sha256": "2b7df22ab75d5700305490677ae9e7fbf776fe7230175d2fccf0dc33688c7717",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/3892.png",
+      "bytes": 28423,
+      "sha256": "a35bdcfabd7829b50609494bef8c3470281483d19bdd1fd3850e8f118f494db5",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/4468.png",
+      "bytes": 27066,
+      "sha256": "7792f2763b8f9cab520843498f17d98b9aa292aa7398e3bfc3d02c15e92f613e",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/4761.png",
+      "bytes": 28498,
+      "sha256": "252337172046664f85908384d6d0e0247bd409bd55c701afb5abe365fa37dfe8",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/4914.png",
+      "bytes": 28665,
+      "sha256": "b330ce5fb4b58c644f3d0a7b4d2b2735f2d76c5c9fb0b5dc7d2a1a747a1a9b70",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/4996.png",
+      "bytes": 28124,
+      "sha256": "46dce76d9ec535f924f29f224f3f4855430f24b26aafc2f2884399c89cb30f9f",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/5204.png",
+      "bytes": 29873,
+      "sha256": "73c962eea3c678f1f45ba79220ec0ff6ba22fadfc79c363fb14ca2e015b141c9",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/7123.png",
+      "bytes": 29529,
+      "sha256": "f5e8bb94aa23c6d2fcb0f6a0c664a8cb7720fa70577f6546796b6995759e7a8e",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/7295.png",
+      "bytes": 28032,
+      "sha256": "1717053c49f2193345b28f0de0a80327a31326c9317bef5eebb5feb37c715fd3",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-11/7803.png",
+      "bytes": 27702,
+      "sha256": "efbe16523164bfb2b84af9f37ec4a3acdefe485a5dcc85d2bf056561262a6afb",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/1211.png",
+      "bytes": 27806,
+      "sha256": "ed70939ab3cebe6d5c5b9544d8954484af682f2d801238dd38b6d8125f68d60a",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/2141.png",
+      "bytes": 28278,
+      "sha256": "a98e83bf81eaabc12fbd3eddf07c729027254f2b47b3de0c5838a86e7ebc5c88",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/2639.png",
+      "bytes": 28689,
+      "sha256": "cccec8e4d44ea1e31edd440937803c12a780e8aaecdb289dcd95082a344d67ab",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/3084.png",
+      "bytes": 26340,
+      "sha256": "6eee2209c2dd8a44191fbe626e41ece3883ef0b5378289eb06407aa379f7a0f3",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/3532.png",
+      "bytes": 27212,
+      "sha256": "c2ed296b2dd254c2bc367442f76c881ea65db5f51811cef2f1ba406824494c76",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/5592.png",
+      "bytes": 27914,
+      "sha256": "33954f39410d23b6cd7b7788d9e2bb30d6668cf440669b6cd140977d93dc1f1c",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/6384.png",
+      "bytes": 28866,
+      "sha256": "d1089bfc4268552c3999e56f46c8e277d067597e3f8dd23b47b276c3854682ec",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/6406.png",
+      "bytes": 25106,
+      "sha256": "32a8701384f934cb05c3ab456e9fe438e0e488618593f98babf80bf37f13fca7",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/6973.png",
+      "bytes": 28739,
+      "sha256": "7f96a50d5e360aaf2075ca218266daa059f55d42ad60a46a0e07c98b1a301cd0",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/7829.png",
+      "bytes": 29480,
+      "sha256": "4cafdd7566f065e80cfa877a554b8b9cab31386ff8ef294b6d8983f08a44de3e",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/7997.png",
+      "bytes": 28400,
+      "sha256": "e978b3a8784b4e76eb2a3ca5dea7ad8463d0b2ee13b4bdacdc47569d7adce686",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2024-12/9687.png",
+      "bytes": 29911,
+      "sha256": "30bf0cc0ca8caf437c0ac14a12d3ba667aace279b5c80c522c5715b5b980c6e0",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2025-01/3295.png",
+      "bytes": 28333,
+      "sha256": "fcfc1cb83a41cce8e142f6f38804496085d3484c980d7d461ab28d0e9531f795",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2025-01/4973.png",
+      "bytes": 28818,
+      "sha256": "cd3748b2b42d319a3c67695e234bae6717a08d0700296e22dcfd303b7405c001",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2025-01/5953.png",
+      "bytes": 27550,
+      "sha256": "4088cbd06e9b1c0dc31213f16d55537275ec801a44670d7ac64e99a24860584a",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2025-01/6167.png",
+      "bytes": 27761,
+      "sha256": "cce086c03446db9318970bfbc76e68b25ea4b33858ec34007b7590c2faaf2d9a",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2025-01/7007.png",
+      "bytes": 28248,
+      "sha256": "c82d49c9410c648d17b954c17d806e21b6a51ec57d783fb6d1d15bac3aa659be",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2025-01/8845.png",
+      "bytes": 28669,
+      "sha256": "7a207efdb136cde5415e67de21af3dc142fd3518fe0b570d38f3378247bb69dc",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2025-01/9150.png",
+      "bytes": 28012,
+      "sha256": "95e5cd104355a51811ac46e18b3b622273c6fc7e98eec899f5220633a508b5b5",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/memberships/2025-01/9605.png",
+      "bytes": 28858,
+      "sha256": "a602ff60e520641c08256218a4f0e7b91c99945340ea84bf607f13766b604fd9",
+      "format": "png",
+      "records": null,
+      "columns": [],
+      "schema_hints": {
+        "width": 600,
+        "height": 350,
+        "bit_depth": 8,
+        "color_type": 2
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "family": "gizmobox",
+      "dataset": "memberships",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/04. Extract Memberships Data - Images.sql",
+        "dea-course/dea03-etl-with-apache-spark/13. Transform Memberships Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py04. Extract Memberships Data - Images.python",
+        "dea-course/dea03-etl-with-apache-spark/Py13. Transform Memberships Data.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/orders/orders_2024_10.json",
+      "bytes": 4844,
+      "sha256": "568dd65befa095ec25a2fa9a50953dd071fee4dc2811ebf9b5c13b57dd84c519",
+      "format": "jsonl",
+      "records": 12,
+      "columns": [
+        "customer_id",
+        "items",
+        "order_date",
+        "order_id",
+        "order_status",
+        "payment_method",
+        "total_amount",
+        "transaction_timestamp"
+      ],
+      "schema_hints": {
+        "customer_id": [
+          "int"
+        ],
+        "items": [
+          "list"
+        ],
+        "order_date": [
+          "str"
+        ],
+        "order_id": [
+          "int"
+        ],
+        "order_status": [
+          "str"
+        ],
+        "payment_method": [
+          "str"
+        ],
+        "total_amount": [
+          "int"
+        ],
+        "transaction_timestamp": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [
+        9
+      ],
+      "role": "local_input",
+      "nonblank_lines": 13,
+      "family": "gizmobox",
+      "dataset": "orders",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/03. Extract Orders Data - Complex JSON as Text.sql",
+        "dea-course/dea03-etl-with-apache-spark/15. Query Orders Data - JSON Strings.sql",
+        "dea-course/dea03-etl-with-apache-spark/16. Transform Orders Data - String to JSON.sql",
+        "dea-course/dea03-etl-with-apache-spark/17. Transform Orders Data - Explode Arrays.sql",
+        "dea-course/dea03-etl-with-apache-spark/19. Monthly Order Summary.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py03. Extract Orders Data - Complex JSON as Text.python",
+        "dea-course/dea03-etl-with-apache-spark/Py16. Transform Orders Data - String to JSON.python",
+        "dea-course/dea03-etl-with-apache-spark/Py17. Transform Orders Data - Explode Arrays.python",
+        "dea-course/dea03-etl-with-apache-spark/Py19. Monthly Order Summary.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/orders/orders_2024_11.json",
+      "bytes": 8515,
+      "sha256": "3a5c22cf352300a2dd9f9083ee6cbedba5006dd1e6dbadff0b24d41670c98504",
+      "format": "jsonl",
+      "records": 21,
+      "columns": [
+        "customer_id",
+        "items",
+        "order_date",
+        "order_id",
+        "order_status",
+        "payment_method",
+        "total_amount",
+        "transaction_timestamp"
+      ],
+      "schema_hints": {
+        "customer_id": [
+          "int"
+        ],
+        "items": [
+          "list"
+        ],
+        "order_date": [
+          "str"
+        ],
+        "order_id": [
+          "int"
+        ],
+        "order_status": [
+          "str"
+        ],
+        "payment_method": [
+          "str"
+        ],
+        "total_amount": [
+          "int"
+        ],
+        "transaction_timestamp": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [
+        11
+      ],
+      "role": "local_input",
+      "nonblank_lines": 22,
+      "family": "gizmobox",
+      "dataset": "orders",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/03. Extract Orders Data - Complex JSON as Text.sql",
+        "dea-course/dea03-etl-with-apache-spark/15. Query Orders Data - JSON Strings.sql",
+        "dea-course/dea03-etl-with-apache-spark/16. Transform Orders Data - String to JSON.sql",
+        "dea-course/dea03-etl-with-apache-spark/17. Transform Orders Data - Explode Arrays.sql",
+        "dea-course/dea03-etl-with-apache-spark/19. Monthly Order Summary.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py03. Extract Orders Data - Complex JSON as Text.python",
+        "dea-course/dea03-etl-with-apache-spark/Py16. Transform Orders Data - String to JSON.python",
+        "dea-course/dea03-etl-with-apache-spark/Py17. Transform Orders Data - Explode Arrays.python",
+        "dea-course/dea03-etl-with-apache-spark/Py19. Monthly Order Summary.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/orders/orders_2024_12.json",
+      "bytes": 11443,
+      "sha256": "7fb460c1a55cec94bfbdef77639b16a20101496552ebf18a1433f6f4e0f3d922",
+      "format": "jsonl",
+      "records": 29,
+      "columns": [
+        "customer_id",
+        "items",
+        "order_date",
+        "order_id",
+        "order_status",
+        "payment_method",
+        "total_amount",
+        "transaction_timestamp"
+      ],
+      "schema_hints": {
+        "customer_id": [
+          "int"
+        ],
+        "items": [
+          "list"
+        ],
+        "order_date": [
+          "str"
+        ],
+        "order_id": [
+          "int"
+        ],
+        "order_status": [
+          "str"
+        ],
+        "payment_method": [
+          "str"
+        ],
+        "total_amount": [
+          "int"
+        ],
+        "transaction_timestamp": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [
+        21
+      ],
+      "role": "local_input",
+      "nonblank_lines": 30,
+      "family": "gizmobox",
+      "dataset": "orders",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/03. Extract Orders Data - Complex JSON as Text.sql",
+        "dea-course/dea03-etl-with-apache-spark/15. Query Orders Data - JSON Strings.sql",
+        "dea-course/dea03-etl-with-apache-spark/16. Transform Orders Data - String to JSON.sql",
+        "dea-course/dea03-etl-with-apache-spark/17. Transform Orders Data - Explode Arrays.sql",
+        "dea-course/dea03-etl-with-apache-spark/19. Monthly Order Summary.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py03. Extract Orders Data - Complex JSON as Text.python",
+        "dea-course/dea03-etl-with-apache-spark/Py16. Transform Orders Data - String to JSON.python",
+        "dea-course/dea03-etl-with-apache-spark/Py17. Transform Orders Data - Explode Arrays.python",
+        "dea-course/dea03-etl-with-apache-spark/Py19. Monthly Order Summary.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/orders/orders_2025_01.json",
+      "bytes": 14231,
+      "sha256": "72634bb3207bddbc9c211b20997f1cce4d373539a303f3c2b1c80dd8fd079255",
+      "format": "jsonl",
+      "records": 33,
+      "columns": [
+        "customer_id",
+        "items",
+        "order_date",
+        "order_id",
+        "order_status",
+        "payment_method",
+        "total_amount",
+        "transaction_timestamp"
+      ],
+      "schema_hints": {
+        "customer_id": [
+          "int"
+        ],
+        "items": [
+          "list"
+        ],
+        "order_date": [
+          "str"
+        ],
+        "order_id": [
+          "int"
+        ],
+        "order_status": [
+          "str"
+        ],
+        "payment_method": [
+          "str"
+        ],
+        "total_amount": [
+          "int"
+        ],
+        "transaction_timestamp": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [
+        2,
+        8
+      ],
+      "role": "local_input",
+      "nonblank_lines": 35,
+      "family": "gizmobox",
+      "dataset": "orders",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/03. Extract Orders Data - Complex JSON as Text.sql",
+        "dea-course/dea03-etl-with-apache-spark/15. Query Orders Data - JSON Strings.sql",
+        "dea-course/dea03-etl-with-apache-spark/16. Transform Orders Data - String to JSON.sql",
+        "dea-course/dea03-etl-with-apache-spark/17. Transform Orders Data - Explode Arrays.sql",
+        "dea-course/dea03-etl-with-apache-spark/19. Monthly Order Summary.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py03. Extract Orders Data - Complex JSON as Text.python",
+        "dea-course/dea03-etl-with-apache-spark/Py16. Transform Orders Data - String to JSON.python",
+        "dea-course/dea03-etl-with-apache-spark/Py17. Transform Orders Data - Explode Arrays.python",
+        "dea-course/dea03-etl-with-apache-spark/Py19. Monthly Order Summary.python"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/payments/payments_2024_10.csv",
+      "bytes": 487,
+      "sha256": "e3f38e0aa9ca86ccd43051fd5a3c4be0027a90e298667bf498045f7392e3814a",
+      "format": "csv",
+      "records": 13,
+      "columns": [
+        "_c0",
+        "_c1",
+        "_c2",
+        "_c3",
+        "_c4"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          5
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": false,
+      "family": "gizmobox",
+      "dataset": "payments",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/06. Extract Payments Data - CSV via External Table.sql",
+        "dea-course/dea03-etl-with-apache-spark/11. Transform Payments Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/20. User Defined Functions.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py06. Extract Payments Data - CSV.python",
+        "dea-course/dea03-etl-with-apache-spark/Py11. Transform Payments Data.python",
+        "dea-course/dea08-delta-sharing-and-lakehouse-federation/01.Configure Query Federation.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/payments/payments_2024_11.csv",
+      "bytes": 773,
+      "sha256": "29d152e9f625d7d02396e6278f52eb1d72b89522435e2f6adc10ef911faeb3cc",
+      "format": "csv",
+      "records": 20,
+      "columns": [
+        "_c0",
+        "_c1",
+        "_c2",
+        "_c3",
+        "_c4"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          5
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": false,
+      "family": "gizmobox",
+      "dataset": "payments",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/06. Extract Payments Data - CSV via External Table.sql",
+        "dea-course/dea03-etl-with-apache-spark/11. Transform Payments Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/20. User Defined Functions.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py06. Extract Payments Data - CSV.python",
+        "dea-course/dea03-etl-with-apache-spark/Py11. Transform Payments Data.python",
+        "dea-course/dea08-delta-sharing-and-lakehouse-federation/01.Configure Query Federation.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/payments/payments_2024_12.csv",
+      "bytes": 1157,
+      "sha256": "6c93a96b2d30d8b6d42acb02f3a02638720d2a9bcea8a9f9db8b878652b520cf",
+      "format": "csv",
+      "records": 30,
+      "columns": [
+        "_c0",
+        "_c1",
+        "_c2",
+        "_c3",
+        "_c4"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          5
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": false,
+      "family": "gizmobox",
+      "dataset": "payments",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/06. Extract Payments Data - CSV via External Table.sql",
+        "dea-course/dea03-etl-with-apache-spark/11. Transform Payments Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/20. User Defined Functions.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py06. Extract Payments Data - CSV.python",
+        "dea-course/dea03-etl-with-apache-spark/Py11. Transform Payments Data.python",
+        "dea-course/dea08-delta-sharing-and-lakehouse-federation/01.Configure Query Federation.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/payments/payments_2025_01.csv",
+      "bytes": 1084,
+      "sha256": "cf063b145affe0e5f3e8ce4eb97889a3cd7d09ae7ef958da20703221789caaeb",
+      "format": "csv",
+      "records": 28,
+      "columns": [
+        "_c0",
+        "_c1",
+        "_c2",
+        "_c3",
+        "_c4"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          5
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": false,
+      "family": "gizmobox",
+      "dataset": "payments",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/06. Extract Payments Data - CSV via External Table.sql",
+        "dea-course/dea03-etl-with-apache-spark/11. Transform Payments Data.sql",
+        "dea-course/dea03-etl-with-apache-spark/20. User Defined Functions.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py06. Extract Payments Data - CSV.python",
+        "dea-course/dea03-etl-with-apache-spark/Py11. Transform Payments Data.python",
+        "dea-course/dea08-delta-sharing-and-lakehouse-federation/01.Configure Query Federation.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "gizmobox/refunds/refunds_azure_sql_ddl.sql",
+      "bytes": 1016,
+      "sha256": "381b2dd0af7030cf52c46a562645ca7177b1cdbadea55cb453577694a1949feb",
+      "format": "sql",
+      "records": null,
+      "columns": [
+        "refund_id",
+        "payment_id",
+        "refund_timestamp",
+        "refund_amount",
+        "refund_reason"
+      ],
+      "schema_hints": {
+        "table": "Refunds",
+        "columns": [
+          "refund_id",
+          "payment_id",
+          "refund_timestamp",
+          "refund_amount",
+          "refund_reason"
+        ],
+        "records": "INSERT tuples; not counted as data-file records",
+        "known_issue": "Line 6 ends with NOT NULL. (period), preserved verbatim",
+        "root_copy": "scripts/sql/refunds_azure_sql_ddl.sql"
+      },
+      "malformed_line_numbers": [],
+      "role": "local_external_database_setup",
+      "family": "gizmobox",
+      "dataset": "refunds",
+      "lessons": [
+        "dea-course/dea03-etl-with-apache-spark/07. Extract Refunds Data - via JDBC.sql",
+        "dea-course/dea03-etl-with-apache-spark/Py07. Extract Refunds Data - via JDBC.python",
+        "dea-course/dea03-etl-with-apache-spark/Py12. Transform Refunds Data.python",
+        "dea-course/dea08-delta-sharing-and-lakehouse-federation/01.Configure Query Federation.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "stock_prices/stock_prices_day1.json",
+      "bytes": 242,
+      "sha256": "fa5587aa3a3844d9b6a344e13c691e750e72b16ac5a95c97cc8d29995306101d",
+      "format": "jsonl",
+      "records": 3,
+      "columns": [
+        "price",
+        "status",
+        "stock_id",
+        "trading_date"
+      ],
+      "schema_hints": {
+        "price": [
+          "float"
+        ],
+        "status": [
+          "str"
+        ],
+        "stock_id": [
+          "str"
+        ],
+        "trading_date": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 3,
+      "family": "stock_prices",
+      "dataset": "stock_prices",
+      "lessons": [
+        "dea-course/dea04-delta-lake/06. COPY INTO And MERGE Commands.sql",
+        "dea-course/dea04-delta-lake/07. OPTIMIZE and ZORDER - Compaction.sql",
+        "dea-course/dea04-delta-lake/08. VACUUM - Remove unused files.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "stock_prices/stock_prices_day2.json",
+      "bytes": 160,
+      "sha256": "756bbae2da3113c44d94e4b4862899cc69de371747e26b78a35d2f1fbbe07b5c",
+      "format": "jsonl",
+      "records": 2,
+      "columns": [
+        "price",
+        "status",
+        "stock_id",
+        "trading_date"
+      ],
+      "schema_hints": {
+        "price": [
+          "float"
+        ],
+        "status": [
+          "str"
+        ],
+        "stock_id": [
+          "str"
+        ],
+        "trading_date": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 2,
+      "family": "stock_prices",
+      "dataset": "stock_prices",
+      "lessons": [
+        "dea-course/dea04-delta-lake/06. COPY INTO And MERGE Commands.sql",
+        "dea-course/dea04-delta-lake/07. OPTIMIZE and ZORDER - Compaction.sql",
+        "dea-course/dea04-delta-lake/08. VACUUM - Remove unused files.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "stock_prices/stock_prices_day3.json",
+      "bytes": 483,
+      "sha256": "bedaa05d4909b2e605cb6811802d928f68e2e802092c0ebf9ff4ca945ecca11d",
+      "format": "jsonl",
+      "records": 6,
+      "columns": [
+        "price",
+        "status",
+        "stock_id",
+        "trading_date"
+      ],
+      "schema_hints": {
+        "price": [
+          "float",
+          "null"
+        ],
+        "status": [
+          "str"
+        ],
+        "stock_id": [
+          "str"
+        ],
+        "trading_date": [
+          "str"
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "nonblank_lines": 6,
+      "family": "stock_prices",
+      "dataset": "stock_prices",
+      "lessons": [
+        "dea-course/dea04-delta-lake/06. COPY INTO And MERGE Commands.sql",
+        "dea-course/dea04-delta-lake/07. OPTIMIZE and ZORDER - Compaction.sql",
+        "dea-course/dea04-delta-lake/08. VACUUM - Remove unused files.sql"
+      ],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "top_tech_companies/top_tech_companies_1.csv",
+      "bytes": 148,
+      "sha256": "e58e21ac0019eecab8cd299b9d773e575f9303124c951faeacb9e7d1870eb5a8",
+      "format": "csv",
+      "records": 5,
+      "columns": [
+        "company_name",
+        "founded_date",
+        "country"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          3
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": true,
+      "family": "top_tech_companies",
+      "dataset": "top_tech_companies",
+      "lessons": [],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    },
+    {
+      "path": "top_tech_companies/top_tech_companies_2.csv",
+      "bytes": 64,
+      "sha256": "4d598a00ccbc321c9358c82537a93d96c21c5faaec143d40b96a7a3737bb31a3",
+      "format": "csv",
+      "records": 1,
+      "columns": [
+        "company_name",
+        "founded_date",
+        "country"
+      ],
+      "schema_hints": {
+        "column_types": "text; no coercion",
+        "row_widths": [
+          3
+        ]
+      },
+      "malformed_line_numbers": [],
+      "role": "local_input",
+      "header": true,
+      "family": "top_tech_companies",
+      "dataset": "top_tech_companies",
+      "lessons": [],
+      "lesson_evidence": "family and dataset tokens in archived command source"
+    }
+  ],
+  "family_counts": {
+    "circuitbox": 6,
+    "gizmobox": 75,
+    "stock_prices": 3,
+    "top_tech_companies": 2
+  },
+  "intentional_duplicate_sets": [
+    {
+      "sha256": "0975ad63cfa55e46459057fc15f8cd08e2acbe2b0a7adfaf5af1c413d286f0e8",
+      "paths": [
+        "gizmobox/customers/customers_2024_11.json",
+        "gizmobox/customers_autoloader/customers_2024_11.json",
+        "gizmobox/customers_stream/customers_2024_11.json"
+      ],
+      "intentional": true,
+      "reason": "Separate batch, streaming and Auto Loader ingestion lanes"
+    },
+    {
+      "sha256": "15d60911a261098d415d009b534c406eaa1b414b32a8b6dd0e787c3ce183c8df",
+      "paths": [
+        "gizmobox/customers/customers_2024_12.json",
+        "gizmobox/customers_autoloader/customers_2024_12.json",
+        "gizmobox/customers_stream/customers_2024_12.json"
+      ],
+      "intentional": true,
+      "reason": "Separate batch, streaming and Auto Loader ingestion lanes"
+    },
+    {
+      "sha256": "40102069938c0783dde49047c9dcf9015113aa828ff6f6c176c9a1355422131c",
+      "paths": [
+        "gizmobox/customers/customers_2025_01.json",
+        "gizmobox/customers_autoloader/customers_2025_01.json",
+        "gizmobox/customers_stream/customers_2025_01.json"
+      ],
+      "intentional": true,
+      "reason": "Separate batch, streaming and Auto Loader ingestion lanes"
+    },
+    {
+      "sha256": "5bffe1ac1be63e53e5b83f9e7a2d2772f0a6a828a4abd987ed3b4e6ade71c51f",
+      "paths": [
+        "gizmobox/customers/customers_2024_10.json",
+        "gizmobox/customers_autoloader/customers_2024_10.json",
+        "gizmobox/customers_stream/customers_2024_10.json"
+      ],
+      "intentional": true,
+      "reason": "Separate batch, streaming and Auto Loader ingestion lanes"
+    }
+  ],
+  "provenance": {
+    "archive": "docs/originals/dea-course-v5.dbc",
+    "relationships": "Command-source token matches; not execution verification",
+    "archived_outputs": "Excluded: notebook results are historical, not local inputs",
+    "external_state": "Cloud storage, catalogs, tables, checkpoints and JDBC databases are external state, not supplied local datasets"
+  }
+}
