@@ -1,0 +1,3694 @@
+{
+  "document": {
+    "commands": [
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "df = spark.sql('''CREATE OR REPLACE TEMP VIEW tv_customers \n                  AS \n                  SELECT * FROM json.`/Volumes/gizmobox/landing/operational_data/customers`''')",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 10,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1734697925911,
+        "globalVars": {},
+        "guid": "87b3dddd-a285-4255-a51e-1df3348c5347",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "5c79326f-5872-402b-8da4-60185eceabe9",
+        "origId": 1753352661355686,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.640625,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [],
+          "datasetInfos": [
+            {
+              "name": "df",
+              "schema": {
+                "fields": [],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1734697924623,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1734697924550,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%sql\nSELECT * FROM tv_customers;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 5,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1734697950037,
+        "globalVars": {},
+        "guid": "687901dc-a1f9-47cb-b9fb-91d4fa5e2f15",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            62
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "implicitDf": true,
+          "rowLimit": 10000
+        },
+        "nuid": "eef0ece5-877c-4ee2-b139-a25aa39a0252",
+        "origId": 1753352661355687,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.7890625,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  "2024-10-17 16:12:27",
+                  9179,
+                  "Richard Cox",
+                  "1996-10-25",
+                  "devon84@mail.com",
+                  "2024-09-26",
+                  "+1 6680703335"
+                ],
+                [
+                  "2024-10-01 00:50:29",
+                  4858,
+                  "Carla Morton",
+                  "2004-06-21",
+                  "joseph88@mail.com",
+                  "2024-09-15",
+                  "+1 8616454195"
+                ],
+                [
+                  "2024-10-23 22:03:08",
+                  7207,
+                  "Billy Scott",
+                  "1997-03-17",
+                  "christopher30@mail.com",
+                  "2024-09-23",
+                  "+1 5544387564"
+                ],
+                [
+                  "2024-10-12 06:02:27",
+                  8539,
+                  "Lori Mason",
+                  "2002-11-01",
+                  "stephanie7@mail.com",
+                  "2024-09-12",
+                  "+1 0498301620"
+                ],
+                [
+                  "2024-10-24 13:03:13",
+                  9706,
+                  "Jennifer Haas",
+                  "2001-04-03",
+                  "benjamin55@mail.com",
+                  "2024-10-05",
+                  "+1 4725460000"
+                ],
+                [
+                  "2024-10-08 22:49:25",
+                  9263,
+                  "Joseph Keller",
+                  "2003-02-11",
+                  null,
+                  "2024-10-04",
+                  "+1 3817867756"
+                ],
+                [
+                  "2024-10-06 19:55:52",
+                  5028,
+                  "Jessica Harris",
+                  "2004-04-19",
+                  null,
+                  "2024-09-10",
+                  "+1 8604009935"
+                ],
+                [
+                  "2024-10-18 23:24:52",
+                  9018,
+                  "William Carter",
+                  "2003-09-05",
+                  "james70@gmail.com",
+                  "2024-10-08",
+                  "+1 1448753611"
+                ],
+                [
+                  "2024-10-21 13:20:26",
+                  8580,
+                  "Shannon Austin",
+                  "2002-03-22",
+                  "john30@gmail.com",
+                  "2024-10-07",
+                  "+1 4594705629"
+                ],
+                [
+                  "2024-10-02 14:53:40",
+                  3409,
+                  "Andrew Phillips",
+                  "2003-04-17",
+                  "peter73@yahoo.com",
+                  "2024-09-30",
+                  "+1 4079273853"
+                ],
+                [
+                  "2024-10-26 15:14:33",
+                  2344,
+                  "Martin Thomas DDS",
+                  "2002-05-01",
+                  "billy42@outlook.com",
+                  "2024-10-13",
+                  "+1 0201457151"
+                ],
+                [
+                  "2024-10-15 02:48:29",
+                  5011,
+                  "Rachel Thomas",
+                  "2003-02-17",
+                  "lauren59@yahoo.com",
+                  "2024-09-24",
+                  "+1 5437271621"
+                ],
+                [
+                  "2024-10-28 00:57:09",
+                  9247,
+                  "Dr. Daniel Hall",
+                  "2004-03-21",
+                  "tamara30@gmail.com",
+                  "2024-10-03",
+                  "+1 7544137170"
+                ],
+                [
+                  "2024-10-22 05:52:57",
+                  6627,
+                  "Candice Rosales",
+                  "2004-04-03",
+                  "amber79@example.org",
+                  "2024-10-15",
+                  "+1 4788451559"
+                ],
+                [
+                  "2024-10-06 19:55:52",
+                  5028,
+                  "Jessica Harris",
+                  "2004-04-19",
+                  null,
+                  "2024-09-10",
+                  "+1 8604009935"
+                ],
+                [
+                  "2024-10-08 03:30:53",
+                  5816,
+                  "Amy Morales",
+                  "1999-12-11",
+                  "daniel12@hotmail.com",
+                  "2024-09-17",
+                  "+46 4407385044"
+                ],
+                [
+                  "2024-10-15 01:27:54",
+                  9247,
+                  "Dr. Daniel Hall",
+                  "2004-03-21",
+                  "sheena11@alexander.com",
+                  "2024-09-15",
+                  "+46 7281991017"
+                ],
+                [
+                  "2024-10-09 18:54:00",
+                  3889,
+                  "Jennifer Jackson",
+                  "1995-10-30",
+                  null,
+                  "2024-09-16",
+                  "+68 2276996612"
+                ],
+                [
+                  "2024-10-10 16:53:44",
+                  9084,
+                  "Olivia Lyons",
+                  "1997-06-17",
+                  "johnsonmichael@yahoo.com",
+                  "2024-09-26",
+                  null
+                ],
+                [
+                  "2024-10-19 11:53:44",
+                  null,
+                  "John Smith",
+                  "1998-01-19",
+                  "john.smith@outlook.com",
+                  "2024-07-16",
+                  "+1 8762342456"
+                ],
+                [
+                  "2024-11-14 20:41:18",
+                  3892,
+                  "Jason Bridges",
+                  "2004-01-01",
+                  "nicole29@gmail.com",
+                  "2024-10-29",
+                  "+1 8220011928"
+                ],
+                [
+                  "2024-11-16 01:47:25",
+                  1987,
+                  "Amanda Alvarez",
+                  "1995-10-11",
+                  "eric40@outlook.com",
+                  "2024-10-27",
+                  "+1 9673066300"
+                ],
+                [
+                  "2024-11-19 14:03:09",
+                  5816,
+                  "Amy Morales",
+                  "1999-12-11",
+                  "katelyn82@example.org",
+                  "2024-11-04",
+                  "+1 4140982719"
+                ],
+                [
+                  "2024-11-09 14:52:31",
+                  5204,
+                  "Jennifer Nichols DDS",
+                  "1997-02-17",
+                  "joseph8@example.org",
+                  "2024-11-04",
+                  "+1 0383356328"
+                ],
+                [
+                  "2024-11-23 18:16:18",
+                  4468,
+                  "Mrs. Roberta Salas PhD",
+                  "1997-05-10",
+                  null,
+                  "2024-10-25",
+                  "+1 4679955118"
+                ],
+                [
+                  "2024-11-14 16:41:14",
+                  4761,
+                  "Timothy Smith",
+                  "1996-11-07",
+                  "joshua40@yahoo.com",
+                  "2024-11-03",
+                  "+1 9450920858"
+                ],
+                [
+                  "2024-11-07 22:20:00",
+                  2703,
+                  "Anthony Miller",
+                  "1997-11-02",
+                  null,
+                  "2024-11-05",
+                  "+1 1586310752"
+                ],
+                [
+                  "2024-11-12 12:57:38",
+                  4914,
+                  "Samantha Johnson",
+                  "1997-03-26",
+                  "theresa14@mail.com",
+                  "2024-10-13",
+                  "+1 4095003738"
+                ],
+                [
+                  "2024-11-08 02:26:42",
+                  7295,
+                  "Lauren Reed",
+                  "2001-08-11",
+                  "jeanette48@example.org",
+                  "2024-10-10",
+                  "+1 0104088765"
+                ],
+                [
+                  "2024-11-09 20:24:30",
+                  7803,
+                  "Katherine Lee",
+                  "2000-03-09",
+                  "jennifer85@mail.com",
+                  "2024-10-27",
+                  "+1 3119886866"
+                ],
+                [
+                  "2024-11-24 11:14:03",
+                  3712,
+                  "Robin Chavez",
+                  "1997-03-16",
+                  "lisa15@gmail.com",
+                  "2024-11-24",
+                  "+1 2654756919"
+                ],
+                [
+                  "2024-11-23 11:14:03",
+                  null,
+                  "Andrew Taylor",
+                  "1996-01-11",
+                  "andrew.taylor@gmail.com",
+                  "2024-11-21",
+                  "+1 1235447333"
+                ],
+                [
+                  "2024-11-03 17:22:56",
+                  2054,
+                  "Alan Price",
+                  "1998-08-25",
+                  "connor40@yahoo.com",
+                  "2024-10-14",
+                  "+1 3745642936"
+                ],
+                [
+                  "2024-11-09 07:14:17",
+                  7123,
+                  "Edgar Stevens",
+                  "2003-02-15",
+                  "kevin68@example.org",
+                  "2024-10-27",
+                  "+1 0793189847"
+                ],
+                [
+                  "2024-11-27 12:56:20",
+                  4996,
+                  "Brandon Reed",
+                  "1997-05-11",
+                  "handerson@barker.info",
+                  "2024-11-06",
+                  "+43 2750540511"
+                ],
+                [
+                  "2024-12-25 11:06:35",
+                  6973,
+                  "Tracy Cole",
+                  "1998-07-24",
+                  "tony46@mail.com",
+                  "2024-12-16",
+                  "+1 5515836612"
+                ],
+                [
+                  "2024-12-26 09:29:16",
+                  3532,
+                  "Holly Wilkinson",
+                  "2003-03-06",
+                  "lindsey61@yahoo.com",
+                  "2024-12-22",
+                  null
+                ],
+                [
+                  "2024-12-16 16:54:10",
+                  1211,
+                  "Jeremy Ball",
+                  "2002-03-26",
+                  "megan86@yahoo.com",
+                  "2024-12-01",
+                  "+1 5793543882"
+                ],
+                [
+                  "2024-12-07 18:09:58",
+                  7829,
+                  "Daniel Black",
+                  "1998-04-13",
+                  "sandra54@example.org",
+                  "2024-11-16",
+                  "+1 0933795082"
+                ],
+                [
+                  "2024-12-24 14:46:04",
+                  6384,
+                  "Jennifer Carrillo",
+                  "1994-12-18",
+                  "james34@yahoo.com",
+                  "2024-12-22",
+                  "+1 5592179843"
+                ],
+                [
+                  "2024-12-21 07:08:28",
+                  2639,
+                  "Jessica Deleon",
+                  "1995-06-04",
+                  "jeremiah96@gmail.com",
+                  "2024-11-22",
+                  "+1 1304435999"
+                ],
+                [
+                  "2024-12-20 12:32:29",
+                  3084,
+                  "Tyler Simmons",
+                  "2003-02-20",
+                  "brian94@mail.com",
+                  "2024-12-02",
+                  null
+                ],
+                [
+                  "2024-12-22 23:00:48",
+                  7997,
+                  "Patricia Abbott",
+                  "1997-07-31",
+                  "angela97@mail.com",
+                  "2024-11-28",
+                  "+1 4053366448"
+                ],
+                [
+                  "2024-12-05 08:58:52",
+                  9687,
+                  "Micheal Perez MD",
+                  "2002-07-18",
+                  "christopher65@example.org",
+                  "2024-11-22",
+                  "+1 3079718622"
+                ],
+                [
+                  "2024-12-17 15:05:15",
+                  2141,
+                  "Zachary Lopez",
+                  "2002-09-20",
+                  "glenn87@example.org",
+                  "2024-12-14",
+                  "+1 7431190983"
+                ],
+                [
+                  "2024-12-04 13:16:03",
+                  5592,
+                  "Richard Neal",
+                  "1995-11-05",
+                  "eric52@gmail.com",
+                  "2024-11-15",
+                  "+1 4425187397"
+                ],
+                [
+                  "2024-12-13 14:23:27",
+                  6406,
+                  "Christopher Ritter",
+                  "2004-07-12",
+                  null,
+                  "2024-11-24",
+                  "+1 1752511241"
+                ],
+                [
+                  "2024-12-16 16:54:10",
+                  1211,
+                  "Jeremy Ball",
+                  "2002-03-26",
+                  "megan86@yahoo.com",
+                  "2024-12-01",
+                  "+1 5793543882"
+                ],
+                [
+                  "2024-12-22 23:00:48",
+                  7997,
+                  "Patricia Abbott",
+                  "1997-07-31",
+                  "angela97@mail.com",
+                  "2024-11-28",
+                  "+1 4053366448"
+                ],
+                [
+                  "2025-01-05 17:29:34",
+                  7007,
+                  "Joe Castaneda",
+                  "1999-04-27",
+                  "michael34@mail.com",
+                  "2024-12-31",
+                  "+1 1767970338"
+                ],
+                [
+                  "2025-01-17 15:59:39",
+                  5953,
+                  "Kevin Harris",
+                  "2003-01-23",
+                  "timothy99@mail.com",
+                  "2024-12-31",
+                  "+1 6517763640"
+                ],
+                [
+                  "2025-01-12 20:13:31",
+                  4996,
+                  "Brandon Reed",
+                  "1997-05-11",
+                  "stacey71@yahoo.com",
+                  "2024-12-13",
+                  null
+                ],
+                [
+                  "2025-01-14 13:30:57",
+                  9605,
+                  "Tiffany Rocha",
+                  "2003-04-25",
+                  "michael82@yahoo.com",
+                  "2024-12-22",
+                  "+1 6232811506"
+                ],
+                [
+                  "2025-01-16 21:17:22",
+                  8845,
+                  "Joseph Robbins",
+                  "1997-04-04",
+                  "derek53@yahoo.com",
+                  "2025-01-12",
+                  "+1 9513893820"
+                ],
+                [
+                  "2025-01-26 09:46:03",
+                  4973,
+                  "Daniel Thompson",
+                  "1999-07-17",
+                  "connor32@example.org",
+                  "2024-12-27",
+                  "+1 5823046206"
+                ],
+                [
+                  "2025-01-25 13:28:31",
+                  3889,
+                  "Jennifer Jackson",
+                  "1995-10-30",
+                  "catherine77@example.org",
+                  "2025-01-07",
+                  "+1 5932456755"
+                ],
+                [
+                  "2025-01-14 18:31:28",
+                  6167,
+                  "Leslie Smith",
+                  "2001-10-28",
+                  "angela16@mail.com",
+                  "2024-12-16",
+                  "+1 2978446880"
+                ],
+                [
+                  "2025-01-17 07:50:48",
+                  3295,
+                  "Drew Hanson",
+                  "1996-11-21",
+                  "cathy31@gmail.com",
+                  "2025-01-01",
+                  "+1 6521792889"
+                ],
+                [
+                  "2025-01-03 03:28:34",
+                  9084,
+                  "Olivia Lyons",
+                  "1997-06-17",
+                  "patty47@outlook.com",
+                  "2024-12-16",
+                  "+1 2909899135"
+                ],
+                [
+                  "2025-01-23 02:07:26",
+                  9150,
+                  "Alison Davis",
+                  "2004-01-17",
+                  "jacob31@yahoo.com",
+                  "2024-12-26",
+                  "+1 7119851149"
+                ],
+                [
+                  "2025-01-14 13:30:57",
+                  9605,
+                  "Tiffany Rocha",
+                  "2003-04-25",
+                  "michael82@yahoo.com",
+                  "2024-12-22",
+                  "+1 6232811506"
+                ],
+                [
+                  "2025-01-12 20:13:31",
+                  4996,
+                  "Brandon Reed",
+                  "1997-05-11",
+                  "stacey71@yahoo.com",
+                  "2024-12-13",
+                  null
+                ]
+              ],
+              "datasetInfos": [],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {
+                "createTempViewForImplicitDf": true,
+                "dataframeName": "_sqldf",
+                "executionCount": 14
+              },
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{}",
+                  "name": "created_timestamp",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "customer_id",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "customer_name",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "date_of_birth",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "email",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "member_since",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "telephone",
+                  "type": "\"string\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "_sqldf",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "created_timestamp",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "customer_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "customer_name",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "date_of_birth",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "email",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "member_since",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "telephone",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1734697948697,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1734697948665,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "df = spark.table('gizmobox.bronze.v_addresses')\ndisplay(df)",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 10,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1734698281611,
+        "globalVars": {},
+        "guid": "776875e8-c6a7-40b1-abc4-8b0b6bfd58d7",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            100
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "2f5fe843-9d48-4f12-a129-1055e2b79332",
+        "origId": 1753352661355683,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 3.5,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  9179,
+                  "shipping",
+                  "9713 Medina Mountains Apt. 813",
+                  "Lake Erika",
+                  "Mississippi",
+                  91945,
+                  null
+                ],
+                [
+                  9179,
+                  "billing",
+                  "084 Anne Hollow Apt. 064",
+                  "East Jasontown",
+                  "Minnesota",
+                  77329,
+                  null
+                ],
+                [
+                  5816,
+                  "shipping",
+                  "8400 Rebecca Lodge Suite 011",
+                  "Lake Lisatown",
+                  "Montana",
+                  11354,
+                  null
+                ],
+                [
+                  5816,
+                  "billing",
+                  "869 Linda Locks Apt. 105",
+                  "West Melissabury",
+                  "Michigan",
+                  37662,
+                  null
+                ],
+                [
+                  4858,
+                  "shipping",
+                  "4838 Jacob Neck",
+                  "Jamesview",
+                  "Wisconsin",
+                  58657,
+                  null
+                ],
+                [
+                  4858,
+                  "billing",
+                  "4558 Cabrera Islands",
+                  "Lake David",
+                  "Rhode Island",
+                  6133,
+                  null
+                ],
+                [
+                  7207,
+                  "shipping",
+                  "75470 Richardson Mission Apt. 147",
+                  "New Rachelhaven",
+                  "Hawaii",
+                  38857,
+                  null
+                ],
+                [
+                  7207,
+                  "billing",
+                  "4450 Michelle Mission Suite 663",
+                  "North Justin",
+                  "Kentucky",
+                  91757,
+                  null
+                ],
+                [
+                  8539,
+                  "shipping",
+                  "331 Monica Route Apt. 022",
+                  "Michellechester",
+                  "Texas",
+                  14637,
+                  null
+                ],
+                [
+                  8539,
+                  "billing",
+                  "48794 Aguirre Ferry Apt. 952",
+                  "North Amy",
+                  "Washington",
+                  92507,
+                  null
+                ],
+                [
+                  9706,
+                  "shipping",
+                  "2856 Jeremy Wall Apt. 985",
+                  "East Elizabeth",
+                  "Oklahoma",
+                  66460,
+                  null
+                ],
+                [
+                  9706,
+                  "billing",
+                  "14540 Moody Tunnel",
+                  "West Shellybury",
+                  "Kentucky",
+                  83151,
+                  null
+                ],
+                [
+                  9263,
+                  "shipping",
+                  "5733 Richards Ferry Suite 995",
+                  "East Angelafort",
+                  "Indiana",
+                  79556,
+                  null
+                ],
+                [
+                  9263,
+                  "billing",
+                  "13677 Garcia Ports",
+                  "Shelleyland",
+                  "Rhode Island",
+                  3719,
+                  null
+                ],
+                [
+                  5028,
+                  "shipping",
+                  "955 Montgomery Mountain Suite 167",
+                  "Jameschester",
+                  "Kentucky",
+                  9013,
+                  null
+                ],
+                [
+                  5028,
+                  "billing",
+                  "5094 Ayala Falls",
+                  "Greenmouth",
+                  "North Carolina",
+                  2638,
+                  null
+                ],
+                [
+                  9018,
+                  "shipping",
+                  "2099 Francisco Spring",
+                  "Beanshire",
+                  "South Carolina",
+                  87684,
+                  null
+                ],
+                [
+                  9018,
+                  "billing",
+                  "207 Tracy Gateway",
+                  "Cookberg",
+                  "Delaware",
+                  14011,
+                  null
+                ],
+                [
+                  8580,
+                  "shipping",
+                  "17549 Lisa Mission Suite 987",
+                  "Vasquezstad",
+                  "Virginia",
+                  40641,
+                  null
+                ],
+                [
+                  8580,
+                  "billing",
+                  "6150 Jessica Park",
+                  "Bellmouth",
+                  "Pennsylvania",
+                  82370,
+                  null
+                ],
+                [
+                  3409,
+                  "shipping",
+                  "918 April Junctions",
+                  "New Theresa",
+                  "Indiana",
+                  46004,
+                  null
+                ],
+                [
+                  3409,
+                  "billing",
+                  "1294 Edward Inlet",
+                  "North Alison",
+                  "Indiana",
+                  82752,
+                  null
+                ],
+                [
+                  3889,
+                  "shipping",
+                  "90408 Connie Pines Suite 258",
+                  "Catherinehaven",
+                  "Texas",
+                  33736,
+                  null
+                ],
+                [
+                  3889,
+                  "billing",
+                  "7908 Walker Track",
+                  "North Jose",
+                  "Virginia",
+                  84099,
+                  null
+                ],
+                [
+                  9084,
+                  "shipping",
+                  "411 Joseph Park",
+                  "Ericside",
+                  "South Dakota",
+                  45339,
+                  null
+                ],
+                [
+                  9084,
+                  "billing",
+                  "649 Jessica Parks",
+                  "North Tommyland",
+                  "Illinois",
+                  88048,
+                  null
+                ],
+                [
+                  2344,
+                  "shipping",
+                  "97619 Sanchez Prairie Suite 359",
+                  "Kelleyfurt",
+                  "Louisiana",
+                  64906,
+                  null
+                ],
+                [
+                  2344,
+                  "billing",
+                  "5008 Corey Landing Apt. 475",
+                  "South Christinaburgh",
+                  "New Mexico",
+                  3650,
+                  null
+                ],
+                [
+                  5011,
+                  "shipping",
+                  "828 Michele Spring",
+                  "Duffyshire",
+                  "Tennessee",
+                  93025,
+                  null
+                ],
+                [
+                  5011,
+                  "billing",
+                  "8066 Smith Ports",
+                  "Port Cheryl",
+                  "Florida",
+                  97952,
+                  null
+                ],
+                [
+                  9247,
+                  "shipping",
+                  "196 Thomas Shore Apt. 768",
+                  "Bobbymouth",
+                  "Louisiana",
+                  91533,
+                  null
+                ],
+                [
+                  9247,
+                  "billing",
+                  "0034 Fleming Hollow Suite 295",
+                  "Wadefurt",
+                  "Montana",
+                  34460,
+                  null
+                ],
+                [
+                  6627,
+                  "shipping",
+                  "76810 Mcintosh Forge Suite 885",
+                  "Gregoryport",
+                  "South Dakota",
+                  41885,
+                  null
+                ],
+                [
+                  6627,
+                  "billing",
+                  "35855 Haas Centers Apt. 931",
+                  "West Andreaville",
+                  "Virginia",
+                  82397,
+                  null
+                ],
+                [
+                  3892,
+                  "shipping",
+                  "5001 Castro Creek",
+                  "Watsonberg",
+                  "South Dakota",
+                  3805,
+                  null
+                ],
+                [
+                  3892,
+                  "billing",
+                  "322 Dan Lock",
+                  "Terriport",
+                  "Missouri",
+                  25276,
+                  null
+                ],
+                [
+                  1987,
+                  "shipping",
+                  "944 Smith Squares",
+                  "Port Jennifer",
+                  "Maryland",
+                  28646,
+                  null
+                ],
+                [
+                  1987,
+                  "billing",
+                  "3440 Beck Parkways",
+                  "West Jennifer",
+                  "Alaska",
+                  79766,
+                  null
+                ],
+                [
+                  5204,
+                  "shipping",
+                  "73225 Davis Island",
+                  "Robertville",
+                  "Florida",
+                  30994,
+                  null
+                ],
+                [
+                  5204,
+                  "billing",
+                  "8191 Jennifer Shoals",
+                  "Friedmanstad",
+                  "North Dakota",
+                  97678,
+                  null
+                ],
+                [
+                  4468,
+                  "shipping",
+                  "96501 Michelle Wall",
+                  "Andersonmouth",
+                  "New York",
+                  40416,
+                  null
+                ],
+                [
+                  4468,
+                  "billing",
+                  "790 Jones Neck",
+                  "Jenniferville",
+                  "Florida",
+                  72949,
+                  null
+                ],
+                [
+                  4761,
+                  "shipping",
+                  "55640 Yolanda Brooks",
+                  "Andrewfurt",
+                  "Missouri",
+                  30615,
+                  null
+                ],
+                [
+                  4761,
+                  "billing",
+                  "492 Jose Knoll Apt. 836",
+                  "Lake Sydney",
+                  "Wyoming",
+                  51511,
+                  null
+                ],
+                [
+                  2703,
+                  "shipping",
+                  "5385 Paul Port Suite 963",
+                  "Richardsonton",
+                  "Florida",
+                  6432,
+                  null
+                ],
+                [
+                  2703,
+                  "billing",
+                  "7639 Derek Streets",
+                  "New Mary",
+                  "California",
+                  68610,
+                  null
+                ],
+                [
+                  4996,
+                  "shipping",
+                  "5566 Good Harbor Suite 047",
+                  "North Crystalfurt",
+                  "Maine",
+                  30274,
+                  null
+                ],
+                [
+                  4996,
+                  "billing",
+                  "102 Coleman Centers",
+                  "West Paulberg",
+                  "Arizona",
+                  55699,
+                  null
+                ],
+                [
+                  4914,
+                  "shipping",
+                  "750 Oliver Shore Suite 402",
+                  "Reedbury",
+                  "Kentucky",
+                  33755,
+                  null
+                ],
+                [
+                  4914,
+                  "billing",
+                  "639 Matthew Forge",
+                  "South Lisaburgh",
+                  "Alaska",
+                  26693,
+                  null
+                ],
+                [
+                  7295,
+                  "shipping",
+                  "240 Tammy Bypass Suite 433",
+                  "New Hayden",
+                  "Minnesota",
+                  55632,
+                  null
+                ],
+                [
+                  7295,
+                  "billing",
+                  "0087 Smith Square Suite 127",
+                  "West Kristenside",
+                  "Idaho",
+                  795,
+                  null
+                ],
+                [
+                  7803,
+                  "shipping",
+                  "39194 Le Underpass",
+                  "Davidtown",
+                  "Virginia",
+                  41382,
+                  null
+                ],
+                [
+                  7803,
+                  "billing",
+                  "529 Bobby Squares Apt. 225",
+                  "Lake Michelle",
+                  "Kansas",
+                  18094,
+                  null
+                ],
+                [
+                  3712,
+                  "shipping",
+                  "35807 Kaylee View",
+                  "Lake Melanieburgh",
+                  "Utah",
+                  86406,
+                  null
+                ],
+                [
+                  3712,
+                  "billing",
+                  "91984 Rodney Fork Suite 290",
+                  "Maryland",
+                  "Missouri",
+                  37082,
+                  null
+                ],
+                [
+                  2054,
+                  "shipping",
+                  "225 Lopez Bridge Suite 386",
+                  "South Monica",
+                  "Indiana",
+                  34134,
+                  null
+                ],
+                [
+                  2054,
+                  "billing",
+                  "890 Brandon Brook Suite 774",
+                  "North Nicoleborough",
+                  "Wyoming",
+                  15077,
+                  null
+                ],
+                [
+                  7123,
+                  "shipping",
+                  "6149 Adam Meadows",
+                  "South Lisa",
+                  "New York",
+                  96138,
+                  null
+                ],
+                [
+                  7123,
+                  "billing",
+                  "3975 Short Trail Suite 332",
+                  "North Alexandra",
+                  "South Dakota",
+                  47448,
+                  null
+                ],
+                [
+                  6973,
+                  "shipping",
+                  "5780 Ashley Row",
+                  "Larachester",
+                  "Alaska",
+                  96580,
+                  null
+                ],
+                [
+                  6973,
+                  "billing",
+                  "757 Amy Motorway",
+                  "Stephaniemouth",
+                  "Massachusetts",
+                  55102,
+                  null
+                ],
+                [
+                  3532,
+                  "shipping",
+                  "18892 Benson Lake",
+                  "Mitchellland",
+                  "Minnesota",
+                  80110,
+                  null
+                ],
+                [
+                  3532,
+                  "billing",
+                  "87297 Davis Bypass Apt. 742",
+                  "Mannshire",
+                  "Colorado",
+                  19139,
+                  null
+                ],
+                [
+                  1211,
+                  "shipping",
+                  "580 Samantha Lodge",
+                  "New Christinaborough",
+                  "Louisiana",
+                  4251,
+                  null
+                ],
+                [
+                  1211,
+                  "billing",
+                  "7938 Cervantes Mountain Suite 159",
+                  "Oconnorhaven",
+                  "Indiana",
+                  44129,
+                  null
+                ],
+                [
+                  7829,
+                  "shipping",
+                  "3242 Kelly Forks Suite 810",
+                  "Lake Sierraside",
+                  "Nebraska",
+                  10629,
+                  null
+                ],
+                [
+                  7829,
+                  "billing",
+                  "0722 Gregory Turnpike",
+                  "East Jacksonport",
+                  "Indiana",
+                  5138,
+                  null
+                ],
+                [
+                  6384,
+                  "shipping",
+                  "750 Lisa Valleys",
+                  "Heatherton",
+                  "Michigan",
+                  22885,
+                  null
+                ],
+                [
+                  6384,
+                  "billing",
+                  "3915 Reyes Islands Apt. 261",
+                  "New Emily",
+                  "Massachusetts",
+                  95275,
+                  null
+                ],
+                [
+                  2639,
+                  "shipping",
+                  "5383 Albert Grove Apt. 804",
+                  "North Destinyland",
+                  "Illinois",
+                  60150,
+                  null
+                ],
+                [
+                  2639,
+                  "billing",
+                  "222 Dominique Springs Apt. 942",
+                  "Colechester",
+                  "Louisiana",
+                  96258,
+                  null
+                ],
+                [
+                  3084,
+                  "shipping",
+                  "3337 Gregory Island",
+                  "Mitchellbury",
+                  "Tennessee",
+                  70603,
+                  null
+                ],
+                [
+                  3084,
+                  "billing",
+                  "78828 Montgomery Branch Suite 316",
+                  "South Chelsea",
+                  "Wisconsin",
+                  61054,
+                  null
+                ],
+                [
+                  7997,
+                  "shipping",
+                  "8166 Anthony Lodge Suite 528",
+                  "Richardmouth",
+                  "Mississippi",
+                  48790,
+                  null
+                ],
+                [
+                  7997,
+                  "billing",
+                  "425 Keith Motorway",
+                  "West Lawrencemouth",
+                  "Nebraska",
+                  76674,
+                  null
+                ],
+                [
+                  9687,
+                  "shipping",
+                  "3044 Scott Row",
+                  "North Noah",
+                  "Oregon",
+                  73984,
+                  null
+                ],
+                [
+                  9687,
+                  "billing",
+                  "146 Smith Coves Apt. 738",
+                  "North Lisaton",
+                  "West Virginia",
+                  46429,
+                  null
+                ],
+                [
+                  2141,
+                  "shipping",
+                  "098 Sellers Station",
+                  "South Javierstad",
+                  "Texas",
+                  59689,
+                  null
+                ],
+                [
+                  2141,
+                  "billing",
+                  "7451 Lisa Stravenue Suite 994",
+                  "South Victor",
+                  "Kansas",
+                  49835,
+                  null
+                ],
+                [
+                  5592,
+                  "shipping",
+                  "754 Ricky Corners Apt. 629",
+                  "Jonland",
+                  "South Carolina",
+                  2070,
+                  null
+                ],
+                [
+                  5592,
+                  "billing",
+                  "9688 Elizabeth Plains",
+                  "South Theodoreburgh",
+                  "Massachusetts",
+                  97146,
+                  null
+                ],
+                [
+                  6406,
+                  "shipping",
+                  "613 Hart Rapid Apt. 447",
+                  "Shannonmouth",
+                  "Wyoming",
+                  83119,
+                  null
+                ],
+                [
+                  6406,
+                  "billing",
+                  "5706 Adam Forges Suite 567",
+                  "Josephburgh",
+                  "South Dakota",
+                  7359,
+                  null
+                ],
+                [
+                  7007,
+                  "shipping",
+                  "64918 Lee Ports Apt. 269",
+                  "Jasonview",
+                  "Maryland",
+                  18994,
+                  null
+                ],
+                [
+                  7007,
+                  "billing",
+                  "201 Danielle Hollow Apt. 665",
+                  "Jerryport",
+                  "South Dakota",
+                  12363,
+                  null
+                ],
+                [
+                  5953,
+                  "shipping",
+                  "1393 White Wells Suite 722",
+                  "North Karen",
+                  "Connecticut",
+                  47802,
+                  null
+                ],
+                [
+                  5953,
+                  "billing",
+                  "470 Casey Pines Suite 957",
+                  "Deanmouth",
+                  "Arkansas",
+                  96860,
+                  null
+                ],
+                [
+                  9605,
+                  "shipping",
+                  "4123 Solomon Oval Apt. 648",
+                  "Mccormickside",
+                  "Indiana",
+                  90659,
+                  null
+                ],
+                [
+                  9605,
+                  "billing",
+                  "67373 David Plains Suite 457",
+                  "East Stevenfort",
+                  "Nevada",
+                  84183,
+                  null
+                ],
+                [
+                  8845,
+                  "shipping",
+                  "95689 Jeffrey Expressway",
+                  "East Lanceborough",
+                  "Pennsylvania",
+                  79251,
+                  null
+                ],
+                [
+                  8845,
+                  "billing",
+                  "556 Christensen Pike",
+                  "North Jeremyview",
+                  "California",
+                  90786,
+                  null
+                ],
+                [
+                  4973,
+                  "shipping",
+                  "3013 Michelle Mountain Apt. 214",
+                  "South Patrickburgh",
+                  "Arizona",
+                  45875,
+                  null
+                ],
+                [
+                  4973,
+                  "billing",
+                  "748 John Curve",
+                  "Fritzberg",
+                  "Maryland",
+                  36128,
+                  null
+                ],
+                [
+                  6167,
+                  "shipping",
+                  "179 Vang Street",
+                  "Jessicastad",
+                  "Connecticut",
+                  40919,
+                  null
+                ],
+                [
+                  6167,
+                  "billing",
+                  "58676 Keith Coves",
+                  "New Erichaven",
+                  "Kentucky",
+                  25297,
+                  null
+                ],
+                [
+                  3295,
+                  "shipping",
+                  "9569 Dennis Way Suite 047",
+                  "North Amy",
+                  "New York",
+                  17867,
+                  null
+                ],
+                [
+                  3295,
+                  "billing",
+                  "36789 Hatfield Landing",
+                  "Haydenton",
+                  "Tennessee",
+                  60950,
+                  null
+                ],
+                [
+                  9150,
+                  "shipping",
+                  "819 Campbell Ville",
+                  "South Ian",
+                  "California",
+                  35549,
+                  null
+                ],
+                [
+                  9150,
+                  "billing",
+                  "48219 Kurt Hollow",
+                  "South Ravenberg",
+                  "Rhode Island",
+                  8078,
+                  null
+                ]
+              ],
+              "datasetInfos": [],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {},
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{}",
+                  "name": "customer_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "address_type",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "address_line_1",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "city",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "state",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "postcode",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "_rescued_data",
+                  "type": "\"string\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "df",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "customer_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "address_type",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "address_line_1",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "city",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "state",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "postcode",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "_rescued_data",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1734698280575,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1734698280526,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "df = spark.read.format('json').load('/Volumes/gizmobox/landing/operational_data/customers')\ndisplay(df)",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 9,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1734698171190,
+        "globalVars": {},
+        "guid": "00279ba9-0eea-4444-afb9-b6ac61d5ffd5",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            62
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "873cf021-bc78-459b-984b-67cf95043fbb",
+        "origId": 1753352661355682,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 2.21875,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  "2024-10-17 16:12:27",
+                  9179,
+                  "Richard Cox",
+                  "1996-10-25",
+                  "devon84@mail.com",
+                  "2024-09-26",
+                  "+1 6680703335"
+                ],
+                [
+                  "2024-10-01 00:50:29",
+                  4858,
+                  "Carla Morton",
+                  "2004-06-21",
+                  "joseph88@mail.com",
+                  "2024-09-15",
+                  "+1 8616454195"
+                ],
+                [
+                  "2024-10-23 22:03:08",
+                  7207,
+                  "Billy Scott",
+                  "1997-03-17",
+                  "christopher30@mail.com",
+                  "2024-09-23",
+                  "+1 5544387564"
+                ],
+                [
+                  "2024-10-12 06:02:27",
+                  8539,
+                  "Lori Mason",
+                  "2002-11-01",
+                  "stephanie7@mail.com",
+                  "2024-09-12",
+                  "+1 0498301620"
+                ],
+                [
+                  "2024-10-24 13:03:13",
+                  9706,
+                  "Jennifer Haas",
+                  "2001-04-03",
+                  "benjamin55@mail.com",
+                  "2024-10-05",
+                  "+1 4725460000"
+                ],
+                [
+                  "2024-10-08 22:49:25",
+                  9263,
+                  "Joseph Keller",
+                  "2003-02-11",
+                  null,
+                  "2024-10-04",
+                  "+1 3817867756"
+                ],
+                [
+                  "2024-10-06 19:55:52",
+                  5028,
+                  "Jessica Harris",
+                  "2004-04-19",
+                  null,
+                  "2024-09-10",
+                  "+1 8604009935"
+                ],
+                [
+                  "2024-10-18 23:24:52",
+                  9018,
+                  "William Carter",
+                  "2003-09-05",
+                  "james70@gmail.com",
+                  "2024-10-08",
+                  "+1 1448753611"
+                ],
+                [
+                  "2024-10-21 13:20:26",
+                  8580,
+                  "Shannon Austin",
+                  "2002-03-22",
+                  "john30@gmail.com",
+                  "2024-10-07",
+                  "+1 4594705629"
+                ],
+                [
+                  "2024-10-02 14:53:40",
+                  3409,
+                  "Andrew Phillips",
+                  "2003-04-17",
+                  "peter73@yahoo.com",
+                  "2024-09-30",
+                  "+1 4079273853"
+                ],
+                [
+                  "2024-10-26 15:14:33",
+                  2344,
+                  "Martin Thomas DDS",
+                  "2002-05-01",
+                  "billy42@outlook.com",
+                  "2024-10-13",
+                  "+1 0201457151"
+                ],
+                [
+                  "2024-10-15 02:48:29",
+                  5011,
+                  "Rachel Thomas",
+                  "2003-02-17",
+                  "lauren59@yahoo.com",
+                  "2024-09-24",
+                  "+1 5437271621"
+                ],
+                [
+                  "2024-10-28 00:57:09",
+                  9247,
+                  "Dr. Daniel Hall",
+                  "2004-03-21",
+                  "tamara30@gmail.com",
+                  "2024-10-03",
+                  "+1 7544137170"
+                ],
+                [
+                  "2024-10-22 05:52:57",
+                  6627,
+                  "Candice Rosales",
+                  "2004-04-03",
+                  "amber79@example.org",
+                  "2024-10-15",
+                  "+1 4788451559"
+                ],
+                [
+                  "2024-10-06 19:55:52",
+                  5028,
+                  "Jessica Harris",
+                  "2004-04-19",
+                  null,
+                  "2024-09-10",
+                  "+1 8604009935"
+                ],
+                [
+                  "2024-10-08 03:30:53",
+                  5816,
+                  "Amy Morales",
+                  "1999-12-11",
+                  "daniel12@hotmail.com",
+                  "2024-09-17",
+                  "+46 4407385044"
+                ],
+                [
+                  "2024-10-15 01:27:54",
+                  9247,
+                  "Dr. Daniel Hall",
+                  "2004-03-21",
+                  "sheena11@alexander.com",
+                  "2024-09-15",
+                  "+46 7281991017"
+                ],
+                [
+                  "2024-10-09 18:54:00",
+                  3889,
+                  "Jennifer Jackson",
+                  "1995-10-30",
+                  null,
+                  "2024-09-16",
+                  "+68 2276996612"
+                ],
+                [
+                  "2024-10-10 16:53:44",
+                  9084,
+                  "Olivia Lyons",
+                  "1997-06-17",
+                  "johnsonmichael@yahoo.com",
+                  "2024-09-26",
+                  null
+                ],
+                [
+                  "2024-10-19 11:53:44",
+                  null,
+                  "John Smith",
+                  "1998-01-19",
+                  "john.smith@outlook.com",
+                  "2024-07-16",
+                  "+1 8762342456"
+                ],
+                [
+                  "2024-11-14 20:41:18",
+                  3892,
+                  "Jason Bridges",
+                  "2004-01-01",
+                  "nicole29@gmail.com",
+                  "2024-10-29",
+                  "+1 8220011928"
+                ],
+                [
+                  "2024-11-16 01:47:25",
+                  1987,
+                  "Amanda Alvarez",
+                  "1995-10-11",
+                  "eric40@outlook.com",
+                  "2024-10-27",
+                  "+1 9673066300"
+                ],
+                [
+                  "2024-11-19 14:03:09",
+                  5816,
+                  "Amy Morales",
+                  "1999-12-11",
+                  "katelyn82@example.org",
+                  "2024-11-04",
+                  "+1 4140982719"
+                ],
+                [
+                  "2024-11-09 14:52:31",
+                  5204,
+                  "Jennifer Nichols DDS",
+                  "1997-02-17",
+                  "joseph8@example.org",
+                  "2024-11-04",
+                  "+1 0383356328"
+                ],
+                [
+                  "2024-11-23 18:16:18",
+                  4468,
+                  "Mrs. Roberta Salas PhD",
+                  "1997-05-10",
+                  null,
+                  "2024-10-25",
+                  "+1 4679955118"
+                ],
+                [
+                  "2024-11-14 16:41:14",
+                  4761,
+                  "Timothy Smith",
+                  "1996-11-07",
+                  "joshua40@yahoo.com",
+                  "2024-11-03",
+                  "+1 9450920858"
+                ],
+                [
+                  "2024-11-07 22:20:00",
+                  2703,
+                  "Anthony Miller",
+                  "1997-11-02",
+                  null,
+                  "2024-11-05",
+                  "+1 1586310752"
+                ],
+                [
+                  "2024-11-12 12:57:38",
+                  4914,
+                  "Samantha Johnson",
+                  "1997-03-26",
+                  "theresa14@mail.com",
+                  "2024-10-13",
+                  "+1 4095003738"
+                ],
+                [
+                  "2024-11-08 02:26:42",
+                  7295,
+                  "Lauren Reed",
+                  "2001-08-11",
+                  "jeanette48@example.org",
+                  "2024-10-10",
+                  "+1 0104088765"
+                ],
+                [
+                  "2024-11-09 20:24:30",
+                  7803,
+                  "Katherine Lee",
+                  "2000-03-09",
+                  "jennifer85@mail.com",
+                  "2024-10-27",
+                  "+1 3119886866"
+                ],
+                [
+                  "2024-11-24 11:14:03",
+                  3712,
+                  "Robin Chavez",
+                  "1997-03-16",
+                  "lisa15@gmail.com",
+                  "2024-11-24",
+                  "+1 2654756919"
+                ],
+                [
+                  "2024-11-23 11:14:03",
+                  null,
+                  "Andrew Taylor",
+                  "1996-01-11",
+                  "andrew.taylor@gmail.com",
+                  "2024-11-21",
+                  "+1 1235447333"
+                ],
+                [
+                  "2024-11-03 17:22:56",
+                  2054,
+                  "Alan Price",
+                  "1998-08-25",
+                  "connor40@yahoo.com",
+                  "2024-10-14",
+                  "+1 3745642936"
+                ],
+                [
+                  "2024-11-09 07:14:17",
+                  7123,
+                  "Edgar Stevens",
+                  "2003-02-15",
+                  "kevin68@example.org",
+                  "2024-10-27",
+                  "+1 0793189847"
+                ],
+                [
+                  "2024-11-27 12:56:20",
+                  4996,
+                  "Brandon Reed",
+                  "1997-05-11",
+                  "handerson@barker.info",
+                  "2024-11-06",
+                  "+43 2750540511"
+                ],
+                [
+                  "2024-12-25 11:06:35",
+                  6973,
+                  "Tracy Cole",
+                  "1998-07-24",
+                  "tony46@mail.com",
+                  "2024-12-16",
+                  "+1 5515836612"
+                ],
+                [
+                  "2024-12-26 09:29:16",
+                  3532,
+                  "Holly Wilkinson",
+                  "2003-03-06",
+                  "lindsey61@yahoo.com",
+                  "2024-12-22",
+                  null
+                ],
+                [
+                  "2024-12-16 16:54:10",
+                  1211,
+                  "Jeremy Ball",
+                  "2002-03-26",
+                  "megan86@yahoo.com",
+                  "2024-12-01",
+                  "+1 5793543882"
+                ],
+                [
+                  "2024-12-07 18:09:58",
+                  7829,
+                  "Daniel Black",
+                  "1998-04-13",
+                  "sandra54@example.org",
+                  "2024-11-16",
+                  "+1 0933795082"
+                ],
+                [
+                  "2024-12-24 14:46:04",
+                  6384,
+                  "Jennifer Carrillo",
+                  "1994-12-18",
+                  "james34@yahoo.com",
+                  "2024-12-22",
+                  "+1 5592179843"
+                ],
+                [
+                  "2024-12-21 07:08:28",
+                  2639,
+                  "Jessica Deleon",
+                  "1995-06-04",
+                  "jeremiah96@gmail.com",
+                  "2024-11-22",
+                  "+1 1304435999"
+                ],
+                [
+                  "2024-12-20 12:32:29",
+                  3084,
+                  "Tyler Simmons",
+                  "2003-02-20",
+                  "brian94@mail.com",
+                  "2024-12-02",
+                  null
+                ],
+                [
+                  "2024-12-22 23:00:48",
+                  7997,
+                  "Patricia Abbott",
+                  "1997-07-31",
+                  "angela97@mail.com",
+                  "2024-11-28",
+                  "+1 4053366448"
+                ],
+                [
+                  "2024-12-05 08:58:52",
+                  9687,
+                  "Micheal Perez MD",
+                  "2002-07-18",
+                  "christopher65@example.org",
+                  "2024-11-22",
+                  "+1 3079718622"
+                ],
+                [
+                  "2024-12-17 15:05:15",
+                  2141,
+                  "Zachary Lopez",
+                  "2002-09-20",
+                  "glenn87@example.org",
+                  "2024-12-14",
+                  "+1 7431190983"
+                ],
+                [
+                  "2024-12-04 13:16:03",
+                  5592,
+                  "Richard Neal",
+                  "1995-11-05",
+                  "eric52@gmail.com",
+                  "2024-11-15",
+                  "+1 4425187397"
+                ],
+                [
+                  "2024-12-13 14:23:27",
+                  6406,
+                  "Christopher Ritter",
+                  "2004-07-12",
+                  null,
+                  "2024-11-24",
+                  "+1 1752511241"
+                ],
+                [
+                  "2024-12-16 16:54:10",
+                  1211,
+                  "Jeremy Ball",
+                  "2002-03-26",
+                  "megan86@yahoo.com",
+                  "2024-12-01",
+                  "+1 5793543882"
+                ],
+                [
+                  "2024-12-22 23:00:48",
+                  7997,
+                  "Patricia Abbott",
+                  "1997-07-31",
+                  "angela97@mail.com",
+                  "2024-11-28",
+                  "+1 4053366448"
+                ],
+                [
+                  "2025-01-05 17:29:34",
+                  7007,
+                  "Joe Castaneda",
+                  "1999-04-27",
+                  "michael34@mail.com",
+                  "2024-12-31",
+                  "+1 1767970338"
+                ],
+                [
+                  "2025-01-17 15:59:39",
+                  5953,
+                  "Kevin Harris",
+                  "2003-01-23",
+                  "timothy99@mail.com",
+                  "2024-12-31",
+                  "+1 6517763640"
+                ],
+                [
+                  "2025-01-12 20:13:31",
+                  4996,
+                  "Brandon Reed",
+                  "1997-05-11",
+                  "stacey71@yahoo.com",
+                  "2024-12-13",
+                  null
+                ],
+                [
+                  "2025-01-14 13:30:57",
+                  9605,
+                  "Tiffany Rocha",
+                  "2003-04-25",
+                  "michael82@yahoo.com",
+                  "2024-12-22",
+                  "+1 6232811506"
+                ],
+                [
+                  "2025-01-16 21:17:22",
+                  8845,
+                  "Joseph Robbins",
+                  "1997-04-04",
+                  "derek53@yahoo.com",
+                  "2025-01-12",
+                  "+1 9513893820"
+                ],
+                [
+                  "2025-01-26 09:46:03",
+                  4973,
+                  "Daniel Thompson",
+                  "1999-07-17",
+                  "connor32@example.org",
+                  "2024-12-27",
+                  "+1 5823046206"
+                ],
+                [
+                  "2025-01-25 13:28:31",
+                  3889,
+                  "Jennifer Jackson",
+                  "1995-10-30",
+                  "catherine77@example.org",
+                  "2025-01-07",
+                  "+1 5932456755"
+                ],
+                [
+                  "2025-01-14 18:31:28",
+                  6167,
+                  "Leslie Smith",
+                  "2001-10-28",
+                  "angela16@mail.com",
+                  "2024-12-16",
+                  "+1 2978446880"
+                ],
+                [
+                  "2025-01-17 07:50:48",
+                  3295,
+                  "Drew Hanson",
+                  "1996-11-21",
+                  "cathy31@gmail.com",
+                  "2025-01-01",
+                  "+1 6521792889"
+                ],
+                [
+                  "2025-01-03 03:28:34",
+                  9084,
+                  "Olivia Lyons",
+                  "1997-06-17",
+                  "patty47@outlook.com",
+                  "2024-12-16",
+                  "+1 2909899135"
+                ],
+                [
+                  "2025-01-23 02:07:26",
+                  9150,
+                  "Alison Davis",
+                  "2004-01-17",
+                  "jacob31@yahoo.com",
+                  "2024-12-26",
+                  "+1 7119851149"
+                ],
+                [
+                  "2025-01-14 13:30:57",
+                  9605,
+                  "Tiffany Rocha",
+                  "2003-04-25",
+                  "michael82@yahoo.com",
+                  "2024-12-22",
+                  "+1 6232811506"
+                ],
+                [
+                  "2025-01-12 20:13:31",
+                  4996,
+                  "Brandon Reed",
+                  "1997-05-11",
+                  "stacey71@yahoo.com",
+                  "2024-12-13",
+                  null
+                ]
+              ],
+              "datasetInfos": [],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {},
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{}",
+                  "name": "created_timestamp",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "customer_id",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "customer_name",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "date_of_birth",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "email",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "member_since",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "telephone",
+                  "type": "\"string\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "df",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "created_timestamp",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "customer_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "customer_name",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "date_of_birth",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "email",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "member_since",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "telephone",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1734698170294,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1734698170261,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "df = spark.sql('SELECT * FROM json.`/Volumes/gizmobox/landing/operational_data/customers`')\ndisplay(df)",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 19,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1734697802933,
+        "globalVars": {},
+        "guid": "812addcc-5aae-4ec0-a954-17fda4bc73f9",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            62
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "6d57c454-3d4a-4fc4-b2ee-d33acb944452",
+        "origId": 1753352661355684,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.34375,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  "2024-10-17 16:12:27",
+                  9179,
+                  "Richard Cox",
+                  "1996-10-25",
+                  "devon84@mail.com",
+                  "2024-09-26",
+                  "+1 6680703335"
+                ],
+                [
+                  "2024-10-01 00:50:29",
+                  4858,
+                  "Carla Morton",
+                  "2004-06-21",
+                  "joseph88@mail.com",
+                  "2024-09-15",
+                  "+1 8616454195"
+                ],
+                [
+                  "2024-10-23 22:03:08",
+                  7207,
+                  "Billy Scott",
+                  "1997-03-17",
+                  "christopher30@mail.com",
+                  "2024-09-23",
+                  "+1 5544387564"
+                ],
+                [
+                  "2024-10-12 06:02:27",
+                  8539,
+                  "Lori Mason",
+                  "2002-11-01",
+                  "stephanie7@mail.com",
+                  "2024-09-12",
+                  "+1 0498301620"
+                ],
+                [
+                  "2024-10-24 13:03:13",
+                  9706,
+                  "Jennifer Haas",
+                  "2001-04-03",
+                  "benjamin55@mail.com",
+                  "2024-10-05",
+                  "+1 4725460000"
+                ],
+                [
+                  "2024-10-08 22:49:25",
+                  9263,
+                  "Joseph Keller",
+                  "2003-02-11",
+                  null,
+                  "2024-10-04",
+                  "+1 3817867756"
+                ],
+                [
+                  "2024-10-06 19:55:52",
+                  5028,
+                  "Jessica Harris",
+                  "2004-04-19",
+                  null,
+                  "2024-09-10",
+                  "+1 8604009935"
+                ],
+                [
+                  "2024-10-18 23:24:52",
+                  9018,
+                  "William Carter",
+                  "2003-09-05",
+                  "james70@gmail.com",
+                  "2024-10-08",
+                  "+1 1448753611"
+                ],
+                [
+                  "2024-10-21 13:20:26",
+                  8580,
+                  "Shannon Austin",
+                  "2002-03-22",
+                  "john30@gmail.com",
+                  "2024-10-07",
+                  "+1 4594705629"
+                ],
+                [
+                  "2024-10-02 14:53:40",
+                  3409,
+                  "Andrew Phillips",
+                  "2003-04-17",
+                  "peter73@yahoo.com",
+                  "2024-09-30",
+                  "+1 4079273853"
+                ],
+                [
+                  "2024-10-26 15:14:33",
+                  2344,
+                  "Martin Thomas DDS",
+                  "2002-05-01",
+                  "billy42@outlook.com",
+                  "2024-10-13",
+                  "+1 0201457151"
+                ],
+                [
+                  "2024-10-15 02:48:29",
+                  5011,
+                  "Rachel Thomas",
+                  "2003-02-17",
+                  "lauren59@yahoo.com",
+                  "2024-09-24",
+                  "+1 5437271621"
+                ],
+                [
+                  "2024-10-28 00:57:09",
+                  9247,
+                  "Dr. Daniel Hall",
+                  "2004-03-21",
+                  "tamara30@gmail.com",
+                  "2024-10-03",
+                  "+1 7544137170"
+                ],
+                [
+                  "2024-10-22 05:52:57",
+                  6627,
+                  "Candice Rosales",
+                  "2004-04-03",
+                  "amber79@example.org",
+                  "2024-10-15",
+                  "+1 4788451559"
+                ],
+                [
+                  "2024-10-06 19:55:52",
+                  5028,
+                  "Jessica Harris",
+                  "2004-04-19",
+                  null,
+                  "2024-09-10",
+                  "+1 8604009935"
+                ],
+                [
+                  "2024-10-08 03:30:53",
+                  5816,
+                  "Amy Morales",
+                  "1999-12-11",
+                  "daniel12@hotmail.com",
+                  "2024-09-17",
+                  "+46 4407385044"
+                ],
+                [
+                  "2024-10-15 01:27:54",
+                  9247,
+                  "Dr. Daniel Hall",
+                  "2004-03-21",
+                  "sheena11@alexander.com",
+                  "2024-09-15",
+                  "+46 7281991017"
+                ],
+                [
+                  "2024-10-09 18:54:00",
+                  3889,
+                  "Jennifer Jackson",
+                  "1995-10-30",
+                  null,
+                  "2024-09-16",
+                  "+68 2276996612"
+                ],
+                [
+                  "2024-10-10 16:53:44",
+                  9084,
+                  "Olivia Lyons",
+                  "1997-06-17",
+                  "johnsonmichael@yahoo.com",
+                  "2024-09-26",
+                  null
+                ],
+                [
+                  "2024-10-19 11:53:44",
+                  null,
+                  "John Smith",
+                  "1998-01-19",
+                  "john.smith@outlook.com",
+                  "2024-07-16",
+                  "+1 8762342456"
+                ],
+                [
+                  "2024-11-14 20:41:18",
+                  3892,
+                  "Jason Bridges",
+                  "2004-01-01",
+                  "nicole29@gmail.com",
+                  "2024-10-29",
+                  "+1 8220011928"
+                ],
+                [
+                  "2024-11-16 01:47:25",
+                  1987,
+                  "Amanda Alvarez",
+                  "1995-10-11",
+                  "eric40@outlook.com",
+                  "2024-10-27",
+                  "+1 9673066300"
+                ],
+                [
+                  "2024-11-19 14:03:09",
+                  5816,
+                  "Amy Morales",
+                  "1999-12-11",
+                  "katelyn82@example.org",
+                  "2024-11-04",
+                  "+1 4140982719"
+                ],
+                [
+                  "2024-11-09 14:52:31",
+                  5204,
+                  "Jennifer Nichols DDS",
+                  "1997-02-17",
+                  "joseph8@example.org",
+                  "2024-11-04",
+                  "+1 0383356328"
+                ],
+                [
+                  "2024-11-23 18:16:18",
+                  4468,
+                  "Mrs. Roberta Salas PhD",
+                  "1997-05-10",
+                  null,
+                  "2024-10-25",
+                  "+1 4679955118"
+                ],
+                [
+                  "2024-11-14 16:41:14",
+                  4761,
+                  "Timothy Smith",
+                  "1996-11-07",
+                  "joshua40@yahoo.com",
+                  "2024-11-03",
+                  "+1 9450920858"
+                ],
+                [
+                  "2024-11-07 22:20:00",
+                  2703,
+                  "Anthony Miller",
+                  "1997-11-02",
+                  null,
+                  "2024-11-05",
+                  "+1 1586310752"
+                ],
+                [
+                  "2024-11-12 12:57:38",
+                  4914,
+                  "Samantha Johnson",
+                  "1997-03-26",
+                  "theresa14@mail.com",
+                  "2024-10-13",
+                  "+1 4095003738"
+                ],
+                [
+                  "2024-11-08 02:26:42",
+                  7295,
+                  "Lauren Reed",
+                  "2001-08-11",
+                  "jeanette48@example.org",
+                  "2024-10-10",
+                  "+1 0104088765"
+                ],
+                [
+                  "2024-11-09 20:24:30",
+                  7803,
+                  "Katherine Lee",
+                  "2000-03-09",
+                  "jennifer85@mail.com",
+                  "2024-10-27",
+                  "+1 3119886866"
+                ],
+                [
+                  "2024-11-24 11:14:03",
+                  3712,
+                  "Robin Chavez",
+                  "1997-03-16",
+                  "lisa15@gmail.com",
+                  "2024-11-24",
+                  "+1 2654756919"
+                ],
+                [
+                  "2024-11-23 11:14:03",
+                  null,
+                  "Andrew Taylor",
+                  "1996-01-11",
+                  "andrew.taylor@gmail.com",
+                  "2024-11-21",
+                  "+1 1235447333"
+                ],
+                [
+                  "2024-11-03 17:22:56",
+                  2054,
+                  "Alan Price",
+                  "1998-08-25",
+                  "connor40@yahoo.com",
+                  "2024-10-14",
+                  "+1 3745642936"
+                ],
+                [
+                  "2024-11-09 07:14:17",
+                  7123,
+                  "Edgar Stevens",
+                  "2003-02-15",
+                  "kevin68@example.org",
+                  "2024-10-27",
+                  "+1 0793189847"
+                ],
+                [
+                  "2024-11-27 12:56:20",
+                  4996,
+                  "Brandon Reed",
+                  "1997-05-11",
+                  "handerson@barker.info",
+                  "2024-11-06",
+                  "+43 2750540511"
+                ],
+                [
+                  "2024-12-25 11:06:35",
+                  6973,
+                  "Tracy Cole",
+                  "1998-07-24",
+                  "tony46@mail.com",
+                  "2024-12-16",
+                  "+1 5515836612"
+                ],
+                [
+                  "2024-12-26 09:29:16",
+                  3532,
+                  "Holly Wilkinson",
+                  "2003-03-06",
+                  "lindsey61@yahoo.com",
+                  "2024-12-22",
+                  null
+                ],
+                [
+                  "2024-12-16 16:54:10",
+                  1211,
+                  "Jeremy Ball",
+                  "2002-03-26",
+                  "megan86@yahoo.com",
+                  "2024-12-01",
+                  "+1 5793543882"
+                ],
+                [
+                  "2024-12-07 18:09:58",
+                  7829,
+                  "Daniel Black",
+                  "1998-04-13",
+                  "sandra54@example.org",
+                  "2024-11-16",
+                  "+1 0933795082"
+                ],
+                [
+                  "2024-12-24 14:46:04",
+                  6384,
+                  "Jennifer Carrillo",
+                  "1994-12-18",
+                  "james34@yahoo.com",
+                  "2024-12-22",
+                  "+1 5592179843"
+                ],
+                [
+                  "2024-12-21 07:08:28",
+                  2639,
+                  "Jessica Deleon",
+                  "1995-06-04",
+                  "jeremiah96@gmail.com",
+                  "2024-11-22",
+                  "+1 1304435999"
+                ],
+                [
+                  "2024-12-20 12:32:29",
+                  3084,
+                  "Tyler Simmons",
+                  "2003-02-20",
+                  "brian94@mail.com",
+                  "2024-12-02",
+                  null
+                ],
+                [
+                  "2024-12-22 23:00:48",
+                  7997,
+                  "Patricia Abbott",
+                  "1997-07-31",
+                  "angela97@mail.com",
+                  "2024-11-28",
+                  "+1 4053366448"
+                ],
+                [
+                  "2024-12-05 08:58:52",
+                  9687,
+                  "Micheal Perez MD",
+                  "2002-07-18",
+                  "christopher65@example.org",
+                  "2024-11-22",
+                  "+1 3079718622"
+                ],
+                [
+                  "2024-12-17 15:05:15",
+                  2141,
+                  "Zachary Lopez",
+                  "2002-09-20",
+                  "glenn87@example.org",
+                  "2024-12-14",
+                  "+1 7431190983"
+                ],
+                [
+                  "2024-12-04 13:16:03",
+                  5592,
+                  "Richard Neal",
+                  "1995-11-05",
+                  "eric52@gmail.com",
+                  "2024-11-15",
+                  "+1 4425187397"
+                ],
+                [
+                  "2024-12-13 14:23:27",
+                  6406,
+                  "Christopher Ritter",
+                  "2004-07-12",
+                  null,
+                  "2024-11-24",
+                  "+1 1752511241"
+                ],
+                [
+                  "2024-12-16 16:54:10",
+                  1211,
+                  "Jeremy Ball",
+                  "2002-03-26",
+                  "megan86@yahoo.com",
+                  "2024-12-01",
+                  "+1 5793543882"
+                ],
+                [
+                  "2024-12-22 23:00:48",
+                  7997,
+                  "Patricia Abbott",
+                  "1997-07-31",
+                  "angela97@mail.com",
+                  "2024-11-28",
+                  "+1 4053366448"
+                ],
+                [
+                  "2025-01-05 17:29:34",
+                  7007,
+                  "Joe Castaneda",
+                  "1999-04-27",
+                  "michael34@mail.com",
+                  "2024-12-31",
+                  "+1 1767970338"
+                ],
+                [
+                  "2025-01-17 15:59:39",
+                  5953,
+                  "Kevin Harris",
+                  "2003-01-23",
+                  "timothy99@mail.com",
+                  "2024-12-31",
+                  "+1 6517763640"
+                ],
+                [
+                  "2025-01-12 20:13:31",
+                  4996,
+                  "Brandon Reed",
+                  "1997-05-11",
+                  "stacey71@yahoo.com",
+                  "2024-12-13",
+                  null
+                ],
+                [
+                  "2025-01-14 13:30:57",
+                  9605,
+                  "Tiffany Rocha",
+                  "2003-04-25",
+                  "michael82@yahoo.com",
+                  "2024-12-22",
+                  "+1 6232811506"
+                ],
+                [
+                  "2025-01-16 21:17:22",
+                  8845,
+                  "Joseph Robbins",
+                  "1997-04-04",
+                  "derek53@yahoo.com",
+                  "2025-01-12",
+                  "+1 9513893820"
+                ],
+                [
+                  "2025-01-26 09:46:03",
+                  4973,
+                  "Daniel Thompson",
+                  "1999-07-17",
+                  "connor32@example.org",
+                  "2024-12-27",
+                  "+1 5823046206"
+                ],
+                [
+                  "2025-01-25 13:28:31",
+                  3889,
+                  "Jennifer Jackson",
+                  "1995-10-30",
+                  "catherine77@example.org",
+                  "2025-01-07",
+                  "+1 5932456755"
+                ],
+                [
+                  "2025-01-14 18:31:28",
+                  6167,
+                  "Leslie Smith",
+                  "2001-10-28",
+                  "angela16@mail.com",
+                  "2024-12-16",
+                  "+1 2978446880"
+                ],
+                [
+                  "2025-01-17 07:50:48",
+                  3295,
+                  "Drew Hanson",
+                  "1996-11-21",
+                  "cathy31@gmail.com",
+                  "2025-01-01",
+                  "+1 6521792889"
+                ],
+                [
+                  "2025-01-03 03:28:34",
+                  9084,
+                  "Olivia Lyons",
+                  "1997-06-17",
+                  "patty47@outlook.com",
+                  "2024-12-16",
+                  "+1 2909899135"
+                ],
+                [
+                  "2025-01-23 02:07:26",
+                  9150,
+                  "Alison Davis",
+                  "2004-01-17",
+                  "jacob31@yahoo.com",
+                  "2024-12-26",
+                  "+1 7119851149"
+                ],
+                [
+                  "2025-01-14 13:30:57",
+                  9605,
+                  "Tiffany Rocha",
+                  "2003-04-25",
+                  "michael82@yahoo.com",
+                  "2024-12-22",
+                  "+1 6232811506"
+                ],
+                [
+                  "2025-01-12 20:13:31",
+                  4996,
+                  "Brandon Reed",
+                  "1997-05-11",
+                  "stacey71@yahoo.com",
+                  "2024-12-13",
+                  null
+                ]
+              ],
+              "datasetInfos": [],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {},
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{}",
+                  "name": "created_timestamp",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "customer_id",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "customer_name",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "date_of_birth",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "email",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "member_since",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "telephone",
+                  "type": "\"string\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "df",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "created_timestamp",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "customer_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "customer_name",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "date_of_birth",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "email",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "member_since",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "telephone",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1734697801688,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1734697801644,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n### 1. Run SQL Commands using Python - spark.sql Function",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 3,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "9c608dc6-ad75-42a5-9a88-0b4b9afc1700",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "141b4048-7ae9-4f0c-9d1a-c95a3c7f17b7",
+        "origId": 1753352661355661,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 0.75,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n## Extract Data - Using PySpark\n1. Run SQL Commands using Python - spark.sql Function\n2. Spark Dataframe Reader API\n3. Read Tables using spark.table Function",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 30,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "e8665ace-f5af-4d7f-a02d-395d25605571",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "085a4077-40f2-4141-bcdc-2ab14ecb3609",
+        "origId": 1753352661355660,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 0.5,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n### 3. spark.table Function",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 3,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "497e0142-3ced-4544-b350-86ac7ac893a3",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "2eb3a360-ac1e-4608-95dc-d32e6f4d5b22",
+        "origId": 1753352661355669,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 2.5,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n### 2. Spark DataframeReader API\n[DataFrameReader API](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrameReader.html)",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 9,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "88906bdf-17d1-468e-82cb-d2c9725b74f0",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "20317e57-31af-46b3-826f-93c9c86c5456",
+        "origId": 1753352661355667,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.9375,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      }
+    ],
+    "computePreferences": null,
+    "dashboards": [],
+    "environmentMetadata": {
+      "base_environment": "",
+      "client": "1"
+    },
+    "environmentSerializationPreferences": null,
+    "globalVars": {},
+    "guid": "ec5a5588-61f2-49c8-aec1-241ca499ca20",
+    "iPythonMetadata": null,
+    "inputWidgetPreferences": null,
+    "inputWidgets": {},
+    "language": "python",
+    "name": "08. Extract Data using Python",
+    "notebookMetadata": {
+      "mostRecentlyExecutedCommandWithImplicitDF": {
+        "commandId": 1753352661355687,
+        "dataframes": [
+          "_sqldf"
+        ]
+      },
+      "pythonIndentUnit": 2
+    },
+    "origId": 1753352661355659,
+    "reposExportFormat": "SOURCE",
+    "version": "NotebookV1"
+  },
+  "provenance": {
+    "aliases": [],
+    "archive": "materials/archives/dea-course-v5.dbc",
+    "archive_sha256": "23908dc947dc9279b1176575fa5b0966281fca608509c6fed3deca7700146488",
+    "member": "dea-course/dea03-etl-with-apache-spark/08. Extract Data using Python.python",
+    "member_sha256": "4210a6fede4db5ef9048637425612717e6c0fff49f6184bae839f1cac9353ca6"
+  },
+  "schema_version": 1,
+  "source_base64": "eyJ2ZXJzaW9uIjoiTm90ZWJvb2tWMSIsIm9yaWdJZCI6MTc1MzM1MjY2MTM1NTY1OSwibmFtZSI6IjA4LiBFeHRyYWN0IERhdGEgdXNpbmcgUHl0aG9uIiwibGFuZ3VhZ2UiOiJweXRob24iLCJjb21tYW5kcyI6W3sidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6MTc1MzM1MjY2MTM1NTY4NiwiZ3VpZCI6Ijg3YjNkZGRkLWEyODUtNDI1NS1hNTFlLTFkZjMzNDhjNTM0NyIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjEuNjQwNjI1LCJjb21tYW5kIjoiZGYgPSBzcGFyay5zcWwoJycnQ1JFQVRFIE9SIFJFUExBQ0UgVEVNUCBWSUVXIHR2X2N1c3RvbWVycyBcbiAgICAgICAgICAgICAgICAgIEFTIFxuICAgICAgICAgICAgICAgICAgU0VMRUNUICogRlJPTSBqc29uLmAvVm9sdW1lcy9naXptb2JveC9sYW5kaW5nL29wZXJhdGlvbmFsX2RhdGEvY3VzdG9tZXJzYCcnJykiLCJjb21tYW5kVmVyc2lvbiI6MTAsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJsaXN0UmVzdWx0cyIsImRhdGEiOltdLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sImRhdGFzZXRJbmZvcyI6W3sibmFtZSI6ImRmIiwidHlwZVN0ciI6InB5c3Bhcmsuc3FsLmRhdGFmcmFtZS5EYXRhRnJhbWUiLCJzY2hlbWEiOnsiZmllbGRzIjpbXSwidHlwZSI6InN0cnVjdCJ9LCJ0YWJsZUlkZW50aWZpZXIiOm51bGx9XSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTczNDY5NzkyNDYyMywic3VibWl0VGltZSI6MTczNDY5NzkyNDU1MCwiZmluaXNoVGltZSI6MTczNDY5NzkyNTkxMSwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJyb3dMaW1pdCI6MTAwMDAsImJ5dGVMaW1pdCI6MjA0ODAwMH0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltdLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiI1Yzc5MzI2Zi01ODcyLTQwMmItOGRhNC02MDE4NWVjZWFiZTkifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjE3NTMzNTI2NjEzNTU2ODcsImd1aWQiOiI2ODc5MDFkYy1hMWY5LTQ3Y2ItYjlmYi05MWQ0ZmE1ZTJmMTUiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjoxLjc4OTA2MjUsImNvbW1hbmQiOiIlc3FsXG5TRUxFQ1QgKiBGUk9NIHR2X2N1c3RvbWVyczsiLCJjb21tYW5kVmVyc2lvbiI6NSwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6Imxpc3RSZXN1bHRzIiwiZGF0YSI6W3sidHlwZSI6InRhYmxlIiwiZGF0YSI6W1siMjAyNC0xMC0xNyAxNjoxMjoyNyIsOTE3OSwiUmljaGFyZCBDb3giLCIxOTk2LTEwLTI1IiwiZGV2b244NEBtYWlsLmNvbSIsIjIwMjQtMDktMjYiLCIrMSA2NjgwNzAzMzM1Il0sWyIyMDI0LTEwLTAxIDAwOjUwOjI5Iiw0ODU4LCJDYXJsYSBNb3J0b24iLCIyMDA0LTA2LTIxIiwiam9zZXBoODhAbWFpbC5jb20iLCIyMDI0LTA5LTE1IiwiKzEgODYxNjQ1NDE5NSJdLFsiMjAyNC0xMC0yMyAyMjowMzowOCIsNzIwNywiQmlsbHkgU2NvdHQiLCIxOTk3LTAzLTE3IiwiY2hyaXN0b3BoZXIzMEBtYWlsLmNvbSIsIjIwMjQtMDktMjMiLCIrMSA1NTQ0Mzg3NTY0Il0sWyIyMDI0LTEwLTEyIDA2OjAyOjI3Iiw4NTM5LCJMb3JpIE1hc29uIiwiMjAwMi0xMS0wMSIsInN0ZXBoYW5pZTdAbWFpbC5jb20iLCIyMDI0LTA5LTEyIiwiKzEgMDQ5ODMwMTYyMCJdLFsiMjAyNC0xMC0yNCAxMzowMzoxMyIsOTcwNiwiSmVubmlmZXIgSGFhcyIsIjIwMDEtMDQtMDMiLCJiZW5qYW1pbjU1QG1haWwuY29tIiwiMjAyNC0xMC0wNSIsIisxIDQ3MjU0NjAwMDAiXSxbIjIwMjQtMTAtMDggMjI6NDk6MjUiLDkyNjMsIkpvc2VwaCBLZWxsZXIiLCIyMDAzLTAyLTExIixudWxsLCIyMDI0LTEwLTA0IiwiKzEgMzgxNzg2Nzc1NiJdLFsiMjAyNC0xMC0wNiAxOTo1NTo1MiIsNTAyOCwiSmVzc2ljYSBIYXJyaXMiLCIyMDA0LTA0LTE5IixudWxsLCIyMDI0LTA5LTEwIiwiKzEgODYwNDAwOTkzNSJdLFsiMjAyNC0xMC0xOCAyMzoyNDo1MiIsOTAxOCwiV2lsbGlhbSBDYXJ0ZXIiLCIyMDAzLTA5LTA1IiwiamFtZXM3MEBnbWFpbC5jb20iLCIyMDI0LTEwLTA4IiwiKzEgMTQ0ODc1MzYxMSJdLFsiMjAyNC0xMC0yMSAxMzoyMDoyNiIsODU4MCwiU2hhbm5vbiBBdXN0aW4iLCIyMDAyLTAzLTIyIiwiam9objMwQGdtYWlsLmNvbSIsIjIwMjQtMTAtMDciLCIrMSA0NTk0NzA1NjI5Il0sWyIyMDI0LTEwLTAyIDE0OjUzOjQwIiwzNDA5LCJBbmRyZXcgUGhpbGxpcHMiLCIyMDAzLTA0LTE3IiwicGV0ZXI3M0B5YWhvby5jb20iLCIyMDI0LTA5LTMwIiwiKzEgNDA3OTI3Mzg1MyJdLFsiMjAyNC0xMC0yNiAxNToxNDozMyIsMjM0NCwiTWFydGluIFRob21hcyBERFMiLCIyMDAyLTA1LTAxIiwiYmlsbHk0MkBvdXRsb29rLmNvbSIsIjIwMjQtMTAtMTMiLCIrMSAwMjAxNDU3MTUxIl0sWyIyMDI0LTEwLTE1IDAyOjQ4OjI5Iiw1MDExLCJSYWNoZWwgVGhvbWFzIiwiMjAwMy0wMi0xNyIsImxhdXJlbjU5QHlhaG9vLmNvbSIsIjIwMjQtMDktMjQiLCIrMSA1NDM3MjcxNjIxIl0sWyIyMDI0LTEwLTI4IDAwOjU3OjA5Iiw5MjQ3LCJEci4gRGFuaWVsIEhhbGwiLCIyMDA0LTAzLTIxIiwidGFtYXJhMzBAZ21haWwuY29tIiwiMjAyNC0xMC0wMyIsIisxIDc1NDQxMzcxNzAiXSxbIjIwMjQtMTAtMjIgMDU6NTI6NTciLDY2MjcsIkNhbmRpY2UgUm9zYWxlcyIsIjIwMDQtMDQtMDMiLCJhbWJlcjc5QGV4YW1wbGUub3JnIiwiMjAyNC0xMC0xNSIsIisxIDQ3ODg0NTE1NTkiXSxbIjIwMjQtMTAtMDYgMTk6NTU6NTIiLDUwMjgsIkplc3NpY2EgSGFycmlzIiwiMjAwNC0wNC0xOSIsbnVsbCwiMjAyNC0wOS0xMCIsIisxIDg2MDQwMDk5MzUiXSxbIjIwMjQtMTAtMDggMDM6MzA6NTMiLDU4MTYsIkFteSBNb3JhbGVzIiwiMTk5OS0xMi0xMSIsImRhbmllbDEyQGhvdG1haWwuY29tIiwiMjAyNC0wOS0xNyIsIis0NiA0NDA3Mzg1MDQ0Il0sWyIyMDI0LTEwLTE1IDAxOjI3OjU0Iiw5MjQ3LCJEci4gRGFuaWVsIEhhbGwiLCIyMDA0LTAzLTIxIiwic2hlZW5hMTFAYWxleGFuZGVyLmNvbSIsIjIwMjQtMDktMTUiLCIrNDYgNzI4MTk5MTAxNyJdLFsiMjAyNC0xMC0wOSAxODo1NDowMCIsMzg4OSwiSmVubmlmZXIgSmFja3NvbiIsIjE5OTUtMTAtMzAiLG51bGwsIjIwMjQtMDktMTYiLCIrNjggMjI3Njk5NjYxMiJdLFsiMjAyNC0xMC0xMCAxNjo1Mzo0NCIsOTA4NCwiT2xpdmlhIEx5b25zIiwiMTk5Ny0wNi0xNyIsImpvaG5zb25taWNoYWVsQHlhaG9vLmNvbSIsIjIwMjQtMDktMjYiLG51bGxdLFsiMjAyNC0xMC0xOSAxMTo1Mzo0NCIsbnVsbCwiSm9obiBTbWl0aCIsIjE5OTgtMDEtMTkiLCJqb2huLnNtaXRoQG91dGxvb2suY29tIiwiMjAyNC0wNy0xNiIsIisxIDg3NjIzNDI0NTYiXSxbIjIwMjQtMTEtMTQgMjA6NDE6MTgiLDM4OTIsIkphc29uIEJyaWRnZXMiLCIyMDA0LTAxLTAxIiwibmljb2xlMjlAZ21haWwuY29tIiwiMjAyNC0xMC0yOSIsIisxIDgyMjAwMTE5MjgiXSxbIjIwMjQtMTEtMTYgMDE6NDc6MjUiLDE5ODcsIkFtYW5kYSBBbHZhcmV6IiwiMTk5NS0xMC0xMSIsImVyaWM0MEBvdXRsb29rLmNvbSIsIjIwMjQtMTAtMjciLCIrMSA5NjczMDY2MzAwIl0sWyIyMDI0LTExLTE5IDE0OjAzOjA5Iiw1ODE2LCJBbXkgTW9yYWxlcyIsIjE5OTktMTItMTEiLCJrYXRlbHluODJAZXhhbXBsZS5vcmciLCIyMDI0LTExLTA0IiwiKzEgNDE0MDk4MjcxOSJdLFsiMjAyNC0xMS0wOSAxNDo1MjozMSIsNTIwNCwiSmVubmlmZXIgTmljaG9scyBERFMiLCIxOTk3LTAyLTE3Iiwiam9zZXBoOEBleGFtcGxlLm9yZyIsIjIwMjQtMTEtMDQiLCIrMSAwMzgzMzU2MzI4Il0sWyIyMDI0LTExLTIzIDE4OjE2OjE4Iiw0NDY4LCJNcnMuIFJvYmVydGEgU2FsYXMgUGhEIiwiMTk5Ny0wNS0xMCIsbnVsbCwiMjAyNC0xMC0yNSIsIisxIDQ2Nzk5NTUxMTgiXSxbIjIwMjQtMTEtMTQgMTY6NDE6MTQiLDQ3NjEsIlRpbW90aHkgU21pdGgiLCIxOTk2LTExLTA3Iiwiam9zaHVhNDBAeWFob28uY29tIiwiMjAyNC0xMS0wMyIsIisxIDk0NTA5MjA4NTgiXSxbIjIwMjQtMTEtMDcgMjI6MjA6MDAiLDI3MDMsIkFudGhvbnkgTWlsbGVyIiwiMTk5Ny0xMS0wMiIsbnVsbCwiMjAyNC0xMS0wNSIsIisxIDE1ODYzMTA3NTIiXSxbIjIwMjQtMTEtMTIgMTI6NTc6MzgiLDQ5MTQsIlNhbWFudGhhIEpvaG5zb24iLCIxOTk3LTAzLTI2IiwidGhlcmVzYTE0QG1haWwuY29tIiwiMjAyNC0xMC0xMyIsIisxIDQwOTUwMDM3MzgiXSxbIjIwMjQtMTEtMDggMDI6MjY6NDIiLDcyOTUsIkxhdXJlbiBSZWVkIiwiMjAwMS0wOC0xMSIsImplYW5ldHRlNDhAZXhhbXBsZS5vcmciLCIyMDI0LTEwLTEwIiwiKzEgMDEwNDA4ODc2NSJdLFsiMjAyNC0xMS0wOSAyMDoyNDozMCIsNzgwMywiS2F0aGVyaW5lIExlZSIsIjIwMDAtMDMtMDkiLCJqZW5uaWZlcjg1QG1haWwuY29tIiwiMjAyNC0xMC0yNyIsIisxIDMxMTk4ODY4NjYiXSxbIjIwMjQtMTEtMjQgMTE6MTQ6MDMiLDM3MTIsIlJvYmluIENoYXZleiIsIjE5OTctMDMtMTYiLCJsaXNhMTVAZ21haWwuY29tIiwiMjAyNC0xMS0yNCIsIisxIDI2NTQ3NTY5MTkiXSxbIjIwMjQtMTEtMjMgMTE6MTQ6MDMiLG51bGwsIkFuZHJldyBUYXlsb3IiLCIxOTk2LTAxLTExIiwiYW5kcmV3LnRheWxvckBnbWFpbC5jb20iLCIyMDI0LTExLTIxIiwiKzEgMTIzNTQ0NzMzMyJdLFsiMjAyNC0xMS0wMyAxNzoyMjo1NiIsMjA1NCwiQWxhbiBQcmljZSIsIjE5OTgtMDgtMjUiLCJjb25ub3I0MEB5YWhvby5jb20iLCIyMDI0LTEwLTE0IiwiKzEgMzc0NTY0MjkzNiJdLFsiMjAyNC0xMS0wOSAwNzoxNDoxNyIsNzEyMywiRWRnYXIgU3RldmVucyIsIjIwMDMtMDItMTUiLCJrZXZpbjY4QGV4YW1wbGUub3JnIiwiMjAyNC0xMC0yNyIsIisxIDA3OTMxODk4NDciXSxbIjIwMjQtMTEtMjcgMTI6NTY6MjAiLDQ5OTYsIkJyYW5kb24gUmVlZCIsIjE5OTctMDUtMTEiLCJoYW5kZXJzb25AYmFya2VyLmluZm8iLCIyMDI0LTExLTA2IiwiKzQzIDI3NTA1NDA1MTEiXSxbIjIwMjQtMTItMjUgMTE6MDY6MzUiLDY5NzMsIlRyYWN5IENvbGUiLCIxOTk4LTA3LTI0IiwidG9ueTQ2QG1haWwuY29tIiwiMjAyNC0xMi0xNiIsIisxIDU1MTU4MzY2MTIiXSxbIjIwMjQtMTItMjYgMDk6Mjk6MTYiLDM1MzIsIkhvbGx5IFdpbGtpbnNvbiIsIjIwMDMtMDMtMDYiLCJsaW5kc2V5NjFAeWFob28uY29tIiwiMjAyNC0xMi0yMiIsbnVsbF0sWyIyMDI0LTEyLTE2IDE2OjU0OjEwIiwxMjExLCJKZXJlbXkgQmFsbCIsIjIwMDItMDMtMjYiLCJtZWdhbjg2QHlhaG9vLmNvbSIsIjIwMjQtMTItMDEiLCIrMSA1NzkzNTQzODgyIl0sWyIyMDI0LTEyLTA3IDE4OjA5OjU4Iiw3ODI5LCJEYW5pZWwgQmxhY2siLCIxOTk4LTA0LTEzIiwic2FuZHJhNTRAZXhhbXBsZS5vcmciLCIyMDI0LTExLTE2IiwiKzEgMDkzMzc5NTA4MiJdLFsiMjAyNC0xMi0yNCAxNDo0NjowNCIsNjM4NCwiSmVubmlmZXIgQ2FycmlsbG8iLCIxOTk0LTEyLTE4IiwiamFtZXMzNEB5YWhvby5jb20iLCIyMDI0LTEyLTIyIiwiKzEgNTU5MjE3OTg0MyJdLFsiMjAyNC0xMi0yMSAwNzowODoyOCIsMjYzOSwiSmVzc2ljYSBEZWxlb24iLCIxOTk1LTA2LTA0IiwiamVyZW1pYWg5NkBnbWFpbC5jb20iLCIyMDI0LTExLTIyIiwiKzEgMTMwNDQzNTk5OSJdLFsiMjAyNC0xMi0yMCAxMjozMjoyOSIsMzA4NCwiVHlsZXIgU2ltbW9ucyIsIjIwMDMtMDItMjAiLCJicmlhbjk0QG1haWwuY29tIiwiMjAyNC0xMi0wMiIsbnVsbF0sWyIyMDI0LTEyLTIyIDIzOjAwOjQ4Iiw3OTk3LCJQYXRyaWNpYSBBYmJvdHQiLCIxOTk3LTA3LTMxIiwiYW5nZWxhOTdAbWFpbC5jb20iLCIyMDI0LTExLTI4IiwiKzEgNDA1MzM2NjQ0OCJdLFsiMjAyNC0xMi0wNSAwODo1ODo1MiIsOTY4NywiTWljaGVhbCBQZXJleiBNRCIsIjIwMDItMDctMTgiLCJjaHJpc3RvcGhlcjY1QGV4YW1wbGUub3JnIiwiMjAyNC0xMS0yMiIsIisxIDMwNzk3MTg2MjIiXSxbIjIwMjQtMTItMTcgMTU6MDU6MTUiLDIxNDEsIlphY2hhcnkgTG9wZXoiLCIyMDAyLTA5LTIwIiwiZ2xlbm44N0BleGFtcGxlLm9yZyIsIjIwMjQtMTItMTQiLCIrMSA3NDMxMTkwOTgzIl0sWyIyMDI0LTEyLTA0IDEzOjE2OjAzIiw1NTkyLCJSaWNoYXJkIE5lYWwiLCIxOTk1LTExLTA1IiwiZXJpYzUyQGdtYWlsLmNvbSIsIjIwMjQtMTEtMTUiLCIrMSA0NDI1MTg3Mzk3Il0sWyIyMDI0LTEyLTEzIDE0OjIzOjI3Iiw2NDA2LCJDaHJpc3RvcGhlciBSaXR0ZXIiLCIyMDA0LTA3LTEyIixudWxsLCIyMDI0LTExLTI0IiwiKzEgMTc1MjUxMTI0MSJdLFsiMjAyNC0xMi0xNiAxNjo1NDoxMCIsMTIxMSwiSmVyZW15IEJhbGwiLCIyMDAyLTAzLTI2IiwibWVnYW44NkB5YWhvby5jb20iLCIyMDI0LTEyLTAxIiwiKzEgNTc5MzU0Mzg4MiJdLFsiMjAyNC0xMi0yMiAyMzowMDo0OCIsNzk5NywiUGF0cmljaWEgQWJib3R0IiwiMTk5Ny0wNy0zMSIsImFuZ2VsYTk3QG1haWwuY29tIiwiMjAyNC0xMS0yOCIsIisxIDQwNTMzNjY0NDgiXSxbIjIwMjUtMDEtMDUgMTc6Mjk6MzQiLDcwMDcsIkpvZSBDYXN0YW5lZGEiLCIxOTk5LTA0LTI3IiwibWljaGFlbDM0QG1haWwuY29tIiwiMjAyNC0xMi0zMSIsIisxIDE3Njc5NzAzMzgiXSxbIjIwMjUtMDEtMTcgMTU6NTk6MzkiLDU5NTMsIktldmluIEhhcnJpcyIsIjIwMDMtMDEtMjMiLCJ0aW1vdGh5OTlAbWFpbC5jb20iLCIyMDI0LTEyLTMxIiwiKzEgNjUxNzc2MzY0MCJdLFsiMjAyNS0wMS0xMiAyMDoxMzozMSIsNDk5NiwiQnJhbmRvbiBSZWVkIiwiMTk5Ny0wNS0xMSIsInN0YWNleTcxQHlhaG9vLmNvbSIsIjIwMjQtMTItMTMiLG51bGxdLFsiMjAyNS0wMS0xNCAxMzozMDo1NyIsOTYwNSwiVGlmZmFueSBSb2NoYSIsIjIwMDMtMDQtMjUiLCJtaWNoYWVsODJAeWFob28uY29tIiwiMjAyNC0xMi0yMiIsIisxIDYyMzI4MTE1MDYiXSxbIjIwMjUtMDEtMTYgMjE6MTc6MjIiLDg4NDUsIkpvc2VwaCBSb2JiaW5zIiwiMTk5Ny0wNC0wNCIsImRlcmVrNTNAeWFob28uY29tIiwiMjAyNS0wMS0xMiIsIisxIDk1MTM4OTM4MjAiXSxbIjIwMjUtMDEtMjYgMDk6NDY6MDMiLDQ5NzMsIkRhbmllbCBUaG9tcHNvbiIsIjE5OTktMDctMTciLCJjb25ub3IzMkBleGFtcGxlLm9yZyIsIjIwMjQtMTItMjciLCIrMSA1ODIzMDQ2MjA2Il0sWyIyMDI1LTAxLTI1IDEzOjI4OjMxIiwzODg5LCJKZW5uaWZlciBKYWNrc29uIiwiMTk5NS0xMC0zMCIsImNhdGhlcmluZTc3QGV4YW1wbGUub3JnIiwiMjAyNS0wMS0wNyIsIisxIDU5MzI0NTY3NTUiXSxbIjIwMjUtMDEtMTQgMTg6MzE6MjgiLDYxNjcsIkxlc2xpZSBTbWl0aCIsIjIwMDEtMTAtMjgiLCJhbmdlbGExNkBtYWlsLmNvbSIsIjIwMjQtMTItMTYiLCIrMSAyOTc4NDQ2ODgwIl0sWyIyMDI1LTAxLTE3IDA3OjUwOjQ4IiwzMjk1LCJEcmV3IEhhbnNvbiIsIjE5OTYtMTEtMjEiLCJjYXRoeTMxQGdtYWlsLmNvbSIsIjIwMjUtMDEtMDEiLCIrMSA2NTIxNzkyODg5Il0sWyIyMDI1LTAxLTAzIDAzOjI4OjM0Iiw5MDg0LCJPbGl2aWEgTHlvbnMiLCIxOTk3LTA2LTE3IiwicGF0dHk0N0BvdXRsb29rLmNvbSIsIjIwMjQtMTItMTYiLCIrMSAyOTA5ODk5MTM1Il0sWyIyMDI1LTAxLTIzIDAyOjA3OjI2Iiw5MTUwLCJBbGlzb24gRGF2aXMiLCIyMDA0LTAxLTE3IiwiamFjb2IzMUB5YWhvby5jb20iLCIyMDI0LTEyLTI2IiwiKzEgNzExOTg1MTE0OSJdLFsiMjAyNS0wMS0xNCAxMzozMDo1NyIsOTYwNSwiVGlmZmFueSBSb2NoYSIsIjIwMDMtMDQtMjUiLCJtaWNoYWVsODJAeWFob28uY29tIiwiMjAyNC0xMi0yMiIsIisxIDYyMzI4MTE1MDYiXSxbIjIwMjUtMDEtMTIgMjA6MTM6MzEiLDQ5OTYsIkJyYW5kb24gUmVlZCIsIjE5OTctMDUtMTEiLCJzdGFjZXk3MUB5YWhvby5jb20iLCIyMDI0LTEyLTEzIixudWxsXV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoiY3JlYXRlZF90aW1lc3RhbXAiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJjdXN0b21lcl9pZCIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJjdXN0b21lcl9uYW1lIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoiZGF0ZV9vZl9iaXJ0aCIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6ImVtYWlsIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoibWVtYmVyX3NpbmNlIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoidGVsZXBob25lIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJkYXRhZnJhbWVOYW1lIjoiX3NxbGRmIiwiZXhlY3V0aW9uQ291bnQiOjE0LCJjcmVhdGVUZW1wVmlld0ZvckltcGxpY2l0RGYiOnRydWV9fV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbeyJuYW1lIjoiX3NxbGRmIiwidHlwZVN0ciI6InB5c3Bhcmsuc3FsLmRhdGFmcmFtZS5EYXRhRnJhbWUiLCJzY2hlbWEiOnsiZmllbGRzIjpbeyJtZXRhZGF0YSI6e30sIm5hbWUiOiJjcmVhdGVkX3RpbWVzdGFtcCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJjdXN0b21lcl9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoibG9uZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiY3VzdG9tZXJfbmFtZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJkYXRlX29mX2JpcnRoIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6ImVtYWlsIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6Im1lbWJlcl9zaW5jZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJ0ZWxlcGhvbmUiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9XSwidHlwZSI6InN0cnVjdCJ9LCJ0YWJsZUlkZW50aWZpZXIiOm51bGx9XSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTczNDY5Nzk0ODY5Nywic3VibWl0VGltZSI6MTczNDY5Nzk0ODY2NSwiZmluaXNoVGltZSI6MTczNDY5Nzk1MDAzNywiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJyb3dMaW1pdCI6MTAwMDAsImJ5dGVMaW1pdCI6MjA0ODAwMCwiaW1wbGljaXREZiI6dHJ1ZX0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltbInRhYmxlIiw2Ml1dLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiJlZWYwZWNlNS04NzdjLTRlZTItYjEzOS1hMjVhYTM5YTAyNTIifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjE3NTMzNTI2NjEzNTU2ODMsImd1aWQiOiI3NzY4NzVlOC1jNmE3LTQwYjEtYWJjNC04YjBiNmJmZDU4ZDciLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjozLjUsImNvbW1hbmQiOiJkZiA9IHNwYXJrLnRhYmxlKCdnaXptb2JveC5icm9uemUudl9hZGRyZXNzZXMnKVxuZGlzcGxheShkZikiLCJjb21tYW5kVmVyc2lvbiI6MTAsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJsaXN0UmVzdWx0cyIsImRhdGEiOlt7InR5cGUiOiJ0YWJsZSIsImRhdGEiOltbOTE3OSwic2hpcHBpbmciLCI5NzEzIE1lZGluYSBNb3VudGFpbnMgQXB0LiA4MTMiLCJMYWtlIEVyaWthIiwiTWlzc2lzc2lwcGkiLDkxOTQ1LG51bGxdLFs5MTc5LCJiaWxsaW5nIiwiMDg0IEFubmUgSG9sbG93IEFwdC4gMDY0IiwiRWFzdCBKYXNvbnRvd24iLCJNaW5uZXNvdGEiLDc3MzI5LG51bGxdLFs1ODE2LCJzaGlwcGluZyIsIjg0MDAgUmViZWNjYSBMb2RnZSBTdWl0ZSAwMTEiLCJMYWtlIExpc2F0b3duIiwiTW9udGFuYSIsMTEzNTQsbnVsbF0sWzU4MTYsImJpbGxpbmciLCI4NjkgTGluZGEgTG9ja3MgQXB0LiAxMDUiLCJXZXN0IE1lbGlzc2FidXJ5IiwiTWljaGlnYW4iLDM3NjYyLG51bGxdLFs0ODU4LCJzaGlwcGluZyIsIjQ4MzggSmFjb2IgTmVjayIsIkphbWVzdmlldyIsIldpc2NvbnNpbiIsNTg2NTcsbnVsbF0sWzQ4NTgsImJpbGxpbmciLCI0NTU4IENhYnJlcmEgSXNsYW5kcyIsIkxha2UgRGF2aWQiLCJSaG9kZSBJc2xhbmQiLDYxMzMsbnVsbF0sWzcyMDcsInNoaXBwaW5nIiwiNzU0NzAgUmljaGFyZHNvbiBNaXNzaW9uIEFwdC4gMTQ3IiwiTmV3IFJhY2hlbGhhdmVuIiwiSGF3YWlpIiwzODg1NyxudWxsXSxbNzIwNywiYmlsbGluZyIsIjQ0NTAgTWljaGVsbGUgTWlzc2lvbiBTdWl0ZSA2NjMiLCJOb3J0aCBKdXN0aW4iLCJLZW50dWNreSIsOTE3NTcsbnVsbF0sWzg1MzksInNoaXBwaW5nIiwiMzMxIE1vbmljYSBSb3V0ZSBBcHQuIDAyMiIsIk1pY2hlbGxlY2hlc3RlciIsIlRleGFzIiwxNDYzNyxudWxsXSxbODUzOSwiYmlsbGluZyIsIjQ4Nzk0IEFndWlycmUgRmVycnkgQXB0LiA5NTIiLCJOb3J0aCBBbXkiLCJXYXNoaW5ndG9uIiw5MjUwNyxudWxsXSxbOTcwNiwic2hpcHBpbmciLCIyODU2IEplcmVteSBXYWxsIEFwdC4gOTg1IiwiRWFzdCBFbGl6YWJldGgiLCJPa2xhaG9tYSIsNjY0NjAsbnVsbF0sWzk3MDYsImJpbGxpbmciLCIxNDU0MCBNb29keSBUdW5uZWwiLCJXZXN0IFNoZWxseWJ1cnkiLCJLZW50dWNreSIsODMxNTEsbnVsbF0sWzkyNjMsInNoaXBwaW5nIiwiNTczMyBSaWNoYXJkcyBGZXJyeSBTdWl0ZSA5OTUiLCJFYXN0IEFuZ2VsYWZvcnQiLCJJbmRpYW5hIiw3OTU1NixudWxsXSxbOTI2MywiYmlsbGluZyIsIjEzNjc3IEdhcmNpYSBQb3J0cyIsIlNoZWxsZXlsYW5kIiwiUmhvZGUgSXNsYW5kIiwzNzE5LG51bGxdLFs1MDI4LCJzaGlwcGluZyIsIjk1NSBNb250Z29tZXJ5IE1vdW50YWluIFN1aXRlIDE2NyIsIkphbWVzY2hlc3RlciIsIktlbnR1Y2t5Iiw5MDEzLG51bGxdLFs1MDI4LCJiaWxsaW5nIiwiNTA5NCBBeWFsYSBGYWxscyIsIkdyZWVubW91dGgiLCJOb3J0aCBDYXJvbGluYSIsMjYzOCxudWxsXSxbOTAxOCwic2hpcHBpbmciLCIyMDk5IEZyYW5jaXNjbyBTcHJpbmciLCJCZWFuc2hpcmUiLCJTb3V0aCBDYXJvbGluYSIsODc2ODQsbnVsbF0sWzkwMTgsImJpbGxpbmciLCIyMDcgVHJhY3kgR2F0ZXdheSIsIkNvb2tiZXJnIiwiRGVsYXdhcmUiLDE0MDExLG51bGxdLFs4NTgwLCJzaGlwcGluZyIsIjE3NTQ5IExpc2EgTWlzc2lvbiBTdWl0ZSA5ODciLCJWYXNxdWV6c3RhZCIsIlZpcmdpbmlhIiw0MDY0MSxudWxsXSxbODU4MCwiYmlsbGluZyIsIjYxNTAgSmVzc2ljYSBQYXJrIiwiQmVsbG1vdXRoIiwiUGVubnN5bHZhbmlhIiw4MjM3MCxudWxsXSxbMzQwOSwic2hpcHBpbmciLCI5MTggQXByaWwgSnVuY3Rpb25zIiwiTmV3IFRoZXJlc2EiLCJJbmRpYW5hIiw0NjAwNCxudWxsXSxbMzQwOSwiYmlsbGluZyIsIjEyOTQgRWR3YXJkIElubGV0IiwiTm9ydGggQWxpc29uIiwiSW5kaWFuYSIsODI3NTIsbnVsbF0sWzM4ODksInNoaXBwaW5nIiwiOTA0MDggQ29ubmllIFBpbmVzIFN1aXRlIDI1OCIsIkNhdGhlcmluZWhhdmVuIiwiVGV4YXMiLDMzNzM2LG51bGxdLFszODg5LCJiaWxsaW5nIiwiNzkwOCBXYWxrZXIgVHJhY2siLCJOb3J0aCBKb3NlIiwiVmlyZ2luaWEiLDg0MDk5LG51bGxdLFs5MDg0LCJzaGlwcGluZyIsIjQxMSBKb3NlcGggUGFyayIsIkVyaWNzaWRlIiwiU291dGggRGFrb3RhIiw0NTMzOSxudWxsXSxbOTA4NCwiYmlsbGluZyIsIjY0OSBKZXNzaWNhIFBhcmtzIiwiTm9ydGggVG9tbXlsYW5kIiwiSWxsaW5vaXMiLDg4MDQ4LG51bGxdLFsyMzQ0LCJzaGlwcGluZyIsIjk3NjE5IFNhbmNoZXogUHJhaXJpZSBTdWl0ZSAzNTkiLCJLZWxsZXlmdXJ0IiwiTG91aXNpYW5hIiw2NDkwNixudWxsXSxbMjM0NCwiYmlsbGluZyIsIjUwMDggQ29yZXkgTGFuZGluZyBBcHQuIDQ3NSIsIlNvdXRoIENocmlzdGluYWJ1cmdoIiwiTmV3IE1leGljbyIsMzY1MCxudWxsXSxbNTAxMSwic2hpcHBpbmciLCI4MjggTWljaGVsZSBTcHJpbmciLCJEdWZmeXNoaXJlIiwiVGVubmVzc2VlIiw5MzAyNSxudWxsXSxbNTAxMSwiYmlsbGluZyIsIjgwNjYgU21pdGggUG9ydHMiLCJQb3J0IENoZXJ5bCIsIkZsb3JpZGEiLDk3OTUyLG51bGxdLFs5MjQ3LCJzaGlwcGluZyIsIjE5NiBUaG9tYXMgU2hvcmUgQXB0LiA3NjgiLCJCb2JieW1vdXRoIiwiTG91aXNpYW5hIiw5MTUzMyxudWxsXSxbOTI0NywiYmlsbGluZyIsIjAwMzQgRmxlbWluZyBIb2xsb3cgU3VpdGUgMjk1IiwiV2FkZWZ1cnQiLCJNb250YW5hIiwzNDQ2MCxudWxsXSxbNjYyNywic2hpcHBpbmciLCI3NjgxMCBNY2ludG9zaCBGb3JnZSBTdWl0ZSA4ODUiLCJHcmVnb3J5cG9ydCIsIlNvdXRoIERha290YSIsNDE4ODUsbnVsbF0sWzY2MjcsImJpbGxpbmciLCIzNTg1NSBIYWFzIENlbnRlcnMgQXB0LiA5MzEiLCJXZXN0IEFuZHJlYXZpbGxlIiwiVmlyZ2luaWEiLDgyMzk3LG51bGxdLFszODkyLCJzaGlwcGluZyIsIjUwMDEgQ2FzdHJvIENyZWVrIiwiV2F0c29uYmVyZyIsIlNvdXRoIERha290YSIsMzgwNSxudWxsXSxbMzg5MiwiYmlsbGluZyIsIjMyMiBEYW4gTG9jayIsIlRlcnJpcG9ydCIsIk1pc3NvdXJpIiwyNTI3NixudWxsXSxbMTk4Nywic2hpcHBpbmciLCI5NDQgU21pdGggU3F1YXJlcyIsIlBvcnQgSmVubmlmZXIiLCJNYXJ5bGFuZCIsMjg2NDYsbnVsbF0sWzE5ODcsImJpbGxpbmciLCIzNDQwIEJlY2sgUGFya3dheXMiLCJXZXN0IEplbm5pZmVyIiwiQWxhc2thIiw3OTc2NixudWxsXSxbNTIwNCwic2hpcHBpbmciLCI3MzIyNSBEYXZpcyBJc2xhbmQiLCJSb2JlcnR2aWxsZSIsIkZsb3JpZGEiLDMwOTk0LG51bGxdLFs1MjA0LCJiaWxsaW5nIiwiODE5MSBKZW5uaWZlciBTaG9hbHMiLCJGcmllZG1hbnN0YWQiLCJOb3J0aCBEYWtvdGEiLDk3Njc4LG51bGxdLFs0NDY4LCJzaGlwcGluZyIsIjk2NTAxIE1pY2hlbGxlIFdhbGwiLCJBbmRlcnNvbm1vdXRoIiwiTmV3IFlvcmsiLDQwNDE2LG51bGxdLFs0NDY4LCJiaWxsaW5nIiwiNzkwIEpvbmVzIE5lY2siLCJKZW5uaWZlcnZpbGxlIiwiRmxvcmlkYSIsNzI5NDksbnVsbF0sWzQ3NjEsInNoaXBwaW5nIiwiNTU2NDAgWW9sYW5kYSBCcm9va3MiLCJBbmRyZXdmdXJ0IiwiTWlzc291cmkiLDMwNjE1LG51bGxdLFs0NzYxLCJiaWxsaW5nIiwiNDkyIEpvc2UgS25vbGwgQXB0LiA4MzYiLCJMYWtlIFN5ZG5leSIsIld5b21pbmciLDUxNTExLG51bGxdLFsyNzAzLCJzaGlwcGluZyIsIjUzODUgUGF1bCBQb3J0IFN1aXRlIDk2MyIsIlJpY2hhcmRzb250b24iLCJGbG9yaWRhIiw2NDMyLG51bGxdLFsyNzAzLCJiaWxsaW5nIiwiNzYzOSBEZXJlayBTdHJlZXRzIiwiTmV3IE1hcnkiLCJDYWxpZm9ybmlhIiw2ODYxMCxudWxsXSxbNDk5Niwic2hpcHBpbmciLCI1NTY2IEdvb2QgSGFyYm9yIFN1aXRlIDA0NyIsIk5vcnRoIENyeXN0YWxmdXJ0IiwiTWFpbmUiLDMwMjc0LG51bGxdLFs0OTk2LCJiaWxsaW5nIiwiMTAyIENvbGVtYW4gQ2VudGVycyIsIldlc3QgUGF1bGJlcmciLCJBcml6b25hIiw1NTY5OSxudWxsXSxbNDkxNCwic2hpcHBpbmciLCI3NTAgT2xpdmVyIFNob3JlIFN1aXRlIDQwMiIsIlJlZWRidXJ5IiwiS2VudHVja3kiLDMzNzU1LG51bGxdLFs0OTE0LCJiaWxsaW5nIiwiNjM5IE1hdHRoZXcgRm9yZ2UiLCJTb3V0aCBMaXNhYnVyZ2giLCJBbGFza2EiLDI2NjkzLG51bGxdLFs3Mjk1LCJzaGlwcGluZyIsIjI0MCBUYW1teSBCeXBhc3MgU3VpdGUgNDMzIiwiTmV3IEhheWRlbiIsIk1pbm5lc290YSIsNTU2MzIsbnVsbF0sWzcyOTUsImJpbGxpbmciLCIwMDg3IFNtaXRoIFNxdWFyZSBTdWl0ZSAxMjciLCJXZXN0IEtyaXN0ZW5zaWRlIiwiSWRhaG8iLDc5NSxudWxsXSxbNzgwMywic2hpcHBpbmciLCIzOTE5NCBMZSBVbmRlcnBhc3MiLCJEYXZpZHRvd24iLCJWaXJnaW5pYSIsNDEzODIsbnVsbF0sWzc4MDMsImJpbGxpbmciLCI1MjkgQm9iYnkgU3F1YXJlcyBBcHQuIDIyNSIsIkxha2UgTWljaGVsbGUiLCJLYW5zYXMiLDE4MDk0LG51bGxdLFszNzEyLCJzaGlwcGluZyIsIjM1ODA3IEtheWxlZSBWaWV3IiwiTGFrZSBNZWxhbmllYnVyZ2giLCJVdGFoIiw4NjQwNixudWxsXSxbMzcxMiwiYmlsbGluZyIsIjkxOTg0IFJvZG5leSBGb3JrIFN1aXRlIDI5MCIsIk1hcnlsYW5kIiwiTWlzc291cmkiLDM3MDgyLG51bGxdLFsyMDU0LCJzaGlwcGluZyIsIjIyNSBMb3BleiBCcmlkZ2UgU3VpdGUgMzg2IiwiU291dGggTW9uaWNhIiwiSW5kaWFuYSIsMzQxMzQsbnVsbF0sWzIwNTQsImJpbGxpbmciLCI4OTAgQnJhbmRvbiBCcm9vayBTdWl0ZSA3NzQiLCJOb3J0aCBOaWNvbGVib3JvdWdoIiwiV3lvbWluZyIsMTUwNzcsbnVsbF0sWzcxMjMsInNoaXBwaW5nIiwiNjE0OSBBZGFtIE1lYWRvd3MiLCJTb3V0aCBMaXNhIiwiTmV3IFlvcmsiLDk2MTM4LG51bGxdLFs3MTIzLCJiaWxsaW5nIiwiMzk3NSBTaG9ydCBUcmFpbCBTdWl0ZSAzMzIiLCJOb3J0aCBBbGV4YW5kcmEiLCJTb3V0aCBEYWtvdGEiLDQ3NDQ4LG51bGxdLFs2OTczLCJzaGlwcGluZyIsIjU3ODAgQXNobGV5IFJvdyIsIkxhcmFjaGVzdGVyIiwiQWxhc2thIiw5NjU4MCxudWxsXSxbNjk3MywiYmlsbGluZyIsIjc1NyBBbXkgTW90b3J3YXkiLCJTdGVwaGFuaWVtb3V0aCIsIk1hc3NhY2h1c2V0dHMiLDU1MTAyLG51bGxdLFszNTMyLCJzaGlwcGluZyIsIjE4ODkyIEJlbnNvbiBMYWtlIiwiTWl0Y2hlbGxsYW5kIiwiTWlubmVzb3RhIiw4MDExMCxudWxsXSxbMzUzMiwiYmlsbGluZyIsIjg3Mjk3IERhdmlzIEJ5cGFzcyBBcHQuIDc0MiIsIk1hbm5zaGlyZSIsIkNvbG9yYWRvIiwxOTEzOSxudWxsXSxbMTIxMSwic2hpcHBpbmciLCI1ODAgU2FtYW50aGEgTG9kZ2UiLCJOZXcgQ2hyaXN0aW5hYm9yb3VnaCIsIkxvdWlzaWFuYSIsNDI1MSxudWxsXSxbMTIxMSwiYmlsbGluZyIsIjc5MzggQ2VydmFudGVzIE1vdW50YWluIFN1aXRlIDE1OSIsIk9jb25ub3JoYXZlbiIsIkluZGlhbmEiLDQ0MTI5LG51bGxdLFs3ODI5LCJzaGlwcGluZyIsIjMyNDIgS2VsbHkgRm9ya3MgU3VpdGUgODEwIiwiTGFrZSBTaWVycmFzaWRlIiwiTmVicmFza2EiLDEwNjI5LG51bGxdLFs3ODI5LCJiaWxsaW5nIiwiMDcyMiBHcmVnb3J5IFR1cm5waWtlIiwiRWFzdCBKYWNrc29ucG9ydCIsIkluZGlhbmEiLDUxMzgsbnVsbF0sWzYzODQsInNoaXBwaW5nIiwiNzUwIExpc2EgVmFsbGV5cyIsIkhlYXRoZXJ0b24iLCJNaWNoaWdhbiIsMjI4ODUsbnVsbF0sWzYzODQsImJpbGxpbmciLCIzOTE1IFJleWVzIElzbGFuZHMgQXB0LiAyNjEiLCJOZXcgRW1pbHkiLCJNYXNzYWNodXNldHRzIiw5NTI3NSxudWxsXSxbMjYzOSwic2hpcHBpbmciLCI1MzgzIEFsYmVydCBHcm92ZSBBcHQuIDgwNCIsIk5vcnRoIERlc3RpbnlsYW5kIiwiSWxsaW5vaXMiLDYwMTUwLG51bGxdLFsyNjM5LCJiaWxsaW5nIiwiMjIyIERvbWluaXF1ZSBTcHJpbmdzIEFwdC4gOTQyIiwiQ29sZWNoZXN0ZXIiLCJMb3Vpc2lhbmEiLDk2MjU4LG51bGxdLFszMDg0LCJzaGlwcGluZyIsIjMzMzcgR3JlZ29yeSBJc2xhbmQiLCJNaXRjaGVsbGJ1cnkiLCJUZW5uZXNzZWUiLDcwNjAzLG51bGxdLFszMDg0LCJiaWxsaW5nIiwiNzg4MjggTW9udGdvbWVyeSBCcmFuY2ggU3VpdGUgMzE2IiwiU291dGggQ2hlbHNlYSIsIldpc2NvbnNpbiIsNjEwNTQsbnVsbF0sWzc5OTcsInNoaXBwaW5nIiwiODE2NiBBbnRob255IExvZGdlIFN1aXRlIDUyOCIsIlJpY2hhcmRtb3V0aCIsIk1pc3Npc3NpcHBpIiw0ODc5MCxudWxsXSxbNzk5NywiYmlsbGluZyIsIjQyNSBLZWl0aCBNb3RvcndheSIsIldlc3QgTGF3cmVuY2Vtb3V0aCIsIk5lYnJhc2thIiw3NjY3NCxudWxsXSxbOTY4Nywic2hpcHBpbmciLCIzMDQ0IFNjb3R0IFJvdyIsIk5vcnRoIE5vYWgiLCJPcmVnb24iLDczOTg0LG51bGxdLFs5Njg3LCJiaWxsaW5nIiwiMTQ2IFNtaXRoIENvdmVzIEFwdC4gNzM4IiwiTm9ydGggTGlzYXRvbiIsIldlc3QgVmlyZ2luaWEiLDQ2NDI5LG51bGxdLFsyMTQxLCJzaGlwcGluZyIsIjA5OCBTZWxsZXJzIFN0YXRpb24iLCJTb3V0aCBKYXZpZXJzdGFkIiwiVGV4YXMiLDU5Njg5LG51bGxdLFsyMTQxLCJiaWxsaW5nIiwiNzQ1MSBMaXNhIFN0cmF2ZW51ZSBTdWl0ZSA5OTQiLCJTb3V0aCBWaWN0b3IiLCJLYW5zYXMiLDQ5ODM1LG51bGxdLFs1NTkyLCJzaGlwcGluZyIsIjc1NCBSaWNreSBDb3JuZXJzIEFwdC4gNjI5IiwiSm9ubGFuZCIsIlNvdXRoIENhcm9saW5hIiwyMDcwLG51bGxdLFs1NTkyLCJiaWxsaW5nIiwiOTY4OCBFbGl6YWJldGggUGxhaW5zIiwiU291dGggVGhlb2RvcmVidXJnaCIsIk1hc3NhY2h1c2V0dHMiLDk3MTQ2LG51bGxdLFs2NDA2LCJzaGlwcGluZyIsIjYxMyBIYXJ0IFJhcGlkIEFwdC4gNDQ3IiwiU2hhbm5vbm1vdXRoIiwiV3lvbWluZyIsODMxMTksbnVsbF0sWzY0MDYsImJpbGxpbmciLCI1NzA2IEFkYW0gRm9yZ2VzIFN1aXRlIDU2NyIsIkpvc2VwaGJ1cmdoIiwiU291dGggRGFrb3RhIiw3MzU5LG51bGxdLFs3MDA3LCJzaGlwcGluZyIsIjY0OTE4IExlZSBQb3J0cyBBcHQuIDI2OSIsIkphc29udmlldyIsIk1hcnlsYW5kIiwxODk5NCxudWxsXSxbNzAwNywiYmlsbGluZyIsIjIwMSBEYW5pZWxsZSBIb2xsb3cgQXB0LiA2NjUiLCJKZXJyeXBvcnQiLCJTb3V0aCBEYWtvdGEiLDEyMzYzLG51bGxdLFs1OTUzLCJzaGlwcGluZyIsIjEzOTMgV2hpdGUgV2VsbHMgU3VpdGUgNzIyIiwiTm9ydGggS2FyZW4iLCJDb25uZWN0aWN1dCIsNDc4MDIsbnVsbF0sWzU5NTMsImJpbGxpbmciLCI0NzAgQ2FzZXkgUGluZXMgU3VpdGUgOTU3IiwiRGVhbm1vdXRoIiwiQXJrYW5zYXMiLDk2ODYwLG51bGxdLFs5NjA1LCJzaGlwcGluZyIsIjQxMjMgU29sb21vbiBPdmFsIEFwdC4gNjQ4IiwiTWNjb3JtaWNrc2lkZSIsIkluZGlhbmEiLDkwNjU5LG51bGxdLFs5NjA1LCJiaWxsaW5nIiwiNjczNzMgRGF2aWQgUGxhaW5zIFN1aXRlIDQ1NyIsIkVhc3QgU3RldmVuZm9ydCIsIk5ldmFkYSIsODQxODMsbnVsbF0sWzg4NDUsInNoaXBwaW5nIiwiOTU2ODkgSmVmZnJleSBFeHByZXNzd2F5IiwiRWFzdCBMYW5jZWJvcm91Z2giLCJQZW5uc3lsdmFuaWEiLDc5MjUxLG51bGxdLFs4ODQ1LCJiaWxsaW5nIiwiNTU2IENocmlzdGVuc2VuIFBpa2UiLCJOb3J0aCBKZXJlbXl2aWV3IiwiQ2FsaWZvcm5pYSIsOTA3ODYsbnVsbF0sWzQ5NzMsInNoaXBwaW5nIiwiMzAxMyBNaWNoZWxsZSBNb3VudGFpbiBBcHQuIDIxNCIsIlNvdXRoIFBhdHJpY2tidXJnaCIsIkFyaXpvbmEiLDQ1ODc1LG51bGxdLFs0OTczLCJiaWxsaW5nIiwiNzQ4IEpvaG4gQ3VydmUiLCJGcml0emJlcmciLCJNYXJ5bGFuZCIsMzYxMjgsbnVsbF0sWzYxNjcsInNoaXBwaW5nIiwiMTc5IFZhbmcgU3RyZWV0IiwiSmVzc2ljYXN0YWQiLCJDb25uZWN0aWN1dCIsNDA5MTksbnVsbF0sWzYxNjcsImJpbGxpbmciLCI1ODY3NiBLZWl0aCBDb3ZlcyIsIk5ldyBFcmljaGF2ZW4iLCJLZW50dWNreSIsMjUyOTcsbnVsbF0sWzMyOTUsInNoaXBwaW5nIiwiOTU2OSBEZW5uaXMgV2F5IFN1aXRlIDA0NyIsIk5vcnRoIEFteSIsIk5ldyBZb3JrIiwxNzg2NyxudWxsXSxbMzI5NSwiYmlsbGluZyIsIjM2Nzg5IEhhdGZpZWxkIExhbmRpbmciLCJIYXlkZW50b24iLCJUZW5uZXNzZWUiLDYwOTUwLG51bGxdLFs5MTUwLCJzaGlwcGluZyIsIjgxOSBDYW1wYmVsbCBWaWxsZSIsIlNvdXRoIElhbiIsIkNhbGlmb3JuaWEiLDM1NTQ5LG51bGxdLFs5MTUwLCJiaWxsaW5nIiwiNDgyMTkgS3VydCBIb2xsb3ciLCJTb3V0aCBSYXZlbmJlcmciLCJSaG9kZSBJc2xhbmQiLDgwNzgsbnVsbF1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sInNjaGVtYSI6W3sibmFtZSI6ImN1c3RvbWVyX2lkIiwidHlwZSI6IlwiaW50ZWdlclwiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6ImFkZHJlc3NfdHlwZSIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6ImFkZHJlc3NfbGluZV8xIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoiY2l0eSIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InN0YXRlIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicG9zdGNvZGUiLCJ0eXBlIjoiXCJpbnRlZ2VyXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoiX3Jlc2N1ZWRfZGF0YSIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9XSwib3ZlcmZsb3ciOmZhbHNlLCJhZ2dEYXRhIjpbXSwiYWdnU2NoZW1hIjpbXSwiYWdnT3ZlcmZsb3ciOmZhbHNlLCJhZ2dTZXJpZXNMaW1pdFJlYWNoZWQiOmZhbHNlLCJhZ2dFcnJvciI6IiIsImFnZ1R5cGUiOiIiLCJwbG90T3B0aW9ucyI6bnVsbCwiaXNKc29uU2NoZW1hIjp0cnVlLCJkYmZzUmVzdWx0UGF0aCI6bnVsbCwiZGF0YXNldEluZm9zIjpbXSwiY29sdW1uQ3VzdG9tRGlzcGxheUluZm9zIjp7fSwibWV0YWRhdGEiOnt9fV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbeyJuYW1lIjoiZGYiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuZGF0YWZyYW1lLkRhdGFGcmFtZSIsInNjaGVtYSI6eyJmaWVsZHMiOlt7Im1ldGFkYXRhIjp7fSwibmFtZSI6ImN1c3RvbWVyX2lkIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJpbnRlZ2VyIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJhZGRyZXNzX3R5cGUiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiYWRkcmVzc19saW5lXzEiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiY2l0eSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJzdGF0ZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJwb3N0Y29kZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiX3Jlc2N1ZWRfZGF0YSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzM0Njk4MjgwNTc1LCJzdWJtaXRUaW1lIjoxNzM0Njk4MjgwNTI2LCJmaW5pc2hUaW1lIjoxNzM0Njk4MjgxNjExLCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDEwMF1dLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiIyZjVmZTg0My05ZDQ4LTRmMTItYTEyOS0xMDU1ZTJiNzkzMzIifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjE3NTMzNTI2NjEzNTU2ODIsImd1aWQiOiIwMDI3OWJhOS0wZWVhLTQ0NDQtYWZiOS1iNmFjNjFkNWZmZDUiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjoyLjIxODc1LCJjb21tYW5kIjoiZGYgPSBzcGFyay5yZWFkLmZvcm1hdCgnanNvbicpLmxvYWQoJy9Wb2x1bWVzL2dpem1vYm94L2xhbmRpbmcvb3BlcmF0aW9uYWxfZGF0YS9jdXN0b21lcnMnKVxuZGlzcGxheShkZikiLCJjb21tYW5kVmVyc2lvbiI6OSwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6Imxpc3RSZXN1bHRzIiwiZGF0YSI6W3sidHlwZSI6InRhYmxlIiwiZGF0YSI6W1siMjAyNC0xMC0xNyAxNjoxMjoyNyIsOTE3OSwiUmljaGFyZCBDb3giLCIxOTk2LTEwLTI1IiwiZGV2b244NEBtYWlsLmNvbSIsIjIwMjQtMDktMjYiLCIrMSA2NjgwNzAzMzM1Il0sWyIyMDI0LTEwLTAxIDAwOjUwOjI5Iiw0ODU4LCJDYXJsYSBNb3J0b24iLCIyMDA0LTA2LTIxIiwiam9zZXBoODhAbWFpbC5jb20iLCIyMDI0LTA5LTE1IiwiKzEgODYxNjQ1NDE5NSJdLFsiMjAyNC0xMC0yMyAyMjowMzowOCIsNzIwNywiQmlsbHkgU2NvdHQiLCIxOTk3LTAzLTE3IiwiY2hyaXN0b3BoZXIzMEBtYWlsLmNvbSIsIjIwMjQtMDktMjMiLCIrMSA1NTQ0Mzg3NTY0Il0sWyIyMDI0LTEwLTEyIDA2OjAyOjI3Iiw4NTM5LCJMb3JpIE1hc29uIiwiMjAwMi0xMS0wMSIsInN0ZXBoYW5pZTdAbWFpbC5jb20iLCIyMDI0LTA5LTEyIiwiKzEgMDQ5ODMwMTYyMCJdLFsiMjAyNC0xMC0yNCAxMzowMzoxMyIsOTcwNiwiSmVubmlmZXIgSGFhcyIsIjIwMDEtMDQtMDMiLCJiZW5qYW1pbjU1QG1haWwuY29tIiwiMjAyNC0xMC0wNSIsIisxIDQ3MjU0NjAwMDAiXSxbIjIwMjQtMTAtMDggMjI6NDk6MjUiLDkyNjMsIkpvc2VwaCBLZWxsZXIiLCIyMDAzLTAyLTExIixudWxsLCIyMDI0LTEwLTA0IiwiKzEgMzgxNzg2Nzc1NiJdLFsiMjAyNC0xMC0wNiAxOTo1NTo1MiIsNTAyOCwiSmVzc2ljYSBIYXJyaXMiLCIyMDA0LTA0LTE5IixudWxsLCIyMDI0LTA5LTEwIiwiKzEgODYwNDAwOTkzNSJdLFsiMjAyNC0xMC0xOCAyMzoyNDo1MiIsOTAxOCwiV2lsbGlhbSBDYXJ0ZXIiLCIyMDAzLTA5LTA1IiwiamFtZXM3MEBnbWFpbC5jb20iLCIyMDI0LTEwLTA4IiwiKzEgMTQ0ODc1MzYxMSJdLFsiMjAyNC0xMC0yMSAxMzoyMDoyNiIsODU4MCwiU2hhbm5vbiBBdXN0aW4iLCIyMDAyLTAzLTIyIiwiam9objMwQGdtYWlsLmNvbSIsIjIwMjQtMTAtMDciLCIrMSA0NTk0NzA1NjI5Il0sWyIyMDI0LTEwLTAyIDE0OjUzOjQwIiwzNDA5LCJBbmRyZXcgUGhpbGxpcHMiLCIyMDAzLTA0LTE3IiwicGV0ZXI3M0B5YWhvby5jb20iLCIyMDI0LTA5LTMwIiwiKzEgNDA3OTI3Mzg1MyJdLFsiMjAyNC0xMC0yNiAxNToxNDozMyIsMjM0NCwiTWFydGluIFRob21hcyBERFMiLCIyMDAyLTA1LTAxIiwiYmlsbHk0MkBvdXRsb29rLmNvbSIsIjIwMjQtMTAtMTMiLCIrMSAwMjAxNDU3MTUxIl0sWyIyMDI0LTEwLTE1IDAyOjQ4OjI5Iiw1MDExLCJSYWNoZWwgVGhvbWFzIiwiMjAwMy0wMi0xNyIsImxhdXJlbjU5QHlhaG9vLmNvbSIsIjIwMjQtMDktMjQiLCIrMSA1NDM3MjcxNjIxIl0sWyIyMDI0LTEwLTI4IDAwOjU3OjA5Iiw5MjQ3LCJEci4gRGFuaWVsIEhhbGwiLCIyMDA0LTAzLTIxIiwidGFtYXJhMzBAZ21haWwuY29tIiwiMjAyNC0xMC0wMyIsIisxIDc1NDQxMzcxNzAiXSxbIjIwMjQtMTAtMjIgMDU6NTI6NTciLDY2MjcsIkNhbmRpY2UgUm9zYWxlcyIsIjIwMDQtMDQtMDMiLCJhbWJlcjc5QGV4YW1wbGUub3JnIiwiMjAyNC0xMC0xNSIsIisxIDQ3ODg0NTE1NTkiXSxbIjIwMjQtMTAtMDYgMTk6NTU6NTIiLDUwMjgsIkplc3NpY2EgSGFycmlzIiwiMjAwNC0wNC0xOSIsbnVsbCwiMjAyNC0wOS0xMCIsIisxIDg2MDQwMDk5MzUiXSxbIjIwMjQtMTAtMDggMDM6MzA6NTMiLDU4MTYsIkFteSBNb3JhbGVzIiwiMTk5OS0xMi0xMSIsImRhbmllbDEyQGhvdG1haWwuY29tIiwiMjAyNC0wOS0xNyIsIis0NiA0NDA3Mzg1MDQ0Il0sWyIyMDI0LTEwLTE1IDAxOjI3OjU0Iiw5MjQ3LCJEci4gRGFuaWVsIEhhbGwiLCIyMDA0LTAzLTIxIiwic2hlZW5hMTFAYWxleGFuZGVyLmNvbSIsIjIwMjQtMDktMTUiLCIrNDYgNzI4MTk5MTAxNyJdLFsiMjAyNC0xMC0wOSAxODo1NDowMCIsMzg4OSwiSmVubmlmZXIgSmFja3NvbiIsIjE5OTUtMTAtMzAiLG51bGwsIjIwMjQtMDktMTYiLCIrNjggMjI3Njk5NjYxMiJdLFsiMjAyNC0xMC0xMCAxNjo1Mzo0NCIsOTA4NCwiT2xpdmlhIEx5b25zIiwiMTk5Ny0wNi0xNyIsImpvaG5zb25taWNoYWVsQHlhaG9vLmNvbSIsIjIwMjQtMDktMjYiLG51bGxdLFsiMjAyNC0xMC0xOSAxMTo1Mzo0NCIsbnVsbCwiSm9obiBTbWl0aCIsIjE5OTgtMDEtMTkiLCJqb2huLnNtaXRoQG91dGxvb2suY29tIiwiMjAyNC0wNy0xNiIsIisxIDg3NjIzNDI0NTYiXSxbIjIwMjQtMTEtMTQgMjA6NDE6MTgiLDM4OTIsIkphc29uIEJyaWRnZXMiLCIyMDA0LTAxLTAxIiwibmljb2xlMjlAZ21haWwuY29tIiwiMjAyNC0xMC0yOSIsIisxIDgyMjAwMTE5MjgiXSxbIjIwMjQtMTEtMTYgMDE6NDc6MjUiLDE5ODcsIkFtYW5kYSBBbHZhcmV6IiwiMTk5NS0xMC0xMSIsImVyaWM0MEBvdXRsb29rLmNvbSIsIjIwMjQtMTAtMjciLCIrMSA5NjczMDY2MzAwIl0sWyIyMDI0LTExLTE5IDE0OjAzOjA5Iiw1ODE2LCJBbXkgTW9yYWxlcyIsIjE5OTktMTItMTEiLCJrYXRlbHluODJAZXhhbXBsZS5vcmciLCIyMDI0LTExLTA0IiwiKzEgNDE0MDk4MjcxOSJdLFsiMjAyNC0xMS0wOSAxNDo1MjozMSIsNTIwNCwiSmVubmlmZXIgTmljaG9scyBERFMiLCIxOTk3LTAyLTE3Iiwiam9zZXBoOEBleGFtcGxlLm9yZyIsIjIwMjQtMTEtMDQiLCIrMSAwMzgzMzU2MzI4Il0sWyIyMDI0LTExLTIzIDE4OjE2OjE4Iiw0NDY4LCJNcnMuIFJvYmVydGEgU2FsYXMgUGhEIiwiMTk5Ny0wNS0xMCIsbnVsbCwiMjAyNC0xMC0yNSIsIisxIDQ2Nzk5NTUxMTgiXSxbIjIwMjQtMTEtMTQgMTY6NDE6MTQiLDQ3NjEsIlRpbW90aHkgU21pdGgiLCIxOTk2LTExLTA3Iiwiam9zaHVhNDBAeWFob28uY29tIiwiMjAyNC0xMS0wMyIsIisxIDk0NTA5MjA4NTgiXSxbIjIwMjQtMTEtMDcgMjI6MjA6MDAiLDI3MDMsIkFudGhvbnkgTWlsbGVyIiwiMTk5Ny0xMS0wMiIsbnVsbCwiMjAyNC0xMS0wNSIsIisxIDE1ODYzMTA3NTIiXSxbIjIwMjQtMTEtMTIgMTI6NTc6MzgiLDQ5MTQsIlNhbWFudGhhIEpvaG5zb24iLCIxOTk3LTAzLTI2IiwidGhlcmVzYTE0QG1haWwuY29tIiwiMjAyNC0xMC0xMyIsIisxIDQwOTUwMDM3MzgiXSxbIjIwMjQtMTEtMDggMDI6MjY6NDIiLDcyOTUsIkxhdXJlbiBSZWVkIiwiMjAwMS0wOC0xMSIsImplYW5ldHRlNDhAZXhhbXBsZS5vcmciLCIyMDI0LTEwLTEwIiwiKzEgMDEwNDA4ODc2NSJdLFsiMjAyNC0xMS0wOSAyMDoyNDozMCIsNzgwMywiS2F0aGVyaW5lIExlZSIsIjIwMDAtMDMtMDkiLCJqZW5uaWZlcjg1QG1haWwuY29tIiwiMjAyNC0xMC0yNyIsIisxIDMxMTk4ODY4NjYiXSxbIjIwMjQtMTEtMjQgMTE6MTQ6MDMiLDM3MTIsIlJvYmluIENoYXZleiIsIjE5OTctMDMtMTYiLCJsaXNhMTVAZ21haWwuY29tIiwiMjAyNC0xMS0yNCIsIisxIDI2NTQ3NTY5MTkiXSxbIjIwMjQtMTEtMjMgMTE6MTQ6MDMiLG51bGwsIkFuZHJldyBUYXlsb3IiLCIxOTk2LTAxLTExIiwiYW5kcmV3LnRheWxvckBnbWFpbC5jb20iLCIyMDI0LTExLTIxIiwiKzEgMTIzNTQ0NzMzMyJdLFsiMjAyNC0xMS0wMyAxNzoyMjo1NiIsMjA1NCwiQWxhbiBQcmljZSIsIjE5OTgtMDgtMjUiLCJjb25ub3I0MEB5YWhvby5jb20iLCIyMDI0LTEwLTE0IiwiKzEgMzc0NTY0MjkzNiJdLFsiMjAyNC0xMS0wOSAwNzoxNDoxNyIsNzEyMywiRWRnYXIgU3RldmVucyIsIjIwMDMtMDItMTUiLCJrZXZpbjY4QGV4YW1wbGUub3JnIiwiMjAyNC0xMC0yNyIsIisxIDA3OTMxODk4NDciXSxbIjIwMjQtMTEtMjcgMTI6NTY6MjAiLDQ5OTYsIkJyYW5kb24gUmVlZCIsIjE5OTctMDUtMTEiLCJoYW5kZXJzb25AYmFya2VyLmluZm8iLCIyMDI0LTExLTA2IiwiKzQzIDI3NTA1NDA1MTEiXSxbIjIwMjQtMTItMjUgMTE6MDY6MzUiLDY5NzMsIlRyYWN5IENvbGUiLCIxOTk4LTA3LTI0IiwidG9ueTQ2QG1haWwuY29tIiwiMjAyNC0xMi0xNiIsIisxIDU1MTU4MzY2MTIiXSxbIjIwMjQtMTItMjYgMDk6Mjk6MTYiLDM1MzIsIkhvbGx5IFdpbGtpbnNvbiIsIjIwMDMtMDMtMDYiLCJsaW5kc2V5NjFAeWFob28uY29tIiwiMjAyNC0xMi0yMiIsbnVsbF0sWyIyMDI0LTEyLTE2IDE2OjU0OjEwIiwxMjExLCJKZXJlbXkgQmFsbCIsIjIwMDItMDMtMjYiLCJtZWdhbjg2QHlhaG9vLmNvbSIsIjIwMjQtMTItMDEiLCIrMSA1NzkzNTQzODgyIl0sWyIyMDI0LTEyLTA3IDE4OjA5OjU4Iiw3ODI5LCJEYW5pZWwgQmxhY2siLCIxOTk4LTA0LTEzIiwic2FuZHJhNTRAZXhhbXBsZS5vcmciLCIyMDI0LTExLTE2IiwiKzEgMDkzMzc5NTA4MiJdLFsiMjAyNC0xMi0yNCAxNDo0NjowNCIsNjM4NCwiSmVubmlmZXIgQ2FycmlsbG8iLCIxOTk0LTEyLTE4IiwiamFtZXMzNEB5YWhvby5jb20iLCIyMDI0LTEyLTIyIiwiKzEgNTU5MjE3OTg0MyJdLFsiMjAyNC0xMi0yMSAwNzowODoyOCIsMjYzOSwiSmVzc2ljYSBEZWxlb24iLCIxOTk1LTA2LTA0IiwiamVyZW1pYWg5NkBnbWFpbC5jb20iLCIyMDI0LTExLTIyIiwiKzEgMTMwNDQzNTk5OSJdLFsiMjAyNC0xMi0yMCAxMjozMjoyOSIsMzA4NCwiVHlsZXIgU2ltbW9ucyIsIjIwMDMtMDItMjAiLCJicmlhbjk0QG1haWwuY29tIiwiMjAyNC0xMi0wMiIsbnVsbF0sWyIyMDI0LTEyLTIyIDIzOjAwOjQ4Iiw3OTk3LCJQYXRyaWNpYSBBYmJvdHQiLCIxOTk3LTA3LTMxIiwiYW5nZWxhOTdAbWFpbC5jb20iLCIyMDI0LTExLTI4IiwiKzEgNDA1MzM2NjQ0OCJdLFsiMjAyNC0xMi0wNSAwODo1ODo1MiIsOTY4NywiTWljaGVhbCBQZXJleiBNRCIsIjIwMDItMDctMTgiLCJjaHJpc3RvcGhlcjY1QGV4YW1wbGUub3JnIiwiMjAyNC0xMS0yMiIsIisxIDMwNzk3MTg2MjIiXSxbIjIwMjQtMTItMTcgMTU6MDU6MTUiLDIxNDEsIlphY2hhcnkgTG9wZXoiLCIyMDAyLTA5LTIwIiwiZ2xlbm44N0BleGFtcGxlLm9yZyIsIjIwMjQtMTItMTQiLCIrMSA3NDMxMTkwOTgzIl0sWyIyMDI0LTEyLTA0IDEzOjE2OjAzIiw1NTkyLCJSaWNoYXJkIE5lYWwiLCIxOTk1LTExLTA1IiwiZXJpYzUyQGdtYWlsLmNvbSIsIjIwMjQtMTEtMTUiLCIrMSA0NDI1MTg3Mzk3Il0sWyIyMDI0LTEyLTEzIDE0OjIzOjI3Iiw2NDA2LCJDaHJpc3RvcGhlciBSaXR0ZXIiLCIyMDA0LTA3LTEyIixudWxsLCIyMDI0LTExLTI0IiwiKzEgMTc1MjUxMTI0MSJdLFsiMjAyNC0xMi0xNiAxNjo1NDoxMCIsMTIxMSwiSmVyZW15IEJhbGwiLCIyMDAyLTAzLTI2IiwibWVnYW44NkB5YWhvby5jb20iLCIyMDI0LTEyLTAxIiwiKzEgNTc5MzU0Mzg4MiJdLFsiMjAyNC0xMi0yMiAyMzowMDo0OCIsNzk5NywiUGF0cmljaWEgQWJib3R0IiwiMTk5Ny0wNy0zMSIsImFuZ2VsYTk3QG1haWwuY29tIiwiMjAyNC0xMS0yOCIsIisxIDQwNTMzNjY0NDgiXSxbIjIwMjUtMDEtMDUgMTc6Mjk6MzQiLDcwMDcsIkpvZSBDYXN0YW5lZGEiLCIxOTk5LTA0LTI3IiwibWljaGFlbDM0QG1haWwuY29tIiwiMjAyNC0xMi0zMSIsIisxIDE3Njc5NzAzMzgiXSxbIjIwMjUtMDEtMTcgMTU6NTk6MzkiLDU5NTMsIktldmluIEhhcnJpcyIsIjIwMDMtMDEtMjMiLCJ0aW1vdGh5OTlAbWFpbC5jb20iLCIyMDI0LTEyLTMxIiwiKzEgNjUxNzc2MzY0MCJdLFsiMjAyNS0wMS0xMiAyMDoxMzozMSIsNDk5NiwiQnJhbmRvbiBSZWVkIiwiMTk5Ny0wNS0xMSIsInN0YWNleTcxQHlhaG9vLmNvbSIsIjIwMjQtMTItMTMiLG51bGxdLFsiMjAyNS0wMS0xNCAxMzozMDo1NyIsOTYwNSwiVGlmZmFueSBSb2NoYSIsIjIwMDMtMDQtMjUiLCJtaWNoYWVsODJAeWFob28uY29tIiwiMjAyNC0xMi0yMiIsIisxIDYyMzI4MTE1MDYiXSxbIjIwMjUtMDEtMTYgMjE6MTc6MjIiLDg4NDUsIkpvc2VwaCBSb2JiaW5zIiwiMTk5Ny0wNC0wNCIsImRlcmVrNTNAeWFob28uY29tIiwiMjAyNS0wMS0xMiIsIisxIDk1MTM4OTM4MjAiXSxbIjIwMjUtMDEtMjYgMDk6NDY6MDMiLDQ5NzMsIkRhbmllbCBUaG9tcHNvbiIsIjE5OTktMDctMTciLCJjb25ub3IzMkBleGFtcGxlLm9yZyIsIjIwMjQtMTItMjciLCIrMSA1ODIzMDQ2MjA2Il0sWyIyMDI1LTAxLTI1IDEzOjI4OjMxIiwzODg5LCJKZW5uaWZlciBKYWNrc29uIiwiMTk5NS0xMC0zMCIsImNhdGhlcmluZTc3QGV4YW1wbGUub3JnIiwiMjAyNS0wMS0wNyIsIisxIDU5MzI0NTY3NTUiXSxbIjIwMjUtMDEtMTQgMTg6MzE6MjgiLDYxNjcsIkxlc2xpZSBTbWl0aCIsIjIwMDEtMTAtMjgiLCJhbmdlbGExNkBtYWlsLmNvbSIsIjIwMjQtMTItMTYiLCIrMSAyOTc4NDQ2ODgwIl0sWyIyMDI1LTAxLTE3IDA3OjUwOjQ4IiwzMjk1LCJEcmV3IEhhbnNvbiIsIjE5OTYtMTEtMjEiLCJjYXRoeTMxQGdtYWlsLmNvbSIsIjIwMjUtMDEtMDEiLCIrMSA2NTIxNzkyODg5Il0sWyIyMDI1LTAxLTAzIDAzOjI4OjM0Iiw5MDg0LCJPbGl2aWEgTHlvbnMiLCIxOTk3LTA2LTE3IiwicGF0dHk0N0BvdXRsb29rLmNvbSIsIjIwMjQtMTItMTYiLCIrMSAyOTA5ODk5MTM1Il0sWyIyMDI1LTAxLTIzIDAyOjA3OjI2Iiw5MTUwLCJBbGlzb24gRGF2aXMiLCIyMDA0LTAxLTE3IiwiamFjb2IzMUB5YWhvby5jb20iLCIyMDI0LTEyLTI2IiwiKzEgNzExOTg1MTE0OSJdLFsiMjAyNS0wMS0xNCAxMzozMDo1NyIsOTYwNSwiVGlmZmFueSBSb2NoYSIsIjIwMDMtMDQtMjUiLCJtaWNoYWVsODJAeWFob28uY29tIiwiMjAyNC0xMi0yMiIsIisxIDYyMzI4MTE1MDYiXSxbIjIwMjUtMDEtMTIgMjA6MTM6MzEiLDQ5OTYsIkJyYW5kb24gUmVlZCIsIjE5OTctMDUtMTEiLCJzdGFjZXk3MUB5YWhvby5jb20iLCIyMDI0LTEyLTEzIixudWxsXV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoiY3JlYXRlZF90aW1lc3RhbXAiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJjdXN0b21lcl9pZCIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJjdXN0b21lcl9uYW1lIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoiZGF0ZV9vZl9iaXJ0aCIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6ImVtYWlsIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoibWVtYmVyX3NpbmNlIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoidGVsZXBob25lIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6e319XSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJkZiIsInR5cGVTdHIiOiJweXNwYXJrLnNxbC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnt9LCJuYW1lIjoiY3JlYXRlZF90aW1lc3RhbXAiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiY3VzdG9tZXJfaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImxvbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6ImN1c3RvbWVyX25hbWUiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiZGF0ZV9vZl9iaXJ0aCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJlbWFpbCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJtZW1iZXJfc2luY2UiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoidGVsZXBob25lIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifV0sInR5cGUiOiJzdHJ1Y3QifSwidGFibGVJZGVudGlmaWVyIjpudWxsfV0sIm1ldGFkYXRhIjp7ImlzRGJmc0NvbW1hbmRSZXN1bHQiOmZhbHNlfX0sInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjE3MzQ2OTgxNzAyOTQsInN1Ym1pdFRpbWUiOjE3MzQ2OTgxNzAyNjEsImZpbmlzaFRpbWUiOjE3MzQ2OTgxNzExOTAsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnsicm93TGltaXQiOjEwMDAwLCJieXRlTGltaXQiOjIwNDgwMDB9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbWyJ0YWJsZSIsNjJdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiODczY2YwMjEtYmM3OC00NTliLTk4NGItNjdjZjk1MDQzZmJiIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjoxNzUzMzUyNjYxMzU1Njg0LCJndWlkIjoiODEyYWRkY2MtNWFhZS00ZWMwLWE5NTQtMTdmZGE0YmM3M2Y5Iiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MS4zNDM3NSwiY29tbWFuZCI6ImRmID0gc3Bhcmsuc3FsKCdTRUxFQ1QgKiBGUk9NIGpzb24uYC9Wb2x1bWVzL2dpem1vYm94L2xhbmRpbmcvb3BlcmF0aW9uYWxfZGF0YS9jdXN0b21lcnNgJylcbmRpc3BsYXkoZGYpIiwiY29tbWFuZFZlcnNpb24iOjE5LCJzdGF0ZSI6ImZpbmlzaGVkIiwicmVzdWx0cyI6eyJ0eXBlIjoibGlzdFJlc3VsdHMiLCJkYXRhIjpbeyJ0eXBlIjoidGFibGUiLCJkYXRhIjpbWyIyMDI0LTEwLTE3IDE2OjEyOjI3Iiw5MTc5LCJSaWNoYXJkIENveCIsIjE5OTYtMTAtMjUiLCJkZXZvbjg0QG1haWwuY29tIiwiMjAyNC0wOS0yNiIsIisxIDY2ODA3MDMzMzUiXSxbIjIwMjQtMTAtMDEgMDA6NTA6MjkiLDQ4NTgsIkNhcmxhIE1vcnRvbiIsIjIwMDQtMDYtMjEiLCJqb3NlcGg4OEBtYWlsLmNvbSIsIjIwMjQtMDktMTUiLCIrMSA4NjE2NDU0MTk1Il0sWyIyMDI0LTEwLTIzIDIyOjAzOjA4Iiw3MjA3LCJCaWxseSBTY290dCIsIjE5OTctMDMtMTciLCJjaHJpc3RvcGhlcjMwQG1haWwuY29tIiwiMjAyNC0wOS0yMyIsIisxIDU1NDQzODc1NjQiXSxbIjIwMjQtMTAtMTIgMDY6MDI6MjciLDg1MzksIkxvcmkgTWFzb24iLCIyMDAyLTExLTAxIiwic3RlcGhhbmllN0BtYWlsLmNvbSIsIjIwMjQtMDktMTIiLCIrMSAwNDk4MzAxNjIwIl0sWyIyMDI0LTEwLTI0IDEzOjAzOjEzIiw5NzA2LCJKZW5uaWZlciBIYWFzIiwiMjAwMS0wNC0wMyIsImJlbmphbWluNTVAbWFpbC5jb20iLCIyMDI0LTEwLTA1IiwiKzEgNDcyNTQ2MDAwMCJdLFsiMjAyNC0xMC0wOCAyMjo0OToyNSIsOTI2MywiSm9zZXBoIEtlbGxlciIsIjIwMDMtMDItMTEiLG51bGwsIjIwMjQtMTAtMDQiLCIrMSAzODE3ODY3NzU2Il0sWyIyMDI0LTEwLTA2IDE5OjU1OjUyIiw1MDI4LCJKZXNzaWNhIEhhcnJpcyIsIjIwMDQtMDQtMTkiLG51bGwsIjIwMjQtMDktMTAiLCIrMSA4NjA0MDA5OTM1Il0sWyIyMDI0LTEwLTE4IDIzOjI0OjUyIiw5MDE4LCJXaWxsaWFtIENhcnRlciIsIjIwMDMtMDktMDUiLCJqYW1lczcwQGdtYWlsLmNvbSIsIjIwMjQtMTAtMDgiLCIrMSAxNDQ4NzUzNjExIl0sWyIyMDI0LTEwLTIxIDEzOjIwOjI2Iiw4NTgwLCJTaGFubm9uIEF1c3RpbiIsIjIwMDItMDMtMjIiLCJqb2huMzBAZ21haWwuY29tIiwiMjAyNC0xMC0wNyIsIisxIDQ1OTQ3MDU2MjkiXSxbIjIwMjQtMTAtMDIgMTQ6NTM6NDAiLDM0MDksIkFuZHJldyBQaGlsbGlwcyIsIjIwMDMtMDQtMTciLCJwZXRlcjczQHlhaG9vLmNvbSIsIjIwMjQtMDktMzAiLCIrMSA0MDc5MjczODUzIl0sWyIyMDI0LTEwLTI2IDE1OjE0OjMzIiwyMzQ0LCJNYXJ0aW4gVGhvbWFzIEREUyIsIjIwMDItMDUtMDEiLCJiaWxseTQyQG91dGxvb2suY29tIiwiMjAyNC0xMC0xMyIsIisxIDAyMDE0NTcxNTEiXSxbIjIwMjQtMTAtMTUgMDI6NDg6MjkiLDUwMTEsIlJhY2hlbCBUaG9tYXMiLCIyMDAzLTAyLTE3IiwibGF1cmVuNTlAeWFob28uY29tIiwiMjAyNC0wOS0yNCIsIisxIDU0MzcyNzE2MjEiXSxbIjIwMjQtMTAtMjggMDA6NTc6MDkiLDkyNDcsIkRyLiBEYW5pZWwgSGFsbCIsIjIwMDQtMDMtMjEiLCJ0YW1hcmEzMEBnbWFpbC5jb20iLCIyMDI0LTEwLTAzIiwiKzEgNzU0NDEzNzE3MCJdLFsiMjAyNC0xMC0yMiAwNTo1Mjo1NyIsNjYyNywiQ2FuZGljZSBSb3NhbGVzIiwiMjAwNC0wNC0wMyIsImFtYmVyNzlAZXhhbXBsZS5vcmciLCIyMDI0LTEwLTE1IiwiKzEgNDc4ODQ1MTU1OSJdLFsiMjAyNC0xMC0wNiAxOTo1NTo1MiIsNTAyOCwiSmVzc2ljYSBIYXJyaXMiLCIyMDA0LTA0LTE5IixudWxsLCIyMDI0LTA5LTEwIiwiKzEgODYwNDAwOTkzNSJdLFsiMjAyNC0xMC0wOCAwMzozMDo1MyIsNTgxNiwiQW15IE1vcmFsZXMiLCIxOTk5LTEyLTExIiwiZGFuaWVsMTJAaG90bWFpbC5jb20iLCIyMDI0LTA5LTE3IiwiKzQ2IDQ0MDczODUwNDQiXSxbIjIwMjQtMTAtMTUgMDE6Mjc6NTQiLDkyNDcsIkRyLiBEYW5pZWwgSGFsbCIsIjIwMDQtMDMtMjEiLCJzaGVlbmExMUBhbGV4YW5kZXIuY29tIiwiMjAyNC0wOS0xNSIsIis0NiA3MjgxOTkxMDE3Il0sWyIyMDI0LTEwLTA5IDE4OjU0OjAwIiwzODg5LCJKZW5uaWZlciBKYWNrc29uIiwiMTk5NS0xMC0zMCIsbnVsbCwiMjAyNC0wOS0xNiIsIis2OCAyMjc2OTk2NjEyIl0sWyIyMDI0LTEwLTEwIDE2OjUzOjQ0Iiw5MDg0LCJPbGl2aWEgTHlvbnMiLCIxOTk3LTA2LTE3Iiwiam9obnNvbm1pY2hhZWxAeWFob28uY29tIiwiMjAyNC0wOS0yNiIsbnVsbF0sWyIyMDI0LTEwLTE5IDExOjUzOjQ0IixudWxsLCJKb2huIFNtaXRoIiwiMTk5OC0wMS0xOSIsImpvaG4uc21pdGhAb3V0bG9vay5jb20iLCIyMDI0LTA3LTE2IiwiKzEgODc2MjM0MjQ1NiJdLFsiMjAyNC0xMS0xNCAyMDo0MToxOCIsMzg5MiwiSmFzb24gQnJpZGdlcyIsIjIwMDQtMDEtMDEiLCJuaWNvbGUyOUBnbWFpbC5jb20iLCIyMDI0LTEwLTI5IiwiKzEgODIyMDAxMTkyOCJdLFsiMjAyNC0xMS0xNiAwMTo0NzoyNSIsMTk4NywiQW1hbmRhIEFsdmFyZXoiLCIxOTk1LTEwLTExIiwiZXJpYzQwQG91dGxvb2suY29tIiwiMjAyNC0xMC0yNyIsIisxIDk2NzMwNjYzMDAiXSxbIjIwMjQtMTEtMTkgMTQ6MDM6MDkiLDU4MTYsIkFteSBNb3JhbGVzIiwiMTk5OS0xMi0xMSIsImthdGVseW44MkBleGFtcGxlLm9yZyIsIjIwMjQtMTEtMDQiLCIrMSA0MTQwOTgyNzE5Il0sWyIyMDI0LTExLTA5IDE0OjUyOjMxIiw1MjA0LCJKZW5uaWZlciBOaWNob2xzIEREUyIsIjE5OTctMDItMTciLCJqb3NlcGg4QGV4YW1wbGUub3JnIiwiMjAyNC0xMS0wNCIsIisxIDAzODMzNTYzMjgiXSxbIjIwMjQtMTEtMjMgMTg6MTY6MTgiLDQ0NjgsIk1ycy4gUm9iZXJ0YSBTYWxhcyBQaEQiLCIxOTk3LTA1LTEwIixudWxsLCIyMDI0LTEwLTI1IiwiKzEgNDY3OTk1NTExOCJdLFsiMjAyNC0xMS0xNCAxNjo0MToxNCIsNDc2MSwiVGltb3RoeSBTbWl0aCIsIjE5OTYtMTEtMDciLCJqb3NodWE0MEB5YWhvby5jb20iLCIyMDI0LTExLTAzIiwiKzEgOTQ1MDkyMDg1OCJdLFsiMjAyNC0xMS0wNyAyMjoyMDowMCIsMjcwMywiQW50aG9ueSBNaWxsZXIiLCIxOTk3LTExLTAyIixudWxsLCIyMDI0LTExLTA1IiwiKzEgMTU4NjMxMDc1MiJdLFsiMjAyNC0xMS0xMiAxMjo1NzozOCIsNDkxNCwiU2FtYW50aGEgSm9obnNvbiIsIjE5OTctMDMtMjYiLCJ0aGVyZXNhMTRAbWFpbC5jb20iLCIyMDI0LTEwLTEzIiwiKzEgNDA5NTAwMzczOCJdLFsiMjAyNC0xMS0wOCAwMjoyNjo0MiIsNzI5NSwiTGF1cmVuIFJlZWQiLCIyMDAxLTA4LTExIiwiamVhbmV0dGU0OEBleGFtcGxlLm9yZyIsIjIwMjQtMTAtMTAiLCIrMSAwMTA0MDg4NzY1Il0sWyIyMDI0LTExLTA5IDIwOjI0OjMwIiw3ODAzLCJLYXRoZXJpbmUgTGVlIiwiMjAwMC0wMy0wOSIsImplbm5pZmVyODVAbWFpbC5jb20iLCIyMDI0LTEwLTI3IiwiKzEgMzExOTg4Njg2NiJdLFsiMjAyNC0xMS0yNCAxMToxNDowMyIsMzcxMiwiUm9iaW4gQ2hhdmV6IiwiMTk5Ny0wMy0xNiIsImxpc2ExNUBnbWFpbC5jb20iLCIyMDI0LTExLTI0IiwiKzEgMjY1NDc1NjkxOSJdLFsiMjAyNC0xMS0yMyAxMToxNDowMyIsbnVsbCwiQW5kcmV3IFRheWxvciIsIjE5OTYtMDEtMTEiLCJhbmRyZXcudGF5bG9yQGdtYWlsLmNvbSIsIjIwMjQtMTEtMjEiLCIrMSAxMjM1NDQ3MzMzIl0sWyIyMDI0LTExLTAzIDE3OjIyOjU2IiwyMDU0LCJBbGFuIFByaWNlIiwiMTk5OC0wOC0yNSIsImNvbm5vcjQwQHlhaG9vLmNvbSIsIjIwMjQtMTAtMTQiLCIrMSAzNzQ1NjQyOTM2Il0sWyIyMDI0LTExLTA5IDA3OjE0OjE3Iiw3MTIzLCJFZGdhciBTdGV2ZW5zIiwiMjAwMy0wMi0xNSIsImtldmluNjhAZXhhbXBsZS5vcmciLCIyMDI0LTEwLTI3IiwiKzEgMDc5MzE4OTg0NyJdLFsiMjAyNC0xMS0yNyAxMjo1NjoyMCIsNDk5NiwiQnJhbmRvbiBSZWVkIiwiMTk5Ny0wNS0xMSIsImhhbmRlcnNvbkBiYXJrZXIuaW5mbyIsIjIwMjQtMTEtMDYiLCIrNDMgMjc1MDU0MDUxMSJdLFsiMjAyNC0xMi0yNSAxMTowNjozNSIsNjk3MywiVHJhY3kgQ29sZSIsIjE5OTgtMDctMjQiLCJ0b255NDZAbWFpbC5jb20iLCIyMDI0LTEyLTE2IiwiKzEgNTUxNTgzNjYxMiJdLFsiMjAyNC0xMi0yNiAwOToyOToxNiIsMzUzMiwiSG9sbHkgV2lsa2luc29uIiwiMjAwMy0wMy0wNiIsImxpbmRzZXk2MUB5YWhvby5jb20iLCIyMDI0LTEyLTIyIixudWxsXSxbIjIwMjQtMTItMTYgMTY6NTQ6MTAiLDEyMTEsIkplcmVteSBCYWxsIiwiMjAwMi0wMy0yNiIsIm1lZ2FuODZAeWFob28uY29tIiwiMjAyNC0xMi0wMSIsIisxIDU3OTM1NDM4ODIiXSxbIjIwMjQtMTItMDcgMTg6MDk6NTgiLDc4MjksIkRhbmllbCBCbGFjayIsIjE5OTgtMDQtMTMiLCJzYW5kcmE1NEBleGFtcGxlLm9yZyIsIjIwMjQtMTEtMTYiLCIrMSAwOTMzNzk1MDgyIl0sWyIyMDI0LTEyLTI0IDE0OjQ2OjA0Iiw2Mzg0LCJKZW5uaWZlciBDYXJyaWxsbyIsIjE5OTQtMTItMTgiLCJqYW1lczM0QHlhaG9vLmNvbSIsIjIwMjQtMTItMjIiLCIrMSA1NTkyMTc5ODQzIl0sWyIyMDI0LTEyLTIxIDA3OjA4OjI4IiwyNjM5LCJKZXNzaWNhIERlbGVvbiIsIjE5OTUtMDYtMDQiLCJqZXJlbWlhaDk2QGdtYWlsLmNvbSIsIjIwMjQtMTEtMjIiLCIrMSAxMzA0NDM1OTk5Il0sWyIyMDI0LTEyLTIwIDEyOjMyOjI5IiwzMDg0LCJUeWxlciBTaW1tb25zIiwiMjAwMy0wMi0yMCIsImJyaWFuOTRAbWFpbC5jb20iLCIyMDI0LTEyLTAyIixudWxsXSxbIjIwMjQtMTItMjIgMjM6MDA6NDgiLDc5OTcsIlBhdHJpY2lhIEFiYm90dCIsIjE5OTctMDctMzEiLCJhbmdlbGE5N0BtYWlsLmNvbSIsIjIwMjQtMTEtMjgiLCIrMSA0MDUzMzY2NDQ4Il0sWyIyMDI0LTEyLTA1IDA4OjU4OjUyIiw5Njg3LCJNaWNoZWFsIFBlcmV6IE1EIiwiMjAwMi0wNy0xOCIsImNocmlzdG9waGVyNjVAZXhhbXBsZS5vcmciLCIyMDI0LTExLTIyIiwiKzEgMzA3OTcxODYyMiJdLFsiMjAyNC0xMi0xNyAxNTowNToxNSIsMjE0MSwiWmFjaGFyeSBMb3BleiIsIjIwMDItMDktMjAiLCJnbGVubjg3QGV4YW1wbGUub3JnIiwiMjAyNC0xMi0xNCIsIisxIDc0MzExOTA5ODMiXSxbIjIwMjQtMTItMDQgMTM6MTY6MDMiLDU1OTIsIlJpY2hhcmQgTmVhbCIsIjE5OTUtMTEtMDUiLCJlcmljNTJAZ21haWwuY29tIiwiMjAyNC0xMS0xNSIsIisxIDQ0MjUxODczOTciXSxbIjIwMjQtMTItMTMgMTQ6MjM6MjciLDY0MDYsIkNocmlzdG9waGVyIFJpdHRlciIsIjIwMDQtMDctMTIiLG51bGwsIjIwMjQtMTEtMjQiLCIrMSAxNzUyNTExMjQxIl0sWyIyMDI0LTEyLTE2IDE2OjU0OjEwIiwxMjExLCJKZXJlbXkgQmFsbCIsIjIwMDItMDMtMjYiLCJtZWdhbjg2QHlhaG9vLmNvbSIsIjIwMjQtMTItMDEiLCIrMSA1NzkzNTQzODgyIl0sWyIyMDI0LTEyLTIyIDIzOjAwOjQ4Iiw3OTk3LCJQYXRyaWNpYSBBYmJvdHQiLCIxOTk3LTA3LTMxIiwiYW5nZWxhOTdAbWFpbC5jb20iLCIyMDI0LTExLTI4IiwiKzEgNDA1MzM2NjQ0OCJdLFsiMjAyNS0wMS0wNSAxNzoyOTozNCIsNzAwNywiSm9lIENhc3RhbmVkYSIsIjE5OTktMDQtMjciLCJtaWNoYWVsMzRAbWFpbC5jb20iLCIyMDI0LTEyLTMxIiwiKzEgMTc2Nzk3MDMzOCJdLFsiMjAyNS0wMS0xNyAxNTo1OTozOSIsNTk1MywiS2V2aW4gSGFycmlzIiwiMjAwMy0wMS0yMyIsInRpbW90aHk5OUBtYWlsLmNvbSIsIjIwMjQtMTItMzEiLCIrMSA2NTE3NzYzNjQwIl0sWyIyMDI1LTAxLTEyIDIwOjEzOjMxIiw0OTk2LCJCcmFuZG9uIFJlZWQiLCIxOTk3LTA1LTExIiwic3RhY2V5NzFAeWFob28uY29tIiwiMjAyNC0xMi0xMyIsbnVsbF0sWyIyMDI1LTAxLTE0IDEzOjMwOjU3Iiw5NjA1LCJUaWZmYW55IFJvY2hhIiwiMjAwMy0wNC0yNSIsIm1pY2hhZWw4MkB5YWhvby5jb20iLCIyMDI0LTEyLTIyIiwiKzEgNjIzMjgxMTUwNiJdLFsiMjAyNS0wMS0xNiAyMToxNzoyMiIsODg0NSwiSm9zZXBoIFJvYmJpbnMiLCIxOTk3LTA0LTA0IiwiZGVyZWs1M0B5YWhvby5jb20iLCIyMDI1LTAxLTEyIiwiKzEgOTUxMzg5MzgyMCJdLFsiMjAyNS0wMS0yNiAwOTo0NjowMyIsNDk3MywiRGFuaWVsIFRob21wc29uIiwiMTk5OS0wNy0xNyIsImNvbm5vcjMyQGV4YW1wbGUub3JnIiwiMjAyNC0xMi0yNyIsIisxIDU4MjMwNDYyMDYiXSxbIjIwMjUtMDEtMjUgMTM6Mjg6MzEiLDM4ODksIkplbm5pZmVyIEphY2tzb24iLCIxOTk1LTEwLTMwIiwiY2F0aGVyaW5lNzdAZXhhbXBsZS5vcmciLCIyMDI1LTAxLTA3IiwiKzEgNTkzMjQ1Njc1NSJdLFsiMjAyNS0wMS0xNCAxODozMToyOCIsNjE2NywiTGVzbGllIFNtaXRoIiwiMjAwMS0xMC0yOCIsImFuZ2VsYTE2QG1haWwuY29tIiwiMjAyNC0xMi0xNiIsIisxIDI5Nzg0NDY4ODAiXSxbIjIwMjUtMDEtMTcgMDc6NTA6NDgiLDMyOTUsIkRyZXcgSGFuc29uIiwiMTk5Ni0xMS0yMSIsImNhdGh5MzFAZ21haWwuY29tIiwiMjAyNS0wMS0wMSIsIisxIDY1MjE3OTI4ODkiXSxbIjIwMjUtMDEtMDMgMDM6Mjg6MzQiLDkwODQsIk9saXZpYSBMeW9ucyIsIjE5OTctMDYtMTciLCJwYXR0eTQ3QG91dGxvb2suY29tIiwiMjAyNC0xMi0xNiIsIisxIDI5MDk4OTkxMzUiXSxbIjIwMjUtMDEtMjMgMDI6MDc6MjYiLDkxNTAsIkFsaXNvbiBEYXZpcyIsIjIwMDQtMDEtMTciLCJqYWNvYjMxQHlhaG9vLmNvbSIsIjIwMjQtMTItMjYiLCIrMSA3MTE5ODUxMTQ5Il0sWyIyMDI1LTAxLTE0IDEzOjMwOjU3Iiw5NjA1LCJUaWZmYW55IFJvY2hhIiwiMjAwMy0wNC0yNSIsIm1pY2hhZWw4MkB5YWhvby5jb20iLCIyMDI0LTEyLTIyIiwiKzEgNjIzMjgxMTUwNiJdLFsiMjAyNS0wMS0xMiAyMDoxMzozMSIsNDk5NiwiQnJhbmRvbiBSZWVkIiwiMTk5Ny0wNS0xMSIsInN0YWNleTcxQHlhaG9vLmNvbSIsIjIwMjQtMTItMTMiLG51bGxdXSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJzY2hlbWEiOlt7Im5hbWUiOiJjcmVhdGVkX3RpbWVzdGFtcCIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6ImN1c3RvbWVyX2lkIiwidHlwZSI6IlwibG9uZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6ImN1c3RvbWVyX25hbWUiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJkYXRlX29mX2JpcnRoIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoiZW1haWwiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJtZW1iZXJfc2luY2UiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJ0ZWxlcGhvbmUiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifV0sIm92ZXJmbG93IjpmYWxzZSwiYWdnRGF0YSI6W10sImFnZ1NjaGVtYSI6W10sImFnZ092ZXJmbG93IjpmYWxzZSwiYWdnU2VyaWVzTGltaXRSZWFjaGVkIjpmYWxzZSwiYWdnRXJyb3IiOiIiLCJhZ2dUeXBlIjoiIiwicGxvdE9wdGlvbnMiOm51bGwsImlzSnNvblNjaGVtYSI6dHJ1ZSwiZGJmc1Jlc3VsdFBhdGgiOm51bGwsImRhdGFzZXRJbmZvcyI6W10sImNvbHVtbkN1c3RvbURpc3BsYXlJbmZvcyI6e30sIm1ldGFkYXRhIjp7fX1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sImRhdGFzZXRJbmZvcyI6W3sibmFtZSI6ImRmIiwidHlwZVN0ciI6InB5c3Bhcmsuc3FsLmRhdGFmcmFtZS5EYXRhRnJhbWUiLCJzY2hlbWEiOnsiZmllbGRzIjpbeyJtZXRhZGF0YSI6e30sIm5hbWUiOiJjcmVhdGVkX3RpbWVzdGFtcCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJjdXN0b21lcl9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoibG9uZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiY3VzdG9tZXJfbmFtZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJkYXRlX29mX2JpcnRoIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6ImVtYWlsIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6Im1lbWJlcl9zaW5jZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJ0ZWxlcGhvbmUiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9XSwidHlwZSI6InN0cnVjdCJ9LCJ0YWJsZUlkZW50aWZpZXIiOm51bGx9XSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTczNDY5NzgwMTY4OCwic3VibWl0VGltZSI6MTczNDY5NzgwMTY0NCwiZmluaXNoVGltZSI6MTczNDY5NzgwMjkzMywiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJyb3dMaW1pdCI6MTAwMDAsImJ5dGVMaW1pdCI6MjA0ODAwMH0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltbInRhYmxlIiw2Ml1dLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiI2ZDU3YzQ1NC0zZDRhLTRmYzQtYjJlZS1kMzNhY2I5NDQ0NTIifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjE3NTMzNTI2NjEzNTU2NjEsImd1aWQiOiI5YzYwOGRjNi1hZDc1LTQyYTUtOWE4OC0wYjRiOWFmYzE3MDAiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjowLjc1LCJjb21tYW5kIjoiJW1kXG4jIyMgMS4gUnVuIFNRTCBDb21tYW5kcyB1c2luZyBQeXRob24gLSBzcGFyay5zcWwgRnVuY3Rpb24iLCJjb21tYW5kVmVyc2lvbiI6Mywic3RhdGUiOiJpbnB1dCIsInJlc3VsdHMiOm51bGwsInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjAsInN1Ym1pdFRpbWUiOjAsImZpbmlzaFRpbWUiOjAsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnt9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiMTQxYjQwNDgtN2FlOS00ZjBjLTlkMWEtYzk1YTNjN2YxN2I3In0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjoxNzUzMzUyNjYxMzU1NjYwLCJndWlkIjoiZTg2NjVhY2UtZjVhZi00ZDdmLWEwMmQtMzk1ZDI1NjA1NTcxIiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MC41LCJjb21tYW5kIjoiJW1kXG4jIyBFeHRyYWN0IERhdGEgLSBVc2luZyBQeVNwYXJrXG4xLiBSdW4gU1FMIENvbW1hbmRzIHVzaW5nIFB5dGhvbiAtIHNwYXJrLnNxbCBGdW5jdGlvblxuMi4gU3BhcmsgRGF0YWZyYW1lIFJlYWRlciBBUElcbjMuIFJlYWQgVGFibGVzIHVzaW5nIHNwYXJrLnRhYmxlIEZ1bmN0aW9uIiwiY29tbWFuZFZlcnNpb24iOjMwLCJzdGF0ZSI6ImlucHV0IiwicmVzdWx0cyI6bnVsbCwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MCwic3VibWl0VGltZSI6MCwiZmluaXNoVGltZSI6MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6e30sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltdLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiIwODVhNDA3Ny00MGYyLTQxNDEtYmNkYy0yYWIxNGVjYjM2MDkifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjE3NTMzNTI2NjEzNTU2NjksImd1aWQiOiI0OTdlMDE0Mi0zY2VkLTQ1NDQtYjM1MC04NmFjN2FjODkzYTMiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjoyLjUsImNvbW1hbmQiOiIlbWRcbiMjIyAzLiBzcGFyay50YWJsZSBGdW5jdGlvbiIsImNvbW1hbmRWZXJzaW9uIjozLCJzdGF0ZSI6ImlucHV0IiwicmVzdWx0cyI6bnVsbCwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MCwic3VibWl0VGltZSI6MCwiZmluaXNoVGltZSI6MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6e30sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltdLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiIyZWIzYTM2MC1hYzFlLTQ2MDgtOTVkYy1kMzJlNmY0ZDViMjIifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjE3NTMzNTI2NjEzNTU2NjcsImd1aWQiOiI4ODkwNmJkZi0xN2QxLTQ2OGUtODJjYi1kMmM5NzI1Yjc0ZjAiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjoxLjkzNzUsImNvbW1hbmQiOiIlbWRcbiMjIyAyLiBTcGFyayBEYXRhZnJhbWVSZWFkZXIgQVBJXG5bRGF0YUZyYW1lUmVhZGVyIEFQSV0oaHR0cHM6Ly9zcGFyay5hcGFjaGUub3JnL2RvY3MvbGF0ZXN0L2FwaS9weXRob24vcmVmZXJlbmNlL3B5c3Bhcmsuc3FsL2FwaS9weXNwYXJrLnNxbC5EYXRhRnJhbWVSZWFkZXIuaHRtbCkiLCJjb21tYW5kVmVyc2lvbiI6OSwic3RhdGUiOiJpbnB1dCIsInJlc3VsdHMiOm51bGwsInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjAsInN1Ym1pdFRpbWUiOjAsImZpbmlzaFRpbWUiOjAsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnt9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiMjAzMTdlNTctMzFhZi00NmIzLTgyNmYtOTNjOWM4NmM1NDU2In1dLCJkYXNoYm9hcmRzIjpbXSwiZ3VpZCI6ImVjNWE1NTg4LTYxZjItNDljOC1hZWMxLTI0MWNhNDk5Y2EyMCIsImdsb2JhbFZhcnMiOnt9LCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsImlucHV0V2lkZ2V0cyI6e30sIm5vdGVib29rTWV0YWRhdGEiOnsicHl0aG9uSW5kZW50VW5pdCI6MiwibW9zdFJlY2VudGx5RXhlY3V0ZWRDb21tYW5kV2l0aEltcGxpY2l0REYiOnsiY29tbWFuZElkIjoxNzUzMzUyNjYxMzU1Njg3LCJkYXRhZnJhbWVzIjpbIl9zcWxkZiJdfX0sInJlcG9zRXhwb3J0Rm9ybWF0IjoiU09VUkNFIiwiZW52aXJvbm1lbnRNZXRhZGF0YSI6eyJjbGllbnQiOiIxIiwiYmFzZV9lbnZpcm9ubWVudCI6IiJ9LCJjb21wdXRlUHJlZmVyZW5jZXMiOm51bGwsImlucHV0V2lkZ2V0UHJlZmVyZW5jZXMiOm51bGwsImVudmlyb25tZW50U2VyaWFsaXphdGlvblByZWZlcmVuY2VzIjpudWxsfQ=="
+}

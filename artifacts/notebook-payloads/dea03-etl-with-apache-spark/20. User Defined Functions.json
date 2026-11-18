@@ -1,0 +1,1605 @@
+{
+  "document": {
+    "commands": [
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "CREATE OR REPLACE FUNCTION gizmobox.default.get_fullname(firstname STRING, surname STRING)\nRETURNS STRING\nRETURN CONCAT(initcap(firstname), ' ', initcap(surname));",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 26,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1740394205847,
+        "globalVars": {},
+        "guid": "e7c98d67-7efd-447d-b15e-9e4cf395c468",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            0
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "3a85eba6-9644-4c70-b90f-f9e9ca031d93",
+        "origId": 7495265649357185,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 2.28125,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1740394197980,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1740394197031,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT payment_id,\n       order_id,\n       CAST(date_format(payment_timestamp,'yyyy-MM-dd') AS DATE) AS payment_date,\n       date_format(payment_timestamp,'HH:mm:ss') AS payment_time,\n       gizmobox.default.get_payment_status(payment_status) AS payment_status,  \n       payment_method\n  FROM gizmobox.bronze.payments;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 5,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1740394580770,
+        "globalVars": {},
+        "guid": "cb07b979-d7da-4589-9433-facb8c867b4d",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            87
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "e3fedeb7-5c8d-41b5-abc2-aa26d07d18b2",
+        "origId": 7495265649357189,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 5.28125,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [
+            [
+              35,
+              13,
+              "2024-12-17",
+              "05:25:34",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              36,
+              16,
+              "2024-12-09",
+              "10:45:56",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              37,
+              17,
+              "2024-12-02",
+              "13:50:20",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              38,
+              24,
+              "2024-12-22",
+              "08:30:55",
+              "Success",
+              "PayPal"
+            ],
+            [
+              39,
+              27,
+              "2024-12-03",
+              "11:45:30",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              40,
+              28,
+              "2024-12-27",
+              "05:40:10",
+              "Failed",
+              "Credit Card"
+            ],
+            [
+              41,
+              32,
+              "2024-12-29",
+              "09:20:40",
+              "Success",
+              "PayPal"
+            ],
+            [
+              42,
+              37,
+              "2024-12-23",
+              "12:10:05",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              43,
+              38,
+              "2024-12-26",
+              "20:15:15",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              44,
+              44,
+              "2024-12-21",
+              "14:25:45",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              45,
+              49,
+              "2024-12-08",
+              "16:40:35",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              46,
+              54,
+              "2024-12-21",
+              "13:10:25",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              47,
+              58,
+              "2024-12-10",
+              "11:50:20",
+              "Success",
+              "PayPal"
+            ],
+            [
+              48,
+              60,
+              "2024-12-14",
+              "18:30:15",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              49,
+              61,
+              "2024-12-08",
+              "14:45:50",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              50,
+              65,
+              "2024-12-10",
+              "12:35:05",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              51,
+              67,
+              "2024-12-20",
+              "09:40:25",
+              "Success",
+              "PayPal"
+            ],
+            [
+              52,
+              69,
+              "2024-12-31",
+              "10:15:50",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              53,
+              70,
+              "2024-12-05",
+              "13:50:35",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              54,
+              71,
+              "2024-12-28",
+              "11:05:40",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              55,
+              74,
+              "2024-12-23",
+              "14:25:25",
+              "Success",
+              "PayPal"
+            ],
+            [
+              56,
+              80,
+              "2024-12-12",
+              "08:30:55",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              57,
+              81,
+              "2024-12-28",
+              "16:45:30",
+              "Success",
+              "PayPal"
+            ],
+            [
+              58,
+              82,
+              "2024-12-29",
+              "18:50:10",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              59,
+              91,
+              "2024-12-18",
+              "19:20:40",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              60,
+              93,
+              "2024-12-23",
+              "11:10:05",
+              "Success",
+              "PayPal"
+            ],
+            [
+              61,
+              95,
+              "2024-12-29",
+              "13:15:15",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              62,
+              96,
+              "2024-12-03",
+              "15:25:45",
+              "Success",
+              "PayPal"
+            ],
+            [
+              63,
+              97,
+              "2024-12-08",
+              "12:10:35",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              65,
+              2,
+              "2025-01-19",
+              "05:05:13",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              66,
+              3,
+              "2025-01-08",
+              "23:45:00",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              67,
+              4,
+              "2025-01-05",
+              "10:49:26",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              68,
+              8,
+              "2025-01-02",
+              "16:11:15",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              69,
+              14,
+              "2025-01-01",
+              "22:22:26",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              70,
+              18,
+              "2025-01-22",
+              "23:12:08",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              71,
+              22,
+              "2025-01-01",
+              "18:49:19",
+              "Success",
+              "PayPal"
+            ],
+            [
+              72,
+              26,
+              "2025-01-05",
+              "22:01:25",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              73,
+              29,
+              "2025-01-18",
+              "05:05:04",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              74,
+              34,
+              "2025-01-12",
+              "11:30:15",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              75,
+              36,
+              "2025-01-16",
+              "23:15:43",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              76,
+              40,
+              "2025-01-08",
+              "13:22:51",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              77,
+              45,
+              "2025-01-03",
+              "15:10:25",
+              "Success",
+              "PayPal"
+            ],
+            [
+              78,
+              47,
+              "2025-01-11",
+              "20:20:20",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              79,
+              50,
+              "2025-01-17",
+              "12:30:00",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              80,
+              53,
+              "2025-01-15",
+              "07:40:19",
+              "Failed",
+              "Credit Card"
+            ],
+            [
+              81,
+              58,
+              "2025-01-04",
+              "18:49:33",
+              "Success",
+              "PayPal"
+            ],
+            [
+              82,
+              60,
+              "2025-01-20",
+              "14:10:25",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              83,
+              65,
+              "2025-01-06",
+              "20:30:10",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              84,
+              67,
+              "2025-01-14",
+              "16:00:00",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              85,
+              71,
+              "2025-01-07",
+              "19:15:15",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              86,
+              75,
+              "2025-01-21",
+              "12:50:30",
+              "Success",
+              "PayPal"
+            ],
+            [
+              87,
+              80,
+              "2025-01-19",
+              "09:40:40",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              88,
+              82,
+              "2025-01-10",
+              "08:20:00",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              89,
+              85,
+              "2025-01-16",
+              "15:50:45",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              90,
+              90,
+              "2025-01-22",
+              "21:00:15",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              91,
+              92,
+              "2025-01-03",
+              "16:20:25",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              15,
+              7,
+              "2024-11-19",
+              "19:18:48",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              16,
+              9,
+              "2024-11-27",
+              "13:15:29",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              17,
+              20,
+              "2024-11-18",
+              "02:38:21",
+              "Success",
+              "PayPal"
+            ],
+            [
+              18,
+              21,
+              "2024-11-21",
+              "11:25:35",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              19,
+              23,
+              "2024-11-22",
+              "16:04:05",
+              "Success",
+              "PayPal"
+            ],
+            [
+              20,
+              25,
+              "2024-11-05",
+              "11:45:31",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              21,
+              30,
+              "2024-11-12",
+              "03:20:29",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              22,
+              35,
+              "2024-11-20",
+              "19:09:04",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              23,
+              36,
+              "2024-11-02",
+              "10:39:46",
+              "Success",
+              "PayPal"
+            ],
+            [
+              24,
+              38,
+              "2024-11-15",
+              "15:12:23",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              25,
+              42,
+              "2024-11-26",
+              "09:40:55",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              26,
+              47,
+              "2024-11-28",
+              "12:18:39",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              27,
+              52,
+              "2024-11-17",
+              "07:45:14",
+              "Success",
+              "PayPal"
+            ],
+            [
+              28,
+              56,
+              "2024-11-23",
+              "14:03:20",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              29,
+              59,
+              "2024-11-19",
+              "18:22:33",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              30,
+              63,
+              "2024-11-20",
+              "20:40:09",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              31,
+              67,
+              "2024-11-13",
+              "16:50:26",
+              "Failed",
+              "Credit Card"
+            ],
+            [
+              32,
+              71,
+              "2024-11-18",
+              "11:09:18",
+              "Success",
+              "PayPal"
+            ],
+            [
+              33,
+              74,
+              "2024-11-12",
+              "08:05:46",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              2,
+              10,
+              "2024-10-09",
+              "22:09:27",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              3,
+              11,
+              "2024-10-15",
+              "17:34:19",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              4,
+              15,
+              "2024-10-22",
+              "01:47:25",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              5,
+              19,
+              "2024-10-15",
+              "12:40:26",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              6,
+              39,
+              "2024-10-31",
+              "21:39:19",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              7,
+              55,
+              "2024-10-27",
+              "05:49:16",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              8,
+              59,
+              "2024-10-25",
+              "02:51:05",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              9,
+              72,
+              "2024-10-08",
+              "10:23:28",
+              "Cancelled",
+              "PayPal"
+            ],
+            [
+              10,
+              77,
+              "2024-10-17",
+              "13:09:33",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              11,
+              84,
+              "2024-10-27",
+              "03:37:42",
+              "Success",
+              "PayPal"
+            ],
+            [
+              12,
+              85,
+              "2024-10-25",
+              "20:06:42",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              13,
+              86,
+              "2024-10-21",
+              "13:30:47",
+              "Success",
+              "PayPal"
+            ]
+          ],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [
+            {
+              "metadata": "{}",
+              "name": "payment_id",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "order_id",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_date",
+              "type": "\"date\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_time",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_status",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_method",
+              "type": "\"string\""
+            }
+          ],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1740394575475,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1740394575437,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n#### Syntax\n-----------------------------------------------------------------------------\n**CREATE OR REPLACE FUNCTION** catalog_name.schema_name.udf_name(param_name data_type)   \n**RETURNS** return_type   \n**RETURN** expression;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 53,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "20de3a3e-6941-4497-9b94-47552c968644",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "4affbab2-d1ed-4cdd-80cd-c4283424b136",
+        "origId": 2623208584547160,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 0.28125,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n## User Defined Functions (UDF)\n\n  > - User Defined Functions (UDF) in Spark are custom functions created by users to extend the capabilities of Spark SQL and PySpark. \n  > - UDFs allow us to perform calculations or transformations to apply business logic that are not possible with built-in functions\n  > - You define the function once and use it accross multiple queries.\n  > - SQL UDFs are recommended over Python UDFs due to better optimization\n",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 67,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "fb65250e-a376-4b5b-8a65-5e5a1fbac0c0",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "c192bfd8-8dfe-4d9e-aafb-87cecd864dbe",
+        "origId": 2623208584547159,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 0.25,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "CREATE OR REPLACE FUNCTION gizmobox.default.get_payment_status(payment_status INT)\nRETURNS STRING\nRETURN CASE payment_status\n         WHEN 1 THEN 'Success'\n         WHEN 2 THEN 'Pending'\n         WHEN 3 THEN 'Cancelled'\n         WHEN 4 THEN 'Failed'\n       END;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 9,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1740394546418,
+        "globalVars": {},
+        "guid": "def6c149-481e-4e63-876e-f3e9d6f93837",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            0
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "1b98f7dc-707f-4231-9a76-cb0b4a930d7a",
+        "origId": 7495265649357190,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 4.78125,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1740394545788,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1740394545709,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md \n#### Write a function to get the description of the payment status",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 3,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "4c9ad14b-fdcc-49dd-a455-9d8a03b86ecf",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "9256bd92-7c7d-4691-b3d2-ec0496051811",
+        "origId": 7495265649357191,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 4.53125,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "DESC FUNCTION EXTENDED gizmobox.default.get_fullname;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 4,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1740394370547,
+        "globalVars": {},
+        "guid": "c7decf84-7a28-48c9-a600-adb77a0d2741",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            46
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "2c83d799-7eb0-4ee8-ad79-ab5c33dd6900",
+        "origId": 7495265649357188,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 4.28125,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [
+            [
+              "Function:      gizmobox.default.get_fullname"
+            ],
+            [
+              "Type:          SCALAR"
+            ],
+            [
+              "Input:         firstname STRING"
+            ],
+            [
+              "               surname   STRING"
+            ],
+            [
+              "Returns:       STRING"
+            ],
+            [
+              "Deterministic: true"
+            ],
+            [
+              "Data Access:   CONTAINS SQL"
+            ],
+            [
+              "Configs:       spark.databricks.sql.expression.aiFunctions.repartition=0"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiForecast.enabled=false"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.clusterSizeBasedGlobalParallelism.scaleFactor=32.0"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.debugLogEnabled=true"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.dynamicPoolSizeEnabled=false"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.enabled=true"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.maxPoolSize=2048"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.maxPoolSizeForBatch=512"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.scaleUpThresholdCurrentQpsIncreaseRatio=0.0"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.scaleUpThresholdSuccessRatio=0.95"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.scaleUpThresholdTotalQpsIncreaseRatio=0.0"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.taskWaitTimeInSeconds=1000"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.threadKeepAliveTimeInSeconds=600"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.adaptiveThreadPool.useDynamicTaskQueueExecutor=false"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.batch.aiQuery.embedding.request.size=4"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.batch.execution.size=2048"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.batchInferenceApi.enabled=false"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.decimal.dataType.enabled=true"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.embeddingsEndpointName=databricks-bge-large-en"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.model.parameters.enabled=true"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.modelEndpointTypeParsing.enabled=true"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.purposeBuiltFunctions.batch.execution.enabled=false"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.remoteHttpClient.maxConnections=2048"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.remoteHttpClient.timeoutInSeconds=360"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.safe.inference.enabled=true"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiFunctions.useDedicatedHttpClient=true"
+            ],
+            [
+              "               spark.databricks.sql.functions.aiGen.endpointName=databricks-meta-llama-3-3-70b-instruct"
+            ],
+            [
+              "               spark.databricks.sql.functions.vectorSearch.enabled=true"
+            ],
+            [
+              "               spark.sql.functions.remoteHttpClient.retryOn400TimeoutError=true"
+            ],
+            [
+              "               spark.sql.functions.remoteHttpClient.retryOnSocketTimeoutException=true"
+            ],
+            [
+              "               spark.sql.hive.convertCTAS=true"
+            ],
+            [
+              "               spark.sql.legacy.createHiveTableByDefault=false"
+            ],
+            [
+              "               spark.sql.parquet.compression.codec=snappy"
+            ],
+            [
+              "               spark.sql.sources.commitProtocolClass=com.databricks.sql.transaction.directory.DirectoryAtomicCommitProtocol"
+            ],
+            [
+              "               spark.sql.sources.default=delta"
+            ],
+            [
+              "               spark.sql.streaming.stopTimeout=15s"
+            ],
+            [
+              "Owner:         cloudboxacademy@gmail.com"
+            ],
+            [
+              "Create Time:   Mon Feb 24 10:50:04 UTC 2025"
+            ],
+            [
+              "Body:          CONCAT(initcap(firstname), ' ', initcap(surname))"
+            ]
+          ],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [
+            {
+              "metadata": "{}",
+              "name": "function_desc",
+              "type": "\"string\""
+            }
+          ],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1740394370275,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1740394370220,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT gizmobox.default.get_fullname('john', 'smith');",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 6,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1740394311049,
+        "globalVars": {},
+        "guid": "cea98b41-01e8-4f5b-b73e-8a4786f0286e",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            1
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "becb6f00-e05e-4bdf-a1a2-a38dabc55e0b",
+        "origId": 7495265649357187,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 3.28125,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [
+            [
+              "John Smith"
+            ]
+          ],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [
+            {
+              "metadata": "{\"__autoGeneratedAlias\":\"true\"}",
+              "name": "gizmobox.default.get_fullname(john, smith)",
+              "type": "\"string\""
+            }
+          ],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1740394308096,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1740394308037,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md \n#### Write a function to concatenate firstname and surname to and output the fullname",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 7,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "61d3183c-d359-4fe5-9d61-8570ed8c7558",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "adfa82f4-6f27-478c-a837-8404c8d6f9e5",
+        "origId": 7495265649357184,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.28125,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      }
+    ],
+    "computePreferences": null,
+    "dashboards": [],
+    "environmentMetadata": {
+      "base_environment": "",
+      "client": "2"
+    },
+    "environmentSerializationPreferences": null,
+    "globalVars": {},
+    "guid": "46fe6fb9-d252-42d4-92b1-8c7e934ef095",
+    "iPythonMetadata": null,
+    "inputWidgetPreferences": null,
+    "inputWidgets": {},
+    "language": "sql",
+    "name": "20. User Defined Functions",
+    "notebookMetadata": {
+      "mostRecentlyExecutedCommandWithImplicitDF": {
+        "commandId": 5175346670712694,
+        "dataframes": [
+          "_sqldf"
+        ]
+      },
+      "pythonIndentUnit": 4
+    },
+    "origId": 2623208584547157,
+    "reposExportFormat": "JUPYTER",
+    "version": "NotebookV1"
+  },
+  "provenance": {
+    "aliases": [],
+    "archive": "materials/archives/dea-course-v5.dbc",
+    "archive_sha256": "23908dc947dc9279b1176575fa5b0966281fca608509c6fed3deca7700146488",
+    "member": "dea-course/dea03-etl-with-apache-spark/20. User Defined Functions.sql",
+    "member_sha256": "ce12396610c01adaa431d3aa500337d3e6a6cc42acb209405b1dfddd062d8338"
+  },
+  "schema_version": 1,
+  "source_base64": "eyJ2ZXJzaW9uIjoiTm90ZWJvb2tWMSIsIm9yaWdJZCI6MjYyMzIwODU4NDU0NzE1NywibmFtZSI6IjIwLiBVc2VyIERlZmluZWQgRnVuY3Rpb25zIiwibGFuZ3VhZ2UiOiJzcWwiLCJjb21tYW5kcyI6W3sidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6NzQ5NTI2NTY0OTM1NzE4NSwiZ3VpZCI6ImU3Yzk4ZDY3LTdlZmQtNDQ3ZC1iMTVlLTllNGNmMzk1YzQ2OCIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjIuMjgxMjUsImNvbW1hbmQiOiJDUkVBVEUgT1IgUkVQTEFDRSBGVU5DVElPTiBnaXptb2JveC5kZWZhdWx0LmdldF9mdWxsbmFtZShmaXJzdG5hbWUgU1RSSU5HLCBzdXJuYW1lIFNUUklORylcblJFVFVSTlMgU1RSSU5HXG5SRVRVUk4gQ09OQ0FUKGluaXRjYXAoZmlyc3RuYW1lKSwgJyAnLCBpbml0Y2FwKHN1cm5hbWUpKTsiLCJjb21tYW5kVmVyc2lvbiI6MjYsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJ0YWJsZSIsImRhdGEiOltdLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sInNjaGVtYSI6W10sIm92ZXJmbG93IjpmYWxzZSwiYWdnRGF0YSI6W10sImFnZ1NjaGVtYSI6W10sImFnZ092ZXJmbG93IjpmYWxzZSwiYWdnU2VyaWVzTGltaXRSZWFjaGVkIjpmYWxzZSwiYWdnRXJyb3IiOiIiLCJhZ2dUeXBlIjoiIiwicGxvdE9wdGlvbnMiOm51bGwsImlzSnNvblNjaGVtYSI6dHJ1ZSwiZGJmc1Jlc3VsdFBhdGgiOm51bGwsImRhdGFzZXRJbmZvcyI6W10sImNvbHVtbkN1c3RvbURpc3BsYXlJbmZvcyI6e30sIm1ldGFkYXRhIjp7ImlzRGJmc0NvbW1hbmRSZXN1bHQiOmZhbHNlfX0sInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjE3NDAzOTQxOTc5ODAsInN1Ym1pdFRpbWUiOjE3NDAzOTQxOTcwMzEsImZpbmlzaFRpbWUiOjE3NDAzOTQyMDU4NDcsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnsicm93TGltaXQiOjEwMDAwLCJieXRlTGltaXQiOjIwNDgwMDB9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbWyJ0YWJsZSIsMF1dLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiIzYTg1ZWJhNi05NjQ0LTRjNzAtYjkwZi1mOWU5Y2EwMzFkOTMifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjc0OTUyNjU2NDkzNTcxODksImd1aWQiOiJjYjA3Yjk3OS1kN2RhLTQ1ODktOTQzMy1mYWNiOGM4NjdiNGQiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjo1LjI4MTI1LCJjb21tYW5kIjoiU0VMRUNUIHBheW1lbnRfaWQsXG4gICAgICAgb3JkZXJfaWQsXG4gICAgICAgQ0FTVChkYXRlX2Zvcm1hdChwYXltZW50X3RpbWVzdGFtcCwneXl5eS1NTS1kZCcpIEFTIERBVEUpIEFTIHBheW1lbnRfZGF0ZSxcbiAgICAgICBkYXRlX2Zvcm1hdChwYXltZW50X3RpbWVzdGFtcCwnSEg6bW06c3MnKSBBUyBwYXltZW50X3RpbWUsXG4gICAgICAgZ2l6bW9ib3guZGVmYXVsdC5nZXRfcGF5bWVudF9zdGF0dXMocGF5bWVudF9zdGF0dXMpIEFTIHBheW1lbnRfc3RhdHVzLCAgXG4gICAgICAgcGF5bWVudF9tZXRob2RcbiAgRlJPTSBnaXptb2JveC5icm9uemUucGF5bWVudHM7IiwiY29tbWFuZFZlcnNpb24iOjUsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJ0YWJsZSIsImRhdGEiOltbMzUsMTMsIjIwMjQtMTItMTciLCIwNToyNTozNCIsIlBlbmRpbmciLCJQYXlQYWwiXSxbMzYsMTYsIjIwMjQtMTItMDkiLCIxMDo0NTo1NiIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbMzcsMTcsIjIwMjQtMTItMDIiLCIxMzo1MDoyMCIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzM4LDI0LCIyMDI0LTEyLTIyIiwiMDg6MzA6NTUiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzM5LDI3LCIyMDI0LTEyLTAzIiwiMTE6NDU6MzAiLCJQZW5kaW5nIiwiQ3JlZGl0IENhcmQiXSxbNDAsMjgsIjIwMjQtMTItMjciLCIwNTo0MDoxMCIsIkZhaWxlZCIsIkNyZWRpdCBDYXJkIl0sWzQxLDMyLCIyMDI0LTEyLTI5IiwiMDk6MjA6NDAiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzQyLDM3LCIyMDI0LTEyLTIzIiwiMTI6MTA6MDUiLCJQZW5kaW5nIiwiQ3JlZGl0IENhcmQiXSxbNDMsMzgsIjIwMjQtMTItMjYiLCIyMDoxNToxNSIsIlN1Y2Nlc3MiLCJDcmVkaXQgQ2FyZCJdLFs0NCw0NCwiMjAyNC0xMi0yMSIsIjE0OjI1OjQ1IiwiU3VjY2VzcyIsIkNyZWRpdCBDYXJkIl0sWzQ1LDQ5LCIyMDI0LTEyLTA4IiwiMTY6NDA6MzUiLCJGYWlsZWQiLCJQYXlQYWwiXSxbNDYsNTQsIjIwMjQtMTItMjEiLCIxMzoxMDoyNSIsIlBlbmRpbmciLCJDcmVkaXQgQ2FyZCJdLFs0Nyw1OCwiMjAyNC0xMi0xMCIsIjExOjUwOjIwIiwiU3VjY2VzcyIsIlBheVBhbCJdLFs0OCw2MCwiMjAyNC0xMi0xNCIsIjE4OjMwOjE1IiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbNDksNjEsIjIwMjQtMTItMDgiLCIxNDo0NTo1MCIsIlBlbmRpbmciLCJCYW5rIFRyYW5zZmVyIl0sWzUwLDY1LCIyMDI0LTEyLTEwIiwiMTI6MzU6MDUiLCJGYWlsZWQiLCJCYW5rIFRyYW5zZmVyIl0sWzUxLDY3LCIyMDI0LTEyLTIwIiwiMDk6NDA6MjUiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzUyLDY5LCIyMDI0LTEyLTMxIiwiMTA6MTU6NTAiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFs1Myw3MCwiMjAyNC0xMi0wNSIsIjEzOjUwOjM1IiwiUGVuZGluZyIsIlBheVBhbCJdLFs1NCw3MSwiMjAyNC0xMi0yOCIsIjExOjA1OjQwIiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbNTUsNzQsIjIwMjQtMTItMjMiLCIxNDoyNToyNSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbNTYsODAsIjIwMjQtMTItMTIiLCIwODozMDo1NSIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbNTcsODEsIjIwMjQtMTItMjgiLCIxNjo0NTozMCIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbNTgsODIsIjIwMjQtMTItMjkiLCIxODo1MDoxMCIsIlBlbmRpbmciLCJQYXlQYWwiXSxbNTksOTEsIjIwMjQtMTItMTgiLCIxOToyMDo0MCIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbNjAsOTMsIjIwMjQtMTItMjMiLCIxMToxMDowNSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbNjEsOTUsIjIwMjQtMTItMjkiLCIxMzoxNToxNSIsIlBlbmRpbmciLCJCYW5rIFRyYW5zZmVyIl0sWzYyLDk2LCIyMDI0LTEyLTAzIiwiMTU6MjU6NDUiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzYzLDk3LCIyMDI0LTEyLTA4IiwiMTI6MTA6MzUiLCJGYWlsZWQiLCJCYW5rIFRyYW5zZmVyIl0sWzY1LDIsIjIwMjUtMDEtMTkiLCIwNTowNToxMyIsIlBlbmRpbmciLCJQYXlQYWwiXSxbNjYsMywiMjAyNS0wMS0wOCIsIjIzOjQ1OjAwIiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFs2Nyw0LCIyMDI1LTAxLTA1IiwiMTA6NDk6MjYiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFs2OCw4LCIyMDI1LTAxLTAyIiwiMTY6MTE6MTUiLCJQZW5kaW5nIiwiUGF5UGFsIl0sWzY5LDE0LCIyMDI1LTAxLTAxIiwiMjI6MjI6MjYiLCJGYWlsZWQiLCJQYXlQYWwiXSxbNzAsMTgsIjIwMjUtMDEtMjIiLCIyMzoxMjowOCIsIlN1Y2Nlc3MiLCJDcmVkaXQgQ2FyZCJdLFs3MSwyMiwiMjAyNS0wMS0wMSIsIjE4OjQ5OjE5IiwiU3VjY2VzcyIsIlBheVBhbCJdLFs3MiwyNiwiMjAyNS0wMS0wNSIsIjIyOjAxOjI1IiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiXSxbNzMsMjksIjIwMjUtMDEtMTgiLCIwNTowNTowNCIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbNzQsMzQsIjIwMjUtMDEtMTIiLCIxMTozMDoxNSIsIlN1Y2Nlc3MiLCJDcmVkaXQgQ2FyZCJdLFs3NSwzNiwiMjAyNS0wMS0xNiIsIjIzOjE1OjQzIiwiUGVuZGluZyIsIlBheVBhbCJdLFs3Niw0MCwiMjAyNS0wMS0wOCIsIjEzOjIyOjUxIiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFs3Nyw0NSwiMjAyNS0wMS0wMyIsIjE1OjEwOjI1IiwiU3VjY2VzcyIsIlBheVBhbCJdLFs3OCw0NywiMjAyNS0wMS0xMSIsIjIwOjIwOjIwIiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbNzksNTAsIjIwMjUtMDEtMTciLCIxMjozMDowMCIsIlBlbmRpbmciLCJCYW5rIFRyYW5zZmVyIl0sWzgwLDUzLCIyMDI1LTAxLTE1IiwiMDc6NDA6MTkiLCJGYWlsZWQiLCJDcmVkaXQgQ2FyZCJdLFs4MSw1OCwiMjAyNS0wMS0wNCIsIjE4OjQ5OjMzIiwiU3VjY2VzcyIsIlBheVBhbCJdLFs4Miw2MCwiMjAyNS0wMS0yMCIsIjE0OjEwOjI1IiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiXSxbODMsNjUsIjIwMjUtMDEtMDYiLCIyMDozMDoxMCIsIkZhaWxlZCIsIlBheVBhbCJdLFs4NCw2NywiMjAyNS0wMS0xNCIsIjE2OjAwOjAwIiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbODUsNzEsIjIwMjUtMDEtMDciLCIxOToxNToxNSIsIlBlbmRpbmciLCJDcmVkaXQgQ2FyZCJdLFs4Niw3NSwiMjAyNS0wMS0yMSIsIjEyOjUwOjMwIiwiU3VjY2VzcyIsIlBheVBhbCJdLFs4Nyw4MCwiMjAyNS0wMS0xOSIsIjA5OjQwOjQwIiwiRmFpbGVkIiwiUGF5UGFsIl0sWzg4LDgyLCIyMDI1LTAxLTEwIiwiMDg6MjA6MDAiLCJTdWNjZXNzIiwiQ3JlZGl0IENhcmQiXSxbODksODUsIjIwMjUtMDEtMTYiLCIxNTo1MDo0NSIsIlBlbmRpbmciLCJCYW5rIFRyYW5zZmVyIl0sWzkwLDkwLCIyMDI1LTAxLTIyIiwiMjE6MDA6MTUiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFs5MSw5MiwiMjAyNS0wMS0wMyIsIjE2OjIwOjI1IiwiRmFpbGVkIiwiUGF5UGFsIl0sWzE1LDcsIjIwMjQtMTEtMTkiLCIxOToxODo0OCIsIlBlbmRpbmciLCJDcmVkaXQgQ2FyZCJdLFsxNiw5LCIyMDI0LTExLTI3IiwiMTM6MTU6MjkiLCJGYWlsZWQiLCJCYW5rIFRyYW5zZmVyIl0sWzE3LDIwLCIyMDI0LTExLTE4IiwiMDI6Mzg6MjEiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzE4LDIxLCIyMDI0LTExLTIxIiwiMTE6MjU6MzUiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFsxOSwyMywiMjAyNC0xMS0yMiIsIjE2OjA0OjA1IiwiU3VjY2VzcyIsIlBheVBhbCJdLFsyMCwyNSwiMjAyNC0xMS0wNSIsIjExOjQ1OjMxIiwiUGVuZGluZyIsIlBheVBhbCJdLFsyMSwzMCwiMjAyNC0xMS0xMiIsIjAzOjIwOjI5IiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbMjIsMzUsIjIwMjQtMTEtMjAiLCIxOTowOTowNCIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbMjMsMzYsIjIwMjQtMTEtMDIiLCIxMDozOTo0NiIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbMjQsMzgsIjIwMjQtMTEtMTUiLCIxNToxMjoyMyIsIlN1Y2Nlc3MiLCJDcmVkaXQgQ2FyZCJdLFsyNSw0MiwiMjAyNC0xMS0yNiIsIjA5OjQwOjU1IiwiUGVuZGluZyIsIlBheVBhbCJdLFsyNiw0NywiMjAyNC0xMS0yOCIsIjEyOjE4OjM5IiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFsyNyw1MiwiMjAyNC0xMS0xNyIsIjA3OjQ1OjE0IiwiU3VjY2VzcyIsIlBheVBhbCJdLFsyOCw1NiwiMjAyNC0xMS0yMyIsIjE0OjAzOjIwIiwiU3VjY2VzcyIsIkNyZWRpdCBDYXJkIl0sWzI5LDU5LCIyMDI0LTExLTE5IiwiMTg6MjI6MzMiLCJQZW5kaW5nIiwiUGF5UGFsIl0sWzMwLDYzLCIyMDI0LTExLTIwIiwiMjA6NDA6MDkiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFszMSw2NywiMjAyNC0xMS0xMyIsIjE2OjUwOjI2IiwiRmFpbGVkIiwiQ3JlZGl0IENhcmQiXSxbMzIsNzEsIjIwMjQtMTEtMTgiLCIxMTowOToxOCIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbMzMsNzQsIjIwMjQtMTEtMTIiLCIwODowNTo0NiIsIlBlbmRpbmciLCJCYW5rIFRyYW5zZmVyIl0sWzIsMTAsIjIwMjQtMTAtMDkiLCIyMjowOToyNyIsIlBlbmRpbmciLCJDcmVkaXQgQ2FyZCJdLFszLDExLCIyMDI0LTEwLTE1IiwiMTc6MzQ6MTkiLCJGYWlsZWQiLCJCYW5rIFRyYW5zZmVyIl0sWzQsMTUsIjIwMjQtMTAtMjIiLCIwMTo0NzoyNSIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzUsMTksIjIwMjQtMTAtMTUiLCIxMjo0MDoyNiIsIlBlbmRpbmciLCJQYXlQYWwiXSxbNiwzOSwiMjAyNC0xMC0zMSIsIjIxOjM5OjE5IiwiRmFpbGVkIiwiUGF5UGFsIl0sWzcsNTUsIjIwMjQtMTAtMjciLCIwNTo0OToxNiIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzgsNTksIjIwMjQtMTAtMjUiLCIwMjo1MTowNSIsIlBlbmRpbmciLCJQYXlQYWwiXSxbOSw3MiwiMjAyNC0xMC0wOCIsIjEwOjIzOjI4IiwiQ2FuY2VsbGVkIiwiUGF5UGFsIl0sWzEwLDc3LCIyMDI0LTEwLTE3IiwiMTM6MDk6MzMiLCJTdWNjZXNzIiwiQ3JlZGl0IENhcmQiXSxbMTEsODQsIjIwMjQtMTAtMjciLCIwMzozNzo0MiIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbMTIsODUsIjIwMjQtMTAtMjUiLCIyMDowNjo0MiIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbMTMsODYsIjIwMjQtMTAtMjEiLCIxMzozMDo0NyIsIlN1Y2Nlc3MiLCJQYXlQYWwiXV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoicGF5bWVudF9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJvcmRlcl9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwYXltZW50X2RhdGUiLCJ0eXBlIjoiXCJkYXRlXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicGF5bWVudF90aW1lIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicGF5bWVudF9zdGF0dXMiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwYXltZW50X21ldGhvZCIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9XSwib3ZlcmZsb3ciOmZhbHNlLCJhZ2dEYXRhIjpbXSwiYWdnU2NoZW1hIjpbXSwiYWdnT3ZlcmZsb3ciOmZhbHNlLCJhZ2dTZXJpZXNMaW1pdFJlYWNoZWQiOmZhbHNlLCJhZ2dFcnJvciI6IiIsImFnZ1R5cGUiOiIiLCJwbG90T3B0aW9ucyI6bnVsbCwiaXNKc29uU2NoZW1hIjp0cnVlLCJkYmZzUmVzdWx0UGF0aCI6bnVsbCwiZGF0YXNldEluZm9zIjpbXSwiY29sdW1uQ3VzdG9tRGlzcGxheUluZm9zIjp7fSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTc0MDM5NDU3NTQ3NSwic3VibWl0VGltZSI6MTc0MDM5NDU3NTQzNywiZmluaXNoVGltZSI6MTc0MDM5NDU4MDc3MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJyb3dMaW1pdCI6MTAwMDAsImJ5dGVMaW1pdCI6MjA0ODAwMH0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltbInRhYmxlIiw4N11dLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiJlM2ZlZGViNy01YzhkLTQxYjUtYWJjMi1hYTI2ZDA3ZDE4YjIifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjI2MjMyMDg1ODQ1NDcxNjAsImd1aWQiOiIyMGRlM2EzZS02OTQxLTQ0OTctOWI5NC00NzU1MmM5Njg2NDQiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjowLjI4MTI1LCJjb21tYW5kIjoiJW1kXG4jIyMjIFN5bnRheFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbioqQ1JFQVRFIE9SIFJFUExBQ0UgRlVOQ1RJT04qKiBjYXRhbG9nX25hbWUuc2NoZW1hX25hbWUudWRmX25hbWUocGFyYW1fbmFtZSBkYXRhX3R5cGUpICAgXG4qKlJFVFVSTlMqKiByZXR1cm5fdHlwZSAgIFxuKipSRVRVUk4qKiBleHByZXNzaW9uOyIsImNvbW1hbmRWZXJzaW9uIjo1Mywic3RhdGUiOiJpbnB1dCIsInJlc3VsdHMiOm51bGwsInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjAsInN1Ym1pdFRpbWUiOjAsImZpbmlzaFRpbWUiOjAsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnt9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpudWxsLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiI0YWZmYmFiMi1kMWVkLTRjZGQtODBjZC1jNDI4MzQyNGIxMzYifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjI2MjMyMDg1ODQ1NDcxNTksImd1aWQiOiJmYjY1MjUwZS1hMzc2LTRiNWItOGE2NS01ZTVhMWZiYWMwYzAiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjowLjI1LCJjb21tYW5kIjoiJW1kXG4jIyBVc2VyIERlZmluZWQgRnVuY3Rpb25zIChVREYpXG5cbiAgPiAtIFVzZXIgRGVmaW5lZCBGdW5jdGlvbnMgKFVERikgaW4gU3BhcmsgYXJlIGN1c3RvbSBmdW5jdGlvbnMgY3JlYXRlZCBieSB1c2VycyB0byBleHRlbmQgdGhlIGNhcGFiaWxpdGllcyBvZiBTcGFyayBTUUwgYW5kIFB5U3BhcmsuIFxuICA+IC0gVURGcyBhbGxvdyB1cyB0byBwZXJmb3JtIGNhbGN1bGF0aW9ucyBvciB0cmFuc2Zvcm1hdGlvbnMgdG8gYXBwbHkgYnVzaW5lc3MgbG9naWMgdGhhdCBhcmUgbm90IHBvc3NpYmxlIHdpdGggYnVpbHQtaW4gZnVuY3Rpb25zXG4gID4gLSBZb3UgZGVmaW5lIHRoZSBmdW5jdGlvbiBvbmNlIGFuZCB1c2UgaXQgYWNjcm9zcyBtdWx0aXBsZSBxdWVyaWVzLlxuICA+IC0gU1FMIFVERnMgYXJlIHJlY29tbWVuZGVkIG92ZXIgUHl0aG9uIFVERnMgZHVlIHRvIGJldHRlciBvcHRpbWl6YXRpb25cbiIsImNvbW1hbmRWZXJzaW9uIjo2Nywic3RhdGUiOiJpbnB1dCIsInJlc3VsdHMiOm51bGwsInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjAsInN1Ym1pdFRpbWUiOjAsImZpbmlzaFRpbWUiOjAsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnt9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpudWxsLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiJjMTkyYmZkOC04ZGZlLTRkOWUtYWFmYi04N2NlY2Q4NjRkYmUifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjc0OTUyNjU2NDkzNTcxOTAsImd1aWQiOiJkZWY2YzE0OS00ODFlLTRlNjMtODc2ZS1mM2U5ZDZmOTM4MzciLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjo0Ljc4MTI1LCJjb21tYW5kIjoiQ1JFQVRFIE9SIFJFUExBQ0UgRlVOQ1RJT04gZ2l6bW9ib3guZGVmYXVsdC5nZXRfcGF5bWVudF9zdGF0dXMocGF5bWVudF9zdGF0dXMgSU5UKVxuUkVUVVJOUyBTVFJJTkdcblJFVFVSTiBDQVNFIHBheW1lbnRfc3RhdHVzXG4gICAgICAgICBXSEVOIDEgVEhFTiAnU3VjY2VzcydcbiAgICAgICAgIFdIRU4gMiBUSEVOICdQZW5kaW5nJ1xuICAgICAgICAgV0hFTiAzIFRIRU4gJ0NhbmNlbGxlZCdcbiAgICAgICAgIFdIRU4gNCBUSEVOICdGYWlsZWQnXG4gICAgICAgRU5EOyIsImNvbW1hbmRWZXJzaW9uIjo5LCJzdGF0ZSI6ImZpbmlzaGVkIiwicmVzdWx0cyI6eyJ0eXBlIjoidGFibGUiLCJkYXRhIjpbXSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJzY2hlbWEiOltdLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzQwMzk0NTQ1Nzg4LCJzdWJtaXRUaW1lIjoxNzQwMzk0NTQ1NzA5LCJmaW5pc2hUaW1lIjoxNzQwMzk0NTQ2NDE4LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDBdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiMWI5OGY3ZGMtNzA3Zi00MjMxLTlhNzYtY2IwYjRhOTMwZDdhIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo3NDk1MjY1NjQ5MzU3MTkxLCJndWlkIjoiNGM5YWQxNGItZmRjYy00OWRkLWE0NTUtOWQ4YTAzYjg2ZWNmIiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6NC41MzEyNSwiY29tbWFuZCI6IiVtZCBcbiMjIyMgV3JpdGUgYSBmdW5jdGlvbiB0byBnZXQgdGhlIGRlc2NyaXB0aW9uIG9mIHRoZSBwYXltZW50IHN0YXR1cyIsImNvbW1hbmRWZXJzaW9uIjozLCJzdGF0ZSI6ImlucHV0IiwicmVzdWx0cyI6bnVsbCwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MCwic3VibWl0VGltZSI6MCwiZmluaXNoVGltZSI6MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6e30sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltdLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiI5MjU2YmQ5Mi03YzdkLTQ2OTEtYjNkMi1lYzA0OTYwNTE4MTEifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjc0OTUyNjU2NDkzNTcxODgsImd1aWQiOiJjN2RlY2Y4NC03YTI4LTQ4YzktYTYwMC1hZGI3N2EwZDI3NDEiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjo0LjI4MTI1LCJjb21tYW5kIjoiREVTQyBGVU5DVElPTiBFWFRFTkRFRCBnaXptb2JveC5kZWZhdWx0LmdldF9mdWxsbmFtZTsiLCJjb21tYW5kVmVyc2lvbiI6NCwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6InRhYmxlIiwiZGF0YSI6W1siRnVuY3Rpb246ICAgICAgZ2l6bW9ib3guZGVmYXVsdC5nZXRfZnVsbG5hbWUiXSxbIlR5cGU6ICAgICAgICAgIFNDQUxBUiJdLFsiSW5wdXQ6ICAgICAgICAgZmlyc3RuYW1lIFNUUklORyJdLFsiICAgICAgICAgICAgICAgc3VybmFtZSAgIFNUUklORyJdLFsiUmV0dXJuczogICAgICAgU1RSSU5HIl0sWyJEZXRlcm1pbmlzdGljOiB0cnVlIl0sWyJEYXRhIEFjY2VzczogICBDT05UQUlOUyBTUUwiXSxbIkNvbmZpZ3M6ICAgICAgIHNwYXJrLmRhdGFicmlja3Muc3FsLmV4cHJlc3Npb24uYWlGdW5jdGlvbnMucmVwYXJ0aXRpb249MCJdLFsiICAgICAgICAgICAgICAgc3BhcmsuZGF0YWJyaWNrcy5zcWwuZnVuY3Rpb25zLmFpRm9yZWNhc3QuZW5hYmxlZD1mYWxzZSJdLFsiICAgICAgICAgICAgICAgc3BhcmsuZGF0YWJyaWNrcy5zcWwuZnVuY3Rpb25zLmFpRnVuY3Rpb25zLmFkYXB0aXZlVGhyZWFkUG9vbC5jbHVzdGVyU2l6ZUJhc2VkR2xvYmFsUGFyYWxsZWxpc20uc2NhbGVGYWN0b3I9MzIuMCJdLFsiICAgICAgICAgICAgICAgc3BhcmsuZGF0YWJyaWNrcy5zcWwuZnVuY3Rpb25zLmFpRnVuY3Rpb25zLmFkYXB0aXZlVGhyZWFkUG9vbC5kZWJ1Z0xvZ0VuYWJsZWQ9dHJ1ZSJdLFsiICAgICAgICAgICAgICAgc3BhcmsuZGF0YWJyaWNrcy5zcWwuZnVuY3Rpb25zLmFpRnVuY3Rpb25zLmFkYXB0aXZlVGhyZWFkUG9vbC5keW5hbWljUG9vbFNpemVFbmFibGVkPWZhbHNlIl0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMuYWlGdW5jdGlvbnMuYWRhcHRpdmVUaHJlYWRQb29sLmVuYWJsZWQ9dHJ1ZSJdLFsiICAgICAgICAgICAgICAgc3BhcmsuZGF0YWJyaWNrcy5zcWwuZnVuY3Rpb25zLmFpRnVuY3Rpb25zLmFkYXB0aXZlVGhyZWFkUG9vbC5tYXhQb29sU2l6ZT0yMDQ4Il0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMuYWlGdW5jdGlvbnMuYWRhcHRpdmVUaHJlYWRQb29sLm1heFBvb2xTaXplRm9yQmF0Y2g9NTEyIl0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMuYWlGdW5jdGlvbnMuYWRhcHRpdmVUaHJlYWRQb29sLnNjYWxlVXBUaHJlc2hvbGRDdXJyZW50UXBzSW5jcmVhc2VSYXRpbz0wLjAiXSxbIiAgICAgICAgICAgICAgIHNwYXJrLmRhdGFicmlja3Muc3FsLmZ1bmN0aW9ucy5haUZ1bmN0aW9ucy5hZGFwdGl2ZVRocmVhZFBvb2wuc2NhbGVVcFRocmVzaG9sZFN1Y2Nlc3NSYXRpbz0wLjk1Il0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMuYWlGdW5jdGlvbnMuYWRhcHRpdmVUaHJlYWRQb29sLnNjYWxlVXBUaHJlc2hvbGRUb3RhbFFwc0luY3JlYXNlUmF0aW89MC4wIl0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMuYWlGdW5jdGlvbnMuYWRhcHRpdmVUaHJlYWRQb29sLnRhc2tXYWl0VGltZUluU2Vjb25kcz0xMDAwIl0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMuYWlGdW5jdGlvbnMuYWRhcHRpdmVUaHJlYWRQb29sLnRocmVhZEtlZXBBbGl2ZVRpbWVJblNlY29uZHM9NjAwIl0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMuYWlGdW5jdGlvbnMuYWRhcHRpdmVUaHJlYWRQb29sLnVzZUR5bmFtaWNUYXNrUXVldWVFeGVjdXRvcj1mYWxzZSJdLFsiICAgICAgICAgICAgICAgc3BhcmsuZGF0YWJyaWNrcy5zcWwuZnVuY3Rpb25zLmFpRnVuY3Rpb25zLmJhdGNoLmFpUXVlcnkuZW1iZWRkaW5nLnJlcXVlc3Quc2l6ZT00Il0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMuYWlGdW5jdGlvbnMuYmF0Y2guZXhlY3V0aW9uLnNpemU9MjA0OCJdLFsiICAgICAgICAgICAgICAgc3BhcmsuZGF0YWJyaWNrcy5zcWwuZnVuY3Rpb25zLmFpRnVuY3Rpb25zLmJhdGNoSW5mZXJlbmNlQXBpLmVuYWJsZWQ9ZmFsc2UiXSxbIiAgICAgICAgICAgICAgIHNwYXJrLmRhdGFicmlja3Muc3FsLmZ1bmN0aW9ucy5haUZ1bmN0aW9ucy5kZWNpbWFsLmRhdGFUeXBlLmVuYWJsZWQ9dHJ1ZSJdLFsiICAgICAgICAgICAgICAgc3BhcmsuZGF0YWJyaWNrcy5zcWwuZnVuY3Rpb25zLmFpRnVuY3Rpb25zLmVtYmVkZGluZ3NFbmRwb2ludE5hbWU9ZGF0YWJyaWNrcy1iZ2UtbGFyZ2UtZW4iXSxbIiAgICAgICAgICAgICAgIHNwYXJrLmRhdGFicmlja3Muc3FsLmZ1bmN0aW9ucy5haUZ1bmN0aW9ucy5tb2RlbC5wYXJhbWV0ZXJzLmVuYWJsZWQ9dHJ1ZSJdLFsiICAgICAgICAgICAgICAgc3BhcmsuZGF0YWJyaWNrcy5zcWwuZnVuY3Rpb25zLmFpRnVuY3Rpb25zLm1vZGVsRW5kcG9pbnRUeXBlUGFyc2luZy5lbmFibGVkPXRydWUiXSxbIiAgICAgICAgICAgICAgIHNwYXJrLmRhdGFicmlja3Muc3FsLmZ1bmN0aW9ucy5haUZ1bmN0aW9ucy5wdXJwb3NlQnVpbHRGdW5jdGlvbnMuYmF0Y2guZXhlY3V0aW9uLmVuYWJsZWQ9ZmFsc2UiXSxbIiAgICAgICAgICAgICAgIHNwYXJrLmRhdGFicmlja3Muc3FsLmZ1bmN0aW9ucy5haUZ1bmN0aW9ucy5yZW1vdGVIdHRwQ2xpZW50Lm1heENvbm5lY3Rpb25zPTIwNDgiXSxbIiAgICAgICAgICAgICAgIHNwYXJrLmRhdGFicmlja3Muc3FsLmZ1bmN0aW9ucy5haUZ1bmN0aW9ucy5yZW1vdGVIdHRwQ2xpZW50LnRpbWVvdXRJblNlY29uZHM9MzYwIl0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMuYWlGdW5jdGlvbnMuc2FmZS5pbmZlcmVuY2UuZW5hYmxlZD10cnVlIl0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMuYWlGdW5jdGlvbnMudXNlRGVkaWNhdGVkSHR0cENsaWVudD10cnVlIl0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMuYWlHZW4uZW5kcG9pbnROYW1lPWRhdGFicmlja3MtbWV0YS1sbGFtYS0zLTMtNzBiLWluc3RydWN0Il0sWyIgICAgICAgICAgICAgICBzcGFyay5kYXRhYnJpY2tzLnNxbC5mdW5jdGlvbnMudmVjdG9yU2VhcmNoLmVuYWJsZWQ9dHJ1ZSJdLFsiICAgICAgICAgICAgICAgc3Bhcmsuc3FsLmZ1bmN0aW9ucy5yZW1vdGVIdHRwQ2xpZW50LnJldHJ5T240MDBUaW1lb3V0RXJyb3I9dHJ1ZSJdLFsiICAgICAgICAgICAgICAgc3Bhcmsuc3FsLmZ1bmN0aW9ucy5yZW1vdGVIdHRwQ2xpZW50LnJldHJ5T25Tb2NrZXRUaW1lb3V0RXhjZXB0aW9uPXRydWUiXSxbIiAgICAgICAgICAgICAgIHNwYXJrLnNxbC5oaXZlLmNvbnZlcnRDVEFTPXRydWUiXSxbIiAgICAgICAgICAgICAgIHNwYXJrLnNxbC5sZWdhY3kuY3JlYXRlSGl2ZVRhYmxlQnlEZWZhdWx0PWZhbHNlIl0sWyIgICAgICAgICAgICAgICBzcGFyay5zcWwucGFycXVldC5jb21wcmVzc2lvbi5jb2RlYz1zbmFwcHkiXSxbIiAgICAgICAgICAgICAgIHNwYXJrLnNxbC5zb3VyY2VzLmNvbW1pdFByb3RvY29sQ2xhc3M9Y29tLmRhdGFicmlja3Muc3FsLnRyYW5zYWN0aW9uLmRpcmVjdG9yeS5EaXJlY3RvcnlBdG9taWNDb21taXRQcm90b2NvbCJdLFsiICAgICAgICAgICAgICAgc3Bhcmsuc3FsLnNvdXJjZXMuZGVmYXVsdD1kZWx0YSJdLFsiICAgICAgICAgICAgICAgc3Bhcmsuc3FsLnN0cmVhbWluZy5zdG9wVGltZW91dD0xNXMiXSxbIk93bmVyOiAgICAgICAgIGNsb3VkYm94YWNhZGVteUBnbWFpbC5jb20iXSxbIkNyZWF0ZSBUaW1lOiAgIE1vbiBGZWIgMjQgMTA6NTA6MDQgVVRDIDIwMjUiXSxbIkJvZHk6ICAgICAgICAgIENPTkNBVChpbml0Y2FwKGZpcnN0bmFtZSksICcgJywgaW5pdGNhcChzdXJuYW1lKSkiXV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoiZnVuY3Rpb25fZGVzYyIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9XSwib3ZlcmZsb3ciOmZhbHNlLCJhZ2dEYXRhIjpbXSwiYWdnU2NoZW1hIjpbXSwiYWdnT3ZlcmZsb3ciOmZhbHNlLCJhZ2dTZXJpZXNMaW1pdFJlYWNoZWQiOmZhbHNlLCJhZ2dFcnJvciI6IiIsImFnZ1R5cGUiOiIiLCJwbG90T3B0aW9ucyI6bnVsbCwiaXNKc29uU2NoZW1hIjp0cnVlLCJkYmZzUmVzdWx0UGF0aCI6bnVsbCwiZGF0YXNldEluZm9zIjpbXSwiY29sdW1uQ3VzdG9tRGlzcGxheUluZm9zIjp7fSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTc0MDM5NDM3MDI3NSwic3VibWl0VGltZSI6MTc0MDM5NDM3MDIyMCwiZmluaXNoVGltZSI6MTc0MDM5NDM3MDU0NywiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJyb3dMaW1pdCI6MTAwMDAsImJ5dGVMaW1pdCI6MjA0ODAwMH0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltbInRhYmxlIiw0Nl1dLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiIyYzgzZDc5OS03ZWIwLTRlZTgtYWQ3OS1hYjVjMzNkZDY5MDAifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjc0OTUyNjU2NDkzNTcxODcsImd1aWQiOiJjZWE5OGI0MS0wMWU4LTRmNWItYjczZS04YTQ3ODZmMDI4NmUiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjozLjI4MTI1LCJjb21tYW5kIjoiU0VMRUNUIGdpem1vYm94LmRlZmF1bHQuZ2V0X2Z1bGxuYW1lKCdqb2huJywgJ3NtaXRoJyk7IiwiY29tbWFuZFZlcnNpb24iOjYsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJ0YWJsZSIsImRhdGEiOltbIkpvaG4gU21pdGgiXV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoiZ2l6bW9ib3guZGVmYXVsdC5nZXRfZnVsbG5hbWUoam9obiwgc21pdGgpIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6IntcIl9fYXV0b0dlbmVyYXRlZEFsaWFzXCI6XCJ0cnVlXCJ9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzQwMzk0MzA4MDk2LCJzdWJtaXRUaW1lIjoxNzQwMzk0MzA4MDM3LCJmaW5pc2hUaW1lIjoxNzQwMzk0MzExMDQ5LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDFdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiYmVjYjZmMDAtZTA1ZS00YmRmLWExYTItYTM4ZGFiYzU1ZTBiIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo3NDk1MjY1NjQ5MzU3MTg0LCJndWlkIjoiNjFkMzE4M2MtZDM1OS00ZmU1LTlkNjEtODU3MGVkOGM3NTU4Iiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MS4yODEyNSwiY29tbWFuZCI6IiVtZCBcbiMjIyMgV3JpdGUgYSBmdW5jdGlvbiB0byBjb25jYXRlbmF0ZSBmaXJzdG5hbWUgYW5kIHN1cm5hbWUgdG8gYW5kIG91dHB1dCB0aGUgZnVsbG5hbWUiLCJjb21tYW5kVmVyc2lvbiI6Nywic3RhdGUiOiJpbnB1dCIsInJlc3VsdHMiOm51bGwsInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjAsInN1Ym1pdFRpbWUiOjAsImZpbmlzaFRpbWUiOjAsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnt9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiYWRmYTgyZjQtNmYyNy00NzhjLWE4MzctODQwNGM4ZDZmOWU1In1dLCJkYXNoYm9hcmRzIjpbXSwiZ3VpZCI6IjQ2ZmU2ZmI5LWQyNTItNDJkNC05MmIxLThjN2U5MzRlZjA5NSIsImdsb2JhbFZhcnMiOnt9LCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsImlucHV0V2lkZ2V0cyI6e30sIm5vdGVib29rTWV0YWRhdGEiOnsicHl0aG9uSW5kZW50VW5pdCI6NCwibW9zdFJlY2VudGx5RXhlY3V0ZWRDb21tYW5kV2l0aEltcGxpY2l0REYiOnsiY29tbWFuZElkIjo1MTc1MzQ2NjcwNzEyNjk0LCJkYXRhZnJhbWVzIjpbIl9zcWxkZiJdfX0sInJlcG9zRXhwb3J0Rm9ybWF0IjoiSlVQWVRFUiIsImVudmlyb25tZW50TWV0YWRhdGEiOnsiY2xpZW50IjoiMiIsImJhc2VfZW52aXJvbm1lbnQiOiIifSwiY29tcHV0ZVByZWZlcmVuY2VzIjpudWxsLCJpbnB1dFdpZGdldFByZWZlcmVuY2VzIjpudWxsLCJlbnZpcm9ubWVudFNlcmlhbGl6YXRpb25QcmVmZXJlbmNlcyI6bnVsbH0="
+}

@@ -66,3 +66,13 @@ This is **not** an application-level VS Code or Jupyter Notebook test. Jupyter
 is not installed in the verification environment; no dependencies were installed
 to claim otherwise. Both viewers support standard saved notebook MIME outputs,
 but their trust policies and rendering can differ.
+
+### Collection size after cleanup
+
+The 71 reading notebooks decreased from 25,476,602 to 2,909,649 bytes (**88.58%**).
+The collection now has 1,149 cells instead of 1,803; all 357 embedded input
+snapshots and duplicated full-result metadata were removed from the reading
+copies. Complete originals and payloads remain available separately.
+
+These numbers describe notebook reading-copy size, not total repository size:
+external payloads preserve the full archival record.

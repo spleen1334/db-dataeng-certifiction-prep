@@ -104,11 +104,17 @@ its full input snapshots and duplicated result metadata made the reading copies
 too long. The approved revision separates preservation from presentation.
 
 - [x] Add static escaped HTML table previews with plain-text alternatives.
-- [ ] Externalize complete archived payloads and use lightweight notebook references.
-- [ ] Remove complete raw-input/image snapshots from the normal reading flow.
-- [ ] Replace repeated generic notes with selective operation-specific explanations.
-- [ ] Review representative SQL, profiling, image, join, and standalone samples.
-- [ ] Regenerate all 71 study notebooks and verify source/full-payload fidelity.
-- [ ] Record notebook size reduction and viewer-testing limitations.
+- [x] Externalize complete archived payloads and use lightweight notebook references.
+- [x] Remove complete raw-input/image snapshots from the normal reading flow.
+- [x] Replace repeated generic notes with selective operation-specific explanations.
+- [x] Review representative SQL, profiling, image, join, and standalone samples.
+- [x] Complete final verification of regenerated 71 study notebooks and full payloads.
+- [x] Record notebook size reduction and viewer-testing limitations.
 
 Commit each verified batch. Do not execute course workloads or initiate AI preparation.
+
+Compact revision verification: `make verify` exited 0 with 39 tests, 71 current
+notebooks, exact external payload/source preservation, no embedded input snapshots,
+and no broken documentation/notebook links. Guarded regeneration check reported
+0 stale files. Actual VS Code/Jupyter application rendering remains untested;
+the static Chromium presentation check passed.

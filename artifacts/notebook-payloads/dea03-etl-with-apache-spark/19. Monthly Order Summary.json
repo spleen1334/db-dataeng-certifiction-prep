@@ -1,0 +1,1043 @@
+{
+  "document": {
+    "commands": [
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "CREATE TABLE IF NOT EXISTS gizmobox.gold.order_summary_monthly\nAS\nSELECT date_format(transaction_timestamp, 'yyyy-MM') AS order_month,\n       customer_id, \n       COUNT(DISTINCT order_id) AS total_orders,\n       SUM(quantity) AS total_items_bought,\n       SUM(price * quantity) AS total_amount\n FROM gizmobox.silver.orders\n GROUP BY order_month, customer_id ;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 55,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1735578003510,
+        "globalVars": {},
+        "guid": "cc548f3f-db8d-4b7e-acf3-2234da25e6b4",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            0
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "72c3361a-073f-4ae4-894e-2680cd7c67ce",
+        "origId": 1292139761827958,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 2.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [
+            {
+              "metadata": "{}",
+              "name": "num_affected_rows",
+              "type": "\"long\""
+            },
+            {
+              "metadata": "{}",
+              "name": "num_inserted_rows",
+              "type": "\"long\""
+            }
+          ],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1735577996596,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1735577996504,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n## Monthly Order Summary\nFor each of the customer, produce the following summary per month\n1. total orders\n1. total items bought\n1. total amount spent",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 15,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "29694a84-4420-4a78-9c92-72e28a8d2f0d",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "5243a5a6-27f3-48f5-a9a5-9e9a005996a3",
+        "origId": 1292139761827957,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 0.5,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT * FROM gizmobox.silver.orders WHERE customer_id = 5816 ;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 15,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1735577901499,
+        "globalVars": {},
+        "guid": "91283120-0929-4b56-b350-bfb3d82e226f",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            3
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "7fb30a99-72e9-4312-831d-18ed4b358586",
+        "origId": 1292139761827954,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [
+            [
+              12,
+              "Cancelled",
+              "PayPal",
+              999,
+              "2024-12-06 20:26:49",
+              5816,
+              2,
+              "Laptop",
+              999,
+              1,
+              "Electronics",
+              "Sony",
+              "White"
+            ],
+            [
+              10,
+              "Pending",
+              "Credit Card",
+              399,
+              "2024-10-07 22:09:27",
+              5816,
+              5,
+              "Tablet",
+              399,
+              1,
+              "Electronics",
+              "GoPro",
+              "White"
+            ],
+            [
+              11,
+              "Pending",
+              "Bank Transfer",
+              897,
+              "2024-10-13 17:34:19",
+              5816,
+              4,
+              "Smartwatch",
+              299,
+              3,
+              "Electronics",
+              "Canon",
+              "White"
+            ]
+          ],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [
+            {
+              "metadata": "{}",
+              "name": "order_id",
+              "type": "\"long\""
+            },
+            {
+              "metadata": "{}",
+              "name": "order_status",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_method",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "total_amount",
+              "type": "\"long\""
+            },
+            {
+              "metadata": "{}",
+              "name": "transaction_timestamp",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "customer_id",
+              "type": "\"long\""
+            },
+            {
+              "metadata": "{}",
+              "name": "item_id",
+              "type": "\"long\""
+            },
+            {
+              "metadata": "{}",
+              "name": "name",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "price",
+              "type": "\"long\""
+            },
+            {
+              "metadata": "{}",
+              "name": "quantity",
+              "type": "\"long\""
+            },
+            {
+              "metadata": "{}",
+              "name": "category",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "brand",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "color",
+              "type": "\"string\""
+            }
+          ],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1735577900831,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1735577900781,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT * FROM gizmobox.gold.order_summary_monthly;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 2,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1735578008777,
+        "globalVars": {},
+        "guid": "cf745685-1b6e-45b6-8fea-27b95030b2de",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            76
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "43fe92a4-2b9f-4d4f-ae3c-9c4efd6a096e",
+        "origId": 1292139761827959,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 3.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [
+            [
+              "2024-11",
+              9179,
+              1,
+              1,
+              999
+            ],
+            [
+              "2024-12",
+              2054,
+              1,
+              2,
+              398
+            ],
+            [
+              "2024-10",
+              5816,
+              2,
+              4,
+              1296
+            ],
+            [
+              "2025-01",
+              9084,
+              2,
+              4,
+              1796
+            ],
+            [
+              "2025-01",
+              6384,
+              2,
+              3,
+              1297
+            ],
+            [
+              "2024-11",
+              8580,
+              1,
+              4,
+              586
+            ],
+            [
+              "2024-11",
+              2639,
+              1,
+              6,
+              984
+            ],
+            [
+              "2025-01",
+              9605,
+              2,
+              7,
+              1823
+            ],
+            [
+              "2025-01",
+              9247,
+              1,
+              2,
+              258
+            ],
+            [
+              "2024-11",
+              4914,
+              2,
+              2,
+              398
+            ],
+            [
+              "2024-12",
+              7803,
+              1,
+              3,
+              747
+            ],
+            [
+              "2024-11",
+              8845,
+              1,
+              2,
+              998
+            ],
+            [
+              "2024-10",
+              3409,
+              1,
+              1,
+              499
+            ],
+            [
+              "2024-11",
+              3892,
+              1,
+              2,
+              998
+            ],
+            [
+              "2024-12",
+              2344,
+              1,
+              3,
+              387
+            ],
+            [
+              "2025-01",
+              7123,
+              1,
+              5,
+              985
+            ],
+            [
+              "2024-12",
+              2703,
+              2,
+              7,
+              1033
+            ],
+            [
+              "2024-12",
+              6167,
+              1,
+              1,
+              699
+            ],
+            [
+              "2025-01",
+              7007,
+              1,
+              1,
+              699
+            ],
+            [
+              "2024-12",
+              7123,
+              1,
+              1,
+              699
+            ],
+            [
+              "2024-12",
+              3084,
+              2,
+              4,
+              1296
+            ],
+            [
+              "2024-12",
+              4996,
+              1,
+              1,
+              399
+            ],
+            [
+              "2024-10",
+              9018,
+              1,
+              1,
+              699
+            ],
+            [
+              "2025-01",
+              4996,
+              1,
+              1,
+              299
+            ],
+            [
+              "2024-11",
+              1987,
+              1,
+              5,
+              645
+            ],
+            [
+              "2024-10",
+              5011,
+              2,
+              3,
+              2197
+            ],
+            [
+              "2024-11",
+              8539,
+              2,
+              4,
+              1096
+            ],
+            [
+              "2025-01",
+              3295,
+              1,
+              1,
+              399
+            ],
+            [
+              "2025-01",
+              3712,
+              1,
+              4,
+              746
+            ],
+            [
+              "2025-01",
+              6167,
+              2,
+              4,
+              1086
+            ],
+            [
+              "2025-01",
+              8580,
+              1,
+              2,
+              698
+            ],
+            [
+              "2024-12",
+              7295,
+              1,
+              1,
+              129
+            ],
+            [
+              "2025-01",
+              5028,
+              1,
+              1,
+              499
+            ],
+            [
+              "2024-10",
+              7207,
+              1,
+              1,
+              1199
+            ],
+            [
+              "2024-10",
+              2344,
+              1,
+              2,
+              998
+            ],
+            [
+              "2024-12",
+              9687,
+              2,
+              3,
+              1697
+            ],
+            [
+              "2024-12",
+              6406,
+              2,
+              2,
+              648
+            ],
+            [
+              "2025-01",
+              6973,
+              1,
+              1,
+              499
+            ],
+            [
+              "2024-12",
+              5592,
+              1,
+              1,
+              699
+            ],
+            [
+              "2024-11",
+              7803,
+              2,
+              5,
+              685
+            ],
+            [
+              "2024-10",
+              9084,
+              1,
+              2,
+              398
+            ],
+            [
+              "2024-11",
+              9247,
+              2,
+              4,
+              536
+            ],
+            [
+              "2024-10",
+              3889,
+              1,
+              2,
+              328
+            ],
+            [
+              "2024-11",
+              4761,
+              1,
+              3,
+              997
+            ],
+            [
+              "2025-01",
+              6627,
+              1,
+              5,
+              895
+            ],
+            [
+              "2024-12",
+              7829,
+              2,
+              5,
+              705
+            ],
+            [
+              "2024-11",
+              9706,
+              1,
+              1,
+              999
+            ],
+            [
+              "2024-12",
+              5204,
+              2,
+              5,
+              1595
+            ],
+            [
+              "2025-01",
+              8845,
+              2,
+              2,
+              348
+            ],
+            [
+              "2025-01",
+              2344,
+              1,
+              5,
+              785
+            ],
+            [
+              "2024-11",
+              5028,
+              1,
+              1,
+              149
+            ],
+            [
+              "2024-12",
+              7997,
+              2,
+              4,
+              1096
+            ],
+            [
+              "2024-10",
+              9263,
+              1,
+              3,
+              387
+            ],
+            [
+              "2025-01",
+              2141,
+              1,
+              1,
+              129
+            ],
+            [
+              "2025-01",
+              9179,
+              1,
+              1,
+              399
+            ],
+            [
+              "2024-11",
+              7123,
+              1,
+              4,
+              646
+            ],
+            [
+              "2025-01",
+              5953,
+              1,
+              1,
+              129
+            ],
+            [
+              "2024-12",
+              1211,
+              1,
+              1,
+              1199
+            ],
+            [
+              "2024-12",
+              3409,
+              1,
+              1,
+              199
+            ],
+            [
+              "2024-12",
+              8580,
+              1,
+              1,
+              699
+            ],
+            [
+              "2025-01",
+              3532,
+              3,
+              9,
+              2581
+            ],
+            [
+              "2025-01",
+              9150,
+              3,
+              9,
+              2131
+            ],
+            [
+              "2025-01",
+              4973,
+              1,
+              1,
+              149
+            ],
+            [
+              "2025-01",
+              3084,
+              1,
+              2,
+              598
+            ],
+            [
+              "2024-12",
+              6627,
+              2,
+              6,
+              1544
+            ],
+            [
+              "2025-01",
+              4761,
+              1,
+              1,
+              199
+            ],
+            [
+              "2024-10",
+              1987,
+              1,
+              1,
+              799
+            ],
+            [
+              "2024-12",
+              5816,
+              1,
+              1,
+              999
+            ],
+            [
+              "2025-01",
+              7207,
+              1,
+              3,
+              597
+            ],
+            [
+              "2024-11",
+              4996,
+              1,
+              1,
+              199
+            ],
+            [
+              "2025-01",
+              4468,
+              1,
+              1,
+              799
+            ],
+            [
+              "2024-10",
+              8539,
+              1,
+              1,
+              499
+            ],
+            [
+              "2024-11",
+              5592,
+              1,
+              2,
+              258
+            ],
+            [
+              "2024-12",
+              4973,
+              1,
+              1,
+              699
+            ],
+            [
+              "2024-12",
+              4858,
+              1,
+              1,
+              999
+            ],
+            [
+              "2024-11",
+              7295,
+              2,
+              2,
+              998
+            ]
+          ],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [
+            {
+              "metadata": "{}",
+              "name": "order_month",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "customer_id",
+              "type": "\"long\""
+            },
+            {
+              "metadata": "{}",
+              "name": "total_orders",
+              "type": "\"long\""
+            },
+            {
+              "metadata": "{}",
+              "name": "total_items_bought",
+              "type": "\"long\""
+            },
+            {
+              "metadata": "{}",
+              "name": "total_amount",
+              "type": "\"long\""
+            }
+          ],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1735578007544,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1735578007508,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      }
+    ],
+    "computePreferences": null,
+    "dashboards": [],
+    "environmentMetadata": {
+      "base_environment": "",
+      "client": "1"
+    },
+    "environmentSerializationPreferences": null,
+    "globalVars": {},
+    "guid": "f778cd1d-eab0-4bdc-b4eb-eb5a33120420",
+    "iPythonMetadata": null,
+    "inputWidgetPreferences": null,
+    "inputWidgets": {},
+    "language": "sql",
+    "name": "19. Monthly Order Summary",
+    "notebookMetadata": {
+      "pythonIndentUnit": 4
+    },
+    "origId": 1292139761827953,
+    "reposExportFormat": "SOURCE",
+    "version": "NotebookV1"
+  },
+  "provenance": {
+    "aliases": [],
+    "archive": "materials/archives/dea-course-v5.dbc",
+    "archive_sha256": "23908dc947dc9279b1176575fa5b0966281fca608509c6fed3deca7700146488",
+    "member": "dea-course/dea03-etl-with-apache-spark/19. Monthly Order Summary.sql",
+    "member_sha256": "8c00b6597f44d09dbed63ef13259e6ac35ea35a82732b87f53932fb03e9a3cd7"
+  },
+  "schema_version": 1,
+  "source_base64": "eyJ2ZXJzaW9uIjoiTm90ZWJvb2tWMSIsIm9yaWdJZCI6MTI5MjEzOTc2MTgyNzk1MywibmFtZSI6IjE5LiBNb250aGx5IE9yZGVyIFN1bW1hcnkiLCJsYW5ndWFnZSI6InNxbCIsImNvbW1hbmRzIjpbeyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjoxMjkyMTM5NzYxODI3OTU4LCJndWlkIjoiY2M1NDhmM2YtZGI4ZC00YjdlLWFjZjMtMjIzNGRhMjVlNmI0Iiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6Mi4wLCJjb21tYW5kIjoiQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgZ2l6bW9ib3guZ29sZC5vcmRlcl9zdW1tYXJ5X21vbnRobHlcbkFTXG5TRUxFQ1QgZGF0ZV9mb3JtYXQodHJhbnNhY3Rpb25fdGltZXN0YW1wLCAneXl5eS1NTScpIEFTIG9yZGVyX21vbnRoLFxuICAgICAgIGN1c3RvbWVyX2lkLCBcbiAgICAgICBDT1VOVChESVNUSU5DVCBvcmRlcl9pZCkgQVMgdG90YWxfb3JkZXJzLFxuICAgICAgIFNVTShxdWFudGl0eSkgQVMgdG90YWxfaXRlbXNfYm91Z2h0LFxuICAgICAgIFNVTShwcmljZSAqIHF1YW50aXR5KSBBUyB0b3RhbF9hbW91bnRcbiBGUk9NIGdpem1vYm94LnNpbHZlci5vcmRlcnNcbiBHUk9VUCBCWSBvcmRlcl9tb250aCwgY3VzdG9tZXJfaWQgOyIsImNvbW1hbmRWZXJzaW9uIjo1NSwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6InRhYmxlIiwiZGF0YSI6W10sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoibnVtX2FmZmVjdGVkX3Jvd3MiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoibnVtX2luc2VydGVkX3Jvd3MiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzM1NTc3OTk2NTk2LCJzdWJtaXRUaW1lIjoxNzM1NTc3OTk2NTA0LCJmaW5pc2hUaW1lIjoxNzM1NTc4MDAzNTEwLCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDBdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiNzJjMzM2MWEtMDczZi00YWU0LTg5NGUtMjY4MGNkN2M2N2NlIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjoxMjkyMTM5NzYxODI3OTU3LCJndWlkIjoiMjk2OTRhODQtNDQyMC00YTc4LTljOTItNzJlMjhhOGQyZjBkIiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MC41LCJjb21tYW5kIjoiJW1kXG4jIyBNb250aGx5IE9yZGVyIFN1bW1hcnlcbkZvciBlYWNoIG9mIHRoZSBjdXN0b21lciwgcHJvZHVjZSB0aGUgZm9sbG93aW5nIHN1bW1hcnkgcGVyIG1vbnRoXG4xLiB0b3RhbCBvcmRlcnNcbjEuIHRvdGFsIGl0ZW1zIGJvdWdodFxuMS4gdG90YWwgYW1vdW50IHNwZW50IiwiY29tbWFuZFZlcnNpb24iOjE1LCJzdGF0ZSI6ImlucHV0IiwicmVzdWx0cyI6bnVsbCwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MCwic3VibWl0VGltZSI6MCwiZmluaXNoVGltZSI6MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6e30sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltdLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiI1MjQzYTVhNi0yN2YzLTQ4ZjUtYTlhNS05ZTlhMDA1OTk2YTMifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjEyOTIxMzk3NjE4Mjc5NTQsImd1aWQiOiI5MTI4MzEyMC0wOTI5LTRiNTYtYjM1MC1iZmIzZDgyZTIyNmYiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjoxLjAsImNvbW1hbmQiOiJTRUxFQ1QgKiBGUk9NIGdpem1vYm94LnNpbHZlci5vcmRlcnMgV0hFUkUgY3VzdG9tZXJfaWQgPSA1ODE2IDsiLCJjb21tYW5kVmVyc2lvbiI6MTUsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJ0YWJsZSIsImRhdGEiOltbMTIsIkNhbmNlbGxlZCIsIlBheVBhbCIsOTk5LCIyMDI0LTEyLTA2IDIwOjI2OjQ5Iiw1ODE2LDIsIkxhcHRvcCIsOTk5LDEsIkVsZWN0cm9uaWNzIiwiU29ueSIsIldoaXRlIl0sWzEwLCJQZW5kaW5nIiwiQ3JlZGl0IENhcmQiLDM5OSwiMjAyNC0xMC0wNyAyMjowOToyNyIsNTgxNiw1LCJUYWJsZXQiLDM5OSwxLCJFbGVjdHJvbmljcyIsIkdvUHJvIiwiV2hpdGUiXSxbMTEsIlBlbmRpbmciLCJCYW5rIFRyYW5zZmVyIiw4OTcsIjIwMjQtMTAtMTMgMTc6MzQ6MTkiLDU4MTYsNCwiU21hcnR3YXRjaCIsMjk5LDMsIkVsZWN0cm9uaWNzIiwiQ2Fub24iLCJXaGl0ZSJdXSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJzY2hlbWEiOlt7Im5hbWUiOiJvcmRlcl9pZCIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJvcmRlcl9zdGF0dXMiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwYXltZW50X21ldGhvZCIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InRvdGFsX2Ftb3VudCIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJ0cmFuc2FjdGlvbl90aW1lc3RhbXAiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJjdXN0b21lcl9pZCIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJpdGVtX2lkIiwidHlwZSI6IlwibG9uZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6Im5hbWUiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwcmljZSIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJxdWFudGl0eSIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJjYXRlZ29yeSIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6ImJyYW5kIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoiY29sb3IiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifV0sIm92ZXJmbG93IjpmYWxzZSwiYWdnRGF0YSI6W10sImFnZ1NjaGVtYSI6W10sImFnZ092ZXJmbG93IjpmYWxzZSwiYWdnU2VyaWVzTGltaXRSZWFjaGVkIjpmYWxzZSwiYWdnRXJyb3IiOiIiLCJhZ2dUeXBlIjoiIiwicGxvdE9wdGlvbnMiOm51bGwsImlzSnNvblNjaGVtYSI6dHJ1ZSwiZGJmc1Jlc3VsdFBhdGgiOm51bGwsImRhdGFzZXRJbmZvcyI6W10sImNvbHVtbkN1c3RvbURpc3BsYXlJbmZvcyI6e30sIm1ldGFkYXRhIjp7ImlzRGJmc0NvbW1hbmRSZXN1bHQiOmZhbHNlfX0sInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjE3MzU1Nzc5MDA4MzEsInN1Ym1pdFRpbWUiOjE3MzU1Nzc5MDA3ODEsImZpbmlzaFRpbWUiOjE3MzU1Nzc5MDE0OTksImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnsicm93TGltaXQiOjEwMDAwLCJieXRlTGltaXQiOjIwNDgwMDB9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbWyJ0YWJsZSIsM11dLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiI3ZmIzMGE5OS03MmU5LTQzMTItODMxZC0xOGVkNGIzNTg1ODYifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjEyOTIxMzk3NjE4Mjc5NTksImd1aWQiOiJjZjc0NTY4NS0xYjZlLTQ1YjYtOGZlYS0yN2I5NTAzMGIyZGUiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjozLjAsImNvbW1hbmQiOiJTRUxFQ1QgKiBGUk9NIGdpem1vYm94LmdvbGQub3JkZXJfc3VtbWFyeV9tb250aGx5OyIsImNvbW1hbmRWZXJzaW9uIjoyLCJzdGF0ZSI6ImZpbmlzaGVkIiwicmVzdWx0cyI6eyJ0eXBlIjoidGFibGUiLCJkYXRhIjpbWyIyMDI0LTExIiw5MTc5LDEsMSw5OTldLFsiMjAyNC0xMiIsMjA1NCwxLDIsMzk4XSxbIjIwMjQtMTAiLDU4MTYsMiw0LDEyOTZdLFsiMjAyNS0wMSIsOTA4NCwyLDQsMTc5Nl0sWyIyMDI1LTAxIiw2Mzg0LDIsMywxMjk3XSxbIjIwMjQtMTEiLDg1ODAsMSw0LDU4Nl0sWyIyMDI0LTExIiwyNjM5LDEsNiw5ODRdLFsiMjAyNS0wMSIsOTYwNSwyLDcsMTgyM10sWyIyMDI1LTAxIiw5MjQ3LDEsMiwyNThdLFsiMjAyNC0xMSIsNDkxNCwyLDIsMzk4XSxbIjIwMjQtMTIiLDc4MDMsMSwzLDc0N10sWyIyMDI0LTExIiw4ODQ1LDEsMiw5OThdLFsiMjAyNC0xMCIsMzQwOSwxLDEsNDk5XSxbIjIwMjQtMTEiLDM4OTIsMSwyLDk5OF0sWyIyMDI0LTEyIiwyMzQ0LDEsMywzODddLFsiMjAyNS0wMSIsNzEyMywxLDUsOTg1XSxbIjIwMjQtMTIiLDI3MDMsMiw3LDEwMzNdLFsiMjAyNC0xMiIsNjE2NywxLDEsNjk5XSxbIjIwMjUtMDEiLDcwMDcsMSwxLDY5OV0sWyIyMDI0LTEyIiw3MTIzLDEsMSw2OTldLFsiMjAyNC0xMiIsMzA4NCwyLDQsMTI5Nl0sWyIyMDI0LTEyIiw0OTk2LDEsMSwzOTldLFsiMjAyNC0xMCIsOTAxOCwxLDEsNjk5XSxbIjIwMjUtMDEiLDQ5OTYsMSwxLDI5OV0sWyIyMDI0LTExIiwxOTg3LDEsNSw2NDVdLFsiMjAyNC0xMCIsNTAxMSwyLDMsMjE5N10sWyIyMDI0LTExIiw4NTM5LDIsNCwxMDk2XSxbIjIwMjUtMDEiLDMyOTUsMSwxLDM5OV0sWyIyMDI1LTAxIiwzNzEyLDEsNCw3NDZdLFsiMjAyNS0wMSIsNjE2NywyLDQsMTA4Nl0sWyIyMDI1LTAxIiw4NTgwLDEsMiw2OThdLFsiMjAyNC0xMiIsNzI5NSwxLDEsMTI5XSxbIjIwMjUtMDEiLDUwMjgsMSwxLDQ5OV0sWyIyMDI0LTEwIiw3MjA3LDEsMSwxMTk5XSxbIjIwMjQtMTAiLDIzNDQsMSwyLDk5OF0sWyIyMDI0LTEyIiw5Njg3LDIsMywxNjk3XSxbIjIwMjQtMTIiLDY0MDYsMiwyLDY0OF0sWyIyMDI1LTAxIiw2OTczLDEsMSw0OTldLFsiMjAyNC0xMiIsNTU5MiwxLDEsNjk5XSxbIjIwMjQtMTEiLDc4MDMsMiw1LDY4NV0sWyIyMDI0LTEwIiw5MDg0LDEsMiwzOThdLFsiMjAyNC0xMSIsOTI0NywyLDQsNTM2XSxbIjIwMjQtMTAiLDM4ODksMSwyLDMyOF0sWyIyMDI0LTExIiw0NzYxLDEsMyw5OTddLFsiMjAyNS0wMSIsNjYyNywxLDUsODk1XSxbIjIwMjQtMTIiLDc4MjksMiw1LDcwNV0sWyIyMDI0LTExIiw5NzA2LDEsMSw5OTldLFsiMjAyNC0xMiIsNTIwNCwyLDUsMTU5NV0sWyIyMDI1LTAxIiw4ODQ1LDIsMiwzNDhdLFsiMjAyNS0wMSIsMjM0NCwxLDUsNzg1XSxbIjIwMjQtMTEiLDUwMjgsMSwxLDE0OV0sWyIyMDI0LTEyIiw3OTk3LDIsNCwxMDk2XSxbIjIwMjQtMTAiLDkyNjMsMSwzLDM4N10sWyIyMDI1LTAxIiwyMTQxLDEsMSwxMjldLFsiMjAyNS0wMSIsOTE3OSwxLDEsMzk5XSxbIjIwMjQtMTEiLDcxMjMsMSw0LDY0Nl0sWyIyMDI1LTAxIiw1OTUzLDEsMSwxMjldLFsiMjAyNC0xMiIsMTIxMSwxLDEsMTE5OV0sWyIyMDI0LTEyIiwzNDA5LDEsMSwxOTldLFsiMjAyNC0xMiIsODU4MCwxLDEsNjk5XSxbIjIwMjUtMDEiLDM1MzIsMyw5LDI1ODFdLFsiMjAyNS0wMSIsOTE1MCwzLDksMjEzMV0sWyIyMDI1LTAxIiw0OTczLDEsMSwxNDldLFsiMjAyNS0wMSIsMzA4NCwxLDIsNTk4XSxbIjIwMjQtMTIiLDY2MjcsMiw2LDE1NDRdLFsiMjAyNS0wMSIsNDc2MSwxLDEsMTk5XSxbIjIwMjQtMTAiLDE5ODcsMSwxLDc5OV0sWyIyMDI0LTEyIiw1ODE2LDEsMSw5OTldLFsiMjAyNS0wMSIsNzIwNywxLDMsNTk3XSxbIjIwMjQtMTEiLDQ5OTYsMSwxLDE5OV0sWyIyMDI1LTAxIiw0NDY4LDEsMSw3OTldLFsiMjAyNC0xMCIsODUzOSwxLDEsNDk5XSxbIjIwMjQtMTEiLDU1OTIsMSwyLDI1OF0sWyIyMDI0LTEyIiw0OTczLDEsMSw2OTldLFsiMjAyNC0xMiIsNDg1OCwxLDEsOTk5XSxbIjIwMjQtMTEiLDcyOTUsMiwyLDk5OF1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sInNjaGVtYSI6W3sibmFtZSI6Im9yZGVyX21vbnRoIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoiY3VzdG9tZXJfaWQiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoidG90YWxfb3JkZXJzIiwidHlwZSI6IlwibG9uZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InRvdGFsX2l0ZW1zX2JvdWdodCIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJ0b3RhbF9hbW91bnQiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzM1NTc4MDA3NTQ0LCJzdWJtaXRUaW1lIjoxNzM1NTc4MDA3NTA4LCJmaW5pc2hUaW1lIjoxNzM1NTc4MDA4Nzc3LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDc2XV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjQzZmU5MmE0LTJiOWYtNGQ0Zi1hZTNjLTljNGVmZDZhMDk2ZSJ9XSwiZGFzaGJvYXJkcyI6W10sImd1aWQiOiJmNzc4Y2QxZC1lYWIwLTRiZGMtYjRlYi1lYjVhMzMxMjA0MjAiLCJnbG9iYWxWYXJzIjp7fSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJpbnB1dFdpZGdldHMiOnt9LCJub3RlYm9va01ldGFkYXRhIjp7InB5dGhvbkluZGVudFVuaXQiOjR9LCJyZXBvc0V4cG9ydEZvcm1hdCI6IlNPVVJDRSIsImVudmlyb25tZW50TWV0YWRhdGEiOnsiY2xpZW50IjoiMSIsImJhc2VfZW52aXJvbm1lbnQiOiIifSwiY29tcHV0ZVByZWZlcmVuY2VzIjpudWxsLCJpbnB1dFdpZGdldFByZWZlcmVuY2VzIjpudWxsLCJlbnZpcm9ubWVudFNlcmlhbGl6YXRpb25QcmVmZXJlbmNlcyI6bnVsbH0="
+}

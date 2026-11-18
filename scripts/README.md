@@ -17,6 +17,14 @@ regenerate derived material. Conversion commands are one-time creation operation
 and refuse overwriting existing notebooks; enriched notebooks remain protected
 even if the converter is invoked directly with `--overwrite`.
 
+`make clean-samples` stages six representative compact notebooks in `.work/`;
+`make clean-samples-check` verifies that staging without writing.
+`make refresh-notebooks` explicitly refreshes all 71 canonical study copies and
+their external payloads. It checks every notebook's original source/output cells
+against the archived baseline before writing anything, refusing learner edits.
+It does not execute course code. Use Git to preserve personal changes before
+intentionally revising generated annotations.
+
 Sample notebooks live in ignored `.work/`. They are not additional canonical
 lessons. Maintenance does not provide a “clean” operation that could delete
 original learning assets.

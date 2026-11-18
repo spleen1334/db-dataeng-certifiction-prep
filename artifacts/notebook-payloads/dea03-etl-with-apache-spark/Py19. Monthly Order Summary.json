@@ -1,0 +1,3747 @@
+{
+  "document": {
+    "commands": [
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "df_order_summary.writeTo('gizmobox.gold.py_order_summary_monthly').createOrReplace()",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 9,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1762980824046,
+        "globalVars": {},
+        "guid": "cb34c7cd-cbdc-4b0d-ae44-1ec23e63b9c7",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "75a8f92e-b92f-418f-990e-73335cf7131e",
+        "origId": 7714038203712145,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 2.3125,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [],
+          "datasetInfos": [],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1762980821092,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1762980821027,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n## Monthly Order Summary\nFor each of the customer, produce the following summary per month\n1. total orders\n1. total items bought\n1. total amount spent",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 15,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "8fde3b6f-a88d-47ca-9974-353db0f5eabe",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "5243a5a6-27f3-48f5-a9a5-9e9a005996a3",
+        "origId": 2305013555837336,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 0.5,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%sql\nSELECT * FROM gizmobox.gold.py_order_summary_monthly;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 3,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1762980828455,
+        "globalVars": {},
+        "guid": "07d34657-ae83-4f59-aa22-9c034eb4c47c",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            76
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "implicitDf": true,
+          "rowLimit": 10000
+        },
+        "nuid": "43fe92a4-2b9f-4d4f-ae3c-9c4efd6a096e",
+        "origId": 2305013555837339,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 3.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  "2024-11",
+                  9179,
+                  1,
+                  1,
+                  999
+                ],
+                [
+                  "2024-12",
+                  2054,
+                  1,
+                  2,
+                  398
+                ],
+                [
+                  "2024-10",
+                  5816,
+                  2,
+                  4,
+                  1296
+                ],
+                [
+                  "2025-01",
+                  9084,
+                  2,
+                  4,
+                  1796
+                ],
+                [
+                  "2025-01",
+                  6384,
+                  2,
+                  3,
+                  1297
+                ],
+                [
+                  "2024-11",
+                  8580,
+                  1,
+                  4,
+                  586
+                ],
+                [
+                  "2024-11",
+                  2639,
+                  1,
+                  6,
+                  984
+                ],
+                [
+                  "2025-01",
+                  9605,
+                  2,
+                  7,
+                  1823
+                ],
+                [
+                  "2025-01",
+                  9247,
+                  1,
+                  2,
+                  258
+                ],
+                [
+                  "2024-11",
+                  4914,
+                  2,
+                  2,
+                  398
+                ],
+                [
+                  "2024-12",
+                  7803,
+                  1,
+                  3,
+                  747
+                ],
+                [
+                  "2024-11",
+                  8845,
+                  1,
+                  2,
+                  998
+                ],
+                [
+                  "2024-10",
+                  3409,
+                  1,
+                  1,
+                  499
+                ],
+                [
+                  "2024-11",
+                  3892,
+                  1,
+                  2,
+                  998
+                ],
+                [
+                  "2024-12",
+                  2344,
+                  1,
+                  3,
+                  387
+                ],
+                [
+                  "2025-01",
+                  7123,
+                  1,
+                  5,
+                  985
+                ],
+                [
+                  "2024-12",
+                  2703,
+                  2,
+                  7,
+                  1033
+                ],
+                [
+                  "2024-12",
+                  6167,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2025-01",
+                  7007,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2024-12",
+                  7123,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2024-12",
+                  3084,
+                  2,
+                  4,
+                  1296
+                ],
+                [
+                  "2024-12",
+                  4996,
+                  1,
+                  1,
+                  399
+                ],
+                [
+                  "2024-10",
+                  9018,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2025-01",
+                  4996,
+                  1,
+                  1,
+                  299
+                ],
+                [
+                  "2024-11",
+                  1987,
+                  1,
+                  5,
+                  645
+                ],
+                [
+                  "2024-10",
+                  5011,
+                  2,
+                  3,
+                  2197
+                ],
+                [
+                  "2024-11",
+                  8539,
+                  2,
+                  4,
+                  1096
+                ],
+                [
+                  "2025-01",
+                  3295,
+                  1,
+                  1,
+                  399
+                ],
+                [
+                  "2025-01",
+                  3712,
+                  1,
+                  4,
+                  746
+                ],
+                [
+                  "2025-01",
+                  6167,
+                  2,
+                  4,
+                  1086
+                ],
+                [
+                  "2025-01",
+                  8580,
+                  1,
+                  2,
+                  698
+                ],
+                [
+                  "2024-12",
+                  7295,
+                  1,
+                  1,
+                  129
+                ],
+                [
+                  "2025-01",
+                  5028,
+                  1,
+                  1,
+                  499
+                ],
+                [
+                  "2024-10",
+                  7207,
+                  1,
+                  1,
+                  1199
+                ],
+                [
+                  "2024-10",
+                  2344,
+                  1,
+                  2,
+                  998
+                ],
+                [
+                  "2024-12",
+                  9687,
+                  2,
+                  3,
+                  1697
+                ],
+                [
+                  "2024-12",
+                  6406,
+                  2,
+                  2,
+                  648
+                ],
+                [
+                  "2025-01",
+                  6973,
+                  1,
+                  1,
+                  499
+                ],
+                [
+                  "2024-12",
+                  5592,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2024-11",
+                  7803,
+                  2,
+                  5,
+                  685
+                ],
+                [
+                  "2024-10",
+                  9084,
+                  1,
+                  2,
+                  398
+                ],
+                [
+                  "2024-11",
+                  9247,
+                  2,
+                  4,
+                  536
+                ],
+                [
+                  "2024-10",
+                  3889,
+                  1,
+                  2,
+                  328
+                ],
+                [
+                  "2024-11",
+                  4761,
+                  1,
+                  3,
+                  997
+                ],
+                [
+                  "2025-01",
+                  6627,
+                  1,
+                  5,
+                  895
+                ],
+                [
+                  "2024-12",
+                  7829,
+                  2,
+                  5,
+                  705
+                ],
+                [
+                  "2024-11",
+                  9706,
+                  1,
+                  1,
+                  999
+                ],
+                [
+                  "2024-12",
+                  5204,
+                  2,
+                  5,
+                  1595
+                ],
+                [
+                  "2025-01",
+                  8845,
+                  2,
+                  2,
+                  348
+                ],
+                [
+                  "2025-01",
+                  2344,
+                  1,
+                  5,
+                  785
+                ],
+                [
+                  "2024-11",
+                  5028,
+                  1,
+                  1,
+                  149
+                ],
+                [
+                  "2024-12",
+                  7997,
+                  2,
+                  4,
+                  1096
+                ],
+                [
+                  "2024-10",
+                  9263,
+                  1,
+                  3,
+                  387
+                ],
+                [
+                  "2025-01",
+                  2141,
+                  1,
+                  1,
+                  129
+                ],
+                [
+                  "2025-01",
+                  9179,
+                  1,
+                  1,
+                  399
+                ],
+                [
+                  "2024-11",
+                  7123,
+                  1,
+                  4,
+                  646
+                ],
+                [
+                  "2025-01",
+                  5953,
+                  1,
+                  1,
+                  129
+                ],
+                [
+                  "2024-12",
+                  1211,
+                  1,
+                  1,
+                  1199
+                ],
+                [
+                  "2024-12",
+                  3409,
+                  1,
+                  1,
+                  199
+                ],
+                [
+                  "2024-12",
+                  8580,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2025-01",
+                  3532,
+                  3,
+                  9,
+                  2581
+                ],
+                [
+                  "2025-01",
+                  9150,
+                  3,
+                  9,
+                  2131
+                ],
+                [
+                  "2025-01",
+                  4973,
+                  1,
+                  1,
+                  149
+                ],
+                [
+                  "2025-01",
+                  3084,
+                  1,
+                  2,
+                  598
+                ],
+                [
+                  "2024-12",
+                  6627,
+                  2,
+                  6,
+                  1544
+                ],
+                [
+                  "2025-01",
+                  4761,
+                  1,
+                  1,
+                  199
+                ],
+                [
+                  "2024-10",
+                  1987,
+                  1,
+                  1,
+                  799
+                ],
+                [
+                  "2024-12",
+                  5816,
+                  1,
+                  1,
+                  999
+                ],
+                [
+                  "2025-01",
+                  7207,
+                  1,
+                  3,
+                  597
+                ],
+                [
+                  "2024-11",
+                  4996,
+                  1,
+                  1,
+                  199
+                ],
+                [
+                  "2025-01",
+                  4468,
+                  1,
+                  1,
+                  799
+                ],
+                [
+                  "2024-10",
+                  8539,
+                  1,
+                  1,
+                  499
+                ],
+                [
+                  "2024-11",
+                  5592,
+                  1,
+                  2,
+                  258
+                ],
+                [
+                  "2024-12",
+                  4973,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2024-12",
+                  4858,
+                  1,
+                  1,
+                  999
+                ],
+                [
+                  "2024-11",
+                  7295,
+                  2,
+                  2,
+                  998
+                ]
+              ],
+              "datasetInfos": [
+                {
+                  "name": "_sqldf",
+                  "schema": {
+                    "fields": [
+                      {
+                        "metadata": {},
+                        "name": "order_month",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "customer_id",
+                        "nullable": true,
+                        "type": "long"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "total_orders",
+                        "nullable": true,
+                        "type": "long"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "total_items_bought",
+                        "nullable": true,
+                        "type": "long"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "total_amount",
+                        "nullable": true,
+                        "type": "long"
+                      }
+                    ],
+                    "type": "struct"
+                  },
+                  "tableIdentifier": null,
+                  "typeStr": "pyspark.sql.dataframe.DataFrame"
+                }
+              ],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {
+                "createTempViewForImplicitDf": true,
+                "dataframeName": "_sqldf",
+                "executionCount": 5
+              },
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{}",
+                  "name": "order_month",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "customer_id",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "total_orders",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "total_items_bought",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "total_amount",
+                  "type": "\"long\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "_sqldf",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "order_month",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "customer_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "total_orders",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "total_items_bought",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "total_amount",
+                    "nullable": true,
+                    "type": "long"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1762980826754,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1762980826717,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "df_orders = spark.table('gizmobox.silver.py_orders')\ndisplay(df_orders)",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 8,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1762980332125,
+        "globalVars": {},
+        "guid": "bbc88624-003a-43a7-8dfc-02f87df0b3b9",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            124
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "927c242e-4233-4662-af5d-95265c740946",
+        "origId": 7714038203712143,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.25,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  1,
+                  "Completed",
+                  "Bank Transfer",
+                  499,
+                  "2025-01-05 10:13:59",
+                  6973,
+                  8,
+                  "Gaming Console",
+                  499,
+                  1,
+                  "Electronics",
+                  "Sony",
+                  "Blue"
+                ],
+                [
+                  2,
+                  "Cancelled",
+                  "PayPal",
+                  985,
+                  "2025-01-19 00:05:13",
+                  3532,
+                  4,
+                  "Smartwatch",
+                  299,
+                  2,
+                  "Electronics",
+                  "Canon",
+                  "Gray"
+                ],
+                [
+                  2,
+                  "Cancelled",
+                  "PayPal",
+                  985,
+                  "2025-01-19 00:05:13",
+                  3532,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "Dell",
+                  "Blue"
+                ],
+                [
+                  3,
+                  "Completed",
+                  "Bank Transfer",
+                  597,
+                  "2025-01-08 23:11:00",
+                  3532,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  3,
+                  "Electronics",
+                  "Apple",
+                  "White"
+                ],
+                [
+                  4,
+                  "Cancelled",
+                  "Bank Transfer",
+                  999,
+                  "2025-01-05 05:49:26",
+                  3532,
+                  2,
+                  "Laptop",
+                  999,
+                  1,
+                  "Electronics",
+                  "Microsoft",
+                  "Black"
+                ],
+                [
+                  8,
+                  "Completed",
+                  "PayPal",
+                  399,
+                  "2025-01-02 13:11:15",
+                  9179,
+                  5,
+                  "Tablet",
+                  399,
+                  1,
+                  "Electronics",
+                  "LG",
+                  "White"
+                ],
+                [
+                  14,
+                  "Cancelled",
+                  "PayPal",
+                  597,
+                  "2025-01-01 18:22:26",
+                  7207,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  3,
+                  "Electronics",
+                  "Bose",
+                  "Blue"
+                ],
+                [
+                  18,
+                  "Pending",
+                  "Credit Card",
+                  799,
+                  "2025-01-22 21:12:08",
+                  4468,
+                  10,
+                  "Drone",
+                  799,
+                  1,
+                  "Electronics",
+                  "Dell",
+                  "Black"
+                ],
+                [
+                  22,
+                  "Pending",
+                  "PayPal",
+                  199,
+                  "2025-01-01 15:49:19",
+                  4761,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "HP",
+                  "Silver"
+                ],
+                [
+                  26,
+                  "Shipped",
+                  "Bank Transfer",
+                  699,
+                  "2025-01-05 19:01:25",
+                  7007,
+                  1,
+                  "Smartphone",
+                  699,
+                  1,
+                  "Electronics",
+                  "Samsung",
+                  "Silver"
+                ],
+                [
+                  29,
+                  "Pending",
+                  "Bank Transfer",
+                  129,
+                  "2025-01-18 03:05:04",
+                  5953,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  1,
+                  "Electronics",
+                  "Bose",
+                  "Gray"
+                ],
+                [
+                  31,
+                  "Shipped",
+                  "Bank Transfer",
+                  299,
+                  "2025-01-18 03:13:29",
+                  4996,
+                  4,
+                  "Smartwatch",
+                  299,
+                  1,
+                  "Electronics",
+                  "Dell",
+                  "White"
+                ],
+                [
+                  33,
+                  "Completed",
+                  "PayPal",
+                  897,
+                  "2025-01-13 04:47:43",
+                  9605,
+                  4,
+                  "Smartwatch",
+                  299,
+                  3,
+                  "Electronics",
+                  "Canon",
+                  "White"
+                ],
+                [
+                  34,
+                  "Cancelled",
+                  "PayPal",
+                  926,
+                  "2025-01-21 00:25:01",
+                  9605,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  2,
+                  "Electronics",
+                  "Bose",
+                  "Silver"
+                ],
+                [
+                  34,
+                  "Cancelled",
+                  "PayPal",
+                  926,
+                  "2025-01-21 00:25:01",
+                  9605,
+                  8,
+                  "Gaming Console",
+                  499,
+                  1,
+                  "Electronics",
+                  "LG",
+                  "Black"
+                ],
+                [
+                  34,
+                  "Cancelled",
+                  "PayPal",
+                  926,
+                  "2025-01-21 00:25:01",
+                  9605,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  1,
+                  "Electronics",
+                  "Samsung",
+                  "Black"
+                ],
+                [
+                  40,
+                  "Completed",
+                  "PayPal",
+                  298,
+                  "2025-01-20 16:18:35",
+                  6384,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  2,
+                  "Electronics",
+                  "Bose",
+                  "Silver"
+                ],
+                [
+                  41,
+                  "Shipped",
+                  "Credit Card",
+                  999,
+                  "2025-01-05 06:10:22",
+                  6384,
+                  2,
+                  "Laptop",
+                  999,
+                  1,
+                  "Electronics",
+                  "Sony",
+                  "Silver"
+                ],
+                [
+                  43,
+                  "Pending",
+                  "PayPal",
+                  499,
+                  "2025-01-24 18:10:37",
+                  5028,
+                  8,
+                  "Gaming Console",
+                  499,
+                  1,
+                  "Electronics",
+                  "LG",
+                  "Black"
+                ],
+                [
+                  50,
+                  "Shipped",
+                  "Credit Card",
+                  746,
+                  "2025-01-11 01:19:09",
+                  3712,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  3,
+                  "Electronics",
+                  "Apple",
+                  "Gray"
+                ],
+                [
+                  50,
+                  "Shipped",
+                  "Credit Card",
+                  746,
+                  "2025-01-11 01:19:09",
+                  3712,
+                  4,
+                  "Smartwatch",
+                  299,
+                  1,
+                  "Electronics",
+                  "Sony",
+                  "White"
+                ],
+                [
+                  51,
+                  "Completed",
+                  "PayPal",
+                  149,
+                  "2025-01-21 13:19:59",
+                  8845,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  1,
+                  "Electronics",
+                  "Samsung",
+                  "Gray"
+                ],
+                [
+                  53,
+                  "Pending",
+                  "Bank Transfer",
+                  199,
+                  "2025-01-21 08:31:02",
+                  8845,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "Apple",
+                  "Black"
+                ],
+                [
+                  56,
+                  "Cancelled",
+                  "PayPal",
+                  698,
+                  "2025-01-01 12:02:41",
+                  8580,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "HP",
+                  "Silver"
+                ],
+                [
+                  56,
+                  "Cancelled",
+                  "PayPal",
+                  698,
+                  "2025-01-01 12:02:41",
+                  8580,
+                  8,
+                  "Gaming Console",
+                  499,
+                  1,
+                  "Electronics",
+                  "LG",
+                  "Gray"
+                ],
+                [
+                  62,
+                  "Completed",
+                  "Bank Transfer",
+                  985,
+                  "2025-01-24 12:00:54",
+                  7123,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "Dell",
+                  "White"
+                ],
+                [
+                  62,
+                  "Completed",
+                  "Bank Transfer",
+                  985,
+                  "2025-01-24 12:00:54",
+                  7123,
+                  4,
+                  "Smartwatch",
+                  299,
+                  2,
+                  "Electronics",
+                  "GoPro",
+                  "Blue"
+                ],
+                [
+                  66,
+                  "Cancelled",
+                  "Credit Card",
+                  598,
+                  "2025-01-17 21:16:11",
+                  3084,
+                  4,
+                  "Smartwatch",
+                  299,
+                  1,
+                  "Electronics",
+                  "Bose",
+                  "Silver"
+                ],
+                [
+                  66,
+                  "Cancelled",
+                  "Credit Card",
+                  598,
+                  "2025-01-17 21:16:11",
+                  3084,
+                  4,
+                  "Smartwatch",
+                  299,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "White"
+                ],
+                [
+                  68,
+                  "Completed",
+                  "Bank Transfer",
+                  149,
+                  "2025-01-10 20:35:43",
+                  4973,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  1,
+                  "Electronics",
+                  "Bose",
+                  "Gray"
+                ],
+                [
+                  73,
+                  "Shipped",
+                  "Credit Card",
+                  387,
+                  "2025-01-07 01:02:26",
+                  6167,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "GoPro",
+                  "Gray"
+                ],
+                [
+                  75,
+                  "Shipped",
+                  "Credit Card",
+                  699,
+                  "2025-01-19 16:23:16",
+                  6167,
+                  1,
+                  "Smartphone",
+                  699,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "White"
+                ],
+                [
+                  76,
+                  "Completed",
+                  "Bank Transfer",
+                  399,
+                  "2025-01-06 02:54:39",
+                  3295,
+                  5,
+                  "Tablet",
+                  399,
+                  1,
+                  "Electronics",
+                  "Microsoft",
+                  "Silver"
+                ],
+                [
+                  78,
+                  "Cancelled",
+                  "PayPal",
+                  798,
+                  "2025-01-21 11:42:51",
+                  9084,
+                  5,
+                  "Tablet",
+                  399,
+                  2,
+                  "Electronics",
+                  "Dell",
+                  "White"
+                ],
+                [
+                  79,
+                  "Cancelled",
+                  "Credit Card",
+                  998,
+                  "2025-01-25 03:52:05",
+                  9084,
+                  8,
+                  "Gaming Console",
+                  499,
+                  2,
+                  "Electronics",
+                  "Dell",
+                  "Gray"
+                ],
+                [
+                  83,
+                  "Shipped",
+                  "PayPal",
+                  785,
+                  "2025-01-07 12:48:05",
+                  2344,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "Canon",
+                  "Gray"
+                ],
+                [
+                  83,
+                  "Shipped",
+                  "PayPal",
+                  785,
+                  "2025-01-07 12:48:05",
+                  2344,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  2,
+                  "Electronics",
+                  "Sony",
+                  "Black"
+                ],
+                [
+                  87,
+                  "Pending",
+                  "PayPal",
+                  129,
+                  "2025-01-02 04:28:38",
+                  2141,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  1,
+                  "Electronics",
+                  "Apple",
+                  "Blue"
+                ],
+                [
+                  90,
+                  "Pending",
+                  "Credit Card",
+                  258,
+                  "2025-01-17 14:30:54",
+                  9247,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  1,
+                  "Electronics",
+                  "Canon",
+                  "White"
+                ],
+                [
+                  90,
+                  "Pending",
+                  "Credit Card",
+                  258,
+                  "2025-01-17 14:30:54",
+                  9247,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  1,
+                  "Electronics",
+                  "Samsung",
+                  "Black"
+                ],
+                [
+                  94,
+                  "Pending",
+                  "Credit Card",
+                  895,
+                  "2025-01-10 09:51:48",
+                  6627,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  2,
+                  "Electronics",
+                  "Sony",
+                  "Black"
+                ],
+                [
+                  94,
+                  "Pending",
+                  "Credit Card",
+                  895,
+                  "2025-01-10 09:51:48",
+                  6627,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  3,
+                  "Electronics",
+                  "Apple",
+                  "Blue"
+                ],
+                [
+                  98,
+                  "Completed",
+                  "Credit Card",
+                  985,
+                  "2025-01-08 05:57:55",
+                  9150,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "HP",
+                  "Blue"
+                ],
+                [
+                  98,
+                  "Completed",
+                  "Credit Card",
+                  985,
+                  "2025-01-08 05:57:55",
+                  9150,
+                  4,
+                  "Smartwatch",
+                  299,
+                  2,
+                  "Electronics",
+                  "Samsung",
+                  "Gray"
+                ],
+                [
+                  99,
+                  "Shipped",
+                  "Credit Card",
+                  699,
+                  "2025-01-10 21:43:46",
+                  9150,
+                  1,
+                  "Smartphone",
+                  699,
+                  1,
+                  "Electronics",
+                  "Bose",
+                  "Gray"
+                ],
+                [
+                  100,
+                  "Shipped",
+                  "PayPal",
+                  447,
+                  "2025-01-04 06:40:13",
+                  9150,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  3,
+                  "Electronics",
+                  "LG",
+                  "Silver"
+                ],
+                [
+                  12,
+                  "Cancelled",
+                  "PayPal",
+                  999,
+                  "2024-12-06 20:26:49",
+                  5816,
+                  2,
+                  "Laptop",
+                  999,
+                  1,
+                  "Electronics",
+                  "Sony",
+                  "White"
+                ],
+                [
+                  13,
+                  "Pending",
+                  "PayPal",
+                  999,
+                  "2024-12-17 03:41:37",
+                  4858,
+                  2,
+                  "Laptop",
+                  999,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "Black"
+                ],
+                [
+                  16,
+                  "Pending",
+                  "Bank Transfer",
+                  597,
+                  "2024-12-08 22:59:48",
+                  5204,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  3,
+                  "Electronics",
+                  "Sony",
+                  "Silver"
+                ],
+                [
+                  17,
+                  "Pending",
+                  "Bank Transfer",
+                  998,
+                  "2024-12-02 12:00:50",
+                  5204,
+                  8,
+                  "Gaming Console",
+                  499,
+                  2,
+                  "Electronics",
+                  "Dell",
+                  "Black"
+                ],
+                [
+                  24,
+                  "Completed",
+                  "PayPal",
+                  1199,
+                  "2024-12-21 03:24:26",
+                  1211,
+                  9,
+                  "Smart TV",
+                  1199,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "Gray"
+                ],
+                [
+                  27,
+                  "Completed",
+                  "Credit Card",
+                  904,
+                  "2024-12-02 11:24:21",
+                  2703,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  2,
+                  "Electronics",
+                  "Dell",
+                  "White"
+                ],
+                [
+                  27,
+                  "Completed",
+                  "Credit Card",
+                  904,
+                  "2024-12-02 11:24:21",
+                  2703,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  3,
+                  "Electronics",
+                  "Canon",
+                  "Black"
+                ],
+                [
+                  27,
+                  "Completed",
+                  "Credit Card",
+                  904,
+                  "2024-12-02 11:24:21",
+                  2703,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "Microsoft",
+                  "Silver"
+                ],
+                [
+                  28,
+                  "Cancelled",
+                  "Credit Card",
+                  129,
+                  "2024-12-26 03:17:50",
+                  2703,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "Blue"
+                ],
+                [
+                  32,
+                  "Pending",
+                  "PayPal",
+                  399,
+                  "2024-12-28 08:55:57",
+                  4996,
+                  5,
+                  "Tablet",
+                  399,
+                  1,
+                  "Electronics",
+                  "Apple",
+                  "Silver"
+                ],
+                [
+                  37,
+                  "Shipped",
+                  "Credit Card",
+                  258,
+                  "2024-12-22 10:11:49",
+                  7829,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  2,
+                  "Electronics",
+                  "HP",
+                  "Silver"
+                ],
+                [
+                  38,
+                  "Shipped",
+                  "Credit Card",
+                  447,
+                  "2024-12-25 22:05:19",
+                  7829,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  3,
+                  "Electronics",
+                  "Apple",
+                  "Gray"
+                ],
+                [
+                  44,
+                  "Completed",
+                  "Credit Card",
+                  129,
+                  "2024-12-20 08:05:43",
+                  7295,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  1,
+                  "Electronics",
+                  "Bose",
+                  "Blue"
+                ],
+                [
+                  49,
+                  "Cancelled",
+                  "PayPal",
+                  747,
+                  "2024-12-07 23:24:11",
+                  7803,
+                  4,
+                  "Smartwatch",
+                  299,
+                  1,
+                  "Electronics",
+                  "HP",
+                  "White"
+                ],
+                [
+                  49,
+                  "Cancelled",
+                  "PayPal",
+                  747,
+                  "2024-12-07 23:24:11",
+                  7803,
+                  4,
+                  "Smartwatch",
+                  299,
+                  1,
+                  "Electronics",
+                  "Canon",
+                  "Blue"
+                ],
+                [
+                  49,
+                  "Cancelled",
+                  "PayPal",
+                  747,
+                  "2024-12-07 23:24:11",
+                  7803,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  1,
+                  "Electronics",
+                  "Samsung",
+                  "White"
+                ],
+                [
+                  54,
+                  "Pending",
+                  "Credit Card",
+                  398,
+                  "2024-12-20 12:04:27",
+                  2054,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  2,
+                  "Electronics",
+                  "Bose",
+                  "Gray"
+                ],
+                [
+                  58,
+                  "Completed",
+                  "PayPal",
+                  699,
+                  "2024-12-09 22:40:58",
+                  8580,
+                  1,
+                  "Smartphone",
+                  699,
+                  1,
+                  "Electronics",
+                  "Microsoft",
+                  "Gray"
+                ],
+                [
+                  60,
+                  "Shipped",
+                  "Bank Transfer",
+                  199,
+                  "2024-12-13 13:10:12",
+                  3409,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "Samsung",
+                  "Blue"
+                ],
+                [
+                  61,
+                  "Completed",
+                  "Bank Transfer",
+                  699,
+                  "2024-12-07 07:47:19",
+                  7123,
+                  1,
+                  "Smartphone",
+                  699,
+                  1,
+                  "Electronics",
+                  "Canon",
+                  "Black"
+                ],
+                [
+                  65,
+                  "Cancelled",
+                  "Bank Transfer",
+                  399,
+                  "2024-12-09 13:04:13",
+                  3084,
+                  5,
+                  "Tablet",
+                  399,
+                  1,
+                  "Electronics",
+                  "Microsoft",
+                  "Gray"
+                ],
+                [
+                  67,
+                  "Shipped",
+                  "PayPal",
+                  897,
+                  "2024-12-19 07:11:09",
+                  3084,
+                  4,
+                  "Smartwatch",
+                  299,
+                  3,
+                  "Electronics",
+                  "LG",
+                  "Blue"
+                ],
+                [
+                  69,
+                  "Completed",
+                  "Bank Transfer",
+                  699,
+                  "2024-12-30 02:42:01",
+                  4973,
+                  1,
+                  "Smartphone",
+                  699,
+                  1,
+                  "Electronics",
+                  "Dell",
+                  "Gray"
+                ],
+                [
+                  70,
+                  "Shipped",
+                  "PayPal",
+                  897,
+                  "2024-12-04 17:17:24",
+                  7997,
+                  4,
+                  "Smartwatch",
+                  299,
+                  3,
+                  "Electronics",
+                  "Sony",
+                  "Black"
+                ],
+                [
+                  71,
+                  "Completed",
+                  "Bank Transfer",
+                  199,
+                  "2024-12-27 11:16:39",
+                  7997,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "Microsoft",
+                  "Black"
+                ],
+                [
+                  74,
+                  "Pending",
+                  "PayPal",
+                  699,
+                  "2024-12-22 15:54:11",
+                  6167,
+                  1,
+                  "Smartphone",
+                  699,
+                  1,
+                  "Electronics",
+                  "Samsung",
+                  "Blue"
+                ],
+                [
+                  80,
+                  "Cancelled",
+                  "Bank Transfer",
+                  998,
+                  "2024-12-11 07:43:54",
+                  9687,
+                  8,
+                  "Gaming Console",
+                  499,
+                  2,
+                  "Electronics",
+                  "Samsung",
+                  "White"
+                ],
+                [
+                  81,
+                  "Completed",
+                  "PayPal",
+                  699,
+                  "2024-12-27 02:27:45",
+                  9687,
+                  1,
+                  "Smartphone",
+                  699,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "Blue"
+                ],
+                [
+                  82,
+                  "Completed",
+                  "PayPal",
+                  387,
+                  "2024-12-28 00:54:08",
+                  2344,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "Sony",
+                  "Blue"
+                ],
+                [
+                  91,
+                  "Cancelled",
+                  "Bank Transfer",
+                  699,
+                  "2024-12-17 00:09:53",
+                  5592,
+                  1,
+                  "Smartphone",
+                  699,
+                  1,
+                  "Electronics",
+                  "Canon",
+                  "Silver"
+                ],
+                [
+                  93,
+                  "Pending",
+                  "PayPal",
+                  598,
+                  "2024-12-22 05:07:46",
+                  6627,
+                  4,
+                  "Smartwatch",
+                  299,
+                  2,
+                  "Electronics",
+                  "LG",
+                  "Silver"
+                ],
+                [
+                  95,
+                  "Completed",
+                  "Bank Transfer",
+                  946,
+                  "2024-12-28 04:28:30",
+                  6627,
+                  4,
+                  "Smartwatch",
+                  299,
+                  2,
+                  "Electronics",
+                  "GoPro",
+                  "White"
+                ],
+                [
+                  95,
+                  "Completed",
+                  "Bank Transfer",
+                  946,
+                  "2024-12-28 04:28:30",
+                  6627,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "Bose",
+                  "Gray"
+                ],
+                [
+                  95,
+                  "Completed",
+                  "Bank Transfer",
+                  946,
+                  "2024-12-28 04:28:30",
+                  6627,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  1,
+                  "Electronics",
+                  "Dell",
+                  "Silver"
+                ],
+                [
+                  96,
+                  "Shipped",
+                  "PayPal",
+                  149,
+                  "2024-12-02 12:27:45",
+                  6406,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  1,
+                  "Electronics",
+                  "Microsoft",
+                  "Black"
+                ],
+                [
+                  97,
+                  "Completed",
+                  "Bank Transfer",
+                  499,
+                  "2024-12-07 16:14:34",
+                  6406,
+                  8,
+                  "Gaming Console",
+                  499,
+                  1,
+                  "Electronics",
+                  "Sony",
+                  "Silver"
+                ],
+                [
+                  5,
+                  "Cancelled",
+                  "Bank Transfer",
+                  998,
+                  "2024-11-16 23:07:31",
+                  3892,
+                  8,
+                  "Gaming Console",
+                  499,
+                  2,
+                  "Electronics",
+                  "Dell",
+                  "Blue"
+                ],
+                [
+                  7,
+                  "Pending",
+                  "Credit Card",
+                  645,
+                  "2024-11-19 19:18:48",
+                  1987,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  2,
+                  "Electronics",
+                  "LG",
+                  "Blue"
+                ],
+                [
+                  7,
+                  "Pending",
+                  "Credit Card",
+                  645,
+                  "2024-11-19 19:18:48",
+                  1987,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "HP",
+                  "Gray"
+                ],
+                [
+                  9,
+                  "Shipped",
+                  "Bank Transfer",
+                  999,
+                  "2024-11-27 13:15:29",
+                  9179,
+                  2,
+                  "Laptop",
+                  999,
+                  1,
+                  "Electronics",
+                  "Apple",
+                  "Black"
+                ],
+                [
+                  20,
+                  "Pending",
+                  "PayPal",
+                  798,
+                  "2024-11-18 02:38:21",
+                  8539,
+                  5,
+                  "Tablet",
+                  399,
+                  2,
+                  "Electronics",
+                  "Sony",
+                  "Silver"
+                ],
+                [
+                  21,
+                  "Cancelled",
+                  "Bank Transfer",
+                  298,
+                  "2024-11-21 11:25:35",
+                  8539,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  2,
+                  "Electronics",
+                  "GoPro",
+                  "Blue"
+                ],
+                [
+                  23,
+                  "Shipped",
+                  "PayPal",
+                  997,
+                  "2024-11-22 16:04:05",
+                  4761,
+                  5,
+                  "Tablet",
+                  399,
+                  1,
+                  "Electronics",
+                  "Apple",
+                  "Gray"
+                ],
+                [
+                  23,
+                  "Shipped",
+                  "PayPal",
+                  997,
+                  "2024-11-22 16:04:05",
+                  4761,
+                  4,
+                  "Smartwatch",
+                  299,
+                  2,
+                  "Electronics",
+                  "Dell",
+                  "Gray"
+                ],
+                [
+                  25,
+                  "Completed",
+                  "PayPal",
+                  999,
+                  "2024-11-05 11:45:31",
+                  9706,
+                  2,
+                  "Laptop",
+                  999,
+                  1,
+                  "Electronics",
+                  "LG",
+                  "Gray"
+                ],
+                [
+                  30,
+                  "Shipped",
+                  "Bank Transfer",
+                  199,
+                  "2024-11-12 03:20:29",
+                  4996,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "White"
+                ],
+                [
+                  35,
+                  "Shipped",
+                  "Bank Transfer",
+                  199,
+                  "2024-11-20 19:09:04",
+                  4914,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "Dell",
+                  "Gray"
+                ],
+                [
+                  36,
+                  "Completed",
+                  "PayPal",
+                  199,
+                  "2024-11-02 10:39:46",
+                  4914,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "Canon",
+                  "Silver"
+                ],
+                [
+                  42,
+                  "Completed",
+                  "Credit Card",
+                  149,
+                  "2024-11-08 18:32:25",
+                  5028,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  1,
+                  "Electronics",
+                  "Bose",
+                  "Gray"
+                ],
+                [
+                  45,
+                  "Shipped",
+                  "Credit Card",
+                  799,
+                  "2024-11-07 15:41:43",
+                  7295,
+                  10,
+                  "Drone",
+                  799,
+                  1,
+                  "Electronics",
+                  "Dell",
+                  "White"
+                ],
+                [
+                  46,
+                  "Pending",
+                  "PayPal",
+                  199,
+                  "2024-11-26 17:16:53",
+                  7295,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "Samsung",
+                  "Black"
+                ],
+                [
+                  47,
+                  "Shipped",
+                  "Credit Card",
+                  298,
+                  "2024-11-22 02:01:19",
+                  7803,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  2,
+                  "Electronics",
+                  "LG",
+                  "Blue"
+                ],
+                [
+                  48,
+                  "Completed",
+                  "PayPal",
+                  387,
+                  "2024-11-13 06:35:56",
+                  7803,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "Apple",
+                  "Black"
+                ],
+                [
+                  52,
+                  "Completed",
+                  "PayPal",
+                  998,
+                  "2024-11-19 21:23:45",
+                  8845,
+                  8,
+                  "Gaming Console",
+                  499,
+                  2,
+                  "Electronics",
+                  "GoPro",
+                  "White"
+                ],
+                [
+                  57,
+                  "Cancelled",
+                  "Bank Transfer",
+                  586,
+                  "2024-11-19 11:32:44",
+                  8580,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "HP",
+                  "Silver"
+                ],
+                [
+                  57,
+                  "Cancelled",
+                  "Bank Transfer",
+                  586,
+                  "2024-11-19 11:32:44",
+                  8580,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "Sony",
+                  "Silver"
+                ],
+                [
+                  63,
+                  "Cancelled",
+                  "Bank Transfer",
+                  646,
+                  "2024-11-24 08:41:28",
+                  7123,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "Blue"
+                ],
+                [
+                  63,
+                  "Cancelled",
+                  "Bank Transfer",
+                  646,
+                  "2024-11-24 08:41:28",
+                  7123,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  3,
+                  "Electronics",
+                  "Bose",
+                  "Silver"
+                ],
+                [
+                  64,
+                  "Completed",
+                  "Bank Transfer",
+                  984,
+                  "2024-11-28 12:23:21",
+                  2639,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "Microsoft",
+                  "White"
+                ],
+                [
+                  64,
+                  "Completed",
+                  "Bank Transfer",
+                  984,
+                  "2024-11-28 12:23:21",
+                  2639,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  3,
+                  "Electronics",
+                  "Canon",
+                  "Blue"
+                ],
+                [
+                  88,
+                  "Cancelled",
+                  "Bank Transfer",
+                  387,
+                  "2024-11-15 11:39:44",
+                  9247,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "Bose",
+                  "White"
+                ],
+                [
+                  89,
+                  "Cancelled",
+                  "Bank Transfer",
+                  149,
+                  "2024-11-22 12:09:15",
+                  9247,
+                  6,
+                  "Bluetooth Speaker",
+                  149,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "Silver"
+                ],
+                [
+                  92,
+                  "Shipped",
+                  "PayPal",
+                  258,
+                  "2024-11-24 23:33:21",
+                  5592,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  2,
+                  "Electronics",
+                  "Sony",
+                  "Black"
+                ],
+                [
+                  6,
+                  "Pending",
+                  "Credit Card",
+                  799,
+                  "2024-10-28 04:47:27",
+                  1987,
+                  10,
+                  "Drone",
+                  799,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "Black"
+                ],
+                [
+                  10,
+                  "Pending",
+                  "Credit Card",
+                  399,
+                  "2024-10-07 22:09:27",
+                  5816,
+                  5,
+                  "Tablet",
+                  399,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "White"
+                ],
+                [
+                  11,
+                  "Pending",
+                  "Bank Transfer",
+                  897,
+                  "2024-10-13 17:34:19",
+                  5816,
+                  4,
+                  "Smartwatch",
+                  299,
+                  3,
+                  "Electronics",
+                  "Canon",
+                  "White"
+                ],
+                [
+                  15,
+                  "Completed",
+                  "Bank Transfer",
+                  1199,
+                  "2024-10-20 01:47:25",
+                  7207,
+                  9,
+                  "Smart TV",
+                  1199,
+                  1,
+                  "Electronics",
+                  "GoPro",
+                  "White"
+                ],
+                [
+                  19,
+                  "Shipped",
+                  "PayPal",
+                  499,
+                  "2024-10-13 12:40:26",
+                  8539,
+                  8,
+                  "Gaming Console",
+                  499,
+                  1,
+                  "Electronics",
+                  "Dell",
+                  "Silver"
+                ],
+                [
+                  39,
+                  "Shipped",
+                  "PayPal",
+                  387,
+                  "2024-10-29 21:39:19",
+                  9263,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  3,
+                  "Electronics",
+                  "Sony",
+                  "Black"
+                ],
+                [
+                  55,
+                  "Shipped",
+                  "Bank Transfer",
+                  699,
+                  "2024-10-25 05:49:16",
+                  9018,
+                  1,
+                  "Smartphone",
+                  699,
+                  1,
+                  "Electronics",
+                  "HP",
+                  "Black"
+                ],
+                [
+                  59,
+                  "Pending",
+                  "PayPal",
+                  499,
+                  "2024-10-23 02:51:05",
+                  3409,
+                  8,
+                  "Gaming Console",
+                  499,
+                  1,
+                  "Electronics",
+                  "Dell",
+                  "Black"
+                ],
+                [
+                  72,
+                  "Cancelled",
+                  "PayPal",
+                  328,
+                  "2024-10-06 10:23:28",
+                  3889,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "Microsoft",
+                  "Gray"
+                ],
+                [
+                  72,
+                  "Cancelled",
+                  "PayPal",
+                  328,
+                  "2024-10-06 10:23:28",
+                  3889,
+                  7,
+                  "External Hard Drive",
+                  129,
+                  1,
+                  "Electronics",
+                  "Samsung",
+                  "Silver"
+                ],
+                [
+                  77,
+                  "Pending",
+                  "Credit Card",
+                  398,
+                  "2024-10-15 13:09:33",
+                  9084,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  2,
+                  "Electronics",
+                  "HP",
+                  "Silver"
+                ],
+                [
+                  84,
+                  "Completed",
+                  "PayPal",
+                  998,
+                  "2024-10-25 03:37:42",
+                  2344,
+                  10,
+                  "Drone",
+                  799,
+                  1,
+                  "Electronics",
+                  "Sony",
+                  "Black"
+                ],
+                [
+                  84,
+                  "Completed",
+                  "PayPal",
+                  998,
+                  "2024-10-25 03:37:42",
+                  2344,
+                  3,
+                  "Wireless Headphones",
+                  199,
+                  1,
+                  "Electronics",
+                  "LG",
+                  "Black"
+                ],
+                [
+                  85,
+                  "Shipped",
+                  "Bank Transfer",
+                  998,
+                  "2024-10-23 20:06:42",
+                  5011,
+                  8,
+                  "Gaming Console",
+                  499,
+                  2,
+                  "Electronics",
+                  "GoPro",
+                  "Black"
+                ],
+                [
+                  86,
+                  "Completed",
+                  "PayPal",
+                  1199,
+                  "2024-10-19 13:30:47",
+                  5011,
+                  9,
+                  "Smart TV",
+                  1199,
+                  1,
+                  "Electronics",
+                  "Dell",
+                  "White"
+                ]
+              ],
+              "datasetInfos": [],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {},
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{}",
+                  "name": "order_id",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "order_status",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "payment_method",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "total_amount",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "transaction_timestamp",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "customer_id",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "item_id",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "name",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "price",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "quantity",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "category",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "brand",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "color",
+                  "type": "\"string\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "df_orders",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "order_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "order_status",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "payment_method",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "total_amount",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "transaction_timestamp",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "customer_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "item_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "name",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "price",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "quantity",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "category",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "brand",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "color",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": "`gizmobox`.`silver`.`py_orders`",
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {},
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1762980331330,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1762980327162,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": {
+          "addedWidgets": {},
+          "arguments": {},
+          "datasetInfos": [],
+          "jupyterProps": {
+            "ename": "NameError",
+            "evalue": "name 'transaction_timestamp' is not defined"
+          },
+          "metadata": {},
+          "removedWidgets": [],
+          "sqlProps": null,
+          "stackFrames": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "File \u001b[0;32m<command-7714038203712144>, line 5\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;28;01mfrom\u001b[39;00m \u001b[38;5;21;01mpyspark\u001b[39;00m\u001b[38;5;21;01m.\u001b[39;00m\u001b[38;5;21;01msql\u001b[39;00m \u001b[38;5;28;01mimport\u001b[39;00m functions \u001b[38;5;28;01mas\u001b[39;00m F\n\u001b[1;32m      3\u001b[0m df_order_summary \u001b[38;5;241m=\u001b[39m (\n\u001b[1;32m      4\u001b[0m     df_orders\n\u001b[0;32m----> 5\u001b[0m     \u001b[38;5;241m.\u001b[39mwithColumn(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124morder_month\u001b[39m\u001b[38;5;124m\"\u001b[39m, F\u001b[38;5;241m.\u001b[39mdate_format(transaction_timestamp, \u001b[38;5;124m'\u001b[39m\u001b[38;5;124myyyy-MM\u001b[39m\u001b[38;5;124m'\u001b[39m))\n\u001b[1;32m      6\u001b[0m     \u001b[38;5;241m.\u001b[39mgroupBy(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124morder_month\u001b[39m\u001b[38;5;124m'\u001b[39m, \u001b[38;5;124m'\u001b[39m\u001b[38;5;124mcustomer_id\u001b[39m\u001b[38;5;124m'\u001b[39m)\n\u001b[1;32m      7\u001b[0m     \u001b[38;5;241m.\u001b[39magg(\n\u001b[1;32m      8\u001b[0m         F\u001b[38;5;241m.\u001b[39mcountDistinct(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124morder_id\u001b[39m\u001b[38;5;124m'\u001b[39m)\u001b[38;5;241m.\u001b[39malias(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mtotal_orders\u001b[39m\u001b[38;5;124m'\u001b[39m),\n\u001b[1;32m      9\u001b[0m         F\u001b[38;5;241m.\u001b[39msum(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mquantity\u001b[39m\u001b[38;5;124m'\u001b[39m)\u001b[38;5;241m.\u001b[39malias(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mtotal_items_bought\u001b[39m\u001b[38;5;124m'\u001b[39m),\n\u001b[1;32m     10\u001b[0m         F\u001b[38;5;241m.\u001b[39msum(F\u001b[38;5;241m.\u001b[39mcol(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mprice\u001b[39m\u001b[38;5;124m'\u001b[39m) \u001b[38;5;241m*\u001b[39m F\u001b[38;5;241m.\u001b[39mcol(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mquantity\u001b[39m\u001b[38;5;124m'\u001b[39m))\u001b[38;5;241m.\u001b[39malias(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mtotal_amount\u001b[39m\u001b[38;5;124m'\u001b[39m)\n\u001b[1;32m     11\u001b[0m     )\n\u001b[1;32m     12\u001b[0m )\n\u001b[1;32m     14\u001b[0m display(df_order_summary)\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'transaction_timestamp' is not defined"
+          ],
+          "type": "baseError"
+        },
+        "bindings": {},
+        "collapsed": false,
+        "command": "from pyspark.sql import functions as F\n\ndf_order_summary = (\n    df_orders\n    .withColumn(\"order_month\", F.date_format('transaction_timestamp', 'yyyy-MM'))\n    .groupBy('order_month', 'customer_id')\n    .agg(\n        F.countDistinct('order_id').alias('total_orders'),\n        F.sum('quantity').alias('total_items_bought'),\n        F.sum(F.col('price') * F.col('quantity')).alias('total_amount')\n    )\n)\n\ndisplay(df_order_summary)",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 68,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1762980753384,
+        "globalVars": {},
+        "guid": "ee39eafd-095e-4a79-922b-78e48546065d",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            76
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "78455e15-15ba-4ff2-bd6f-1889565e4fe4",
+        "origId": 7714038203712144,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.625,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  "2024-11",
+                  9179,
+                  1,
+                  1,
+                  999
+                ],
+                [
+                  "2024-12",
+                  2054,
+                  1,
+                  2,
+                  398
+                ],
+                [
+                  "2024-10",
+                  5816,
+                  2,
+                  4,
+                  1296
+                ],
+                [
+                  "2025-01",
+                  9084,
+                  2,
+                  4,
+                  1796
+                ],
+                [
+                  "2025-01",
+                  6384,
+                  2,
+                  3,
+                  1297
+                ],
+                [
+                  "2024-11",
+                  8580,
+                  1,
+                  4,
+                  586
+                ],
+                [
+                  "2024-11",
+                  2639,
+                  1,
+                  6,
+                  984
+                ],
+                [
+                  "2025-01",
+                  9605,
+                  2,
+                  7,
+                  1823
+                ],
+                [
+                  "2025-01",
+                  9247,
+                  1,
+                  2,
+                  258
+                ],
+                [
+                  "2024-11",
+                  4914,
+                  2,
+                  2,
+                  398
+                ],
+                [
+                  "2024-12",
+                  7803,
+                  1,
+                  3,
+                  747
+                ],
+                [
+                  "2024-11",
+                  8845,
+                  1,
+                  2,
+                  998
+                ],
+                [
+                  "2024-10",
+                  3409,
+                  1,
+                  1,
+                  499
+                ],
+                [
+                  "2024-11",
+                  3892,
+                  1,
+                  2,
+                  998
+                ],
+                [
+                  "2024-12",
+                  2344,
+                  1,
+                  3,
+                  387
+                ],
+                [
+                  "2025-01",
+                  7123,
+                  1,
+                  5,
+                  985
+                ],
+                [
+                  "2024-12",
+                  2703,
+                  2,
+                  7,
+                  1033
+                ],
+                [
+                  "2024-12",
+                  6167,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2025-01",
+                  7007,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2024-12",
+                  7123,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2024-12",
+                  3084,
+                  2,
+                  4,
+                  1296
+                ],
+                [
+                  "2024-12",
+                  4996,
+                  1,
+                  1,
+                  399
+                ],
+                [
+                  "2024-10",
+                  9018,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2025-01",
+                  4996,
+                  1,
+                  1,
+                  299
+                ],
+                [
+                  "2024-11",
+                  1987,
+                  1,
+                  5,
+                  645
+                ],
+                [
+                  "2024-10",
+                  5011,
+                  2,
+                  3,
+                  2197
+                ],
+                [
+                  "2024-11",
+                  8539,
+                  2,
+                  4,
+                  1096
+                ],
+                [
+                  "2025-01",
+                  3295,
+                  1,
+                  1,
+                  399
+                ],
+                [
+                  "2025-01",
+                  3712,
+                  1,
+                  4,
+                  746
+                ],
+                [
+                  "2025-01",
+                  6167,
+                  2,
+                  4,
+                  1086
+                ],
+                [
+                  "2025-01",
+                  8580,
+                  1,
+                  2,
+                  698
+                ],
+                [
+                  "2024-12",
+                  7295,
+                  1,
+                  1,
+                  129
+                ],
+                [
+                  "2025-01",
+                  5028,
+                  1,
+                  1,
+                  499
+                ],
+                [
+                  "2024-10",
+                  7207,
+                  1,
+                  1,
+                  1199
+                ],
+                [
+                  "2024-10",
+                  2344,
+                  1,
+                  2,
+                  998
+                ],
+                [
+                  "2024-12",
+                  9687,
+                  2,
+                  3,
+                  1697
+                ],
+                [
+                  "2024-12",
+                  6406,
+                  2,
+                  2,
+                  648
+                ],
+                [
+                  "2025-01",
+                  6973,
+                  1,
+                  1,
+                  499
+                ],
+                [
+                  "2024-12",
+                  5592,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2024-11",
+                  7803,
+                  2,
+                  5,
+                  685
+                ],
+                [
+                  "2024-10",
+                  9084,
+                  1,
+                  2,
+                  398
+                ],
+                [
+                  "2024-11",
+                  9247,
+                  2,
+                  4,
+                  536
+                ],
+                [
+                  "2024-10",
+                  3889,
+                  1,
+                  2,
+                  328
+                ],
+                [
+                  "2024-11",
+                  4761,
+                  1,
+                  3,
+                  997
+                ],
+                [
+                  "2025-01",
+                  6627,
+                  1,
+                  5,
+                  895
+                ],
+                [
+                  "2024-12",
+                  7829,
+                  2,
+                  5,
+                  705
+                ],
+                [
+                  "2024-11",
+                  9706,
+                  1,
+                  1,
+                  999
+                ],
+                [
+                  "2024-12",
+                  5204,
+                  2,
+                  5,
+                  1595
+                ],
+                [
+                  "2025-01",
+                  8845,
+                  2,
+                  2,
+                  348
+                ],
+                [
+                  "2025-01",
+                  2344,
+                  1,
+                  5,
+                  785
+                ],
+                [
+                  "2024-11",
+                  5028,
+                  1,
+                  1,
+                  149
+                ],
+                [
+                  "2024-12",
+                  7997,
+                  2,
+                  4,
+                  1096
+                ],
+                [
+                  "2024-10",
+                  9263,
+                  1,
+                  3,
+                  387
+                ],
+                [
+                  "2025-01",
+                  2141,
+                  1,
+                  1,
+                  129
+                ],
+                [
+                  "2025-01",
+                  9179,
+                  1,
+                  1,
+                  399
+                ],
+                [
+                  "2024-11",
+                  7123,
+                  1,
+                  4,
+                  646
+                ],
+                [
+                  "2025-01",
+                  5953,
+                  1,
+                  1,
+                  129
+                ],
+                [
+                  "2024-12",
+                  1211,
+                  1,
+                  1,
+                  1199
+                ],
+                [
+                  "2024-12",
+                  3409,
+                  1,
+                  1,
+                  199
+                ],
+                [
+                  "2024-12",
+                  8580,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2025-01",
+                  3532,
+                  3,
+                  9,
+                  2581
+                ],
+                [
+                  "2025-01",
+                  9150,
+                  3,
+                  9,
+                  2131
+                ],
+                [
+                  "2025-01",
+                  4973,
+                  1,
+                  1,
+                  149
+                ],
+                [
+                  "2025-01",
+                  3084,
+                  1,
+                  2,
+                  598
+                ],
+                [
+                  "2024-12",
+                  6627,
+                  2,
+                  6,
+                  1544
+                ],
+                [
+                  "2025-01",
+                  4761,
+                  1,
+                  1,
+                  199
+                ],
+                [
+                  "2024-10",
+                  1987,
+                  1,
+                  1,
+                  799
+                ],
+                [
+                  "2024-12",
+                  5816,
+                  1,
+                  1,
+                  999
+                ],
+                [
+                  "2025-01",
+                  7207,
+                  1,
+                  3,
+                  597
+                ],
+                [
+                  "2024-11",
+                  4996,
+                  1,
+                  1,
+                  199
+                ],
+                [
+                  "2025-01",
+                  4468,
+                  1,
+                  1,
+                  799
+                ],
+                [
+                  "2024-10",
+                  8539,
+                  1,
+                  1,
+                  499
+                ],
+                [
+                  "2024-11",
+                  5592,
+                  1,
+                  2,
+                  258
+                ],
+                [
+                  "2024-12",
+                  4973,
+                  1,
+                  1,
+                  699
+                ],
+                [
+                  "2024-12",
+                  4858,
+                  1,
+                  1,
+                  999
+                ],
+                [
+                  "2024-11",
+                  7295,
+                  2,
+                  2,
+                  998
+                ]
+              ],
+              "datasetInfos": [],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {},
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{}",
+                  "name": "order_month",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "customer_id",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "total_orders",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "total_items_bought",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "total_amount",
+                  "type": "\"long\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "df_order_summary",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "order_month",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "customer_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "total_orders",
+                    "nullable": false,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "total_items_bought",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "total_amount",
+                    "nullable": true,
+                    "type": "long"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1762980751327,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1762980751287,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      }
+    ],
+    "computePreferences": null,
+    "dashboards": [],
+    "environmentMetadata": {
+      "base_environment": "",
+      "client": "1"
+    },
+    "environmentSerializationPreferences": null,
+    "globalVars": {},
+    "guid": "1a745c4e-d6fe-43f3-8e53-95090b6509fd",
+    "iPythonMetadata": null,
+    "inputWidgetPreferences": null,
+    "inputWidgets": {},
+    "language": "python",
+    "name": "Py19. Monthly Order Summary",
+    "notebookMetadata": {
+      "mostRecentlyExecutedCommandWithImplicitDF": {
+        "commandId": 2305013555837339,
+        "dataframes": [
+          "_sqldf"
+        ]
+      },
+      "pythonIndentUnit": 4
+    },
+    "origId": 2305013555837335,
+    "reposExportFormat": "SOURCE",
+    "version": "NotebookV1"
+  },
+  "provenance": {
+    "aliases": [],
+    "archive": "materials/archives/dea-course-v5.dbc",
+    "archive_sha256": "23908dc947dc9279b1176575fa5b0966281fca608509c6fed3deca7700146488",
+    "member": "dea-course/dea03-etl-with-apache-spark/Py19. Monthly Order Summary.python",
+    "member_sha256": "fab030e2ddc5e119be0fc1b66f685d42e40a44251b251e019cbc7703049078df"
+  },
+  "schema_version": 1,
+  "source_base64": "eyJ2ZXJzaW9uIjoiTm90ZWJvb2tWMSIsIm9yaWdJZCI6MjMwNTAxMzU1NTgzNzMzNSwibmFtZSI6IlB5MTkuIE1vbnRobHkgT3JkZXIgU3VtbWFyeSIsImxhbmd1YWdlIjoicHl0aG9uIiwiY29tbWFuZHMiOlt7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjc3MTQwMzgyMDM3MTIxNDUsImd1aWQiOiJjYjM0YzdjZC1jYmRjLTRiMGQtYWU0NC0xZWMyM2U2M2I5YzciLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjoyLjMxMjUsImNvbW1hbmQiOiJkZl9vcmRlcl9zdW1tYXJ5LndyaXRlVG8oJ2dpem1vYm94LmdvbGQucHlfb3JkZXJfc3VtbWFyeV9tb250aGx5JykuY3JlYXRlT3JSZXBsYWNlKCkiLCJjb21tYW5kVmVyc2lvbiI6OSwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6Imxpc3RSZXN1bHRzIiwiZGF0YSI6W10sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbXSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTc2Mjk4MDgyMTA5Miwic3VibWl0VGltZSI6MTc2Mjk4MDgyMTAyNywiZmluaXNoVGltZSI6MTc2Mjk4MDgyNDA0NiwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJyb3dMaW1pdCI6MTAwMDAsImJ5dGVMaW1pdCI6MjA0ODAwMH0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltdLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiI3NWE4ZjkyZS1iOTJmLTQxOGYtOTkwZS03MzMzNWNmNzEzMWUifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjIzMDUwMTM1NTU4MzczMzYsImd1aWQiOiI4ZmRlM2I2Zi1hODhkLTQ3Y2EtOTk3NC0zNTNkYjBmNWVhYmUiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjowLjUsImNvbW1hbmQiOiIlbWRcbiMjIE1vbnRobHkgT3JkZXIgU3VtbWFyeVxuRm9yIGVhY2ggb2YgdGhlIGN1c3RvbWVyLCBwcm9kdWNlIHRoZSBmb2xsb3dpbmcgc3VtbWFyeSBwZXIgbW9udGhcbjEuIHRvdGFsIG9yZGVyc1xuMS4gdG90YWwgaXRlbXMgYm91Z2h0XG4xLiB0b3RhbCBhbW91bnQgc3BlbnQiLCJjb21tYW5kVmVyc2lvbiI6MTUsInN0YXRlIjoiaW5wdXQiLCJyZXN1bHRzIjpudWxsLCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjowLCJzdWJtaXRUaW1lIjowLCJmaW5pc2hUaW1lIjowLCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7fSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W10sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjUyNDNhNWE2LTI3ZjMtNDhmNS1hOWE1LTllOWEwMDU5OTZhMyJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6MjMwNTAxMzU1NTgzNzMzOSwiZ3VpZCI6IjA3ZDM0NjU3LWFlODMtNGY1OS1hYTIyLTljMDM0ZWI0YzQ3YyIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjMuMCwiY29tbWFuZCI6IiVzcWxcblNFTEVDVCAqIEZST00gZ2l6bW9ib3guZ29sZC5weV9vcmRlcl9zdW1tYXJ5X21vbnRobHk7IiwiY29tbWFuZFZlcnNpb24iOjMsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJsaXN0UmVzdWx0cyIsImRhdGEiOlt7InR5cGUiOiJ0YWJsZSIsImRhdGEiOltbIjIwMjQtMTEiLDkxNzksMSwxLDk5OV0sWyIyMDI0LTEyIiwyMDU0LDEsMiwzOThdLFsiMjAyNC0xMCIsNTgxNiwyLDQsMTI5Nl0sWyIyMDI1LTAxIiw5MDg0LDIsNCwxNzk2XSxbIjIwMjUtMDEiLDYzODQsMiwzLDEyOTddLFsiMjAyNC0xMSIsODU4MCwxLDQsNTg2XSxbIjIwMjQtMTEiLDI2MzksMSw2LDk4NF0sWyIyMDI1LTAxIiw5NjA1LDIsNywxODIzXSxbIjIwMjUtMDEiLDkyNDcsMSwyLDI1OF0sWyIyMDI0LTExIiw0OTE0LDIsMiwzOThdLFsiMjAyNC0xMiIsNzgwMywxLDMsNzQ3XSxbIjIwMjQtMTEiLDg4NDUsMSwyLDk5OF0sWyIyMDI0LTEwIiwzNDA5LDEsMSw0OTldLFsiMjAyNC0xMSIsMzg5MiwxLDIsOTk4XSxbIjIwMjQtMTIiLDIzNDQsMSwzLDM4N10sWyIyMDI1LTAxIiw3MTIzLDEsNSw5ODVdLFsiMjAyNC0xMiIsMjcwMywyLDcsMTAzM10sWyIyMDI0LTEyIiw2MTY3LDEsMSw2OTldLFsiMjAyNS0wMSIsNzAwNywxLDEsNjk5XSxbIjIwMjQtMTIiLDcxMjMsMSwxLDY5OV0sWyIyMDI0LTEyIiwzMDg0LDIsNCwxMjk2XSxbIjIwMjQtMTIiLDQ5OTYsMSwxLDM5OV0sWyIyMDI0LTEwIiw5MDE4LDEsMSw2OTldLFsiMjAyNS0wMSIsNDk5NiwxLDEsMjk5XSxbIjIwMjQtMTEiLDE5ODcsMSw1LDY0NV0sWyIyMDI0LTEwIiw1MDExLDIsMywyMTk3XSxbIjIwMjQtMTEiLDg1MzksMiw0LDEwOTZdLFsiMjAyNS0wMSIsMzI5NSwxLDEsMzk5XSxbIjIwMjUtMDEiLDM3MTIsMSw0LDc0Nl0sWyIyMDI1LTAxIiw2MTY3LDIsNCwxMDg2XSxbIjIwMjUtMDEiLDg1ODAsMSwyLDY5OF0sWyIyMDI0LTEyIiw3Mjk1LDEsMSwxMjldLFsiMjAyNS0wMSIsNTAyOCwxLDEsNDk5XSxbIjIwMjQtMTAiLDcyMDcsMSwxLDExOTldLFsiMjAyNC0xMCIsMjM0NCwxLDIsOTk4XSxbIjIwMjQtMTIiLDk2ODcsMiwzLDE2OTddLFsiMjAyNC0xMiIsNjQwNiwyLDIsNjQ4XSxbIjIwMjUtMDEiLDY5NzMsMSwxLDQ5OV0sWyIyMDI0LTEyIiw1NTkyLDEsMSw2OTldLFsiMjAyNC0xMSIsNzgwMywyLDUsNjg1XSxbIjIwMjQtMTAiLDkwODQsMSwyLDM5OF0sWyIyMDI0LTExIiw5MjQ3LDIsNCw1MzZdLFsiMjAyNC0xMCIsMzg4OSwxLDIsMzI4XSxbIjIwMjQtMTEiLDQ3NjEsMSwzLDk5N10sWyIyMDI1LTAxIiw2NjI3LDEsNSw4OTVdLFsiMjAyNC0xMiIsNzgyOSwyLDUsNzA1XSxbIjIwMjQtMTEiLDk3MDYsMSwxLDk5OV0sWyIyMDI0LTEyIiw1MjA0LDIsNSwxNTk1XSxbIjIwMjUtMDEiLDg4NDUsMiwyLDM0OF0sWyIyMDI1LTAxIiwyMzQ0LDEsNSw3ODVdLFsiMjAyNC0xMSIsNTAyOCwxLDEsMTQ5XSxbIjIwMjQtMTIiLDc5OTcsMiw0LDEwOTZdLFsiMjAyNC0xMCIsOTI2MywxLDMsMzg3XSxbIjIwMjUtMDEiLDIxNDEsMSwxLDEyOV0sWyIyMDI1LTAxIiw5MTc5LDEsMSwzOTldLFsiMjAyNC0xMSIsNzEyMywxLDQsNjQ2XSxbIjIwMjUtMDEiLDU5NTMsMSwxLDEyOV0sWyIyMDI0LTEyIiwxMjExLDEsMSwxMTk5XSxbIjIwMjQtMTIiLDM0MDksMSwxLDE5OV0sWyIyMDI0LTEyIiw4NTgwLDEsMSw2OTldLFsiMjAyNS0wMSIsMzUzMiwzLDksMjU4MV0sWyIyMDI1LTAxIiw5MTUwLDMsOSwyMTMxXSxbIjIwMjUtMDEiLDQ5NzMsMSwxLDE0OV0sWyIyMDI1LTAxIiwzMDg0LDEsMiw1OThdLFsiMjAyNC0xMiIsNjYyNywyLDYsMTU0NF0sWyIyMDI1LTAxIiw0NzYxLDEsMSwxOTldLFsiMjAyNC0xMCIsMTk4NywxLDEsNzk5XSxbIjIwMjQtMTIiLDU4MTYsMSwxLDk5OV0sWyIyMDI1LTAxIiw3MjA3LDEsMyw1OTddLFsiMjAyNC0xMSIsNDk5NiwxLDEsMTk5XSxbIjIwMjUtMDEiLDQ0NjgsMSwxLDc5OV0sWyIyMDI0LTEwIiw4NTM5LDEsMSw0OTldLFsiMjAyNC0xMSIsNTU5MiwxLDIsMjU4XSxbIjIwMjQtMTIiLDQ5NzMsMSwxLDY5OV0sWyIyMDI0LTEyIiw0ODU4LDEsMSw5OTldLFsiMjAyNC0xMSIsNzI5NSwyLDIsOTk4XV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoib3JkZXJfbW9udGgiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJjdXN0b21lcl9pZCIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJ0b3RhbF9vcmRlcnMiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoidG90YWxfaXRlbXNfYm91Z2h0IiwidHlwZSI6IlwibG9uZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InRvdGFsX2Ftb3VudCIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifV0sIm92ZXJmbG93IjpmYWxzZSwiYWdnRGF0YSI6W10sImFnZ1NjaGVtYSI6W10sImFnZ092ZXJmbG93IjpmYWxzZSwiYWdnU2VyaWVzTGltaXRSZWFjaGVkIjpmYWxzZSwiYWdnRXJyb3IiOiIiLCJhZ2dUeXBlIjoiIiwicGxvdE9wdGlvbnMiOm51bGwsImlzSnNvblNjaGVtYSI6dHJ1ZSwiZGJmc1Jlc3VsdFBhdGgiOm51bGwsImRhdGFzZXRJbmZvcyI6W3sibmFtZSI6Il9zcWxkZiIsInR5cGVTdHIiOiJweXNwYXJrLnNxbC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnt9LCJuYW1lIjoib3JkZXJfbW9udGgiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiY3VzdG9tZXJfaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImxvbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InRvdGFsX29yZGVycyIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoibG9uZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoidG90YWxfaXRlbXNfYm91Z2h0IiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJsb25nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJ0b3RhbF9hbW91bnQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImxvbmcifV0sInR5cGUiOiJzdHJ1Y3QifSwidGFibGVJZGVudGlmaWVyIjpudWxsfV0sImNvbHVtbkN1c3RvbURpc3BsYXlJbmZvcyI6e30sIm1ldGFkYXRhIjp7ImRhdGFmcmFtZU5hbWUiOiJfc3FsZGYiLCJleGVjdXRpb25Db3VudCI6NSwiY3JlYXRlVGVtcFZpZXdGb3JJbXBsaWNpdERmIjp0cnVlfX1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sImRhdGFzZXRJbmZvcyI6W3sibmFtZSI6Il9zcWxkZiIsInR5cGVTdHIiOiJweXNwYXJrLnNxbC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnt9LCJuYW1lIjoib3JkZXJfbW9udGgiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiY3VzdG9tZXJfaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImxvbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InRvdGFsX29yZGVycyIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoibG9uZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoidG90YWxfaXRlbXNfYm91Z2h0IiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJsb25nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJ0b3RhbF9hbW91bnQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImxvbmcifV0sInR5cGUiOiJzdHJ1Y3QifSwidGFibGVJZGVudGlmaWVyIjpudWxsfV0sIm1ldGFkYXRhIjp7ImlzRGJmc0NvbW1hbmRSZXN1bHQiOmZhbHNlfX0sInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjE3NjI5ODA4MjY3NTQsInN1Ym1pdFRpbWUiOjE3NjI5ODA4MjY3MTcsImZpbmlzaFRpbWUiOjE3NjI5ODA4Mjg0NTUsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnsicm93TGltaXQiOjEwMDAwLCJieXRlTGltaXQiOjIwNDgwMDAsImltcGxpY2l0RGYiOnRydWV9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbWyJ0YWJsZSIsNzZdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiNDNmZTkyYTQtMmI5Zi00ZDRmLWFlM2MtOWM0ZWZkNmEwOTZlIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo3NzE0MDM4MjAzNzEyMTQzLCJndWlkIjoiYmJjODg2MjQtMDAzYS00M2E3LThkZmMtMDJmODdkZjBiM2I5Iiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MS4yNSwiY29tbWFuZCI6ImRmX29yZGVycyA9IHNwYXJrLnRhYmxlKCdnaXptb2JveC5zaWx2ZXIucHlfb3JkZXJzJylcbmRpc3BsYXkoZGZfb3JkZXJzKSIsImNvbW1hbmRWZXJzaW9uIjo4LCJzdGF0ZSI6ImZpbmlzaGVkIiwicmVzdWx0cyI6eyJ0eXBlIjoibGlzdFJlc3VsdHMiLCJkYXRhIjpbeyJ0eXBlIjoidGFibGUiLCJkYXRhIjpbWzEsIkNvbXBsZXRlZCIsIkJhbmsgVHJhbnNmZXIiLDQ5OSwiMjAyNS0wMS0wNSAxMDoxMzo1OSIsNjk3Myw4LCJHYW1pbmcgQ29uc29sZSIsNDk5LDEsIkVsZWN0cm9uaWNzIiwiU29ueSIsIkJsdWUiXSxbMiwiQ2FuY2VsbGVkIiwiUGF5UGFsIiw5ODUsIjIwMjUtMDEtMTkgMDA6MDU6MTMiLDM1MzIsNCwiU21hcnR3YXRjaCIsMjk5LDIsIkVsZWN0cm9uaWNzIiwiQ2Fub24iLCJHcmF5Il0sWzIsIkNhbmNlbGxlZCIsIlBheVBhbCIsOTg1LCIyMDI1LTAxLTE5IDAwOjA1OjEzIiwzNTMyLDcsIkV4dGVybmFsIEhhcmQgRHJpdmUiLDEyOSwzLCJFbGVjdHJvbmljcyIsIkRlbGwiLCJCbHVlIl0sWzMsIkNvbXBsZXRlZCIsIkJhbmsgVHJhbnNmZXIiLDU5NywiMjAyNS0wMS0wOCAyMzoxMTowMCIsMzUzMiwzLCJXaXJlbGVzcyBIZWFkcGhvbmVzIiwxOTksMywiRWxlY3Ryb25pY3MiLCJBcHBsZSIsIldoaXRlIl0sWzQsIkNhbmNlbGxlZCIsIkJhbmsgVHJhbnNmZXIiLDk5OSwiMjAyNS0wMS0wNSAwNTo0OToyNiIsMzUzMiwyLCJMYXB0b3AiLDk5OSwxLCJFbGVjdHJvbmljcyIsIk1pY3Jvc29mdCIsIkJsYWNrIl0sWzgsIkNvbXBsZXRlZCIsIlBheVBhbCIsMzk5LCIyMDI1LTAxLTAyIDEzOjExOjE1Iiw5MTc5LDUsIlRhYmxldCIsMzk5LDEsIkVsZWN0cm9uaWNzIiwiTEciLCJXaGl0ZSJdLFsxNCwiQ2FuY2VsbGVkIiwiUGF5UGFsIiw1OTcsIjIwMjUtMDEtMDEgMTg6MjI6MjYiLDcyMDcsMywiV2lyZWxlc3MgSGVhZHBob25lcyIsMTk5LDMsIkVsZWN0cm9uaWNzIiwiQm9zZSIsIkJsdWUiXSxbMTgsIlBlbmRpbmciLCJDcmVkaXQgQ2FyZCIsNzk5LCIyMDI1LTAxLTIyIDIxOjEyOjA4Iiw0NDY4LDEwLCJEcm9uZSIsNzk5LDEsIkVsZWN0cm9uaWNzIiwiRGVsbCIsIkJsYWNrIl0sWzIyLCJQZW5kaW5nIiwiUGF5UGFsIiwxOTksIjIwMjUtMDEtMDEgMTU6NDk6MTkiLDQ3NjEsMywiV2lyZWxlc3MgSGVhZHBob25lcyIsMTk5LDEsIkVsZWN0cm9uaWNzIiwiSFAiLCJTaWx2ZXIiXSxbMjYsIlNoaXBwZWQiLCJCYW5rIFRyYW5zZmVyIiw2OTksIjIwMjUtMDEtMDUgMTk6MDE6MjUiLDcwMDcsMSwiU21hcnRwaG9uZSIsNjk5LDEsIkVsZWN0cm9uaWNzIiwiU2Ftc3VuZyIsIlNpbHZlciJdLFsyOSwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiLDEyOSwiMjAyNS0wMS0xOCAwMzowNTowNCIsNTk1Myw3LCJFeHRlcm5hbCBIYXJkIERyaXZlIiwxMjksMSwiRWxlY3Ryb25pY3MiLCJCb3NlIiwiR3JheSJdLFszMSwiU2hpcHBlZCIsIkJhbmsgVHJhbnNmZXIiLDI5OSwiMjAyNS0wMS0xOCAwMzoxMzoyOSIsNDk5Niw0LCJTbWFydHdhdGNoIiwyOTksMSwiRWxlY3Ryb25pY3MiLCJEZWxsIiwiV2hpdGUiXSxbMzMsIkNvbXBsZXRlZCIsIlBheVBhbCIsODk3LCIyMDI1LTAxLTEzIDA0OjQ3OjQzIiw5NjA1LDQsIlNtYXJ0d2F0Y2giLDI5OSwzLCJFbGVjdHJvbmljcyIsIkNhbm9uIiwiV2hpdGUiXSxbMzQsIkNhbmNlbGxlZCIsIlBheVBhbCIsOTI2LCIyMDI1LTAxLTIxIDAwOjI1OjAxIiw5NjA1LDYsIkJsdWV0b290aCBTcGVha2VyIiwxNDksMiwiRWxlY3Ryb25pY3MiLCJCb3NlIiwiU2lsdmVyIl0sWzM0LCJDYW5jZWxsZWQiLCJQYXlQYWwiLDkyNiwiMjAyNS0wMS0yMSAwMDoyNTowMSIsOTYwNSw4LCJHYW1pbmcgQ29uc29sZSIsNDk5LDEsIkVsZWN0cm9uaWNzIiwiTEciLCJCbGFjayJdLFszNCwiQ2FuY2VsbGVkIiwiUGF5UGFsIiw5MjYsIjIwMjUtMDEtMjEgMDA6MjU6MDEiLDk2MDUsNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDEsIkVsZWN0cm9uaWNzIiwiU2Ftc3VuZyIsIkJsYWNrIl0sWzQwLCJDb21wbGV0ZWQiLCJQYXlQYWwiLDI5OCwiMjAyNS0wMS0yMCAxNjoxODozNSIsNjM4NCw2LCJCbHVldG9vdGggU3BlYWtlciIsMTQ5LDIsIkVsZWN0cm9uaWNzIiwiQm9zZSIsIlNpbHZlciJdLFs0MSwiU2hpcHBlZCIsIkNyZWRpdCBDYXJkIiw5OTksIjIwMjUtMDEtMDUgMDY6MTA6MjIiLDYzODQsMiwiTGFwdG9wIiw5OTksMSwiRWxlY3Ryb25pY3MiLCJTb255IiwiU2lsdmVyIl0sWzQzLCJQZW5kaW5nIiwiUGF5UGFsIiw0OTksIjIwMjUtMDEtMjQgMTg6MTA6MzciLDUwMjgsOCwiR2FtaW5nIENvbnNvbGUiLDQ5OSwxLCJFbGVjdHJvbmljcyIsIkxHIiwiQmxhY2siXSxbNTAsIlNoaXBwZWQiLCJDcmVkaXQgQ2FyZCIsNzQ2LCIyMDI1LTAxLTExIDAxOjE5OjA5IiwzNzEyLDYsIkJsdWV0b290aCBTcGVha2VyIiwxNDksMywiRWxlY3Ryb25pY3MiLCJBcHBsZSIsIkdyYXkiXSxbNTAsIlNoaXBwZWQiLCJDcmVkaXQgQ2FyZCIsNzQ2LCIyMDI1LTAxLTExIDAxOjE5OjA5IiwzNzEyLDQsIlNtYXJ0d2F0Y2giLDI5OSwxLCJFbGVjdHJvbmljcyIsIlNvbnkiLCJXaGl0ZSJdLFs1MSwiQ29tcGxldGVkIiwiUGF5UGFsIiwxNDksIjIwMjUtMDEtMjEgMTM6MTk6NTkiLDg4NDUsNiwiQmx1ZXRvb3RoIFNwZWFrZXIiLDE0OSwxLCJFbGVjdHJvbmljcyIsIlNhbXN1bmciLCJHcmF5Il0sWzUzLCJQZW5kaW5nIiwiQmFuayBUcmFuc2ZlciIsMTk5LCIyMDI1LTAxLTIxIDA4OjMxOjAyIiw4ODQ1LDMsIldpcmVsZXNzIEhlYWRwaG9uZXMiLDE5OSwxLCJFbGVjdHJvbmljcyIsIkFwcGxlIiwiQmxhY2siXSxbNTYsIkNhbmNlbGxlZCIsIlBheVBhbCIsNjk4LCIyMDI1LTAxLTAxIDEyOjAyOjQxIiw4NTgwLDMsIldpcmVsZXNzIEhlYWRwaG9uZXMiLDE5OSwxLCJFbGVjdHJvbmljcyIsIkhQIiwiU2lsdmVyIl0sWzU2LCJDYW5jZWxsZWQiLCJQYXlQYWwiLDY5OCwiMjAyNS0wMS0wMSAxMjowMjo0MSIsODU4MCw4LCJHYW1pbmcgQ29uc29sZSIsNDk5LDEsIkVsZWN0cm9uaWNzIiwiTEciLCJHcmF5Il0sWzYyLCJDb21wbGV0ZWQiLCJCYW5rIFRyYW5zZmVyIiw5ODUsIjIwMjUtMDEtMjQgMTI6MDA6NTQiLDcxMjMsNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDMsIkVsZWN0cm9uaWNzIiwiRGVsbCIsIldoaXRlIl0sWzYyLCJDb21wbGV0ZWQiLCJCYW5rIFRyYW5zZmVyIiw5ODUsIjIwMjUtMDEtMjQgMTI6MDA6NTQiLDcxMjMsNCwiU21hcnR3YXRjaCIsMjk5LDIsIkVsZWN0cm9uaWNzIiwiR29Qcm8iLCJCbHVlIl0sWzY2LCJDYW5jZWxsZWQiLCJDcmVkaXQgQ2FyZCIsNTk4LCIyMDI1LTAxLTE3IDIxOjE2OjExIiwzMDg0LDQsIlNtYXJ0d2F0Y2giLDI5OSwxLCJFbGVjdHJvbmljcyIsIkJvc2UiLCJTaWx2ZXIiXSxbNjYsIkNhbmNlbGxlZCIsIkNyZWRpdCBDYXJkIiw1OTgsIjIwMjUtMDEtMTcgMjE6MTY6MTEiLDMwODQsNCwiU21hcnR3YXRjaCIsMjk5LDEsIkVsZWN0cm9uaWNzIiwiR29Qcm8iLCJXaGl0ZSJdLFs2OCwiQ29tcGxldGVkIiwiQmFuayBUcmFuc2ZlciIsMTQ5LCIyMDI1LTAxLTEwIDIwOjM1OjQzIiw0OTczLDYsIkJsdWV0b290aCBTcGVha2VyIiwxNDksMSwiRWxlY3Ryb25pY3MiLCJCb3NlIiwiR3JheSJdLFs3MywiU2hpcHBlZCIsIkNyZWRpdCBDYXJkIiwzODcsIjIwMjUtMDEtMDcgMDE6MDI6MjYiLDYxNjcsNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDMsIkVsZWN0cm9uaWNzIiwiR29Qcm8iLCJHcmF5Il0sWzc1LCJTaGlwcGVkIiwiQ3JlZGl0IENhcmQiLDY5OSwiMjAyNS0wMS0xOSAxNjoyMzoxNiIsNjE2NywxLCJTbWFydHBob25lIiw2OTksMSwiRWxlY3Ryb25pY3MiLCJHb1BybyIsIldoaXRlIl0sWzc2LCJDb21wbGV0ZWQiLCJCYW5rIFRyYW5zZmVyIiwzOTksIjIwMjUtMDEtMDYgMDI6NTQ6MzkiLDMyOTUsNSwiVGFibGV0IiwzOTksMSwiRWxlY3Ryb25pY3MiLCJNaWNyb3NvZnQiLCJTaWx2ZXIiXSxbNzgsIkNhbmNlbGxlZCIsIlBheVBhbCIsNzk4LCIyMDI1LTAxLTIxIDExOjQyOjUxIiw5MDg0LDUsIlRhYmxldCIsMzk5LDIsIkVsZWN0cm9uaWNzIiwiRGVsbCIsIldoaXRlIl0sWzc5LCJDYW5jZWxsZWQiLCJDcmVkaXQgQ2FyZCIsOTk4LCIyMDI1LTAxLTI1IDAzOjUyOjA1Iiw5MDg0LDgsIkdhbWluZyBDb25zb2xlIiw0OTksMiwiRWxlY3Ryb25pY3MiLCJEZWxsIiwiR3JheSJdLFs4MywiU2hpcHBlZCIsIlBheVBhbCIsNzg1LCIyMDI1LTAxLTA3IDEyOjQ4OjA1IiwyMzQ0LDcsIkV4dGVybmFsIEhhcmQgRHJpdmUiLDEyOSwzLCJFbGVjdHJvbmljcyIsIkNhbm9uIiwiR3JheSJdLFs4MywiU2hpcHBlZCIsIlBheVBhbCIsNzg1LCIyMDI1LTAxLTA3IDEyOjQ4OjA1IiwyMzQ0LDMsIldpcmVsZXNzIEhlYWRwaG9uZXMiLDE5OSwyLCJFbGVjdHJvbmljcyIsIlNvbnkiLCJCbGFjayJdLFs4NywiUGVuZGluZyIsIlBheVBhbCIsMTI5LCIyMDI1LTAxLTAyIDA0OjI4OjM4IiwyMTQxLDcsIkV4dGVybmFsIEhhcmQgRHJpdmUiLDEyOSwxLCJFbGVjdHJvbmljcyIsIkFwcGxlIiwiQmx1ZSJdLFs5MCwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIiwyNTgsIjIwMjUtMDEtMTcgMTQ6MzA6NTQiLDkyNDcsNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDEsIkVsZWN0cm9uaWNzIiwiQ2Fub24iLCJXaGl0ZSJdLFs5MCwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIiwyNTgsIjIwMjUtMDEtMTcgMTQ6MzA6NTQiLDkyNDcsNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDEsIkVsZWN0cm9uaWNzIiwiU2Ftc3VuZyIsIkJsYWNrIl0sWzk0LCJQZW5kaW5nIiwiQ3JlZGl0IENhcmQiLDg5NSwiMjAyNS0wMS0xMCAwOTo1MTo0OCIsNjYyNyw2LCJCbHVldG9vdGggU3BlYWtlciIsMTQ5LDIsIkVsZWN0cm9uaWNzIiwiU29ueSIsIkJsYWNrIl0sWzk0LCJQZW5kaW5nIiwiQ3JlZGl0IENhcmQiLDg5NSwiMjAyNS0wMS0xMCAwOTo1MTo0OCIsNjYyNywzLCJXaXJlbGVzcyBIZWFkcGhvbmVzIiwxOTksMywiRWxlY3Ryb25pY3MiLCJBcHBsZSIsIkJsdWUiXSxbOTgsIkNvbXBsZXRlZCIsIkNyZWRpdCBDYXJkIiw5ODUsIjIwMjUtMDEtMDggMDU6NTc6NTUiLDkxNTAsNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDMsIkVsZWN0cm9uaWNzIiwiSFAiLCJCbHVlIl0sWzk4LCJDb21wbGV0ZWQiLCJDcmVkaXQgQ2FyZCIsOTg1LCIyMDI1LTAxLTA4IDA1OjU3OjU1Iiw5MTUwLDQsIlNtYXJ0d2F0Y2giLDI5OSwyLCJFbGVjdHJvbmljcyIsIlNhbXN1bmciLCJHcmF5Il0sWzk5LCJTaGlwcGVkIiwiQ3JlZGl0IENhcmQiLDY5OSwiMjAyNS0wMS0xMCAyMTo0Mzo0NiIsOTE1MCwxLCJTbWFydHBob25lIiw2OTksMSwiRWxlY3Ryb25pY3MiLCJCb3NlIiwiR3JheSJdLFsxMDAsIlNoaXBwZWQiLCJQYXlQYWwiLDQ0NywiMjAyNS0wMS0wNCAwNjo0MDoxMyIsOTE1MCw2LCJCbHVldG9vdGggU3BlYWtlciIsMTQ5LDMsIkVsZWN0cm9uaWNzIiwiTEciLCJTaWx2ZXIiXSxbMTIsIkNhbmNlbGxlZCIsIlBheVBhbCIsOTk5LCIyMDI0LTEyLTA2IDIwOjI2OjQ5Iiw1ODE2LDIsIkxhcHRvcCIsOTk5LDEsIkVsZWN0cm9uaWNzIiwiU29ueSIsIldoaXRlIl0sWzEzLCJQZW5kaW5nIiwiUGF5UGFsIiw5OTksIjIwMjQtMTItMTcgMDM6NDE6MzciLDQ4NTgsMiwiTGFwdG9wIiw5OTksMSwiRWxlY3Ryb25pY3MiLCJHb1BybyIsIkJsYWNrIl0sWzE2LCJQZW5kaW5nIiwiQmFuayBUcmFuc2ZlciIsNTk3LCIyMDI0LTEyLTA4IDIyOjU5OjQ4Iiw1MjA0LDMsIldpcmVsZXNzIEhlYWRwaG9uZXMiLDE5OSwzLCJFbGVjdHJvbmljcyIsIlNvbnkiLCJTaWx2ZXIiXSxbMTcsIlBlbmRpbmciLCJCYW5rIFRyYW5zZmVyIiw5OTgsIjIwMjQtMTItMDIgMTI6MDA6NTAiLDUyMDQsOCwiR2FtaW5nIENvbnNvbGUiLDQ5OSwyLCJFbGVjdHJvbmljcyIsIkRlbGwiLCJCbGFjayJdLFsyNCwiQ29tcGxldGVkIiwiUGF5UGFsIiwxMTk5LCIyMDI0LTEyLTIxIDAzOjI0OjI2IiwxMjExLDksIlNtYXJ0IFRWIiwxMTk5LDEsIkVsZWN0cm9uaWNzIiwiR29Qcm8iLCJHcmF5Il0sWzI3LCJDb21wbGV0ZWQiLCJDcmVkaXQgQ2FyZCIsOTA0LCIyMDI0LTEyLTAyIDExOjI0OjIxIiwyNzAzLDcsIkV4dGVybmFsIEhhcmQgRHJpdmUiLDEyOSwyLCJFbGVjdHJvbmljcyIsIkRlbGwiLCJXaGl0ZSJdLFsyNywiQ29tcGxldGVkIiwiQ3JlZGl0IENhcmQiLDkwNCwiMjAyNC0xMi0wMiAxMToyNDoyMSIsMjcwMyw2LCJCbHVldG9vdGggU3BlYWtlciIsMTQ5LDMsIkVsZWN0cm9uaWNzIiwiQ2Fub24iLCJCbGFjayJdLFsyNywiQ29tcGxldGVkIiwiQ3JlZGl0IENhcmQiLDkwNCwiMjAyNC0xMi0wMiAxMToyNDoyMSIsMjcwMywzLCJXaXJlbGVzcyBIZWFkcGhvbmVzIiwxOTksMSwiRWxlY3Ryb25pY3MiLCJNaWNyb3NvZnQiLCJTaWx2ZXIiXSxbMjgsIkNhbmNlbGxlZCIsIkNyZWRpdCBDYXJkIiwxMjksIjIwMjQtMTItMjYgMDM6MTc6NTAiLDI3MDMsNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDEsIkVsZWN0cm9uaWNzIiwiR29Qcm8iLCJCbHVlIl0sWzMyLCJQZW5kaW5nIiwiUGF5UGFsIiwzOTksIjIwMjQtMTItMjggMDg6NTU6NTciLDQ5OTYsNSwiVGFibGV0IiwzOTksMSwiRWxlY3Ryb25pY3MiLCJBcHBsZSIsIlNpbHZlciJdLFszNywiU2hpcHBlZCIsIkNyZWRpdCBDYXJkIiwyNTgsIjIwMjQtMTItMjIgMTA6MTE6NDkiLDc4MjksNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDIsIkVsZWN0cm9uaWNzIiwiSFAiLCJTaWx2ZXIiXSxbMzgsIlNoaXBwZWQiLCJDcmVkaXQgQ2FyZCIsNDQ3LCIyMDI0LTEyLTI1IDIyOjA1OjE5Iiw3ODI5LDYsIkJsdWV0b290aCBTcGVha2VyIiwxNDksMywiRWxlY3Ryb25pY3MiLCJBcHBsZSIsIkdyYXkiXSxbNDQsIkNvbXBsZXRlZCIsIkNyZWRpdCBDYXJkIiwxMjksIjIwMjQtMTItMjAgMDg6MDU6NDMiLDcyOTUsNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDEsIkVsZWN0cm9uaWNzIiwiQm9zZSIsIkJsdWUiXSxbNDksIkNhbmNlbGxlZCIsIlBheVBhbCIsNzQ3LCIyMDI0LTEyLTA3IDIzOjI0OjExIiw3ODAzLDQsIlNtYXJ0d2F0Y2giLDI5OSwxLCJFbGVjdHJvbmljcyIsIkhQIiwiV2hpdGUiXSxbNDksIkNhbmNlbGxlZCIsIlBheVBhbCIsNzQ3LCIyMDI0LTEyLTA3IDIzOjI0OjExIiw3ODAzLDQsIlNtYXJ0d2F0Y2giLDI5OSwxLCJFbGVjdHJvbmljcyIsIkNhbm9uIiwiQmx1ZSJdLFs0OSwiQ2FuY2VsbGVkIiwiUGF5UGFsIiw3NDcsIjIwMjQtMTItMDcgMjM6MjQ6MTEiLDc4MDMsNiwiQmx1ZXRvb3RoIFNwZWFrZXIiLDE0OSwxLCJFbGVjdHJvbmljcyIsIlNhbXN1bmciLCJXaGl0ZSJdLFs1NCwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIiwzOTgsIjIwMjQtMTItMjAgMTI6MDQ6MjciLDIwNTQsMywiV2lyZWxlc3MgSGVhZHBob25lcyIsMTk5LDIsIkVsZWN0cm9uaWNzIiwiQm9zZSIsIkdyYXkiXSxbNTgsIkNvbXBsZXRlZCIsIlBheVBhbCIsNjk5LCIyMDI0LTEyLTA5IDIyOjQwOjU4Iiw4NTgwLDEsIlNtYXJ0cGhvbmUiLDY5OSwxLCJFbGVjdHJvbmljcyIsIk1pY3Jvc29mdCIsIkdyYXkiXSxbNjAsIlNoaXBwZWQiLCJCYW5rIFRyYW5zZmVyIiwxOTksIjIwMjQtMTItMTMgMTM6MTA6MTIiLDM0MDksMywiV2lyZWxlc3MgSGVhZHBob25lcyIsMTk5LDEsIkVsZWN0cm9uaWNzIiwiU2Ftc3VuZyIsIkJsdWUiXSxbNjEsIkNvbXBsZXRlZCIsIkJhbmsgVHJhbnNmZXIiLDY5OSwiMjAyNC0xMi0wNyAwNzo0NzoxOSIsNzEyMywxLCJTbWFydHBob25lIiw2OTksMSwiRWxlY3Ryb25pY3MiLCJDYW5vbiIsIkJsYWNrIl0sWzY1LCJDYW5jZWxsZWQiLCJCYW5rIFRyYW5zZmVyIiwzOTksIjIwMjQtMTItMDkgMTM6MDQ6MTMiLDMwODQsNSwiVGFibGV0IiwzOTksMSwiRWxlY3Ryb25pY3MiLCJNaWNyb3NvZnQiLCJHcmF5Il0sWzY3LCJTaGlwcGVkIiwiUGF5UGFsIiw4OTcsIjIwMjQtMTItMTkgMDc6MTE6MDkiLDMwODQsNCwiU21hcnR3YXRjaCIsMjk5LDMsIkVsZWN0cm9uaWNzIiwiTEciLCJCbHVlIl0sWzY5LCJDb21wbGV0ZWQiLCJCYW5rIFRyYW5zZmVyIiw2OTksIjIwMjQtMTItMzAgMDI6NDI6MDEiLDQ5NzMsMSwiU21hcnRwaG9uZSIsNjk5LDEsIkVsZWN0cm9uaWNzIiwiRGVsbCIsIkdyYXkiXSxbNzAsIlNoaXBwZWQiLCJQYXlQYWwiLDg5NywiMjAyNC0xMi0wNCAxNzoxNzoyNCIsNzk5Nyw0LCJTbWFydHdhdGNoIiwyOTksMywiRWxlY3Ryb25pY3MiLCJTb255IiwiQmxhY2siXSxbNzEsIkNvbXBsZXRlZCIsIkJhbmsgVHJhbnNmZXIiLDE5OSwiMjAyNC0xMi0yNyAxMToxNjozOSIsNzk5NywzLCJXaXJlbGVzcyBIZWFkcGhvbmVzIiwxOTksMSwiRWxlY3Ryb25pY3MiLCJNaWNyb3NvZnQiLCJCbGFjayJdLFs3NCwiUGVuZGluZyIsIlBheVBhbCIsNjk5LCIyMDI0LTEyLTIyIDE1OjU0OjExIiw2MTY3LDEsIlNtYXJ0cGhvbmUiLDY5OSwxLCJFbGVjdHJvbmljcyIsIlNhbXN1bmciLCJCbHVlIl0sWzgwLCJDYW5jZWxsZWQiLCJCYW5rIFRyYW5zZmVyIiw5OTgsIjIwMjQtMTItMTEgMDc6NDM6NTQiLDk2ODcsOCwiR2FtaW5nIENvbnNvbGUiLDQ5OSwyLCJFbGVjdHJvbmljcyIsIlNhbXN1bmciLCJXaGl0ZSJdLFs4MSwiQ29tcGxldGVkIiwiUGF5UGFsIiw2OTksIjIwMjQtMTItMjcgMDI6Mjc6NDUiLDk2ODcsMSwiU21hcnRwaG9uZSIsNjk5LDEsIkVsZWN0cm9uaWNzIiwiR29Qcm8iLCJCbHVlIl0sWzgyLCJDb21wbGV0ZWQiLCJQYXlQYWwiLDM4NywiMjAyNC0xMi0yOCAwMDo1NDowOCIsMjM0NCw3LCJFeHRlcm5hbCBIYXJkIERyaXZlIiwxMjksMywiRWxlY3Ryb25pY3MiLCJTb255IiwiQmx1ZSJdLFs5MSwiQ2FuY2VsbGVkIiwiQmFuayBUcmFuc2ZlciIsNjk5LCIyMDI0LTEyLTE3IDAwOjA5OjUzIiw1NTkyLDEsIlNtYXJ0cGhvbmUiLDY5OSwxLCJFbGVjdHJvbmljcyIsIkNhbm9uIiwiU2lsdmVyIl0sWzkzLCJQZW5kaW5nIiwiUGF5UGFsIiw1OTgsIjIwMjQtMTItMjIgMDU6MDc6NDYiLDY2MjcsNCwiU21hcnR3YXRjaCIsMjk5LDIsIkVsZWN0cm9uaWNzIiwiTEciLCJTaWx2ZXIiXSxbOTUsIkNvbXBsZXRlZCIsIkJhbmsgVHJhbnNmZXIiLDk0NiwiMjAyNC0xMi0yOCAwNDoyODozMCIsNjYyNyw0LCJTbWFydHdhdGNoIiwyOTksMiwiRWxlY3Ryb25pY3MiLCJHb1BybyIsIldoaXRlIl0sWzk1LCJDb21wbGV0ZWQiLCJCYW5rIFRyYW5zZmVyIiw5NDYsIjIwMjQtMTItMjggMDQ6Mjg6MzAiLDY2MjcsMywiV2lyZWxlc3MgSGVhZHBob25lcyIsMTk5LDEsIkVsZWN0cm9uaWNzIiwiQm9zZSIsIkdyYXkiXSxbOTUsIkNvbXBsZXRlZCIsIkJhbmsgVHJhbnNmZXIiLDk0NiwiMjAyNC0xMi0yOCAwNDoyODozMCIsNjYyNyw2LCJCbHVldG9vdGggU3BlYWtlciIsMTQ5LDEsIkVsZWN0cm9uaWNzIiwiRGVsbCIsIlNpbHZlciJdLFs5NiwiU2hpcHBlZCIsIlBheVBhbCIsMTQ5LCIyMDI0LTEyLTAyIDEyOjI3OjQ1Iiw2NDA2LDYsIkJsdWV0b290aCBTcGVha2VyIiwxNDksMSwiRWxlY3Ryb25pY3MiLCJNaWNyb3NvZnQiLCJCbGFjayJdLFs5NywiQ29tcGxldGVkIiwiQmFuayBUcmFuc2ZlciIsNDk5LCIyMDI0LTEyLTA3IDE2OjE0OjM0Iiw2NDA2LDgsIkdhbWluZyBDb25zb2xlIiw0OTksMSwiRWxlY3Ryb25pY3MiLCJTb255IiwiU2lsdmVyIl0sWzUsIkNhbmNlbGxlZCIsIkJhbmsgVHJhbnNmZXIiLDk5OCwiMjAyNC0xMS0xNiAyMzowNzozMSIsMzg5Miw4LCJHYW1pbmcgQ29uc29sZSIsNDk5LDIsIkVsZWN0cm9uaWNzIiwiRGVsbCIsIkJsdWUiXSxbNywiUGVuZGluZyIsIkNyZWRpdCBDYXJkIiw2NDUsIjIwMjQtMTEtMTkgMTk6MTg6NDgiLDE5ODcsNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDIsIkVsZWN0cm9uaWNzIiwiTEciLCJCbHVlIl0sWzcsIlBlbmRpbmciLCJDcmVkaXQgQ2FyZCIsNjQ1LCIyMDI0LTExLTE5IDE5OjE4OjQ4IiwxOTg3LDcsIkV4dGVybmFsIEhhcmQgRHJpdmUiLDEyOSwzLCJFbGVjdHJvbmljcyIsIkhQIiwiR3JheSJdLFs5LCJTaGlwcGVkIiwiQmFuayBUcmFuc2ZlciIsOTk5LCIyMDI0LTExLTI3IDEzOjE1OjI5Iiw5MTc5LDIsIkxhcHRvcCIsOTk5LDEsIkVsZWN0cm9uaWNzIiwiQXBwbGUiLCJCbGFjayJdLFsyMCwiUGVuZGluZyIsIlBheVBhbCIsNzk4LCIyMDI0LTExLTE4IDAyOjM4OjIxIiw4NTM5LDUsIlRhYmxldCIsMzk5LDIsIkVsZWN0cm9uaWNzIiwiU29ueSIsIlNpbHZlciJdLFsyMSwiQ2FuY2VsbGVkIiwiQmFuayBUcmFuc2ZlciIsMjk4LCIyMDI0LTExLTIxIDExOjI1OjM1Iiw4NTM5LDYsIkJsdWV0b290aCBTcGVha2VyIiwxNDksMiwiRWxlY3Ryb25pY3MiLCJHb1BybyIsIkJsdWUiXSxbMjMsIlNoaXBwZWQiLCJQYXlQYWwiLDk5NywiMjAyNC0xMS0yMiAxNjowNDowNSIsNDc2MSw1LCJUYWJsZXQiLDM5OSwxLCJFbGVjdHJvbmljcyIsIkFwcGxlIiwiR3JheSJdLFsyMywiU2hpcHBlZCIsIlBheVBhbCIsOTk3LCIyMDI0LTExLTIyIDE2OjA0OjA1Iiw0NzYxLDQsIlNtYXJ0d2F0Y2giLDI5OSwyLCJFbGVjdHJvbmljcyIsIkRlbGwiLCJHcmF5Il0sWzI1LCJDb21wbGV0ZWQiLCJQYXlQYWwiLDk5OSwiMjAyNC0xMS0wNSAxMTo0NTozMSIsOTcwNiwyLCJMYXB0b3AiLDk5OSwxLCJFbGVjdHJvbmljcyIsIkxHIiwiR3JheSJdLFszMCwiU2hpcHBlZCIsIkJhbmsgVHJhbnNmZXIiLDE5OSwiMjAyNC0xMS0xMiAwMzoyMDoyOSIsNDk5NiwzLCJXaXJlbGVzcyBIZWFkcGhvbmVzIiwxOTksMSwiRWxlY3Ryb25pY3MiLCJHb1BybyIsIldoaXRlIl0sWzM1LCJTaGlwcGVkIiwiQmFuayBUcmFuc2ZlciIsMTk5LCIyMDI0LTExLTIwIDE5OjA5OjA0Iiw0OTE0LDMsIldpcmVsZXNzIEhlYWRwaG9uZXMiLDE5OSwxLCJFbGVjdHJvbmljcyIsIkRlbGwiLCJHcmF5Il0sWzM2LCJDb21wbGV0ZWQiLCJQYXlQYWwiLDE5OSwiMjAyNC0xMS0wMiAxMDozOTo0NiIsNDkxNCwzLCJXaXJlbGVzcyBIZWFkcGhvbmVzIiwxOTksMSwiRWxlY3Ryb25pY3MiLCJDYW5vbiIsIlNpbHZlciJdLFs0MiwiQ29tcGxldGVkIiwiQ3JlZGl0IENhcmQiLDE0OSwiMjAyNC0xMS0wOCAxODozMjoyNSIsNTAyOCw2LCJCbHVldG9vdGggU3BlYWtlciIsMTQ5LDEsIkVsZWN0cm9uaWNzIiwiQm9zZSIsIkdyYXkiXSxbNDUsIlNoaXBwZWQiLCJDcmVkaXQgQ2FyZCIsNzk5LCIyMDI0LTExLTA3IDE1OjQxOjQzIiw3Mjk1LDEwLCJEcm9uZSIsNzk5LDEsIkVsZWN0cm9uaWNzIiwiRGVsbCIsIldoaXRlIl0sWzQ2LCJQZW5kaW5nIiwiUGF5UGFsIiwxOTksIjIwMjQtMTEtMjYgMTc6MTY6NTMiLDcyOTUsMywiV2lyZWxlc3MgSGVhZHBob25lcyIsMTk5LDEsIkVsZWN0cm9uaWNzIiwiU2Ftc3VuZyIsIkJsYWNrIl0sWzQ3LCJTaGlwcGVkIiwiQ3JlZGl0IENhcmQiLDI5OCwiMjAyNC0xMS0yMiAwMjowMToxOSIsNzgwMyw2LCJCbHVldG9vdGggU3BlYWtlciIsMTQ5LDIsIkVsZWN0cm9uaWNzIiwiTEciLCJCbHVlIl0sWzQ4LCJDb21wbGV0ZWQiLCJQYXlQYWwiLDM4NywiMjAyNC0xMS0xMyAwNjozNTo1NiIsNzgwMyw3LCJFeHRlcm5hbCBIYXJkIERyaXZlIiwxMjksMywiRWxlY3Ryb25pY3MiLCJBcHBsZSIsIkJsYWNrIl0sWzUyLCJDb21wbGV0ZWQiLCJQYXlQYWwiLDk5OCwiMjAyNC0xMS0xOSAyMToyMzo0NSIsODg0NSw4LCJHYW1pbmcgQ29uc29sZSIsNDk5LDIsIkVsZWN0cm9uaWNzIiwiR29Qcm8iLCJXaGl0ZSJdLFs1NywiQ2FuY2VsbGVkIiwiQmFuayBUcmFuc2ZlciIsNTg2LCIyMDI0LTExLTE5IDExOjMyOjQ0Iiw4NTgwLDMsIldpcmVsZXNzIEhlYWRwaG9uZXMiLDE5OSwxLCJFbGVjdHJvbmljcyIsIkhQIiwiU2lsdmVyIl0sWzU3LCJDYW5jZWxsZWQiLCJCYW5rIFRyYW5zZmVyIiw1ODYsIjIwMjQtMTEtMTkgMTE6MzI6NDQiLDg1ODAsNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDMsIkVsZWN0cm9uaWNzIiwiU29ueSIsIlNpbHZlciJdLFs2MywiQ2FuY2VsbGVkIiwiQmFuayBUcmFuc2ZlciIsNjQ2LCIyMDI0LTExLTI0IDA4OjQxOjI4Iiw3MTIzLDMsIldpcmVsZXNzIEhlYWRwaG9uZXMiLDE5OSwxLCJFbGVjdHJvbmljcyIsIkdvUHJvIiwiQmx1ZSJdLFs2MywiQ2FuY2VsbGVkIiwiQmFuayBUcmFuc2ZlciIsNjQ2LCIyMDI0LTExLTI0IDA4OjQxOjI4Iiw3MTIzLDYsIkJsdWV0b290aCBTcGVha2VyIiwxNDksMywiRWxlY3Ryb25pY3MiLCJCb3NlIiwiU2lsdmVyIl0sWzY0LCJDb21wbGV0ZWQiLCJCYW5rIFRyYW5zZmVyIiw5ODQsIjIwMjQtMTEtMjggMTI6MjM6MjEiLDI2MzksNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDMsIkVsZWN0cm9uaWNzIiwiTWljcm9zb2Z0IiwiV2hpdGUiXSxbNjQsIkNvbXBsZXRlZCIsIkJhbmsgVHJhbnNmZXIiLDk4NCwiMjAyNC0xMS0yOCAxMjoyMzoyMSIsMjYzOSwzLCJXaXJlbGVzcyBIZWFkcGhvbmVzIiwxOTksMywiRWxlY3Ryb25pY3MiLCJDYW5vbiIsIkJsdWUiXSxbODgsIkNhbmNlbGxlZCIsIkJhbmsgVHJhbnNmZXIiLDM4NywiMjAyNC0xMS0xNSAxMTozOTo0NCIsOTI0Nyw3LCJFeHRlcm5hbCBIYXJkIERyaXZlIiwxMjksMywiRWxlY3Ryb25pY3MiLCJCb3NlIiwiV2hpdGUiXSxbODksIkNhbmNlbGxlZCIsIkJhbmsgVHJhbnNmZXIiLDE0OSwiMjAyNC0xMS0yMiAxMjowOToxNSIsOTI0Nyw2LCJCbHVldG9vdGggU3BlYWtlciIsMTQ5LDEsIkVsZWN0cm9uaWNzIiwiR29Qcm8iLCJTaWx2ZXIiXSxbOTIsIlNoaXBwZWQiLCJQYXlQYWwiLDI1OCwiMjAyNC0xMS0yNCAyMzozMzoyMSIsNTU5Miw3LCJFeHRlcm5hbCBIYXJkIERyaXZlIiwxMjksMiwiRWxlY3Ryb25pY3MiLCJTb255IiwiQmxhY2siXSxbNiwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIiw3OTksIjIwMjQtMTAtMjggMDQ6NDc6MjciLDE5ODcsMTAsIkRyb25lIiw3OTksMSwiRWxlY3Ryb25pY3MiLCJHb1BybyIsIkJsYWNrIl0sWzEwLCJQZW5kaW5nIiwiQ3JlZGl0IENhcmQiLDM5OSwiMjAyNC0xMC0wNyAyMjowOToyNyIsNTgxNiw1LCJUYWJsZXQiLDM5OSwxLCJFbGVjdHJvbmljcyIsIkdvUHJvIiwiV2hpdGUiXSxbMTEsIlBlbmRpbmciLCJCYW5rIFRyYW5zZmVyIiw4OTcsIjIwMjQtMTAtMTMgMTc6MzQ6MTkiLDU4MTYsNCwiU21hcnR3YXRjaCIsMjk5LDMsIkVsZWN0cm9uaWNzIiwiQ2Fub24iLCJXaGl0ZSJdLFsxNSwiQ29tcGxldGVkIiwiQmFuayBUcmFuc2ZlciIsMTE5OSwiMjAyNC0xMC0yMCAwMTo0NzoyNSIsNzIwNyw5LCJTbWFydCBUViIsMTE5OSwxLCJFbGVjdHJvbmljcyIsIkdvUHJvIiwiV2hpdGUiXSxbMTksIlNoaXBwZWQiLCJQYXlQYWwiLDQ5OSwiMjAyNC0xMC0xMyAxMjo0MDoyNiIsODUzOSw4LCJHYW1pbmcgQ29uc29sZSIsNDk5LDEsIkVsZWN0cm9uaWNzIiwiRGVsbCIsIlNpbHZlciJdLFszOSwiU2hpcHBlZCIsIlBheVBhbCIsMzg3LCIyMDI0LTEwLTI5IDIxOjM5OjE5Iiw5MjYzLDcsIkV4dGVybmFsIEhhcmQgRHJpdmUiLDEyOSwzLCJFbGVjdHJvbmljcyIsIlNvbnkiLCJCbGFjayJdLFs1NSwiU2hpcHBlZCIsIkJhbmsgVHJhbnNmZXIiLDY5OSwiMjAyNC0xMC0yNSAwNTo0OToxNiIsOTAxOCwxLCJTbWFydHBob25lIiw2OTksMSwiRWxlY3Ryb25pY3MiLCJIUCIsIkJsYWNrIl0sWzU5LCJQZW5kaW5nIiwiUGF5UGFsIiw0OTksIjIwMjQtMTAtMjMgMDI6NTE6MDUiLDM0MDksOCwiR2FtaW5nIENvbnNvbGUiLDQ5OSwxLCJFbGVjdHJvbmljcyIsIkRlbGwiLCJCbGFjayJdLFs3MiwiQ2FuY2VsbGVkIiwiUGF5UGFsIiwzMjgsIjIwMjQtMTAtMDYgMTA6MjM6MjgiLDM4ODksMywiV2lyZWxlc3MgSGVhZHBob25lcyIsMTk5LDEsIkVsZWN0cm9uaWNzIiwiTWljcm9zb2Z0IiwiR3JheSJdLFs3MiwiQ2FuY2VsbGVkIiwiUGF5UGFsIiwzMjgsIjIwMjQtMTAtMDYgMTA6MjM6MjgiLDM4ODksNywiRXh0ZXJuYWwgSGFyZCBEcml2ZSIsMTI5LDEsIkVsZWN0cm9uaWNzIiwiU2Ftc3VuZyIsIlNpbHZlciJdLFs3NywiUGVuZGluZyIsIkNyZWRpdCBDYXJkIiwzOTgsIjIwMjQtMTAtMTUgMTM6MDk6MzMiLDkwODQsMywiV2lyZWxlc3MgSGVhZHBob25lcyIsMTk5LDIsIkVsZWN0cm9uaWNzIiwiSFAiLCJTaWx2ZXIiXSxbODQsIkNvbXBsZXRlZCIsIlBheVBhbCIsOTk4LCIyMDI0LTEwLTI1IDAzOjM3OjQyIiwyMzQ0LDEwLCJEcm9uZSIsNzk5LDEsIkVsZWN0cm9uaWNzIiwiU29ueSIsIkJsYWNrIl0sWzg0LCJDb21wbGV0ZWQiLCJQYXlQYWwiLDk5OCwiMjAyNC0xMC0yNSAwMzozNzo0MiIsMjM0NCwzLCJXaXJlbGVzcyBIZWFkcGhvbmVzIiwxOTksMSwiRWxlY3Ryb25pY3MiLCJMRyIsIkJsYWNrIl0sWzg1LCJTaGlwcGVkIiwiQmFuayBUcmFuc2ZlciIsOTk4LCIyMDI0LTEwLTIzIDIwOjA2OjQyIiw1MDExLDgsIkdhbWluZyBDb25zb2xlIiw0OTksMiwiRWxlY3Ryb25pY3MiLCJHb1BybyIsIkJsYWNrIl0sWzg2LCJDb21wbGV0ZWQiLCJQYXlQYWwiLDExOTksIjIwMjQtMTAtMTkgMTM6MzA6NDciLDUwMTEsOSwiU21hcnQgVFYiLDExOTksMSwiRWxlY3Ryb25pY3MiLCJEZWxsIiwiV2hpdGUiXV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoib3JkZXJfaWQiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoib3JkZXJfc3RhdHVzIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicGF5bWVudF9tZXRob2QiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJ0b3RhbF9hbW91bnQiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoidHJhbnNhY3Rpb25fdGltZXN0YW1wIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoiY3VzdG9tZXJfaWQiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoiaXRlbV9pZCIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJuYW1lIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicHJpY2UiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicXVhbnRpdHkiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoiY2F0ZWdvcnkiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJicmFuZCIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6ImNvbG9yIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6e319XSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJkZl9vcmRlcnMiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuZGF0YWZyYW1lLkRhdGFGcmFtZSIsInNjaGVtYSI6eyJmaWVsZHMiOlt7Im1ldGFkYXRhIjp7fSwibmFtZSI6Im9yZGVyX2lkIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJsb25nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJvcmRlcl9zdGF0dXMiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoicGF5bWVudF9tZXRob2QiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoidG90YWxfYW1vdW50IiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJsb25nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJ0cmFuc2FjdGlvbl90aW1lc3RhbXAiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiY3VzdG9tZXJfaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImxvbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6Iml0ZW1faWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImxvbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6Im5hbWUiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoicHJpY2UiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImxvbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InF1YW50aXR5IiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJsb25nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJjYXRlZ29yeSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJicmFuZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJjb2xvciIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6ImBnaXptb2JveGAuYHNpbHZlcmAuYHB5X29yZGVyc2AifV0sIm1ldGFkYXRhIjp7fX0sInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjE3NjI5ODAzMzEzMzAsInN1Ym1pdFRpbWUiOjE3NjI5ODAzMjcxNjIsImZpbmlzaFRpbWUiOjE3NjI5ODAzMzIxMjUsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnsicm93TGltaXQiOjEwMDAwLCJieXRlTGltaXQiOjIwNDgwMDB9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbWyJ0YWJsZSIsMTI0XV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjkyN2MyNDJlLTQyMzMtNDY2Mi1hZjVkLTk1MjY1Yzc0MDk0NiJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6NzcxNDAzODIwMzcxMjE0NCwiZ3VpZCI6ImVlMzllYWZkLTA5NWUtNGE3OS05MjJiLTc4ZTQ4NTQ2MDY1ZCIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjEuNjI1LCJjb21tYW5kIjoiZnJvbSBweXNwYXJrLnNxbCBpbXBvcnQgZnVuY3Rpb25zIGFzIEZcblxuZGZfb3JkZXJfc3VtbWFyeSA9IChcbiAgICBkZl9vcmRlcnNcbiAgICAud2l0aENvbHVtbihcIm9yZGVyX21vbnRoXCIsIEYuZGF0ZV9mb3JtYXQoJ3RyYW5zYWN0aW9uX3RpbWVzdGFtcCcsICd5eXl5LU1NJykpXG4gICAgLmdyb3VwQnkoJ29yZGVyX21vbnRoJywgJ2N1c3RvbWVyX2lkJylcbiAgICAuYWdnKFxuICAgICAgICBGLmNvdW50RGlzdGluY3QoJ29yZGVyX2lkJykuYWxpYXMoJ3RvdGFsX29yZGVycycpLFxuICAgICAgICBGLnN1bSgncXVhbnRpdHknKS5hbGlhcygndG90YWxfaXRlbXNfYm91Z2h0JyksXG4gICAgICAgIEYuc3VtKEYuY29sKCdwcmljZScpICogRi5jb2woJ3F1YW50aXR5JykpLmFsaWFzKCd0b3RhbF9hbW91bnQnKVxuICAgIClcbilcblxuZGlzcGxheShkZl9vcmRlcl9zdW1tYXJ5KSIsImNvbW1hbmRWZXJzaW9uIjo2OCwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6Imxpc3RSZXN1bHRzIiwiZGF0YSI6W3sidHlwZSI6InRhYmxlIiwiZGF0YSI6W1siMjAyNC0xMSIsOTE3OSwxLDEsOTk5XSxbIjIwMjQtMTIiLDIwNTQsMSwyLDM5OF0sWyIyMDI0LTEwIiw1ODE2LDIsNCwxMjk2XSxbIjIwMjUtMDEiLDkwODQsMiw0LDE3OTZdLFsiMjAyNS0wMSIsNjM4NCwyLDMsMTI5N10sWyIyMDI0LTExIiw4NTgwLDEsNCw1ODZdLFsiMjAyNC0xMSIsMjYzOSwxLDYsOTg0XSxbIjIwMjUtMDEiLDk2MDUsMiw3LDE4MjNdLFsiMjAyNS0wMSIsOTI0NywxLDIsMjU4XSxbIjIwMjQtMTEiLDQ5MTQsMiwyLDM5OF0sWyIyMDI0LTEyIiw3ODAzLDEsMyw3NDddLFsiMjAyNC0xMSIsODg0NSwxLDIsOTk4XSxbIjIwMjQtMTAiLDM0MDksMSwxLDQ5OV0sWyIyMDI0LTExIiwzODkyLDEsMiw5OThdLFsiMjAyNC0xMiIsMjM0NCwxLDMsMzg3XSxbIjIwMjUtMDEiLDcxMjMsMSw1LDk4NV0sWyIyMDI0LTEyIiwyNzAzLDIsNywxMDMzXSxbIjIwMjQtMTIiLDYxNjcsMSwxLDY5OV0sWyIyMDI1LTAxIiw3MDA3LDEsMSw2OTldLFsiMjAyNC0xMiIsNzEyMywxLDEsNjk5XSxbIjIwMjQtMTIiLDMwODQsMiw0LDEyOTZdLFsiMjAyNC0xMiIsNDk5NiwxLDEsMzk5XSxbIjIwMjQtMTAiLDkwMTgsMSwxLDY5OV0sWyIyMDI1LTAxIiw0OTk2LDEsMSwyOTldLFsiMjAyNC0xMSIsMTk4NywxLDUsNjQ1XSxbIjIwMjQtMTAiLDUwMTEsMiwzLDIxOTddLFsiMjAyNC0xMSIsODUzOSwyLDQsMTA5Nl0sWyIyMDI1LTAxIiwzMjk1LDEsMSwzOTldLFsiMjAyNS0wMSIsMzcxMiwxLDQsNzQ2XSxbIjIwMjUtMDEiLDYxNjcsMiw0LDEwODZdLFsiMjAyNS0wMSIsODU4MCwxLDIsNjk4XSxbIjIwMjQtMTIiLDcyOTUsMSwxLDEyOV0sWyIyMDI1LTAxIiw1MDI4LDEsMSw0OTldLFsiMjAyNC0xMCIsNzIwNywxLDEsMTE5OV0sWyIyMDI0LTEwIiwyMzQ0LDEsMiw5OThdLFsiMjAyNC0xMiIsOTY4NywyLDMsMTY5N10sWyIyMDI0LTEyIiw2NDA2LDIsMiw2NDhdLFsiMjAyNS0wMSIsNjk3MywxLDEsNDk5XSxbIjIwMjQtMTIiLDU1OTIsMSwxLDY5OV0sWyIyMDI0LTExIiw3ODAzLDIsNSw2ODVdLFsiMjAyNC0xMCIsOTA4NCwxLDIsMzk4XSxbIjIwMjQtMTEiLDkyNDcsMiw0LDUzNl0sWyIyMDI0LTEwIiwzODg5LDEsMiwzMjhdLFsiMjAyNC0xMSIsNDc2MSwxLDMsOTk3XSxbIjIwMjUtMDEiLDY2MjcsMSw1LDg5NV0sWyIyMDI0LTEyIiw3ODI5LDIsNSw3MDVdLFsiMjAyNC0xMSIsOTcwNiwxLDEsOTk5XSxbIjIwMjQtMTIiLDUyMDQsMiw1LDE1OTVdLFsiMjAyNS0wMSIsODg0NSwyLDIsMzQ4XSxbIjIwMjUtMDEiLDIzNDQsMSw1LDc4NV0sWyIyMDI0LTExIiw1MDI4LDEsMSwxNDldLFsiMjAyNC0xMiIsNzk5NywyLDQsMTA5Nl0sWyIyMDI0LTEwIiw5MjYzLDEsMywzODddLFsiMjAyNS0wMSIsMjE0MSwxLDEsMTI5XSxbIjIwMjUtMDEiLDkxNzksMSwxLDM5OV0sWyIyMDI0LTExIiw3MTIzLDEsNCw2NDZdLFsiMjAyNS0wMSIsNTk1MywxLDEsMTI5XSxbIjIwMjQtMTIiLDEyMTEsMSwxLDExOTldLFsiMjAyNC0xMiIsMzQwOSwxLDEsMTk5XSxbIjIwMjQtMTIiLDg1ODAsMSwxLDY5OV0sWyIyMDI1LTAxIiwzNTMyLDMsOSwyNTgxXSxbIjIwMjUtMDEiLDkxNTAsMyw5LDIxMzFdLFsiMjAyNS0wMSIsNDk3MywxLDEsMTQ5XSxbIjIwMjUtMDEiLDMwODQsMSwyLDU5OF0sWyIyMDI0LTEyIiw2NjI3LDIsNiwxNTQ0XSxbIjIwMjUtMDEiLDQ3NjEsMSwxLDE5OV0sWyIyMDI0LTEwIiwxOTg3LDEsMSw3OTldLFsiMjAyNC0xMiIsNTgxNiwxLDEsOTk5XSxbIjIwMjUtMDEiLDcyMDcsMSwzLDU5N10sWyIyMDI0LTExIiw0OTk2LDEsMSwxOTldLFsiMjAyNS0wMSIsNDQ2OCwxLDEsNzk5XSxbIjIwMjQtMTAiLDg1MzksMSwxLDQ5OV0sWyIyMDI0LTExIiw1NTkyLDEsMiwyNThdLFsiMjAyNC0xMiIsNDk3MywxLDEsNjk5XSxbIjIwMjQtMTIiLDQ4NTgsMSwxLDk5OV0sWyIyMDI0LTExIiw3Mjk1LDIsMiw5OThdXSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJzY2hlbWEiOlt7Im5hbWUiOiJvcmRlcl9tb250aCIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6ImN1c3RvbWVyX2lkIiwidHlwZSI6IlwibG9uZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InRvdGFsX29yZGVycyIsInR5cGUiOiJcImxvbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJ0b3RhbF9pdGVtc19ib3VnaHQiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoidG90YWxfYW1vdW50IiwidHlwZSI6IlwibG9uZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9XSwib3ZlcmZsb3ciOmZhbHNlLCJhZ2dEYXRhIjpbXSwiYWdnU2NoZW1hIjpbXSwiYWdnT3ZlcmZsb3ciOmZhbHNlLCJhZ2dTZXJpZXNMaW1pdFJlYWNoZWQiOmZhbHNlLCJhZ2dFcnJvciI6IiIsImFnZ1R5cGUiOiIiLCJwbG90T3B0aW9ucyI6bnVsbCwiaXNKc29uU2NoZW1hIjp0cnVlLCJkYmZzUmVzdWx0UGF0aCI6bnVsbCwiZGF0YXNldEluZm9zIjpbXSwiY29sdW1uQ3VzdG9tRGlzcGxheUluZm9zIjp7fSwibWV0YWRhdGEiOnt9fV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbeyJuYW1lIjoiZGZfb3JkZXJfc3VtbWFyeSIsInR5cGVTdHIiOiJweXNwYXJrLnNxbC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnt9LCJuYW1lIjoib3JkZXJfbW9udGgiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiY3VzdG9tZXJfaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImxvbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InRvdGFsX29yZGVycyIsIm51bGxhYmxlIjpmYWxzZSwidHlwZSI6ImxvbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InRvdGFsX2l0ZW1zX2JvdWdodCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoibG9uZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoidG90YWxfYW1vdW50IiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJsb25nIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6eyJ0eXBlIjoiYmFzZUVycm9yIiwic3RhY2tGcmFtZXMiOlsiXHUwMDFCWzA7MzFtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXHUwMDFCWzBtIiwiXHUwMDFCWzA7MzFtTmFtZUVycm9yXHUwMDFCWzBtICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVHJhY2ViYWNrIChtb3N0IHJlY2VudCBjYWxsIGxhc3QpIiwiRmlsZSBcdTAwMUJbMDszMm08Y29tbWFuZC03NzE0MDM4MjAzNzEyMTQ0PiwgbGluZSA1XHUwMDFCWzBtXG5cdTAwMUJbMTszMm0gICAgICAxXHUwMDFCWzBtIFx1MDAxQlszODs1OzI4OzAxbWZyb21cdTAwMUJbMzk7MDBtIFx1MDAxQlszODs1OzIxOzAxbXB5c3BhcmtcdTAwMUJbMzk7MDBtXHUwMDFCWzM4OzU7MjE7MDFtLlx1MDAxQlszOTswMG1cdTAwMUJbMzg7NTsyMTswMW1zcWxcdTAwMUJbMzk7MDBtIFx1MDAxQlszODs1OzI4OzAxbWltcG9ydFx1MDAxQlszOTswMG0gZnVuY3Rpb25zIFx1MDAxQlszODs1OzI4OzAxbWFzXHUwMDFCWzM5OzAwbSBGXG5cdTAwMUJbMTszMm0gICAgICAzXHUwMDFCWzBtIGRmX29yZGVyX3N1bW1hcnkgXHUwMDFCWzM4OzU7MjQxbT1cdTAwMUJbMzltIChcblx1MDAxQlsxOzMybSAgICAgIDRcdTAwMUJbMG0gICAgIGRmX29yZGVyc1xuXHUwMDFCWzA7MzJtLS0tLT4gNVx1MDAxQlswbSAgICAgXHUwMDFCWzM4OzU7MjQxbS5cdTAwMUJbMzltd2l0aENvbHVtbihcdTAwMUJbMzg7NTsxMjRtXCJcdTAwMUJbMzltXHUwMDFCWzM4OzU7MTI0bW9yZGVyX21vbnRoXHUwMDFCWzM5bVx1MDAxQlszODs1OzEyNG1cIlx1MDAxQlszOW0sIEZcdTAwMUJbMzg7NTsyNDFtLlx1MDAxQlszOW1kYXRlX2Zvcm1hdCh0cmFuc2FjdGlvbl90aW1lc3RhbXAsIFx1MDAxQlszODs1OzEyNG0nXHUwMDFCWzM5bVx1MDAxQlszODs1OzEyNG15eXl5LU1NXHUwMDFCWzM5bVx1MDAxQlszODs1OzEyNG0nXHUwMDFCWzM5bSkpXG5cdTAwMUJbMTszMm0gICAgICA2XHUwMDFCWzBtICAgICBcdTAwMUJbMzg7NTsyNDFtLlx1MDAxQlszOW1ncm91cEJ5KFx1MDAxQlszODs1OzEyNG0nXHUwMDFCWzM5bVx1MDAxQlszODs1OzEyNG1vcmRlcl9tb250aFx1MDAxQlszOW1cdTAwMUJbMzg7NTsxMjRtJ1x1MDAxQlszOW0sIFx1MDAxQlszODs1OzEyNG0nXHUwMDFCWzM5bVx1MDAxQlszODs1OzEyNG1jdXN0b21lcl9pZFx1MDAxQlszOW1cdTAwMUJbMzg7NTsxMjRtJ1x1MDAxQlszOW0pXG5cdTAwMUJbMTszMm0gICAgICA3XHUwMDFCWzBtICAgICBcdTAwMUJbMzg7NTsyNDFtLlx1MDAxQlszOW1hZ2coXG5cdTAwMUJbMTszMm0gICAgICA4XHUwMDFCWzBtICAgICAgICAgRlx1MDAxQlszODs1OzI0MW0uXHUwMDFCWzM5bWNvdW50RGlzdGluY3QoXHUwMDFCWzM4OzU7MTI0bSdcdTAwMUJbMzltXHUwMDFCWzM4OzU7MTI0bW9yZGVyX2lkXHUwMDFCWzM5bVx1MDAxQlszODs1OzEyNG0nXHUwMDFCWzM5bSlcdTAwMUJbMzg7NTsyNDFtLlx1MDAxQlszOW1hbGlhcyhcdTAwMUJbMzg7NTsxMjRtJ1x1MDAxQlszOW1cdTAwMUJbMzg7NTsxMjRtdG90YWxfb3JkZXJzXHUwMDFCWzM5bVx1MDAxQlszODs1OzEyNG0nXHUwMDFCWzM5bSksXG5cdTAwMUJbMTszMm0gICAgICA5XHUwMDFCWzBtICAgICAgICAgRlx1MDAxQlszODs1OzI0MW0uXHUwMDFCWzM5bXN1bShcdTAwMUJbMzg7NTsxMjRtJ1x1MDAxQlszOW1cdTAwMUJbMzg7NTsxMjRtcXVhbnRpdHlcdTAwMUJbMzltXHUwMDFCWzM4OzU7MTI0bSdcdTAwMUJbMzltKVx1MDAxQlszODs1OzI0MW0uXHUwMDFCWzM5bWFsaWFzKFx1MDAxQlszODs1OzEyNG0nXHUwMDFCWzM5bVx1MDAxQlszODs1OzEyNG10b3RhbF9pdGVtc19ib3VnaHRcdTAwMUJbMzltXHUwMDFCWzM4OzU7MTI0bSdcdTAwMUJbMzltKSxcblx1MDAxQlsxOzMybSAgICAgMTBcdTAwMUJbMG0gICAgICAgICBGXHUwMDFCWzM4OzU7MjQxbS5cdTAwMUJbMzltc3VtKEZcdTAwMUJbMzg7NTsyNDFtLlx1MDAxQlszOW1jb2woXHUwMDFCWzM4OzU7MTI0bSdcdTAwMUJbMzltXHUwMDFCWzM4OzU7MTI0bXByaWNlXHUwMDFCWzM5bVx1MDAxQlszODs1OzEyNG0nXHUwMDFCWzM5bSkgXHUwMDFCWzM4OzU7MjQxbSpcdTAwMUJbMzltIEZcdTAwMUJbMzg7NTsyNDFtLlx1MDAxQlszOW1jb2woXHUwMDFCWzM4OzU7MTI0bSdcdTAwMUJbMzltXHUwMDFCWzM4OzU7MTI0bXF1YW50aXR5XHUwMDFCWzM5bVx1MDAxQlszODs1OzEyNG0nXHUwMDFCWzM5bSkpXHUwMDFCWzM4OzU7MjQxbS5cdTAwMUJbMzltYWxpYXMoXHUwMDFCWzM4OzU7MTI0bSdcdTAwMUJbMzltXHUwMDFCWzM4OzU7MTI0bXRvdGFsX2Ftb3VudFx1MDAxQlszOW1cdTAwMUJbMzg7NTsxMjRtJ1x1MDAxQlszOW0pXG5cdTAwMUJbMTszMm0gICAgIDExXHUwMDFCWzBtICAgICApXG5cdTAwMUJbMTszMm0gICAgIDEyXHUwMDFCWzBtIClcblx1MDAxQlsxOzMybSAgICAgMTRcdTAwMUJbMG0gZGlzcGxheShkZl9vcmRlcl9zdW1tYXJ5KVxuIiwiXHUwMDFCWzA7MzFtTmFtZUVycm9yXHUwMDFCWzBtOiBuYW1lICd0cmFuc2FjdGlvbl90aW1lc3RhbXAnIGlzIG5vdCBkZWZpbmVkIl0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbXSwibWV0YWRhdGEiOnt9LCJqdXB5dGVyUHJvcHMiOnsiZW5hbWUiOiJOYW1lRXJyb3IiLCJldmFsdWUiOiJuYW1lICd0cmFuc2FjdGlvbl90aW1lc3RhbXAnIGlzIG5vdCBkZWZpbmVkIn0sInNxbFByb3BzIjpudWxsfSwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzYyOTgwNzUxMzI3LCJzdWJtaXRUaW1lIjoxNzYyOTgwNzUxMjg3LCJmaW5pc2hUaW1lIjoxNzYyOTgwNzUzMzg0LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDc2XV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6Ijc4NDU1ZTE1LTE1YmEtNGZmMi1iZDZmLTE4ODk1NjVlNGZlNCJ9XSwiZGFzaGJvYXJkcyI6W10sImd1aWQiOiIxYTc0NWM0ZS1kNmZlLTQzZjMtOGU1My05NTA5MGI2NTA5ZmQiLCJnbG9iYWxWYXJzIjp7fSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJpbnB1dFdpZGdldHMiOnt9LCJub3RlYm9va01ldGFkYXRhIjp7InB5dGhvbkluZGVudFVuaXQiOjQsIm1vc3RSZWNlbnRseUV4ZWN1dGVkQ29tbWFuZFdpdGhJbXBsaWNpdERGIjp7ImNvbW1hbmRJZCI6MjMwNTAxMzU1NTgzNzMzOSwiZGF0YWZyYW1lcyI6WyJfc3FsZGYiXX19LCJyZXBvc0V4cG9ydEZvcm1hdCI6IlNPVVJDRSIsImVudmlyb25tZW50TWV0YWRhdGEiOnsiY2xpZW50IjoiMSIsImJhc2VfZW52aXJvbm1lbnQiOiIifSwiY29tcHV0ZVByZWZlcmVuY2VzIjpudWxsLCJpbnB1dFdpZGdldFByZWZlcmVuY2VzIjpudWxsLCJlbnZpcm9ubWVudFNlcmlhbGl6YXRpb25QcmVmZXJlbmNlcyI6bnVsbH0="
+}

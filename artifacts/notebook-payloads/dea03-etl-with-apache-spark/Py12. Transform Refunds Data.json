@@ -1,0 +1,1789 @@
+{
+  "document": {
+    "commands": [
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "df_transformed_refunds.writeTo(\"gizmobox.silver.py_refunds\").createOrReplace()",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 2,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1762961790575,
+        "globalVars": {},
+        "guid": "d675d66a-f96f-4a0e-82b5-62e98e70846d",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "f83d0bf6-0aea-43f7-9650-4d4f9a475991",
+        "origId": 4809868232200490,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 3.5,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [],
+          "datasetInfos": [],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1762961785305,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1762961785267,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "from pyspark.sql import functions as F\ndf_split_refunds = (\n    df_refunds\n        .select(\n            \"refund_id\",\n            \"payment_id\",\n            \"refund_timestamp\",\n            \"refund_amount\",\n            F.split(\"refund_reason\", \":\")[0].alias(\"refund_reason\"),\n            F.split(\"refund_reason\", \":\")[1].alias(\"refund_source\")\n        )\n)\ndisplay(df_split_refunds)",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 2,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1762961681056,
+        "globalVars": {},
+        "guid": "25afa419-fc9b-428b-98ee-1a7e3672c8cd",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            10
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "7bfcd7db-9c47-4444-9b2f-51bdce691524",
+        "origId": 4809868232200487,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.140625,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  1,
+                  66,
+                  "2025-01-10T11:30:00Z",
+                  "85.75",
+                  "Payment Error",
+                  "Retailer"
+                ],
+                [
+                  2,
+                  69,
+                  "2025-01-03T12:40:15Z",
+                  "120.50",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  3,
+                  72,
+                  "2025-01-06T14:45:30Z",
+                  "65.00",
+                  "Product Returned",
+                  "Customer"
+                ],
+                [
+                  4,
+                  73,
+                  "2025-01-07T16:10:45Z",
+                  "210.99",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  5,
+                  75,
+                  "2025-01-09T18:25:00Z",
+                  "45.20",
+                  "Payment Error",
+                  "Retailer"
+                ],
+                [
+                  6,
+                  80,
+                  "2025-01-10T09:35:20Z",
+                  "130.15",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  7,
+                  83,
+                  "2025-01-12T11:20:40Z",
+                  "150.00",
+                  "Product Returned",
+                  "Customer"
+                ],
+                [
+                  8,
+                  85,
+                  "2025-01-14T13:15:30Z",
+                  "89.99",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  9,
+                  89,
+                  "2025-01-15T15:00:00Z",
+                  "78.50",
+                  "Payment Error",
+                  "Retailer"
+                ],
+                [
+                  10,
+                  91,
+                  "2025-01-17T16:45:15Z",
+                  "250.75",
+                  "Product Returned",
+                  "Customer"
+                ]
+              ],
+              "datasetInfos": [],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {},
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":0}",
+                  "name": "refund_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":0}",
+                  "name": "payment_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":false,\"scale\":3}",
+                  "name": "refund_timestamp",
+                  "type": "\"timestamp\""
+                },
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":2}",
+                  "name": "refund_amount",
+                  "type": "\"decimal(10,2)\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "refund_reason",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "refund_source",
+                  "type": "\"string\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "df_split_refunds",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "refund_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "payment_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 3,
+                      "signed": false
+                    },
+                    "name": "refund_timestamp",
+                    "nullable": true,
+                    "type": "timestamp"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 2,
+                      "signed": true
+                    },
+                    "name": "refund_amount",
+                    "nullable": true,
+                    "type": "decimal(10,2)"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "refund_reason",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "refund_source",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1762961680524,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1762961680465,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n## Transform Refunds Data\n1. Extract specific portion of the string from refund_reason using split function\n1. Extract specific portion of the string from refund_reason using regexp_extract function\n1. Extract date and time from the refund_timestamp\n1. Write transformed data to the Silver schema",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 25,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "401dc428-5244-49cc-9820-fe4f1198403b",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "85dfb233-a70b-40c2-854a-5111d0143005",
+        "origId": 3844939428769104,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 0.5,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": {
+          "addedWidgets": {},
+          "arguments": {},
+          "datasetInfos": [],
+          "jupyterProps": null,
+          "metadata": {},
+          "removedWidgets": [],
+          "sqlProps": null,
+          "stackFrames": [
+            "com.databricks.backend.common.rpc.SparkDriverExceptions$SQLExecutionException: java.util.concurrent.ExecutionException: com.microsoft.sqlserver.jdbc.SQLServerException: Database 'gizmobox-db' on server 'gizmobox-srv.database.windows.net' is not currently available.  Please retry the connection later.  If the problem persists, contact customer support, and provide them the session tracing ID of '{1D5DFDFF-9D63-44D8-8423-91BF6EA9446E}'. ClientConnectionId:b8ab3828-557e-4a87-bc22-1202515a5788",
+            "\tat com.google.common.util.concurrent.AbstractFuture$Sync.getValue(AbstractFuture.java:299)",
+            "\tat com.google.common.util.concurrent.AbstractFuture$Sync.get(AbstractFuture.java:286)",
+            "\tat com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:116)",
+            "\tat com.google.common.util.concurrent.Uninterruptibles.getUninterruptibly(Uninterruptibles.java:135)",
+            "\tat com.google.common.cache.LocalCache$Segment.getAndRecordStats(LocalCache.java:2344)",
+            "\tat com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2316)",
+            "\tat com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2278)",
+            "\tat com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2193)",
+            "\tat com.google.common.cache.LocalCache.get(LocalCache.java:3932)",
+            "\tat com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4721)",
+            "\tat org.apache.spark.sql.catalyst.catalog.SessionCatalogImpl.getCachedPlan(SessionCatalog.scala:752)",
+            "\tat org.apache.spark.sql.catalyst.catalog.DelegatingSessionCatalog.getCachedPlan(DelegatingSessionCatalog.scala:64)",
+            "\tat org.apache.spark.sql.catalyst.catalog.DelegatingSessionCatalog.getCachedPlan$(DelegatingSessionCatalog.scala:63)",
+            "\tat com.databricks.sql.managedcatalog.ManagedCatalogSessionCatalog.getCachedPlan(ManagedCatalogSessionCatalog.scala:91)",
+            "\tat org.apache.spark.sql.execution.datasources.FindDataSourceTable.org$apache$spark$sql$execution$datasources$FindDataSourceTable$$readDataSourceTable(DataSourceStrategy.scala:327)",
+            "\tat org.apache.spark.sql.execution.datasources.FindDataSourceTable$$anonfun$apply0$1.applyOrElse(DataSourceStrategy.scala:455)",
+            "\tat org.apache.spark.sql.execution.datasources.FindDataSourceTable$$anonfun$apply0$1.applyOrElse(DataSourceStrategy.scala:417)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$2(AnalysisHelper.scala:219)",
+            "\tat org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:85)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$1(AnalysisHelper.scala:219)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:436)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning(AnalysisHelper.scala:217)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning$(AnalysisHelper.scala:213)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsDownWithPruning(LogicalPlan.scala:40)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$4(AnalysisHelper.scala:224)",
+            "\tat org.apache.spark.sql.catalyst.trees.UnaryLike.mapChildren(TreeNode.scala:1314)",
+            "\tat org.apache.spark.sql.catalyst.trees.UnaryLike.mapChildren$(TreeNode.scala:1313)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.SubqueryAlias.mapChildren(basicLogicalOperators.scala:2078)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$1(AnalysisHelper.scala:224)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:436)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning(AnalysisHelper.scala:217)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning$(AnalysisHelper.scala:213)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsDownWithPruning(LogicalPlan.scala:40)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$4(AnalysisHelper.scala:224)",
+            "\tat org.apache.spark.sql.catalyst.trees.UnaryLike.mapChildren(TreeNode.scala:1314)",
+            "\tat org.apache.spark.sql.catalyst.trees.UnaryLike.mapChildren$(TreeNode.scala:1313)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.Project.mapChildren(basicLogicalOperators.scala:87)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsDownWithPruning$1(AnalysisHelper.scala:224)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:436)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning(AnalysisHelper.scala:217)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsDownWithPruning$(AnalysisHelper.scala:213)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsDownWithPruning(LogicalPlan.scala:40)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsWithPruning(AnalysisHelper.scala:102)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsWithPruning$(AnalysisHelper.scala:99)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsWithPruning(LogicalPlan.scala:40)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperators(AnalysisHelper.scala:79)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperators$(AnalysisHelper.scala:78)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperators(LogicalPlan.scala:40)",
+            "\tat org.apache.spark.sql.execution.datasources.FindDataSourceTable.apply0(DataSourceStrategy.scala:417)",
+            "\tat org.apache.spark.sql.execution.datasources.FindDataSourceTable.apply(DataSourceStrategy.scala:411)",
+            "\tat org.apache.spark.sql.execution.datasources.FindDataSourceTable.apply(DataSourceStrategy.scala:272)",
+            "\tat org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$4(RuleExecutor.scala:327)",
+            "\tat com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:94)",
+            "\tat org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$3(RuleExecutor.scala:327)",
+            "\tat scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)",
+            "\tat scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)",
+            "\tat scala.collection.immutable.List.foldLeft(List.scala:91)",
+            "\tat org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$2(RuleExecutor.scala:324)",
+            "\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)",
+            "\tat com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:94)",
+            "\tat org.apache.spark.sql.catalyst.rules.RuleExecutor.executeBatch$1(RuleExecutor.scala:307)",
+            "\tat org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$9(RuleExecutor.scala:411)",
+            "\tat org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$9$adapted(RuleExecutor.scala:411)",
+            "\tat scala.collection.immutable.List.foreach(List.scala:431)",
+            "\tat org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1(RuleExecutor.scala:411)",
+            "\tat com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:94)",
+            "\tat org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:270)",
+            "\tat org.apache.spark.sql.catalyst.analysis.Analyzer.executeSameContext(Analyzer.scala:444)",
+            "\tat org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$execute$1(Analyzer.scala:437)",
+            "\tat org.apache.spark.sql.catalyst.analysis.AnalysisContext$.withNewAnalysisContext(Analyzer.scala:350)",
+            "\tat org.apache.spark.sql.catalyst.analysis.Analyzer.execute(Analyzer.scala:437)",
+            "\tat org.apache.spark.sql.catalyst.analysis.Analyzer.execute(Analyzer.scala:369)",
+            "\tat org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$executeAndTrack$1(RuleExecutor.scala:262)",
+            "\tat org.apache.spark.sql.catalyst.QueryPlanningTracker$.withTracker(QueryPlanningTracker.scala:182)",
+            "\tat org.apache.spark.sql.catalyst.rules.RuleExecutor.executeAndTrack(RuleExecutor.scala:262)",
+            "\tat org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$1(Analyzer.scala:422)",
+            "\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:443)",
+            "\tat org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:421)",
+            "\tat org.apache.spark.sql.execution.QueryExecution.$anonfun$analyzed$1(QueryExecution.scala:262)",
+            "\tat com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:94)",
+            "\tat org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:458)",
+            "\tat org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$5(QueryExecution.scala:613)",
+            "\tat org.apache.spark.sql.execution.SQLExecution$.withExecutionPhase(SQLExecution.scala:144)",
+            "\tat org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$4(QueryExecution.scala:613)",
+            "\tat org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:1179)",
+            "\tat org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$2(QueryExecution.scala:612)",
+            "\tat com.databricks.util.LexicalThreadLocal$Handle.runWith(LexicalThreadLocal.scala:63)",
+            "\tat org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:608)",
+            "\tat org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:1180)",
+            "\tat org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:608)",
+            "\tat org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:256)",
+            "\tat org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:255)",
+            "\tat org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:237)",
+            "\tat org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:130)",
+            "\tat org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:1180)",
+            "\tat org.apache.spark.sql.SparkSession.$anonfun$withActiveAndFrameProfiler$1(SparkSession.scala:1187)",
+            "\tat com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:94)",
+            "\tat org.apache.spark.sql.SparkSession.withActiveAndFrameProfiler(SparkSession.scala:1187)",
+            "\tat org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:122)",
+            "\tat org.apache.spark.sql.SparkSession.$anonfun$sql$4(SparkSession.scala:959)",
+            "\tat org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:1180)",
+            "\tat org.apache.spark.sql.SparkSession.sql(SparkSession.scala:947)",
+            "\tat org.apache.spark.sql.SparkSession.sql(SparkSession.scala:982)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal$DbClassicStrategy.executeSQLQuery(DriverLocal.scala:301)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.executeSQLSubCommand(DriverLocal.scala:401)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.$anonfun$executeSql$1(DriverLocal.scala:423)",
+            "\tat scala.collection.immutable.List.map(List.scala:293)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.executeSql(DriverLocal.scala:418)",
+            "\tat com.databricks.backend.daemon.driver.SQLDriverLocal.repl(SQLDriverLocal.scala:40)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.$anonfun$execute$33(DriverLocal.scala:1172)",
+            "\tat com.databricks.unity.UCSEphemeralState$Handle.runWith(UCSEphemeralState.scala:51)",
+            "\tat com.databricks.unity.HandleImpl.runWith(UCSHandle.scala:104)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.$anonfun$execute$28(DriverLocal.scala:1163)",
+            "\tat com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:48)",
+            "\tat com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:276)",
+            "\tat scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)",
+            "\tat com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:272)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:46)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:43)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.withAttributionContext(DriverLocal.scala:96)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionTags(AttributionContextTracing.scala:95)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionTags$(AttributionContextTracing.scala:76)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.withAttributionTags(DriverLocal.scala:96)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.$anonfun$execute$1(DriverLocal.scala:1099)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal$.$anonfun$maybeSynchronizeExecution$4(DriverLocal.scala:1519)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.execute(DriverLocal.scala:776)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$tryExecutingCommand$2(DriverWrapper.scala:932)",
+            "\tat scala.util.Try$.apply(Try.scala:213)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$tryExecutingCommand$1(DriverWrapper.scala:921)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$tryExecutingCommand$3(DriverWrapper.scala:967)",
+            "\tat com.databricks.logging.UsageLogging.executeThunkAndCaptureResultTags$1(UsageLogging.scala:633)",
+            "\tat com.databricks.logging.UsageLogging.$anonfun$recordOperationWithResultTags$4(UsageLogging.scala:656)",
+            "\tat com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:48)",
+            "\tat com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:276)",
+            "\tat scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)",
+            "\tat com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:272)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:46)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:43)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.withAttributionContext(DriverWrapper.scala:73)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionTags(AttributionContextTracing.scala:95)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionTags$(AttributionContextTracing.scala:76)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.withAttributionTags(DriverWrapper.scala:73)",
+            "\tat com.databricks.logging.UsageLogging.recordOperationWithResultTags(UsageLogging.scala:628)",
+            "\tat com.databricks.logging.UsageLogging.recordOperationWithResultTags$(UsageLogging.scala:537)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.recordOperationWithResultTags(DriverWrapper.scala:73)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.tryExecutingCommand(DriverWrapper.scala:967)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.executeCommandAndGetError(DriverWrapper.scala:717)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.executeCommand(DriverWrapper.scala:785)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$runInnerLoop$1(DriverWrapper.scala:590)",
+            "\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)",
+            "\tat com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:48)",
+            "\tat com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:276)",
+            "\tat scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)",
+            "\tat com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:272)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:46)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:43)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.withAttributionContext(DriverWrapper.scala:73)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.runInnerLoop(DriverWrapper.scala:590)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.runInner(DriverWrapper.scala:512)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.run(DriverWrapper.scala:306)",
+            "\tat java.lang.Thread.run(Thread.java:750)",
+            "Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Database 'gizmobox-db' on server 'gizmobox-srv.database.windows.net' is not currently available.  Please retry the connection later.  If the problem persists, contact customer support, and provide them the session tracing ID of '{1D5DFDFF-9D63-44D8-8423-91BF6EA9446E}'. ClientConnectionId:b8ab3828-557e-4a87-bc22-1202515a5788",
+            "\tat com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:265)",
+            "\tat com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:300)",
+            "\tat com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:133)",
+            "\tat com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:37)",
+            "\tat com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:6299)",
+            "\tat com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4911)",
+            "\tat com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:90)",
+            "\tat com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4849)",
+            "\tat com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7627)",
+            "\tat com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3916)",
+            "\tat com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:3358)",
+            "\tat com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2950)",
+            "\tat com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2790)",
+            "\tat com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1663)",
+            "\tat com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1064)",
+            "\tat org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:50)",
+            "\tat org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)",
+            "\tat org.apache.spark.sql.jdbc.MsSqlServerDialect$.$anonfun$createConnectionFactory$2(MsSqlServerDialect.scala:68)",
+            "\tat org.apache.spark.sql.jdbc.MsSqlServerDialect$.$anonfun$createConnectionFactory$2$adapted(MsSqlServerDialect.scala:64)",
+            "\tat org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD$.getQueryOutputSchema(JDBCRDD.scala:73)",
+            "\tat org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD$.resolveTable(JDBCRDD.scala:68)",
+            "\tat org.apache.spark.sql.execution.datasources.jdbc.JDBCRelation$.getSchema(JDBCRelation.scala:243)",
+            "\tat org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:44)",
+            "\tat org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:403)",
+            "\tat org.apache.spark.sql.execution.datasources.FindDataSourceTable.$anonfun$readDataSourceTable$7(DataSourceStrategy.scala:351)",
+            "\tat com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4724)",
+            "\tat com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3522)",
+            "\tat com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2315)",
+            "\t... 155 more",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.executeSql(DriverLocal.scala:475)",
+            "\tat com.databricks.backend.daemon.driver.SQLDriverLocal.repl(SQLDriverLocal.scala:40)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.$anonfun$execute$33(DriverLocal.scala:1172)",
+            "\tat com.databricks.unity.UCSEphemeralState$Handle.runWith(UCSEphemeralState.scala:51)",
+            "\tat com.databricks.unity.HandleImpl.runWith(UCSHandle.scala:104)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.$anonfun$execute$28(DriverLocal.scala:1163)",
+            "\tat com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:48)",
+            "\tat com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:276)",
+            "\tat scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)",
+            "\tat com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:272)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:46)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:43)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.withAttributionContext(DriverLocal.scala:96)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionTags(AttributionContextTracing.scala:95)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionTags$(AttributionContextTracing.scala:76)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.withAttributionTags(DriverLocal.scala:96)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.$anonfun$execute$1(DriverLocal.scala:1099)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal$.$anonfun$maybeSynchronizeExecution$4(DriverLocal.scala:1519)",
+            "\tat com.databricks.backend.daemon.driver.DriverLocal.execute(DriverLocal.scala:776)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$tryExecutingCommand$2(DriverWrapper.scala:932)",
+            "\tat scala.util.Try$.apply(Try.scala:213)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$tryExecutingCommand$1(DriverWrapper.scala:921)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$tryExecutingCommand$3(DriverWrapper.scala:967)",
+            "\tat com.databricks.logging.UsageLogging.executeThunkAndCaptureResultTags$1(UsageLogging.scala:633)",
+            "\tat com.databricks.logging.UsageLogging.$anonfun$recordOperationWithResultTags$4(UsageLogging.scala:656)",
+            "\tat com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:48)",
+            "\tat com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:276)",
+            "\tat scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)",
+            "\tat com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:272)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:46)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:43)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.withAttributionContext(DriverWrapper.scala:73)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionTags(AttributionContextTracing.scala:95)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionTags$(AttributionContextTracing.scala:76)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.withAttributionTags(DriverWrapper.scala:73)",
+            "\tat com.databricks.logging.UsageLogging.recordOperationWithResultTags(UsageLogging.scala:628)",
+            "\tat com.databricks.logging.UsageLogging.recordOperationWithResultTags$(UsageLogging.scala:537)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.recordOperationWithResultTags(DriverWrapper.scala:73)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.tryExecutingCommand(DriverWrapper.scala:967)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.executeCommandAndGetError(DriverWrapper.scala:717)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.executeCommand(DriverWrapper.scala:785)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$runInnerLoop$1(DriverWrapper.scala:590)",
+            "\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)",
+            "\tat com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:48)",
+            "\tat com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:276)",
+            "\tat scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)",
+            "\tat com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:272)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:46)",
+            "\tat com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:43)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.withAttributionContext(DriverWrapper.scala:73)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.runInnerLoop(DriverWrapper.scala:590)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.runInner(DriverWrapper.scala:512)",
+            "\tat com.databricks.backend.daemon.driver.DriverWrapper.run(DriverWrapper.scala:306)",
+            "\tat java.lang.Thread.run(Thread.java:750)"
+          ],
+          "type": "baseError"
+        },
+        "bindings": {},
+        "collapsed": false,
+        "command": "df_refunds = spark.table('gizmobox.bronze.py_refunds')\ndisplay(df_refunds)",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 18,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1762961623096,
+        "globalVars": {},
+        "guid": "c7e85e06-ec88-47b4-b702-641e8d76e36f",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            10
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "626cb62d-8b44-436d-ae30-e1e6a13a21db",
+        "origId": 3844939428769105,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  1,
+                  66,
+                  "2025-01-10T11:30:00Z",
+                  "85.75",
+                  "Payment Error:Retailer"
+                ],
+                [
+                  2,
+                  69,
+                  "2025-01-03T12:40:15Z",
+                  "120.50",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  3,
+                  72,
+                  "2025-01-06T14:45:30Z",
+                  "65.00",
+                  "Product Returned:Customer"
+                ],
+                [
+                  4,
+                  73,
+                  "2025-01-07T16:10:45Z",
+                  "210.99",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  5,
+                  75,
+                  "2025-01-09T18:25:00Z",
+                  "45.20",
+                  "Payment Error:Retailer"
+                ],
+                [
+                  6,
+                  80,
+                  "2025-01-10T09:35:20Z",
+                  "130.15",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  7,
+                  83,
+                  "2025-01-12T11:20:40Z",
+                  "150.00",
+                  "Product Returned:Customer"
+                ],
+                [
+                  8,
+                  85,
+                  "2025-01-14T13:15:30Z",
+                  "89.99",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  9,
+                  89,
+                  "2025-01-15T15:00:00Z",
+                  "78.50",
+                  "Payment Error:Retailer"
+                ],
+                [
+                  10,
+                  91,
+                  "2025-01-17T16:45:15Z",
+                  "250.75",
+                  "Product Returned:Customer"
+                ]
+              ],
+              "datasetInfos": [],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {},
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":0}",
+                  "name": "refund_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":0}",
+                  "name": "payment_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":false,\"scale\":3}",
+                  "name": "refund_timestamp",
+                  "type": "\"timestamp\""
+                },
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":2}",
+                  "name": "refund_amount",
+                  "type": "\"decimal(10,2)\""
+                },
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":false,\"scale\":0}",
+                  "name": "refund_reason",
+                  "type": "\"string\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "df_refunds",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "refund_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "payment_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 3,
+                      "signed": false
+                    },
+                    "name": "refund_timestamp",
+                    "nullable": true,
+                    "type": "timestamp"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 2,
+                      "signed": true
+                    },
+                    "name": "refund_amount",
+                    "nullable": true,
+                    "type": "decimal(10,2)"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 0,
+                      "signed": false
+                    },
+                    "name": "refund_reason",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": "`gizmobox`.`bronze`.`py_refunds`",
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1762961622413,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1762961622305,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n### 1. Extract specific portion of the string from refund_reason using split function",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 5,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "2beac4a8-e35b-435e-b9c4-f504d55e22e5",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "697af4db-6cfe-431a-be92-31053b937397",
+        "origId": 3844939428769106,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.0625,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n### 2. Extract specific portion of the string from refund_reason using regexp_extract function",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 14,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "724cc393-c5b2-4bae-bc53-2d1c2bcc215d",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "76e281b8-3e17-48a7-b5de-13c05595848d",
+        "origId": 3844939428769108,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.375,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n### 3. Write transformed data to the Silver schema  ",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 3,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "43e6926b-e9e8-4910-a644-d2a85bec37d7",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "f604f2f3-411f-4583-a7ae-d0c90da91807",
+        "origId": 3844939428769110,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 2.5,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%sql\nSELECT * FROM gizmobox.silver.py_refunds;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 5,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1762961798339,
+        "globalVars": {},
+        "guid": "69260a4b-80c3-4f7f-8d92-24857dd1c646",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            10
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "implicitDf": true,
+          "rowLimit": 10000
+        },
+        "nuid": "47dda4a8-451c-40fe-90e9-09f012f32277",
+        "origId": 3844939428769113,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 4.5,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  1,
+                  66,
+                  "2025-01-10",
+                  "11-30-00",
+                  "85.75",
+                  "Payment Error",
+                  "Retailer"
+                ],
+                [
+                  2,
+                  69,
+                  "2025-01-03",
+                  "12-40-15",
+                  "120.50",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  3,
+                  72,
+                  "2025-01-06",
+                  "14-45-30",
+                  "65.00",
+                  "Product Returned",
+                  "Customer"
+                ],
+                [
+                  4,
+                  73,
+                  "2025-01-07",
+                  "16-10-45",
+                  "210.99",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  5,
+                  75,
+                  "2025-01-09",
+                  "18-25-00",
+                  "45.20",
+                  "Payment Error",
+                  "Retailer"
+                ],
+                [
+                  6,
+                  80,
+                  "2025-01-10",
+                  "09-35-20",
+                  "130.15",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  7,
+                  83,
+                  "2025-01-12",
+                  "11-20-40",
+                  "150.00",
+                  "Product Returned",
+                  "Customer"
+                ],
+                [
+                  8,
+                  85,
+                  "2025-01-14",
+                  "13-15-30",
+                  "89.99",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  9,
+                  89,
+                  "2025-01-15",
+                  "15-00-00",
+                  "78.50",
+                  "Payment Error",
+                  "Retailer"
+                ],
+                [
+                  10,
+                  91,
+                  "2025-01-17",
+                  "16-45-15",
+                  "250.75",
+                  "Product Returned",
+                  "Customer"
+                ]
+              ],
+              "datasetInfos": [
+                {
+                  "name": "_sqldf",
+                  "schema": {
+                    "fields": [
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "scale": 0,
+                          "signed": true
+                        },
+                        "name": "refund_id",
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "scale": 0,
+                          "signed": true
+                        },
+                        "name": "payment_id",
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "refund_date",
+                        "nullable": true,
+                        "type": "date"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "refund_time",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "scale": 2,
+                          "signed": true
+                        },
+                        "name": "refund_amount",
+                        "nullable": true,
+                        "type": "decimal(10,2)"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "refund_reason",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "refund_source",
+                        "nullable": true,
+                        "type": "string"
+                      }
+                    ],
+                    "type": "struct"
+                  },
+                  "tableIdentifier": null,
+                  "typeStr": "pyspark.sql.dataframe.DataFrame"
+                }
+              ],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {
+                "createTempViewForImplicitDf": true,
+                "dataframeName": "_sqldf",
+                "executionCount": 14
+              },
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":0}",
+                  "name": "refund_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":0}",
+                  "name": "payment_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "refund_date",
+                  "type": "\"date\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "refund_time",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":2}",
+                  "name": "refund_amount",
+                  "type": "\"decimal(10,2)\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "refund_reason",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "refund_source",
+                  "type": "\"string\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "_sqldf",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "refund_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "payment_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "refund_date",
+                    "nullable": true,
+                    "type": "date"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "refund_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 2,
+                      "signed": true
+                    },
+                    "name": "refund_amount",
+                    "nullable": true,
+                    "type": "decimal(10,2)"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "refund_reason",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "refund_source",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1762961796248,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1762961796208,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "df_transformed_refunds = (\n    df_refunds\n        .select(\n            \"refund_id\",\n            \"payment_id\",\n            F.date_format('refund_timestamp','yyyy-MM-dd').cast('date').alias('refund_date'),\n            F.date_format('refund_timestamp','HH-mm-ss').alias('refund_time'),\n            \"refund_amount\",\n            F.regexp_extract(\"refund_reason\", \"^([^:]+):\", 1).alias(\"refund_reason\"),\n            F.regexp_extract(\"refund_reason\", \"^[^:]+:(.*)$\", 1).alias(\"refund_source\")\n        )\n)\ndisplay(df_transformed_refunds)",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 10,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1762961753231,
+        "globalVars": {},
+        "guid": "d064178e-a939-44a8-890e-5d97654fb258",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            10
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "846f862f-df28-4a9c-8e55-e4340f3fd009",
+        "origId": 4809868232200489,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.796875,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  1,
+                  66,
+                  "2025-01-10",
+                  "11-30-00",
+                  "85.75",
+                  "Payment Error",
+                  "Retailer"
+                ],
+                [
+                  2,
+                  69,
+                  "2025-01-03",
+                  "12-40-15",
+                  "120.50",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  3,
+                  72,
+                  "2025-01-06",
+                  "14-45-30",
+                  "65.00",
+                  "Product Returned",
+                  "Customer"
+                ],
+                [
+                  4,
+                  73,
+                  "2025-01-07",
+                  "16-10-45",
+                  "210.99",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  5,
+                  75,
+                  "2025-01-09",
+                  "18-25-00",
+                  "45.20",
+                  "Payment Error",
+                  "Retailer"
+                ],
+                [
+                  6,
+                  80,
+                  "2025-01-10",
+                  "09-35-20",
+                  "130.15",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  7,
+                  83,
+                  "2025-01-12",
+                  "11-20-40",
+                  "150.00",
+                  "Product Returned",
+                  "Customer"
+                ],
+                [
+                  8,
+                  85,
+                  "2025-01-14",
+                  "13-15-30",
+                  "89.99",
+                  "Order Cancelled",
+                  "Customer"
+                ],
+                [
+                  9,
+                  89,
+                  "2025-01-15",
+                  "15-00-00",
+                  "78.50",
+                  "Payment Error",
+                  "Retailer"
+                ],
+                [
+                  10,
+                  91,
+                  "2025-01-17",
+                  "16-45-15",
+                  "250.75",
+                  "Product Returned",
+                  "Customer"
+                ]
+              ],
+              "datasetInfos": [],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {},
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":0}",
+                  "name": "refund_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":0}",
+                  "name": "payment_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "refund_date",
+                  "type": "\"date\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "refund_time",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{\"isTimestampNTZ\":false,\"signed\":true,\"scale\":2}",
+                  "name": "refund_amount",
+                  "type": "\"decimal(10,2)\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "refund_reason",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "refund_source",
+                  "type": "\"string\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "df_transformed_refunds",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "refund_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "payment_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "refund_date",
+                    "nullable": true,
+                    "type": "date"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "refund_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "scale": 2,
+                      "signed": true
+                    },
+                    "name": "refund_amount",
+                    "nullable": true,
+                    "type": "decimal(10,2)"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "refund_reason",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "refund_source",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1762961752612,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1762961752538,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      }
+    ],
+    "computePreferences": null,
+    "dashboards": [],
+    "environmentMetadata": {
+      "base_environment": "",
+      "client": "1"
+    },
+    "environmentSerializationPreferences": null,
+    "globalVars": {},
+    "guid": "e897cb8a-eef1-4826-aaa7-6eead25f5be7",
+    "iPythonMetadata": null,
+    "inputWidgetPreferences": null,
+    "inputWidgets": {},
+    "language": "python",
+    "name": "Py12. Transform Refunds Data",
+    "notebookMetadata": {
+      "mostRecentlyExecutedCommandWithImplicitDF": {
+        "commandId": 3844939428769113,
+        "dataframes": [
+          "_sqldf"
+        ]
+      },
+      "pythonIndentUnit": 4
+    },
+    "origId": 3844939428769103,
+    "reposExportFormat": "SOURCE",
+    "version": "NotebookV1"
+  },
+  "provenance": {
+    "aliases": [],
+    "archive": "materials/archives/dea-course-v5.dbc",
+    "archive_sha256": "23908dc947dc9279b1176575fa5b0966281fca608509c6fed3deca7700146488",
+    "member": "dea-course/dea03-etl-with-apache-spark/Py12. Transform Refunds Data.python",
+    "member_sha256": "922a2450af8c69f3bc4fbe5fc4cf0baf9d5b99595718f979c03957116582b0fb"
+  },
+  "schema_version": 1,
+  "source_base64": "eyJ2ZXJzaW9uIjoiTm90ZWJvb2tWMSIsIm9yaWdJZCI6Mzg0NDkzOTQyODc2OTEwMywibmFtZSI6IlB5MTIuIFRyYW5zZm9ybSBSZWZ1bmRzIERhdGEiLCJsYW5ndWFnZSI6InB5dGhvbiIsImNvbW1hbmRzIjpbeyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo0ODA5ODY4MjMyMjAwNDkwLCJndWlkIjoiZDY3NWQ2NmEtZjk2Zi00YTBlLTgyYjUtNjJlOThlNzA4NDZkIiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6My41LCJjb21tYW5kIjoiZGZfdHJhbnNmb3JtZWRfcmVmdW5kcy53cml0ZVRvKFwiZ2l6bW9ib3guc2lsdmVyLnB5X3JlZnVuZHNcIikuY3JlYXRlT3JSZXBsYWNlKCkiLCJjb21tYW5kVmVyc2lvbiI6Miwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6Imxpc3RSZXN1bHRzIiwiZGF0YSI6W10sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbXSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTc2Mjk2MTc4NTMwNSwic3VibWl0VGltZSI6MTc2Mjk2MTc4NTI2NywiZmluaXNoVGltZSI6MTc2Mjk2MTc5MDU3NSwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJyb3dMaW1pdCI6MTAwMDAsImJ5dGVMaW1pdCI6MjA0ODAwMH0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltdLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiJmODNkMGJmNi0wYWVhLTQzZjctOTY1MC00ZDRmOWE0NzU5OTEifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjQ4MDk4NjgyMzIyMDA0ODcsImd1aWQiOiIyNWFmYTQxOS1mYzliLTQyOGItOThlZS0xYTdlMzY3MmM4Y2QiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjoxLjE0MDYyNSwiY29tbWFuZCI6ImZyb20gcHlzcGFyay5zcWwgaW1wb3J0IGZ1bmN0aW9ucyBhcyBGXG5kZl9zcGxpdF9yZWZ1bmRzID0gKFxuICAgIGRmX3JlZnVuZHNcbiAgICAgICAgLnNlbGVjdChcbiAgICAgICAgICAgIFwicmVmdW5kX2lkXCIsXG4gICAgICAgICAgICBcInBheW1lbnRfaWRcIixcbiAgICAgICAgICAgIFwicmVmdW5kX3RpbWVzdGFtcFwiLFxuICAgICAgICAgICAgXCJyZWZ1bmRfYW1vdW50XCIsXG4gICAgICAgICAgICBGLnNwbGl0KFwicmVmdW5kX3JlYXNvblwiLCBcIjpcIilbMF0uYWxpYXMoXCJyZWZ1bmRfcmVhc29uXCIpLFxuICAgICAgICAgICAgRi5zcGxpdChcInJlZnVuZF9yZWFzb25cIiwgXCI6XCIpWzFdLmFsaWFzKFwicmVmdW5kX3NvdXJjZVwiKVxuICAgICAgICApXG4pXG5kaXNwbGF5KGRmX3NwbGl0X3JlZnVuZHMpIiwiY29tbWFuZFZlcnNpb24iOjIsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJsaXN0UmVzdWx0cyIsImRhdGEiOlt7InR5cGUiOiJ0YWJsZSIsImRhdGEiOltbMSw2NiwiMjAyNS0wMS0xMFQxMTozMDowMFoiLCI4NS43NSIsIlBheW1lbnQgRXJyb3IiLCJSZXRhaWxlciJdLFsyLDY5LCIyMDI1LTAxLTAzVDEyOjQwOjE1WiIsIjEyMC41MCIsIk9yZGVyIENhbmNlbGxlZCIsIkN1c3RvbWVyIl0sWzMsNzIsIjIwMjUtMDEtMDZUMTQ6NDU6MzBaIiwiNjUuMDAiLCJQcm9kdWN0IFJldHVybmVkIiwiQ3VzdG9tZXIiXSxbNCw3MywiMjAyNS0wMS0wN1QxNjoxMDo0NVoiLCIyMTAuOTkiLCJPcmRlciBDYW5jZWxsZWQiLCJDdXN0b21lciJdLFs1LDc1LCIyMDI1LTAxLTA5VDE4OjI1OjAwWiIsIjQ1LjIwIiwiUGF5bWVudCBFcnJvciIsIlJldGFpbGVyIl0sWzYsODAsIjIwMjUtMDEtMTBUMDk6MzU6MjBaIiwiMTMwLjE1IiwiT3JkZXIgQ2FuY2VsbGVkIiwiQ3VzdG9tZXIiXSxbNyw4MywiMjAyNS0wMS0xMlQxMToyMDo0MFoiLCIxNTAuMDAiLCJQcm9kdWN0IFJldHVybmVkIiwiQ3VzdG9tZXIiXSxbOCw4NSwiMjAyNS0wMS0xNFQxMzoxNTozMFoiLCI4OS45OSIsIk9yZGVyIENhbmNlbGxlZCIsIkN1c3RvbWVyIl0sWzksODksIjIwMjUtMDEtMTVUMTU6MDA6MDBaIiwiNzguNTAiLCJQYXltZW50IEVycm9yIiwiUmV0YWlsZXIiXSxbMTAsOTEsIjIwMjUtMDEtMTdUMTY6NDU6MTVaIiwiMjUwLjc1IiwiUHJvZHVjdCBSZXR1cm5lZCIsIkN1c3RvbWVyIl1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sInNjaGVtYSI6W3sibmFtZSI6InJlZnVuZF9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie1wiaXNUaW1lc3RhbXBOVFpcIjpmYWxzZSxcInNpZ25lZFwiOnRydWUsXCJzY2FsZVwiOjB9In0seyJuYW1lIjoicGF5bWVudF9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie1wiaXNUaW1lc3RhbXBOVFpcIjpmYWxzZSxcInNpZ25lZFwiOnRydWUsXCJzY2FsZVwiOjB9In0seyJuYW1lIjoicmVmdW5kX3RpbWVzdGFtcCIsInR5cGUiOiJcInRpbWVzdGFtcFwiIiwibWV0YWRhdGEiOiJ7XCJpc1RpbWVzdGFtcE5UWlwiOmZhbHNlLFwic2lnbmVkXCI6ZmFsc2UsXCJzY2FsZVwiOjN9In0seyJuYW1lIjoicmVmdW5kX2Ftb3VudCIsInR5cGUiOiJcImRlY2ltYWwoMTAsMilcIiIsIm1ldGFkYXRhIjoie1wiaXNUaW1lc3RhbXBOVFpcIjpmYWxzZSxcInNpZ25lZFwiOnRydWUsXCJzY2FsZVwiOjJ9In0seyJuYW1lIjoicmVmdW5kX3JlYXNvbiIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InJlZnVuZF9zb3VyY2UiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifV0sIm92ZXJmbG93IjpmYWxzZSwiYWdnRGF0YSI6W10sImFnZ1NjaGVtYSI6W10sImFnZ092ZXJmbG93IjpmYWxzZSwiYWdnU2VyaWVzTGltaXRSZWFjaGVkIjpmYWxzZSwiYWdnRXJyb3IiOiIiLCJhZ2dUeXBlIjoiIiwicGxvdE9wdGlvbnMiOm51bGwsImlzSnNvblNjaGVtYSI6dHJ1ZSwiZGJmc1Jlc3VsdFBhdGgiOm51bGwsImRhdGFzZXRJbmZvcyI6W10sImNvbHVtbkN1c3RvbURpc3BsYXlJbmZvcyI6e30sIm1ldGFkYXRhIjp7fX1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sImRhdGFzZXRJbmZvcyI6W3sibmFtZSI6ImRmX3NwbGl0X3JlZnVuZHMiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuZGF0YWZyYW1lLkRhdGFGcmFtZSIsInNjaGVtYSI6eyJmaWVsZHMiOlt7Im1ldGFkYXRhIjp7ImlzVGltZXN0YW1wTlRaIjpmYWxzZSwic2NhbGUiOjAsInNpZ25lZCI6dHJ1ZX0sIm5hbWUiOiJyZWZ1bmRfaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImludGVnZXIifSx7Im1ldGFkYXRhIjp7ImlzVGltZXN0YW1wTlRaIjpmYWxzZSwic2NhbGUiOjAsInNpZ25lZCI6dHJ1ZX0sIm5hbWUiOiJwYXltZW50X2lkIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJpbnRlZ2VyIn0seyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsInNjYWxlIjozLCJzaWduZWQiOmZhbHNlfSwibmFtZSI6InJlZnVuZF90aW1lc3RhbXAiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InRpbWVzdGFtcCJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJzY2FsZSI6Miwic2lnbmVkIjp0cnVlfSwibmFtZSI6InJlZnVuZF9hbW91bnQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImRlY2ltYWwoMTAsMikifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InJlZnVuZF9yZWFzb24iLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoicmVmdW5kX3NvdXJjZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzYyOTYxNjgwNTI0LCJzdWJtaXRUaW1lIjoxNzYyOTYxNjgwNDY1LCJmaW5pc2hUaW1lIjoxNzYyOTYxNjgxMDU2LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDEwXV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjdiZmNkN2RiLTljNDctNDQ0NC05YjJmLTUxYmRjZTY5MTUyNCJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6Mzg0NDkzOTQyODc2OTEwNCwiZ3VpZCI6IjQwMWRjNDI4LTUyNDQtNDljYy05ODIwLWZlNGYxMTk4NDAzYiIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjAuNSwiY29tbWFuZCI6IiVtZFxuIyMgVHJhbnNmb3JtIFJlZnVuZHMgRGF0YVxuMS4gRXh0cmFjdCBzcGVjaWZpYyBwb3J0aW9uIG9mIHRoZSBzdHJpbmcgZnJvbSByZWZ1bmRfcmVhc29uIHVzaW5nIHNwbGl0IGZ1bmN0aW9uXG4xLiBFeHRyYWN0IHNwZWNpZmljIHBvcnRpb24gb2YgdGhlIHN0cmluZyBmcm9tIHJlZnVuZF9yZWFzb24gdXNpbmcgcmVnZXhwX2V4dHJhY3QgZnVuY3Rpb25cbjEuIEV4dHJhY3QgZGF0ZSBhbmQgdGltZSBmcm9tIHRoZSByZWZ1bmRfdGltZXN0YW1wXG4xLiBXcml0ZSB0cmFuc2Zvcm1lZCBkYXRhIHRvIHRoZSBTaWx2ZXIgc2NoZW1hIiwiY29tbWFuZFZlcnNpb24iOjI1LCJzdGF0ZSI6ImlucHV0IiwicmVzdWx0cyI6bnVsbCwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MCwic3VibWl0VGltZSI6MCwiZmluaXNoVGltZSI6MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6e30sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOm51bGwsInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6Ijg1ZGZiMjMzLWE3MGItNDBjMi04NTRhLTUxMTFkMDE0MzAwNSJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6Mzg0NDkzOTQyODc2OTEwNSwiZ3VpZCI6ImM3ZTg1ZTA2LWVjODgtNDdiNC1iNzAyLTY0MWU4ZDc2ZTM2ZiIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjEuMCwiY29tbWFuZCI6ImRmX3JlZnVuZHMgPSBzcGFyay50YWJsZSgnZ2l6bW9ib3guYnJvbnplLnB5X3JlZnVuZHMnKVxuZGlzcGxheShkZl9yZWZ1bmRzKSIsImNvbW1hbmRWZXJzaW9uIjoxOCwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6Imxpc3RSZXN1bHRzIiwiZGF0YSI6W3sidHlwZSI6InRhYmxlIiwiZGF0YSI6W1sxLDY2LCIyMDI1LTAxLTEwVDExOjMwOjAwWiIsIjg1Ljc1IiwiUGF5bWVudCBFcnJvcjpSZXRhaWxlciJdLFsyLDY5LCIyMDI1LTAxLTAzVDEyOjQwOjE1WiIsIjEyMC41MCIsIk9yZGVyIENhbmNlbGxlZDpDdXN0b21lciJdLFszLDcyLCIyMDI1LTAxLTA2VDE0OjQ1OjMwWiIsIjY1LjAwIiwiUHJvZHVjdCBSZXR1cm5lZDpDdXN0b21lciJdLFs0LDczLCIyMDI1LTAxLTA3VDE2OjEwOjQ1WiIsIjIxMC45OSIsIk9yZGVyIENhbmNlbGxlZDpDdXN0b21lciJdLFs1LDc1LCIyMDI1LTAxLTA5VDE4OjI1OjAwWiIsIjQ1LjIwIiwiUGF5bWVudCBFcnJvcjpSZXRhaWxlciJdLFs2LDgwLCIyMDI1LTAxLTEwVDA5OjM1OjIwWiIsIjEzMC4xNSIsIk9yZGVyIENhbmNlbGxlZDpDdXN0b21lciJdLFs3LDgzLCIyMDI1LTAxLTEyVDExOjIwOjQwWiIsIjE1MC4wMCIsIlByb2R1Y3QgUmV0dXJuZWQ6Q3VzdG9tZXIiXSxbOCw4NSwiMjAyNS0wMS0xNFQxMzoxNTozMFoiLCI4OS45OSIsIk9yZGVyIENhbmNlbGxlZDpDdXN0b21lciJdLFs5LDg5LCIyMDI1LTAxLTE1VDE1OjAwOjAwWiIsIjc4LjUwIiwiUGF5bWVudCBFcnJvcjpSZXRhaWxlciJdLFsxMCw5MSwiMjAyNS0wMS0xN1QxNjo0NToxNVoiLCIyNTAuNzUiLCJQcm9kdWN0IFJldHVybmVkOkN1c3RvbWVyIl1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sInNjaGVtYSI6W3sibmFtZSI6InJlZnVuZF9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie1wiaXNUaW1lc3RhbXBOVFpcIjpmYWxzZSxcInNpZ25lZFwiOnRydWUsXCJzY2FsZVwiOjB9In0seyJuYW1lIjoicGF5bWVudF9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie1wiaXNUaW1lc3RhbXBOVFpcIjpmYWxzZSxcInNpZ25lZFwiOnRydWUsXCJzY2FsZVwiOjB9In0seyJuYW1lIjoicmVmdW5kX3RpbWVzdGFtcCIsInR5cGUiOiJcInRpbWVzdGFtcFwiIiwibWV0YWRhdGEiOiJ7XCJpc1RpbWVzdGFtcE5UWlwiOmZhbHNlLFwic2lnbmVkXCI6ZmFsc2UsXCJzY2FsZVwiOjN9In0seyJuYW1lIjoicmVmdW5kX2Ftb3VudCIsInR5cGUiOiJcImRlY2ltYWwoMTAsMilcIiIsIm1ldGFkYXRhIjoie1wiaXNUaW1lc3RhbXBOVFpcIjpmYWxzZSxcInNpZ25lZFwiOnRydWUsXCJzY2FsZVwiOjJ9In0seyJuYW1lIjoicmVmdW5kX3JlYXNvbiIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7XCJpc1RpbWVzdGFtcE5UWlwiOmZhbHNlLFwic2lnbmVkXCI6ZmFsc2UsXCJzY2FsZVwiOjB9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6e319XSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJkZl9yZWZ1bmRzIiwidHlwZVN0ciI6InB5c3Bhcmsuc3FsLmRhdGFmcmFtZS5EYXRhRnJhbWUiLCJzY2hlbWEiOnsiZmllbGRzIjpbeyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsInNjYWxlIjowLCJzaWduZWQiOnRydWV9LCJuYW1lIjoicmVmdW5kX2lkIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJpbnRlZ2VyIn0seyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsInNjYWxlIjowLCJzaWduZWQiOnRydWV9LCJuYW1lIjoicGF5bWVudF9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJzY2FsZSI6Mywic2lnbmVkIjpmYWxzZX0sIm5hbWUiOiJyZWZ1bmRfdGltZXN0YW1wIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJ0aW1lc3RhbXAifSx7Im1ldGFkYXRhIjp7ImlzVGltZXN0YW1wTlRaIjpmYWxzZSwic2NhbGUiOjIsInNpZ25lZCI6dHJ1ZX0sIm5hbWUiOiJyZWZ1bmRfYW1vdW50IiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJkZWNpbWFsKDEwLDIpIn0seyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsInNjYWxlIjowLCJzaWduZWQiOmZhbHNlfSwibmFtZSI6InJlZnVuZF9yZWFzb24iLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9XSwidHlwZSI6InN0cnVjdCJ9LCJ0YWJsZUlkZW50aWZpZXIiOiJgZ2l6bW9ib3hgLmBicm9uemVgLmBweV9yZWZ1bmRzYCJ9XSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOnsidHlwZSI6ImJhc2VFcnJvciIsInN0YWNrRnJhbWVzIjpbImNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuY29tbW9uLnJwYy5TcGFya0RyaXZlckV4Y2VwdGlvbnMkU1FMRXhlY3V0aW9uRXhjZXB0aW9uOiBqYXZhLnV0aWwuY29uY3VycmVudC5FeGVjdXRpb25FeGNlcHRpb246IGNvbS5taWNyb3NvZnQuc3Fsc2VydmVyLmpkYmMuU1FMU2VydmVyRXhjZXB0aW9uOiBEYXRhYmFzZSAnZ2l6bW9ib3gtZGInIG9uIHNlcnZlciAnZ2l6bW9ib3gtc3J2LmRhdGFiYXNlLndpbmRvd3MubmV0JyBpcyBub3QgY3VycmVudGx5IGF2YWlsYWJsZS4gIFBsZWFzZSByZXRyeSB0aGUgY29ubmVjdGlvbiBsYXRlci4gIElmIHRoZSBwcm9ibGVtIHBlcnNpc3RzLCBjb250YWN0IGN1c3RvbWVyIHN1cHBvcnQsIGFuZCBwcm92aWRlIHRoZW0gdGhlIHNlc3Npb24gdHJhY2luZyBJRCBvZiAnezFENURGREZGLTlENjMtNDREOC04NDIzLTkxQkY2RUE5NDQ2RX0nLiBDbGllbnRDb25uZWN0aW9uSWQ6YjhhYjM4MjgtNTU3ZS00YTg3LWJjMjItMTIwMjUxNWE1Nzg4IiwiXHRhdCBjb20uZ29vZ2xlLmNvbW1vbi51dGlsLmNvbmN1cnJlbnQuQWJzdHJhY3RGdXR1cmUkU3luYy5nZXRWYWx1ZShBYnN0cmFjdEZ1dHVyZS5qYXZhOjI5OSkiLCJcdGF0IGNvbS5nb29nbGUuY29tbW9uLnV0aWwuY29uY3VycmVudC5BYnN0cmFjdEZ1dHVyZSRTeW5jLmdldChBYnN0cmFjdEZ1dHVyZS5qYXZhOjI4NikiLCJcdGF0IGNvbS5nb29nbGUuY29tbW9uLnV0aWwuY29uY3VycmVudC5BYnN0cmFjdEZ1dHVyZS5nZXQoQWJzdHJhY3RGdXR1cmUuamF2YToxMTYpIiwiXHRhdCBjb20uZ29vZ2xlLmNvbW1vbi51dGlsLmNvbmN1cnJlbnQuVW5pbnRlcnJ1cHRpYmxlcy5nZXRVbmludGVycnVwdGlibHkoVW5pbnRlcnJ1cHRpYmxlcy5qYXZhOjEzNSkiLCJcdGF0IGNvbS5nb29nbGUuY29tbW9uLmNhY2hlLkxvY2FsQ2FjaGUkU2VnbWVudC5nZXRBbmRSZWNvcmRTdGF0cyhMb2NhbENhY2hlLmphdmE6MjM0NCkiLCJcdGF0IGNvbS5nb29nbGUuY29tbW9uLmNhY2hlLkxvY2FsQ2FjaGUkU2VnbWVudC5sb2FkU3luYyhMb2NhbENhY2hlLmphdmE6MjMxNikiLCJcdGF0IGNvbS5nb29nbGUuY29tbW9uLmNhY2hlLkxvY2FsQ2FjaGUkU2VnbWVudC5sb2NrZWRHZXRPckxvYWQoTG9jYWxDYWNoZS5qYXZhOjIyNzgpIiwiXHRhdCBjb20uZ29vZ2xlLmNvbW1vbi5jYWNoZS5Mb2NhbENhY2hlJFNlZ21lbnQuZ2V0KExvY2FsQ2FjaGUuamF2YToyMTkzKSIsIlx0YXQgY29tLmdvb2dsZS5jb21tb24uY2FjaGUuTG9jYWxDYWNoZS5nZXQoTG9jYWxDYWNoZS5qYXZhOjM5MzIpIiwiXHRhdCBjb20uZ29vZ2xlLmNvbW1vbi5jYWNoZS5Mb2NhbENhY2hlJExvY2FsTWFudWFsQ2FjaGUuZ2V0KExvY2FsQ2FjaGUuamF2YTo0NzIxKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QuY2F0YWxvZy5TZXNzaW9uQ2F0YWxvZ0ltcGwuZ2V0Q2FjaGVkUGxhbihTZXNzaW9uQ2F0YWxvZy5zY2FsYTo3NTIpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5jYXRhbG9nLkRlbGVnYXRpbmdTZXNzaW9uQ2F0YWxvZy5nZXRDYWNoZWRQbGFuKERlbGVnYXRpbmdTZXNzaW9uQ2F0YWxvZy5zY2FsYTo2NCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LmNhdGFsb2cuRGVsZWdhdGluZ1Nlc3Npb25DYXRhbG9nLmdldENhY2hlZFBsYW4kKERlbGVnYXRpbmdTZXNzaW9uQ2F0YWxvZy5zY2FsYTo2MykiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLnNxbC5tYW5hZ2VkY2F0YWxvZy5NYW5hZ2VkQ2F0YWxvZ1Nlc3Npb25DYXRhbG9nLmdldENhY2hlZFBsYW4oTWFuYWdlZENhdGFsb2dTZXNzaW9uQ2F0YWxvZy5zY2FsYTo5MSkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5kYXRhc291cmNlcy5GaW5kRGF0YVNvdXJjZVRhYmxlLm9yZyRhcGFjaGUkc3Bhcmskc3FsJGV4ZWN1dGlvbiRkYXRhc291cmNlcyRGaW5kRGF0YVNvdXJjZVRhYmxlJCRyZWFkRGF0YVNvdXJjZVRhYmxlKERhdGFTb3VyY2VTdHJhdGVneS5zY2FsYTozMjcpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5leGVjdXRpb24uZGF0YXNvdXJjZXMuRmluZERhdGFTb3VyY2VUYWJsZSQkYW5vbmZ1biRhcHBseTAkMS5hcHBseU9yRWxzZShEYXRhU291cmNlU3RyYXRlZ3kuc2NhbGE6NDU1KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLmRhdGFzb3VyY2VzLkZpbmREYXRhU291cmNlVGFibGUkJGFub25mdW4kYXBwbHkwJDEuYXBwbHlPckVsc2UoRGF0YVNvdXJjZVN0cmF0ZWd5LnNjYWxhOjQxNykiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnBsYW5zLmxvZ2ljYWwuQW5hbHlzaXNIZWxwZXIuJGFub25mdW4kcmVzb2x2ZU9wZXJhdG9yc0Rvd25XaXRoUHJ1bmluZyQyKEFuYWx5c2lzSGVscGVyLnNjYWxhOjIxOSkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnRyZWVzLkN1cnJlbnRPcmlnaW4kLndpdGhPcmlnaW4ob3JpZ2luLnNjYWxhOjg1KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucGxhbnMubG9naWNhbC5BbmFseXNpc0hlbHBlci4kYW5vbmZ1biRyZXNvbHZlT3BlcmF0b3JzRG93bldpdGhQcnVuaW5nJDEoQW5hbHlzaXNIZWxwZXIuc2NhbGE6MjE5KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucGxhbnMubG9naWNhbC5BbmFseXNpc0hlbHBlciQuYWxsb3dJbnZva2luZ1RyYW5zZm9ybXNJbkFuYWx5emVyKEFuYWx5c2lzSGVscGVyLnNjYWxhOjQzNikiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnBsYW5zLmxvZ2ljYWwuQW5hbHlzaXNIZWxwZXIucmVzb2x2ZU9wZXJhdG9yc0Rvd25XaXRoUHJ1bmluZyhBbmFseXNpc0hlbHBlci5zY2FsYToyMTcpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5wbGFucy5sb2dpY2FsLkFuYWx5c2lzSGVscGVyLnJlc29sdmVPcGVyYXRvcnNEb3duV2l0aFBydW5pbmckKEFuYWx5c2lzSGVscGVyLnNjYWxhOjIxMykiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnBsYW5zLmxvZ2ljYWwuTG9naWNhbFBsYW4ucmVzb2x2ZU9wZXJhdG9yc0Rvd25XaXRoUHJ1bmluZyhMb2dpY2FsUGxhbi5zY2FsYTo0MCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnBsYW5zLmxvZ2ljYWwuQW5hbHlzaXNIZWxwZXIuJGFub25mdW4kcmVzb2x2ZU9wZXJhdG9yc0Rvd25XaXRoUHJ1bmluZyQ0KEFuYWx5c2lzSGVscGVyLnNjYWxhOjIyNCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnRyZWVzLlVuYXJ5TGlrZS5tYXBDaGlsZHJlbihUcmVlTm9kZS5zY2FsYToxMzE0KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QudHJlZXMuVW5hcnlMaWtlLm1hcENoaWxkcmVuJChUcmVlTm9kZS5zY2FsYToxMzEzKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucGxhbnMubG9naWNhbC5TdWJxdWVyeUFsaWFzLm1hcENoaWxkcmVuKGJhc2ljTG9naWNhbE9wZXJhdG9ycy5zY2FsYToyMDc4KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucGxhbnMubG9naWNhbC5BbmFseXNpc0hlbHBlci4kYW5vbmZ1biRyZXNvbHZlT3BlcmF0b3JzRG93bldpdGhQcnVuaW5nJDEoQW5hbHlzaXNIZWxwZXIuc2NhbGE6MjI0KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucGxhbnMubG9naWNhbC5BbmFseXNpc0hlbHBlciQuYWxsb3dJbnZva2luZ1RyYW5zZm9ybXNJbkFuYWx5emVyKEFuYWx5c2lzSGVscGVyLnNjYWxhOjQzNikiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnBsYW5zLmxvZ2ljYWwuQW5hbHlzaXNIZWxwZXIucmVzb2x2ZU9wZXJhdG9yc0Rvd25XaXRoUHJ1bmluZyhBbmFseXNpc0hlbHBlci5zY2FsYToyMTcpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5wbGFucy5sb2dpY2FsLkFuYWx5c2lzSGVscGVyLnJlc29sdmVPcGVyYXRvcnNEb3duV2l0aFBydW5pbmckKEFuYWx5c2lzSGVscGVyLnNjYWxhOjIxMykiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnBsYW5zLmxvZ2ljYWwuTG9naWNhbFBsYW4ucmVzb2x2ZU9wZXJhdG9yc0Rvd25XaXRoUHJ1bmluZyhMb2dpY2FsUGxhbi5zY2FsYTo0MCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnBsYW5zLmxvZ2ljYWwuQW5hbHlzaXNIZWxwZXIuJGFub25mdW4kcmVzb2x2ZU9wZXJhdG9yc0Rvd25XaXRoUHJ1bmluZyQ0KEFuYWx5c2lzSGVscGVyLnNjYWxhOjIyNCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnRyZWVzLlVuYXJ5TGlrZS5tYXBDaGlsZHJlbihUcmVlTm9kZS5zY2FsYToxMzE0KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QudHJlZXMuVW5hcnlMaWtlLm1hcENoaWxkcmVuJChUcmVlTm9kZS5zY2FsYToxMzEzKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucGxhbnMubG9naWNhbC5Qcm9qZWN0Lm1hcENoaWxkcmVuKGJhc2ljTG9naWNhbE9wZXJhdG9ycy5zY2FsYTo4NykiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnBsYW5zLmxvZ2ljYWwuQW5hbHlzaXNIZWxwZXIuJGFub25mdW4kcmVzb2x2ZU9wZXJhdG9yc0Rvd25XaXRoUHJ1bmluZyQxKEFuYWx5c2lzSGVscGVyLnNjYWxhOjIyNCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnBsYW5zLmxvZ2ljYWwuQW5hbHlzaXNIZWxwZXIkLmFsbG93SW52b2tpbmdUcmFuc2Zvcm1zSW5BbmFseXplcihBbmFseXNpc0hlbHBlci5zY2FsYTo0MzYpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5wbGFucy5sb2dpY2FsLkFuYWx5c2lzSGVscGVyLnJlc29sdmVPcGVyYXRvcnNEb3duV2l0aFBydW5pbmcoQW5hbHlzaXNIZWxwZXIuc2NhbGE6MjE3KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucGxhbnMubG9naWNhbC5BbmFseXNpc0hlbHBlci5yZXNvbHZlT3BlcmF0b3JzRG93bldpdGhQcnVuaW5nJChBbmFseXNpc0hlbHBlci5zY2FsYToyMTMpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5wbGFucy5sb2dpY2FsLkxvZ2ljYWxQbGFuLnJlc29sdmVPcGVyYXRvcnNEb3duV2l0aFBydW5pbmcoTG9naWNhbFBsYW4uc2NhbGE6NDApIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5wbGFucy5sb2dpY2FsLkFuYWx5c2lzSGVscGVyLnJlc29sdmVPcGVyYXRvcnNXaXRoUHJ1bmluZyhBbmFseXNpc0hlbHBlci5zY2FsYToxMDIpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5wbGFucy5sb2dpY2FsLkFuYWx5c2lzSGVscGVyLnJlc29sdmVPcGVyYXRvcnNXaXRoUHJ1bmluZyQoQW5hbHlzaXNIZWxwZXIuc2NhbGE6OTkpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5wbGFucy5sb2dpY2FsLkxvZ2ljYWxQbGFuLnJlc29sdmVPcGVyYXRvcnNXaXRoUHJ1bmluZyhMb2dpY2FsUGxhbi5zY2FsYTo0MCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnBsYW5zLmxvZ2ljYWwuQW5hbHlzaXNIZWxwZXIucmVzb2x2ZU9wZXJhdG9ycyhBbmFseXNpc0hlbHBlci5zY2FsYTo3OSkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnBsYW5zLmxvZ2ljYWwuQW5hbHlzaXNIZWxwZXIucmVzb2x2ZU9wZXJhdG9ycyQoQW5hbHlzaXNIZWxwZXIuc2NhbGE6NzgpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5wbGFucy5sb2dpY2FsLkxvZ2ljYWxQbGFuLnJlc29sdmVPcGVyYXRvcnMoTG9naWNhbFBsYW4uc2NhbGE6NDApIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5leGVjdXRpb24uZGF0YXNvdXJjZXMuRmluZERhdGFTb3VyY2VUYWJsZS5hcHBseTAoRGF0YVNvdXJjZVN0cmF0ZWd5LnNjYWxhOjQxNykiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5kYXRhc291cmNlcy5GaW5kRGF0YVNvdXJjZVRhYmxlLmFwcGx5KERhdGFTb3VyY2VTdHJhdGVneS5zY2FsYTo0MTEpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5leGVjdXRpb24uZGF0YXNvdXJjZXMuRmluZERhdGFTb3VyY2VUYWJsZS5hcHBseShEYXRhU291cmNlU3RyYXRlZ3kuc2NhbGE6MjcyKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucnVsZXMuUnVsZUV4ZWN1dG9yLiRhbm9uZnVuJGV4ZWN1dGUkNChSdWxlRXhlY3V0b3Iuc2NhbGE6MzI3KSIsIlx0YXQgY29tLmRhdGFicmlja3Muc3BhcmsudXRpbC5GcmFtZVByb2ZpbGVyJC5yZWNvcmQoRnJhbWVQcm9maWxlci5zY2FsYTo5NCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnJ1bGVzLlJ1bGVFeGVjdXRvci4kYW5vbmZ1biRleGVjdXRlJDMoUnVsZUV4ZWN1dG9yLnNjYWxhOjMyNykiLCJcdGF0IHNjYWxhLmNvbGxlY3Rpb24uTGluZWFyU2VxT3B0aW1pemVkLmZvbGRMZWZ0KExpbmVhclNlcU9wdGltaXplZC5zY2FsYToxMjYpIiwiXHRhdCBzY2FsYS5jb2xsZWN0aW9uLkxpbmVhclNlcU9wdGltaXplZC5mb2xkTGVmdCQoTGluZWFyU2VxT3B0aW1pemVkLnNjYWxhOjEyMikiLCJcdGF0IHNjYWxhLmNvbGxlY3Rpb24uaW1tdXRhYmxlLkxpc3QuZm9sZExlZnQoTGlzdC5zY2FsYTo5MSkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnJ1bGVzLlJ1bGVFeGVjdXRvci4kYW5vbmZ1biRleGVjdXRlJDIoUnVsZUV4ZWN1dG9yLnNjYWxhOjMyNCkiLCJcdGF0IHNjYWxhLnJ1bnRpbWUuamF2YTguSkZ1bmN0aW9uMCRtY1Ykc3AuYXBwbHkoSkZ1bmN0aW9uMCRtY1Ykc3AuamF2YToyMykiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLnNwYXJrLnV0aWwuRnJhbWVQcm9maWxlciQucmVjb3JkKEZyYW1lUHJvZmlsZXIuc2NhbGE6OTQpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5ydWxlcy5SdWxlRXhlY3V0b3IuZXhlY3V0ZUJhdGNoJDEoUnVsZUV4ZWN1dG9yLnNjYWxhOjMwNykiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnJ1bGVzLlJ1bGVFeGVjdXRvci4kYW5vbmZ1biRleGVjdXRlJDkoUnVsZUV4ZWN1dG9yLnNjYWxhOjQxMSkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnJ1bGVzLlJ1bGVFeGVjdXRvci4kYW5vbmZ1biRleGVjdXRlJDkkYWRhcHRlZChSdWxlRXhlY3V0b3Iuc2NhbGE6NDExKSIsIlx0YXQgc2NhbGEuY29sbGVjdGlvbi5pbW11dGFibGUuTGlzdC5mb3JlYWNoKExpc3Quc2NhbGE6NDMxKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucnVsZXMuUnVsZUV4ZWN1dG9yLiRhbm9uZnVuJGV4ZWN1dGUkMShSdWxlRXhlY3V0b3Iuc2NhbGE6NDExKSIsIlx0YXQgY29tLmRhdGFicmlja3Muc3BhcmsudXRpbC5GcmFtZVByb2ZpbGVyJC5yZWNvcmQoRnJhbWVQcm9maWxlci5zY2FsYTo5NCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LnJ1bGVzLlJ1bGVFeGVjdXRvci5leGVjdXRlKFJ1bGVFeGVjdXRvci5zY2FsYToyNzApIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5hbmFseXNpcy5BbmFseXplci5leGVjdXRlU2FtZUNvbnRleHQoQW5hbHl6ZXIuc2NhbGE6NDQ0KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QuYW5hbHlzaXMuQW5hbHl6ZXIuJGFub25mdW4kZXhlY3V0ZSQxKEFuYWx5emVyLnNjYWxhOjQzNykiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LmFuYWx5c2lzLkFuYWx5c2lzQ29udGV4dCQud2l0aE5ld0FuYWx5c2lzQ29udGV4dChBbmFseXplci5zY2FsYTozNTApIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5hbmFseXNpcy5BbmFseXplci5leGVjdXRlKEFuYWx5emVyLnNjYWxhOjQzNykiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LmFuYWx5c2lzLkFuYWx5emVyLmV4ZWN1dGUoQW5hbHl6ZXIuc2NhbGE6MzY5KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucnVsZXMuUnVsZUV4ZWN1dG9yLiRhbm9uZnVuJGV4ZWN1dGVBbmRUcmFjayQxKFJ1bGVFeGVjdXRvci5zY2FsYToyNjIpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5RdWVyeVBsYW5uaW5nVHJhY2tlciQud2l0aFRyYWNrZXIoUXVlcnlQbGFubmluZ1RyYWNrZXIuc2NhbGE6MTgyKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucnVsZXMuUnVsZUV4ZWN1dG9yLmV4ZWN1dGVBbmRUcmFjayhSdWxlRXhlY3V0b3Iuc2NhbGE6MjYyKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QuYW5hbHlzaXMuQW5hbHl6ZXIuJGFub25mdW4kZXhlY3V0ZUFuZENoZWNrJDEoQW5hbHl6ZXIuc2NhbGE6NDIyKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QucGxhbnMubG9naWNhbC5BbmFseXNpc0hlbHBlciQubWFya0luQW5hbHl6ZXIoQW5hbHlzaXNIZWxwZXIuc2NhbGE6NDQzKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QuYW5hbHlzaXMuQW5hbHl6ZXIuZXhlY3V0ZUFuZENoZWNrKEFuYWx5emVyLnNjYWxhOjQyMSkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5RdWVyeUV4ZWN1dGlvbi4kYW5vbmZ1biRhbmFseXplZCQxKFF1ZXJ5RXhlY3V0aW9uLnNjYWxhOjI2MikiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLnNwYXJrLnV0aWwuRnJhbWVQcm9maWxlciQucmVjb3JkKEZyYW1lUHJvZmlsZXIuc2NhbGE6OTQpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5RdWVyeVBsYW5uaW5nVHJhY2tlci5tZWFzdXJlUGhhc2UoUXVlcnlQbGFubmluZ1RyYWNrZXIuc2NhbGE6NDU4KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLlF1ZXJ5RXhlY3V0aW9uLiRhbm9uZnVuJGV4ZWN1dGVQaGFzZSQ1KFF1ZXJ5RXhlY3V0aW9uLnNjYWxhOjYxMykiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5TUUxFeGVjdXRpb24kLndpdGhFeGVjdXRpb25QaGFzZShTUUxFeGVjdXRpb24uc2NhbGE6MTQ0KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLlF1ZXJ5RXhlY3V0aW9uLiRhbm9uZnVuJGV4ZWN1dGVQaGFzZSQ0KFF1ZXJ5RXhlY3V0aW9uLnNjYWxhOjYxMykiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5RdWVyeUV4ZWN1dGlvbiQud2l0aEludGVybmFsRXJyb3IoUXVlcnlFeGVjdXRpb24uc2NhbGE6MTE3OSkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5RdWVyeUV4ZWN1dGlvbi4kYW5vbmZ1biRleGVjdXRlUGhhc2UkMihRdWVyeUV4ZWN1dGlvbi5zY2FsYTo2MTIpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy51dGlsLkxleGljYWxUaHJlYWRMb2NhbCRIYW5kbGUucnVuV2l0aChMZXhpY2FsVGhyZWFkTG9jYWwuc2NhbGE6NjMpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5leGVjdXRpb24uUXVlcnlFeGVjdXRpb24uJGFub25mdW4kZXhlY3V0ZVBoYXNlJDEoUXVlcnlFeGVjdXRpb24uc2NhbGE6NjA4KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuU3BhcmtTZXNzaW9uLndpdGhBY3RpdmUoU3BhcmtTZXNzaW9uLnNjYWxhOjExODApIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5leGVjdXRpb24uUXVlcnlFeGVjdXRpb24uZXhlY3V0ZVBoYXNlKFF1ZXJ5RXhlY3V0aW9uLnNjYWxhOjYwOCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5RdWVyeUV4ZWN1dGlvbi5hbmFseXplZCRsenljb21wdXRlKFF1ZXJ5RXhlY3V0aW9uLnNjYWxhOjI1NikiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5RdWVyeUV4ZWN1dGlvbi5hbmFseXplZChRdWVyeUV4ZWN1dGlvbi5zY2FsYToyNTUpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5leGVjdXRpb24uUXVlcnlFeGVjdXRpb24uYXNzZXJ0QW5hbHl6ZWQoUXVlcnlFeGVjdXRpb24uc2NhbGE6MjM3KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuRGF0YXNldCQuJGFub25mdW4kb2ZSb3dzJDIoRGF0YXNldC5zY2FsYToxMzApIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5TcGFya1Nlc3Npb24ud2l0aEFjdGl2ZShTcGFya1Nlc3Npb24uc2NhbGE6MTE4MCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLlNwYXJrU2Vzc2lvbi4kYW5vbmZ1biR3aXRoQWN0aXZlQW5kRnJhbWVQcm9maWxlciQxKFNwYXJrU2Vzc2lvbi5zY2FsYToxMTg3KSIsIlx0YXQgY29tLmRhdGFicmlja3Muc3BhcmsudXRpbC5GcmFtZVByb2ZpbGVyJC5yZWNvcmQoRnJhbWVQcm9maWxlci5zY2FsYTo5NCkiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLlNwYXJrU2Vzc2lvbi53aXRoQWN0aXZlQW5kRnJhbWVQcm9maWxlcihTcGFya1Nlc3Npb24uc2NhbGE6MTE4NykiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLkRhdGFzZXQkLm9mUm93cyhEYXRhc2V0LnNjYWxhOjEyMikiLCJcdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLlNwYXJrU2Vzc2lvbi4kYW5vbmZ1biRzcWwkNChTcGFya1Nlc3Npb24uc2NhbGE6OTU5KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuU3BhcmtTZXNzaW9uLndpdGhBY3RpdmUoU3BhcmtTZXNzaW9uLnNjYWxhOjExODApIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5TcGFya1Nlc3Npb24uc3FsKFNwYXJrU2Vzc2lvbi5zY2FsYTo5NDcpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5TcGFya1Nlc3Npb24uc3FsKFNwYXJrU2Vzc2lvbi5zY2FsYTo5ODIpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwkRGJDbGFzc2ljU3RyYXRlZ3kuZXhlY3V0ZVNRTFF1ZXJ5KERyaXZlckxvY2FsLnNjYWxhOjMwMSkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJMb2NhbC5leGVjdXRlU1FMU3ViQ29tbWFuZChEcml2ZXJMb2NhbC5zY2FsYTo0MDEpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwuJGFub25mdW4kZXhlY3V0ZVNxbCQxKERyaXZlckxvY2FsLnNjYWxhOjQyMykiLCJcdGF0IHNjYWxhLmNvbGxlY3Rpb24uaW1tdXRhYmxlLkxpc3QubWFwKExpc3Quc2NhbGE6MjkzKSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlckxvY2FsLmV4ZWN1dGVTcWwoRHJpdmVyTG9jYWwuc2NhbGE6NDE4KSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLlNRTERyaXZlckxvY2FsLnJlcGwoU1FMRHJpdmVyTG9jYWwuc2NhbGE6NDApIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwuJGFub25mdW4kZXhlY3V0ZSQzMyhEcml2ZXJMb2NhbC5zY2FsYToxMTcyKSIsIlx0YXQgY29tLmRhdGFicmlja3MudW5pdHkuVUNTRXBoZW1lcmFsU3RhdGUkSGFuZGxlLnJ1bldpdGgoVUNTRXBoZW1lcmFsU3RhdGUuc2NhbGE6NTEpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy51bml0eS5IYW5kbGVJbXBsLnJ1bldpdGgoVUNTSGFuZGxlLnNjYWxhOjEwNCkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJMb2NhbC4kYW5vbmZ1biRleGVjdXRlJDI4KERyaXZlckxvY2FsLnNjYWxhOjExNjMpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuJGFub25mdW4kd2l0aEF0dHJpYnV0aW9uQ29udGV4dCQxKEF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuc2NhbGE6NDgpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dCQuJGFub25mdW4kd2l0aFZhbHVlJDEoQXR0cmlidXRpb25Db250ZXh0LnNjYWxhOjI3NikiLCJcdGF0IHNjYWxhLnV0aWwuRHluYW1pY1ZhcmlhYmxlLndpdGhWYWx1ZShEeW5hbWljVmFyaWFibGUuc2NhbGE6NjIpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dCQud2l0aFZhbHVlKEF0dHJpYnV0aW9uQ29udGV4dC5zY2FsYToyNzIpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uQ29udGV4dChBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjQ2KSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLndpdGhBdHRyaWJ1dGlvbkNvbnRleHQkKEF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuc2NhbGE6NDMpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwud2l0aEF0dHJpYnV0aW9uQ29udGV4dChEcml2ZXJMb2NhbC5zY2FsYTo5NikiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy53aXRoQXR0cmlidXRpb25UYWdzKEF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuc2NhbGE6OTUpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uVGFncyQoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo3NikiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJMb2NhbC53aXRoQXR0cmlidXRpb25UYWdzKERyaXZlckxvY2FsLnNjYWxhOjk2KSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlckxvY2FsLiRhbm9uZnVuJGV4ZWN1dGUkMShEcml2ZXJMb2NhbC5zY2FsYToxMDk5KSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlckxvY2FsJC4kYW5vbmZ1biRtYXliZVN5bmNocm9uaXplRXhlY3V0aW9uJDQoRHJpdmVyTG9jYWwuc2NhbGE6MTUxOSkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJMb2NhbC5leGVjdXRlKERyaXZlckxvY2FsLnNjYWxhOjc3NikiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJXcmFwcGVyLiRhbm9uZnVuJHRyeUV4ZWN1dGluZ0NvbW1hbmQkMihEcml2ZXJXcmFwcGVyLnNjYWxhOjkzMikiLCJcdGF0IHNjYWxhLnV0aWwuVHJ5JC5hcHBseShUcnkuc2NhbGE6MjEzKSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIuJGFub25mdW4kdHJ5RXhlY3V0aW5nQ29tbWFuZCQxKERyaXZlcldyYXBwZXIuc2NhbGE6OTIxKSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIuJGFub25mdW4kdHJ5RXhlY3V0aW5nQ29tbWFuZCQzKERyaXZlcldyYXBwZXIuc2NhbGE6OTY3KSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5Vc2FnZUxvZ2dpbmcuZXhlY3V0ZVRodW5rQW5kQ2FwdHVyZVJlc3VsdFRhZ3MkMShVc2FnZUxvZ2dpbmcuc2NhbGE6NjMzKSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5Vc2FnZUxvZ2dpbmcuJGFub25mdW4kcmVjb3JkT3BlcmF0aW9uV2l0aFJlc3VsdFRhZ3MkNChVc2FnZUxvZ2dpbmcuc2NhbGE6NjU2KSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLiRhbm9uZnVuJHdpdGhBdHRyaWJ1dGlvbkNvbnRleHQkMShBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjQ4KSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHQkLiRhbm9uZnVuJHdpdGhWYWx1ZSQxKEF0dHJpYnV0aW9uQ29udGV4dC5zY2FsYToyNzYpIiwiXHRhdCBzY2FsYS51dGlsLkR5bmFtaWNWYXJpYWJsZS53aXRoVmFsdWUoRHluYW1pY1ZhcmlhYmxlLnNjYWxhOjYyKSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHQkLndpdGhWYWx1ZShBdHRyaWJ1dGlvbkNvbnRleHQuc2NhbGE6MjcyKSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLndpdGhBdHRyaWJ1dGlvbkNvbnRleHQoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo0NikiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy53aXRoQXR0cmlidXRpb25Db250ZXh0JChBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjQzKSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIud2l0aEF0dHJpYnV0aW9uQ29udGV4dChEcml2ZXJXcmFwcGVyLnNjYWxhOjczKSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLndpdGhBdHRyaWJ1dGlvblRhZ3MoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo5NSkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy53aXRoQXR0cmlidXRpb25UYWdzJChBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjc2KSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIud2l0aEF0dHJpYnV0aW9uVGFncyhEcml2ZXJXcmFwcGVyLnNjYWxhOjczKSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5Vc2FnZUxvZ2dpbmcucmVjb3JkT3BlcmF0aW9uV2l0aFJlc3VsdFRhZ3MoVXNhZ2VMb2dnaW5nLnNjYWxhOjYyOCkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuVXNhZ2VMb2dnaW5nLnJlY29yZE9wZXJhdGlvbldpdGhSZXN1bHRUYWdzJChVc2FnZUxvZ2dpbmcuc2NhbGE6NTM3KSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIucmVjb3JkT3BlcmF0aW9uV2l0aFJlc3VsdFRhZ3MoRHJpdmVyV3JhcHBlci5zY2FsYTo3MykiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJXcmFwcGVyLnRyeUV4ZWN1dGluZ0NvbW1hbmQoRHJpdmVyV3JhcHBlci5zY2FsYTo5NjcpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyV3JhcHBlci5leGVjdXRlQ29tbWFuZEFuZEdldEVycm9yKERyaXZlcldyYXBwZXIuc2NhbGE6NzE3KSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIuZXhlY3V0ZUNvbW1hbmQoRHJpdmVyV3JhcHBlci5zY2FsYTo3ODUpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyV3JhcHBlci4kYW5vbmZ1biRydW5Jbm5lckxvb3AkMShEcml2ZXJXcmFwcGVyLnNjYWxhOjU5MCkiLCJcdGF0IHNjYWxhLnJ1bnRpbWUuamF2YTguSkZ1bmN0aW9uMCRtY1Ykc3AuYXBwbHkoSkZ1bmN0aW9uMCRtY1Ykc3AuamF2YToyMykiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy4kYW5vbmZ1biR3aXRoQXR0cmlidXRpb25Db250ZXh0JDEoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo0OCkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0JC4kYW5vbmZ1biR3aXRoVmFsdWUkMShBdHRyaWJ1dGlvbkNvbnRleHQuc2NhbGE6Mjc2KSIsIlx0YXQgc2NhbGEudXRpbC5EeW5hbWljVmFyaWFibGUud2l0aFZhbHVlKER5bmFtaWNWYXJpYWJsZS5zY2FsYTo2MikiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0JC53aXRoVmFsdWUoQXR0cmlidXRpb25Db250ZXh0LnNjYWxhOjI3MikiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy53aXRoQXR0cmlidXRpb25Db250ZXh0KEF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuc2NhbGE6NDYpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uQ29udGV4dCQoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo0MykiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJXcmFwcGVyLndpdGhBdHRyaWJ1dGlvbkNvbnRleHQoRHJpdmVyV3JhcHBlci5zY2FsYTo3MykiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJXcmFwcGVyLnJ1bklubmVyTG9vcChEcml2ZXJXcmFwcGVyLnNjYWxhOjU5MCkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJXcmFwcGVyLnJ1bklubmVyKERyaXZlcldyYXBwZXIuc2NhbGE6NTEyKSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIucnVuKERyaXZlcldyYXBwZXIuc2NhbGE6MzA2KSIsIlx0YXQgamF2YS5sYW5nLlRocmVhZC5ydW4oVGhyZWFkLmphdmE6NzUwKSIsIkNhdXNlZCBieTogY29tLm1pY3Jvc29mdC5zcWxzZXJ2ZXIuamRiYy5TUUxTZXJ2ZXJFeGNlcHRpb246IERhdGFiYXNlICdnaXptb2JveC1kYicgb24gc2VydmVyICdnaXptb2JveC1zcnYuZGF0YWJhc2Uud2luZG93cy5uZXQnIGlzIG5vdCBjdXJyZW50bHkgYXZhaWxhYmxlLiAgUGxlYXNlIHJldHJ5IHRoZSBjb25uZWN0aW9uIGxhdGVyLiAgSWYgdGhlIHByb2JsZW0gcGVyc2lzdHMsIGNvbnRhY3QgY3VzdG9tZXIgc3VwcG9ydCwgYW5kIHByb3ZpZGUgdGhlbSB0aGUgc2Vzc2lvbiB0cmFjaW5nIElEIG9mICd7MUQ1REZERkYtOUQ2My00NEQ4LTg0MjMtOTFCRjZFQTk0NDZFfScuIENsaWVudENvbm5lY3Rpb25JZDpiOGFiMzgyOC01NTdlLTRhODctYmMyMi0xMjAyNTE1YTU3ODgiLCJcdGF0IGNvbS5taWNyb3NvZnQuc3Fsc2VydmVyLmpkYmMuU1FMU2VydmVyRXhjZXB0aW9uLm1ha2VGcm9tRGF0YWJhc2VFcnJvcihTUUxTZXJ2ZXJFeGNlcHRpb24uamF2YToyNjUpIiwiXHRhdCBjb20ubWljcm9zb2Z0LnNxbHNlcnZlci5qZGJjLlREU1Rva2VuSGFuZGxlci5vbkVPRih0ZHNwYXJzZXIuamF2YTozMDApIiwiXHRhdCBjb20ubWljcm9zb2Z0LnNxbHNlcnZlci5qZGJjLlREU1BhcnNlci5wYXJzZSh0ZHNwYXJzZXIuamF2YToxMzMpIiwiXHRhdCBjb20ubWljcm9zb2Z0LnNxbHNlcnZlci5qZGJjLlREU1BhcnNlci5wYXJzZSh0ZHNwYXJzZXIuamF2YTozNykiLCJcdGF0IGNvbS5taWNyb3NvZnQuc3Fsc2VydmVyLmpkYmMuU1FMU2VydmVyQ29ubmVjdGlvbi5zZW5kTG9nb24oU1FMU2VydmVyQ29ubmVjdGlvbi5qYXZhOjYyOTkpIiwiXHRhdCBjb20ubWljcm9zb2Z0LnNxbHNlcnZlci5qZGJjLlNRTFNlcnZlckNvbm5lY3Rpb24ubG9nb24oU1FMU2VydmVyQ29ubmVjdGlvbi5qYXZhOjQ5MTEpIiwiXHRhdCBjb20ubWljcm9zb2Z0LnNxbHNlcnZlci5qZGJjLlNRTFNlcnZlckNvbm5lY3Rpb24uYWNjZXNzJDEwMChTUUxTZXJ2ZXJDb25uZWN0aW9uLmphdmE6OTApIiwiXHRhdCBjb20ubWljcm9zb2Z0LnNxbHNlcnZlci5qZGJjLlNRTFNlcnZlckNvbm5lY3Rpb24kTG9nb25Db21tYW5kLmRvRXhlY3V0ZShTUUxTZXJ2ZXJDb25uZWN0aW9uLmphdmE6NDg0OSkiLCJcdGF0IGNvbS5taWNyb3NvZnQuc3Fsc2VydmVyLmpkYmMuVERTQ29tbWFuZC5leGVjdXRlKElPQnVmZmVyLmphdmE6NzYyNykiLCJcdGF0IGNvbS5taWNyb3NvZnQuc3Fsc2VydmVyLmpkYmMuU1FMU2VydmVyQ29ubmVjdGlvbi5leGVjdXRlQ29tbWFuZChTUUxTZXJ2ZXJDb25uZWN0aW9uLmphdmE6MzkxNikiLCJcdGF0IGNvbS5taWNyb3NvZnQuc3Fsc2VydmVyLmpkYmMuU1FMU2VydmVyQ29ubmVjdGlvbi5jb25uZWN0SGVscGVyKFNRTFNlcnZlckNvbm5lY3Rpb24uamF2YTozMzU4KSIsIlx0YXQgY29tLm1pY3Jvc29mdC5zcWxzZXJ2ZXIuamRiYy5TUUxTZXJ2ZXJDb25uZWN0aW9uLmxvZ2luKFNRTFNlcnZlckNvbm5lY3Rpb24uamF2YToyOTUwKSIsIlx0YXQgY29tLm1pY3Jvc29mdC5zcWxzZXJ2ZXIuamRiYy5TUUxTZXJ2ZXJDb25uZWN0aW9uLmNvbm5lY3RJbnRlcm5hbChTUUxTZXJ2ZXJDb25uZWN0aW9uLmphdmE6Mjc5MCkiLCJcdGF0IGNvbS5taWNyb3NvZnQuc3Fsc2VydmVyLmpkYmMuU1FMU2VydmVyQ29ubmVjdGlvbi5jb25uZWN0KFNRTFNlcnZlckNvbm5lY3Rpb24uamF2YToxNjYzKSIsIlx0YXQgY29tLm1pY3Jvc29mdC5zcWxzZXJ2ZXIuamRiYy5TUUxTZXJ2ZXJEcml2ZXIuY29ubmVjdChTUUxTZXJ2ZXJEcml2ZXIuamF2YToxMDY0KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLmRhdGFzb3VyY2VzLmpkYmMuY29ubmVjdGlvbi5CYXNpY0Nvbm5lY3Rpb25Qcm92aWRlci5nZXRDb25uZWN0aW9uKEJhc2ljQ29ubmVjdGlvblByb3ZpZGVyLnNjYWxhOjUwKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLmRhdGFzb3VyY2VzLmpkYmMuY29ubmVjdGlvbi5Db25uZWN0aW9uUHJvdmlkZXJCYXNlLmNyZWF0ZShDb25uZWN0aW9uUHJvdmlkZXIuc2NhbGE6MTAyKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuamRiYy5Nc1NxbFNlcnZlckRpYWxlY3QkLiRhbm9uZnVuJGNyZWF0ZUNvbm5lY3Rpb25GYWN0b3J5JDIoTXNTcWxTZXJ2ZXJEaWFsZWN0LnNjYWxhOjY4KSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuamRiYy5Nc1NxbFNlcnZlckRpYWxlY3QkLiRhbm9uZnVuJGNyZWF0ZUNvbm5lY3Rpb25GYWN0b3J5JDIkYWRhcHRlZChNc1NxbFNlcnZlckRpYWxlY3Quc2NhbGE6NjQpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5leGVjdXRpb24uZGF0YXNvdXJjZXMuamRiYy5KREJDUkREJC5nZXRRdWVyeU91dHB1dFNjaGVtYShKREJDUkRELnNjYWxhOjczKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLmRhdGFzb3VyY2VzLmpkYmMuSkRCQ1JERCQucmVzb2x2ZVRhYmxlKEpEQkNSREQuc2NhbGE6NjgpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5leGVjdXRpb24uZGF0YXNvdXJjZXMuamRiYy5KREJDUmVsYXRpb24kLmdldFNjaGVtYShKREJDUmVsYXRpb24uc2NhbGE6MjQzKSIsIlx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLmRhdGFzb3VyY2VzLmpkYmMuSmRiY1JlbGF0aW9uUHJvdmlkZXIuY3JlYXRlUmVsYXRpb24oSmRiY1JlbGF0aW9uUHJvdmlkZXIuc2NhbGE6NDQpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5leGVjdXRpb24uZGF0YXNvdXJjZXMuRGF0YVNvdXJjZS5yZXNvbHZlUmVsYXRpb24oRGF0YVNvdXJjZS5zY2FsYTo0MDMpIiwiXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5leGVjdXRpb24uZGF0YXNvdXJjZXMuRmluZERhdGFTb3VyY2VUYWJsZS4kYW5vbmZ1biRyZWFkRGF0YVNvdXJjZVRhYmxlJDcoRGF0YVNvdXJjZVN0cmF0ZWd5LnNjYWxhOjM1MSkiLCJcdGF0IGNvbS5nb29nbGUuY29tbW9uLmNhY2hlLkxvY2FsQ2FjaGUkTG9jYWxNYW51YWxDYWNoZSQxLmxvYWQoTG9jYWxDYWNoZS5qYXZhOjQ3MjQpIiwiXHRhdCBjb20uZ29vZ2xlLmNvbW1vbi5jYWNoZS5Mb2NhbENhY2hlJExvYWRpbmdWYWx1ZVJlZmVyZW5jZS5sb2FkRnV0dXJlKExvY2FsQ2FjaGUuamF2YTozNTIyKSIsIlx0YXQgY29tLmdvb2dsZS5jb21tb24uY2FjaGUuTG9jYWxDYWNoZSRTZWdtZW50LmxvYWRTeW5jKExvY2FsQ2FjaGUuamF2YToyMzE1KSIsIlx0Li4uIDE1NSBtb3JlIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwuZXhlY3V0ZVNxbChEcml2ZXJMb2NhbC5zY2FsYTo0NzUpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuU1FMRHJpdmVyTG9jYWwucmVwbChTUUxEcml2ZXJMb2NhbC5zY2FsYTo0MCkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJMb2NhbC4kYW5vbmZ1biRleGVjdXRlJDMzKERyaXZlckxvY2FsLnNjYWxhOjExNzIpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy51bml0eS5VQ1NFcGhlbWVyYWxTdGF0ZSRIYW5kbGUucnVuV2l0aChVQ1NFcGhlbWVyYWxTdGF0ZS5zY2FsYTo1MSkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLnVuaXR5LkhhbmRsZUltcGwucnVuV2l0aChVQ1NIYW5kbGUuc2NhbGE6MTA0KSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlckxvY2FsLiRhbm9uZnVuJGV4ZWN1dGUkMjgoRHJpdmVyTG9jYWwuc2NhbGE6MTE2MykiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy4kYW5vbmZ1biR3aXRoQXR0cmlidXRpb25Db250ZXh0JDEoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo0OCkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0JC4kYW5vbmZ1biR3aXRoVmFsdWUkMShBdHRyaWJ1dGlvbkNvbnRleHQuc2NhbGE6Mjc2KSIsIlx0YXQgc2NhbGEudXRpbC5EeW5hbWljVmFyaWFibGUud2l0aFZhbHVlKER5bmFtaWNWYXJpYWJsZS5zY2FsYTo2MikiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0JC53aXRoVmFsdWUoQXR0cmlidXRpb25Db250ZXh0LnNjYWxhOjI3MikiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy53aXRoQXR0cmlidXRpb25Db250ZXh0KEF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuc2NhbGE6NDYpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uQ29udGV4dCQoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo0MykiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJMb2NhbC53aXRoQXR0cmlidXRpb25Db250ZXh0KERyaXZlckxvY2FsLnNjYWxhOjk2KSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLndpdGhBdHRyaWJ1dGlvblRhZ3MoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo5NSkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy53aXRoQXR0cmlidXRpb25UYWdzJChBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjc2KSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlckxvY2FsLndpdGhBdHRyaWJ1dGlvblRhZ3MoRHJpdmVyTG9jYWwuc2NhbGE6OTYpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwuJGFub25mdW4kZXhlY3V0ZSQxKERyaXZlckxvY2FsLnNjYWxhOjEwOTkpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwkLiRhbm9uZnVuJG1heWJlU3luY2hyb25pemVFeGVjdXRpb24kNChEcml2ZXJMb2NhbC5zY2FsYToxNTE5KSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlckxvY2FsLmV4ZWN1dGUoRHJpdmVyTG9jYWwuc2NhbGE6Nzc2KSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIuJGFub25mdW4kdHJ5RXhlY3V0aW5nQ29tbWFuZCQyKERyaXZlcldyYXBwZXIuc2NhbGE6OTMyKSIsIlx0YXQgc2NhbGEudXRpbC5UcnkkLmFwcGx5KFRyeS5zY2FsYToyMTMpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyV3JhcHBlci4kYW5vbmZ1biR0cnlFeGVjdXRpbmdDb21tYW5kJDEoRHJpdmVyV3JhcHBlci5zY2FsYTo5MjEpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyV3JhcHBlci4kYW5vbmZ1biR0cnlFeGVjdXRpbmdDb21tYW5kJDMoRHJpdmVyV3JhcHBlci5zY2FsYTo5NjcpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLlVzYWdlTG9nZ2luZy5leGVjdXRlVGh1bmtBbmRDYXB0dXJlUmVzdWx0VGFncyQxKFVzYWdlTG9nZ2luZy5zY2FsYTo2MzMpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLlVzYWdlTG9nZ2luZy4kYW5vbmZ1biRyZWNvcmRPcGVyYXRpb25XaXRoUmVzdWx0VGFncyQ0KFVzYWdlTG9nZ2luZy5zY2FsYTo2NTYpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuJGFub25mdW4kd2l0aEF0dHJpYnV0aW9uQ29udGV4dCQxKEF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuc2NhbGE6NDgpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dCQuJGFub25mdW4kd2l0aFZhbHVlJDEoQXR0cmlidXRpb25Db250ZXh0LnNjYWxhOjI3NikiLCJcdGF0IHNjYWxhLnV0aWwuRHluYW1pY1ZhcmlhYmxlLndpdGhWYWx1ZShEeW5hbWljVmFyaWFibGUuc2NhbGE6NjIpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dCQud2l0aFZhbHVlKEF0dHJpYnV0aW9uQ29udGV4dC5zY2FsYToyNzIpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uQ29udGV4dChBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjQ2KSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLndpdGhBdHRyaWJ1dGlvbkNvbnRleHQkKEF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuc2NhbGE6NDMpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyV3JhcHBlci53aXRoQXR0cmlidXRpb25Db250ZXh0KERyaXZlcldyYXBwZXIuc2NhbGE6NzMpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uVGFncyhBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjk1KSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLndpdGhBdHRyaWJ1dGlvblRhZ3MkKEF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuc2NhbGE6NzYpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyV3JhcHBlci53aXRoQXR0cmlidXRpb25UYWdzKERyaXZlcldyYXBwZXIuc2NhbGE6NzMpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLlVzYWdlTG9nZ2luZy5yZWNvcmRPcGVyYXRpb25XaXRoUmVzdWx0VGFncyhVc2FnZUxvZ2dpbmcuc2NhbGE6NjI4KSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5Vc2FnZUxvZ2dpbmcucmVjb3JkT3BlcmF0aW9uV2l0aFJlc3VsdFRhZ3MkKFVzYWdlTG9nZ2luZy5zY2FsYTo1MzcpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyV3JhcHBlci5yZWNvcmRPcGVyYXRpb25XaXRoUmVzdWx0VGFncyhEcml2ZXJXcmFwcGVyLnNjYWxhOjczKSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIudHJ5RXhlY3V0aW5nQ29tbWFuZChEcml2ZXJXcmFwcGVyLnNjYWxhOjk2NykiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJXcmFwcGVyLmV4ZWN1dGVDb21tYW5kQW5kR2V0RXJyb3IoRHJpdmVyV3JhcHBlci5zY2FsYTo3MTcpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyV3JhcHBlci5leGVjdXRlQ29tbWFuZChEcml2ZXJXcmFwcGVyLnNjYWxhOjc4NSkiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJXcmFwcGVyLiRhbm9uZnVuJHJ1bklubmVyTG9vcCQxKERyaXZlcldyYXBwZXIuc2NhbGE6NTkwKSIsIlx0YXQgc2NhbGEucnVudGltZS5qYXZhOC5KRnVuY3Rpb24wJG1jViRzcC5hcHBseShKRnVuY3Rpb24wJG1jViRzcC5qYXZhOjIzKSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLiRhbm9uZnVuJHdpdGhBdHRyaWJ1dGlvbkNvbnRleHQkMShBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjQ4KSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHQkLiRhbm9uZnVuJHdpdGhWYWx1ZSQxKEF0dHJpYnV0aW9uQ29udGV4dC5zY2FsYToyNzYpIiwiXHRhdCBzY2FsYS51dGlsLkR5bmFtaWNWYXJpYWJsZS53aXRoVmFsdWUoRHluYW1pY1ZhcmlhYmxlLnNjYWxhOjYyKSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHQkLndpdGhWYWx1ZShBdHRyaWJ1dGlvbkNvbnRleHQuc2NhbGE6MjcyKSIsIlx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLndpdGhBdHRyaWJ1dGlvbkNvbnRleHQoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo0NikiLCJcdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy53aXRoQXR0cmlidXRpb25Db250ZXh0JChBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjQzKSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIud2l0aEF0dHJpYnV0aW9uQ29udGV4dChEcml2ZXJXcmFwcGVyLnNjYWxhOjczKSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIucnVuSW5uZXJMb29wKERyaXZlcldyYXBwZXIuc2NhbGE6NTkwKSIsIlx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIucnVuSW5uZXIoRHJpdmVyV3JhcHBlci5zY2FsYTo1MTIpIiwiXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyV3JhcHBlci5ydW4oRHJpdmVyV3JhcHBlci5zY2FsYTozMDYpIiwiXHRhdCBqYXZhLmxhbmcuVGhyZWFkLnJ1bihUaHJlYWQuamF2YTo3NTApIl0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbXSwibWV0YWRhdGEiOnt9LCJqdXB5dGVyUHJvcHMiOm51bGwsInNxbFByb3BzIjpudWxsfSwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzYyOTYxNjIyNDEzLCJzdWJtaXRUaW1lIjoxNzYyOTYxNjIyMzA1LCJmaW5pc2hUaW1lIjoxNzYyOTYxNjIzMDk2LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDEwXV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjYyNmNiNjJkLThiNDQtNDM2ZC1hZTMwLWUxZTZhMTNhMjFkYiJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6Mzg0NDkzOTQyODc2OTEwNiwiZ3VpZCI6IjJiZWFjNGE4LWUzNWItNDM1ZS1iOWM0LWY1MDRkNTVlMjJlNSIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjEuMDYyNSwiY29tbWFuZCI6IiVtZFxuIyMjIDEuIEV4dHJhY3Qgc3BlY2lmaWMgcG9ydGlvbiBvZiB0aGUgc3RyaW5nIGZyb20gcmVmdW5kX3JlYXNvbiB1c2luZyBzcGxpdCBmdW5jdGlvbiIsImNvbW1hbmRWZXJzaW9uIjo1LCJzdGF0ZSI6ImlucHV0IiwicmVzdWx0cyI6bnVsbCwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MCwic3VibWl0VGltZSI6MCwiZmluaXNoVGltZSI6MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6e30sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOm51bGwsInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjY5N2FmNGRiLTZjZmUtNDMxYS1iZTkyLTMxMDUzYjkzNzM5NyJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6Mzg0NDkzOTQyODc2OTEwOCwiZ3VpZCI6IjcyNGNjMzkzLWM1YjItNGJhZS1iYzUzLTJkMWMyYmNjMjE1ZCIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjEuMzc1LCJjb21tYW5kIjoiJW1kXG4jIyMgMi4gRXh0cmFjdCBzcGVjaWZpYyBwb3J0aW9uIG9mIHRoZSBzdHJpbmcgZnJvbSByZWZ1bmRfcmVhc29uIHVzaW5nIHJlZ2V4cF9leHRyYWN0IGZ1bmN0aW9uIiwiY29tbWFuZFZlcnNpb24iOjE0LCJzdGF0ZSI6ImlucHV0IiwicmVzdWx0cyI6bnVsbCwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MCwic3VibWl0VGltZSI6MCwiZmluaXNoVGltZSI6MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6e30sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOm51bGwsInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6Ijc2ZTI4MWI4LTNlMTctNDhhNy1iNWRlLTEzYzA1NTk1ODQ4ZCJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6Mzg0NDkzOTQyODc2OTExMCwiZ3VpZCI6IjQzZTY5MjZiLWU5ZTgtNDkxMC1hNjQ0LWQyYTg1YmVjMzdkNyIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjIuNSwiY29tbWFuZCI6IiVtZFxuIyMjIDMuIFdyaXRlIHRyYW5zZm9ybWVkIGRhdGEgdG8gdGhlIFNpbHZlciBzY2hlbWEgICIsImNvbW1hbmRWZXJzaW9uIjozLCJzdGF0ZSI6ImlucHV0IiwicmVzdWx0cyI6bnVsbCwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MCwic3VibWl0VGltZSI6MCwiZmluaXNoVGltZSI6MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6e30sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOm51bGwsInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6ImY2MDRmMmYzLTQxMWYtNDU4My1hN2FlLWQwYzkwZGE5MTgwNyJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6Mzg0NDkzOTQyODc2OTExMywiZ3VpZCI6IjY5MjYwYTRiLTgwYzMtNGY3Zi04ZDkyLTI0ODU3ZGQxYzY0NiIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjQuNSwiY29tbWFuZCI6IiVzcWxcblNFTEVDVCAqIEZST00gZ2l6bW9ib3guc2lsdmVyLnB5X3JlZnVuZHM7IiwiY29tbWFuZFZlcnNpb24iOjUsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJsaXN0UmVzdWx0cyIsImRhdGEiOlt7InR5cGUiOiJ0YWJsZSIsImRhdGEiOltbMSw2NiwiMjAyNS0wMS0xMCIsIjExLTMwLTAwIiwiODUuNzUiLCJQYXltZW50IEVycm9yIiwiUmV0YWlsZXIiXSxbMiw2OSwiMjAyNS0wMS0wMyIsIjEyLTQwLTE1IiwiMTIwLjUwIiwiT3JkZXIgQ2FuY2VsbGVkIiwiQ3VzdG9tZXIiXSxbMyw3MiwiMjAyNS0wMS0wNiIsIjE0LTQ1LTMwIiwiNjUuMDAiLCJQcm9kdWN0IFJldHVybmVkIiwiQ3VzdG9tZXIiXSxbNCw3MywiMjAyNS0wMS0wNyIsIjE2LTEwLTQ1IiwiMjEwLjk5IiwiT3JkZXIgQ2FuY2VsbGVkIiwiQ3VzdG9tZXIiXSxbNSw3NSwiMjAyNS0wMS0wOSIsIjE4LTI1LTAwIiwiNDUuMjAiLCJQYXltZW50IEVycm9yIiwiUmV0YWlsZXIiXSxbNiw4MCwiMjAyNS0wMS0xMCIsIjA5LTM1LTIwIiwiMTMwLjE1IiwiT3JkZXIgQ2FuY2VsbGVkIiwiQ3VzdG9tZXIiXSxbNyw4MywiMjAyNS0wMS0xMiIsIjExLTIwLTQwIiwiMTUwLjAwIiwiUHJvZHVjdCBSZXR1cm5lZCIsIkN1c3RvbWVyIl0sWzgsODUsIjIwMjUtMDEtMTQiLCIxMy0xNS0zMCIsIjg5Ljk5IiwiT3JkZXIgQ2FuY2VsbGVkIiwiQ3VzdG9tZXIiXSxbOSw4OSwiMjAyNS0wMS0xNSIsIjE1LTAwLTAwIiwiNzguNTAiLCJQYXltZW50IEVycm9yIiwiUmV0YWlsZXIiXSxbMTAsOTEsIjIwMjUtMDEtMTciLCIxNi00NS0xNSIsIjI1MC43NSIsIlByb2R1Y3QgUmV0dXJuZWQiLCJDdXN0b21lciJdXSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJzY2hlbWEiOlt7Im5hbWUiOiJyZWZ1bmRfaWQiLCJ0eXBlIjoiXCJpbnRlZ2VyXCIiLCJtZXRhZGF0YSI6IntcImlzVGltZXN0YW1wTlRaXCI6ZmFsc2UsXCJzaWduZWRcIjp0cnVlLFwic2NhbGVcIjowfSJ9LHsibmFtZSI6InBheW1lbnRfaWQiLCJ0eXBlIjoiXCJpbnRlZ2VyXCIiLCJtZXRhZGF0YSI6IntcImlzVGltZXN0YW1wTlRaXCI6ZmFsc2UsXCJzaWduZWRcIjp0cnVlLFwic2NhbGVcIjowfSJ9LHsibmFtZSI6InJlZnVuZF9kYXRlIiwidHlwZSI6IlwiZGF0ZVwiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InJlZnVuZF90aW1lIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicmVmdW5kX2Ftb3VudCIsInR5cGUiOiJcImRlY2ltYWwoMTAsMilcIiIsIm1ldGFkYXRhIjoie1wiaXNUaW1lc3RhbXBOVFpcIjpmYWxzZSxcInNpZ25lZFwiOnRydWUsXCJzY2FsZVwiOjJ9In0seyJuYW1lIjoicmVmdW5kX3JlYXNvbiIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InJlZnVuZF9zb3VyY2UiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifV0sIm92ZXJmbG93IjpmYWxzZSwiYWdnRGF0YSI6W10sImFnZ1NjaGVtYSI6W10sImFnZ092ZXJmbG93IjpmYWxzZSwiYWdnU2VyaWVzTGltaXRSZWFjaGVkIjpmYWxzZSwiYWdnRXJyb3IiOiIiLCJhZ2dUeXBlIjoiIiwicGxvdE9wdGlvbnMiOm51bGwsImlzSnNvblNjaGVtYSI6dHJ1ZSwiZGJmc1Jlc3VsdFBhdGgiOm51bGwsImRhdGFzZXRJbmZvcyI6W3sibmFtZSI6Il9zcWxkZiIsInR5cGVTdHIiOiJweXNwYXJrLnNxbC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJzY2FsZSI6MCwic2lnbmVkIjp0cnVlfSwibmFtZSI6InJlZnVuZF9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJzY2FsZSI6MCwic2lnbmVkIjp0cnVlfSwibmFtZSI6InBheW1lbnRfaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImludGVnZXIifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InJlZnVuZF9kYXRlIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJkYXRlIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJyZWZ1bmRfdGltZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsInNjYWxlIjoyLCJzaWduZWQiOnRydWV9LCJuYW1lIjoicmVmdW5kX2Ftb3VudCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiZGVjaW1hbCgxMCwyKSJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoicmVmdW5kX3JlYXNvbiIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJyZWZ1bmRfc291cmNlIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifV0sInR5cGUiOiJzdHJ1Y3QifSwidGFibGVJZGVudGlmaWVyIjpudWxsfV0sImNvbHVtbkN1c3RvbURpc3BsYXlJbmZvcyI6e30sIm1ldGFkYXRhIjp7ImRhdGFmcmFtZU5hbWUiOiJfc3FsZGYiLCJleGVjdXRpb25Db3VudCI6MTQsImNyZWF0ZVRlbXBWaWV3Rm9ySW1wbGljaXREZiI6dHJ1ZX19XSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJfc3FsZGYiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuZGF0YWZyYW1lLkRhdGFGcmFtZSIsInNjaGVtYSI6eyJmaWVsZHMiOlt7Im1ldGFkYXRhIjp7ImlzVGltZXN0YW1wTlRaIjpmYWxzZSwic2NhbGUiOjAsInNpZ25lZCI6dHJ1ZX0sIm5hbWUiOiJyZWZ1bmRfaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImludGVnZXIifSx7Im1ldGFkYXRhIjp7ImlzVGltZXN0YW1wTlRaIjpmYWxzZSwic2NhbGUiOjAsInNpZ25lZCI6dHJ1ZX0sIm5hbWUiOiJwYXltZW50X2lkIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJpbnRlZ2VyIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJyZWZ1bmRfZGF0ZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiZGF0ZSJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoicmVmdW5kX3RpbWUiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJzY2FsZSI6Miwic2lnbmVkIjp0cnVlfSwibmFtZSI6InJlZnVuZF9hbW91bnQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImRlY2ltYWwoMTAsMikifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InJlZnVuZF9yZWFzb24iLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoicmVmdW5kX3NvdXJjZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzYyOTYxNzk2MjQ4LCJzdWJtaXRUaW1lIjoxNzYyOTYxNzk2MjA4LCJmaW5pc2hUaW1lIjoxNzYyOTYxNzk4MzM5LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwLCJpbXBsaWNpdERmIjp0cnVlfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDEwXV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjQ3ZGRhNGE4LTQ1MWMtNDBmZS05MGU5LTA5ZjAxMmYzMjI3NyJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6NDgwOTg2ODIzMjIwMDQ4OSwiZ3VpZCI6ImQwNjQxNzhlLWE5MzktNDRhOC04OTBlLTVkOTc2NTRmYjI1OCIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjEuNzk2ODc1LCJjb21tYW5kIjoiZGZfdHJhbnNmb3JtZWRfcmVmdW5kcyA9IChcbiAgICBkZl9yZWZ1bmRzXG4gICAgICAgIC5zZWxlY3QoXG4gICAgICAgICAgICBcInJlZnVuZF9pZFwiLFxuICAgICAgICAgICAgXCJwYXltZW50X2lkXCIsXG4gICAgICAgICAgICBGLmRhdGVfZm9ybWF0KCdyZWZ1bmRfdGltZXN0YW1wJywneXl5eS1NTS1kZCcpLmNhc3QoJ2RhdGUnKS5hbGlhcygncmVmdW5kX2RhdGUnKSxcbiAgICAgICAgICAgIEYuZGF0ZV9mb3JtYXQoJ3JlZnVuZF90aW1lc3RhbXAnLCdISC1tbS1zcycpLmFsaWFzKCdyZWZ1bmRfdGltZScpLFxuICAgICAgICAgICAgXCJyZWZ1bmRfYW1vdW50XCIsXG4gICAgICAgICAgICBGLnJlZ2V4cF9leHRyYWN0KFwicmVmdW5kX3JlYXNvblwiLCBcIl4oW146XSspOlwiLCAxKS5hbGlhcyhcInJlZnVuZF9yZWFzb25cIiksXG4gICAgICAgICAgICBGLnJlZ2V4cF9leHRyYWN0KFwicmVmdW5kX3JlYXNvblwiLCBcIl5bXjpdKzooLiopJFwiLCAxKS5hbGlhcyhcInJlZnVuZF9zb3VyY2VcIilcbiAgICAgICAgKVxuKVxuZGlzcGxheShkZl90cmFuc2Zvcm1lZF9yZWZ1bmRzKSIsImNvbW1hbmRWZXJzaW9uIjoxMCwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6Imxpc3RSZXN1bHRzIiwiZGF0YSI6W3sidHlwZSI6InRhYmxlIiwiZGF0YSI6W1sxLDY2LCIyMDI1LTAxLTEwIiwiMTEtMzAtMDAiLCI4NS43NSIsIlBheW1lbnQgRXJyb3IiLCJSZXRhaWxlciJdLFsyLDY5LCIyMDI1LTAxLTAzIiwiMTItNDAtMTUiLCIxMjAuNTAiLCJPcmRlciBDYW5jZWxsZWQiLCJDdXN0b21lciJdLFszLDcyLCIyMDI1LTAxLTA2IiwiMTQtNDUtMzAiLCI2NS4wMCIsIlByb2R1Y3QgUmV0dXJuZWQiLCJDdXN0b21lciJdLFs0LDczLCIyMDI1LTAxLTA3IiwiMTYtMTAtNDUiLCIyMTAuOTkiLCJPcmRlciBDYW5jZWxsZWQiLCJDdXN0b21lciJdLFs1LDc1LCIyMDI1LTAxLTA5IiwiMTgtMjUtMDAiLCI0NS4yMCIsIlBheW1lbnQgRXJyb3IiLCJSZXRhaWxlciJdLFs2LDgwLCIyMDI1LTAxLTEwIiwiMDktMzUtMjAiLCIxMzAuMTUiLCJPcmRlciBDYW5jZWxsZWQiLCJDdXN0b21lciJdLFs3LDgzLCIyMDI1LTAxLTEyIiwiMTEtMjAtNDAiLCIxNTAuMDAiLCJQcm9kdWN0IFJldHVybmVkIiwiQ3VzdG9tZXIiXSxbOCw4NSwiMjAyNS0wMS0xNCIsIjEzLTE1LTMwIiwiODkuOTkiLCJPcmRlciBDYW5jZWxsZWQiLCJDdXN0b21lciJdLFs5LDg5LCIyMDI1LTAxLTE1IiwiMTUtMDAtMDAiLCI3OC41MCIsIlBheW1lbnQgRXJyb3IiLCJSZXRhaWxlciJdLFsxMCw5MSwiMjAyNS0wMS0xNyIsIjE2LTQ1LTE1IiwiMjUwLjc1IiwiUHJvZHVjdCBSZXR1cm5lZCIsIkN1c3RvbWVyIl1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sInNjaGVtYSI6W3sibmFtZSI6InJlZnVuZF9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie1wiaXNUaW1lc3RhbXBOVFpcIjpmYWxzZSxcInNpZ25lZFwiOnRydWUsXCJzY2FsZVwiOjB9In0seyJuYW1lIjoicGF5bWVudF9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie1wiaXNUaW1lc3RhbXBOVFpcIjpmYWxzZSxcInNpZ25lZFwiOnRydWUsXCJzY2FsZVwiOjB9In0seyJuYW1lIjoicmVmdW5kX2RhdGUiLCJ0eXBlIjoiXCJkYXRlXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicmVmdW5kX3RpbWUiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJyZWZ1bmRfYW1vdW50IiwidHlwZSI6IlwiZGVjaW1hbCgxMCwyKVwiIiwibWV0YWRhdGEiOiJ7XCJpc1RpbWVzdGFtcE5UWlwiOmZhbHNlLFwic2lnbmVkXCI6dHJ1ZSxcInNjYWxlXCI6Mn0ifSx7Im5hbWUiOiJyZWZ1bmRfcmVhc29uIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicmVmdW5kX3NvdXJjZSIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9XSwib3ZlcmZsb3ciOmZhbHNlLCJhZ2dEYXRhIjpbXSwiYWdnU2NoZW1hIjpbXSwiYWdnT3ZlcmZsb3ciOmZhbHNlLCJhZ2dTZXJpZXNMaW1pdFJlYWNoZWQiOmZhbHNlLCJhZ2dFcnJvciI6IiIsImFnZ1R5cGUiOiIiLCJwbG90T3B0aW9ucyI6bnVsbCwiaXNKc29uU2NoZW1hIjp0cnVlLCJkYmZzUmVzdWx0UGF0aCI6bnVsbCwiZGF0YXNldEluZm9zIjpbXSwiY29sdW1uQ3VzdG9tRGlzcGxheUluZm9zIjp7fSwibWV0YWRhdGEiOnt9fV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbeyJuYW1lIjoiZGZfdHJhbnNmb3JtZWRfcmVmdW5kcyIsInR5cGVTdHIiOiJweXNwYXJrLnNxbC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJzY2FsZSI6MCwic2lnbmVkIjp0cnVlfSwibmFtZSI6InJlZnVuZF9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJzY2FsZSI6MCwic2lnbmVkIjp0cnVlfSwibmFtZSI6InBheW1lbnRfaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImludGVnZXIifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InJlZnVuZF9kYXRlIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJkYXRlIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJyZWZ1bmRfdGltZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsInNjYWxlIjoyLCJzaWduZWQiOnRydWV9LCJuYW1lIjoicmVmdW5kX2Ftb3VudCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiZGVjaW1hbCgxMCwyKSJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoicmVmdW5kX3JlYXNvbiIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJyZWZ1bmRfc291cmNlIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifV0sInR5cGUiOiJzdHJ1Y3QifSwidGFibGVJZGVudGlmaWVyIjpudWxsfV0sIm1ldGFkYXRhIjp7ImlzRGJmc0NvbW1hbmRSZXN1bHQiOmZhbHNlfX0sInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjE3NjI5NjE3NTI2MTIsInN1Ym1pdFRpbWUiOjE3NjI5NjE3NTI1MzgsImZpbmlzaFRpbWUiOjE3NjI5NjE3NTMyMzEsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnsicm93TGltaXQiOjEwMDAwLCJieXRlTGltaXQiOjIwNDgwMDB9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbWyJ0YWJsZSIsMTBdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiODQ2Zjg2MmYtZGYyOC00YTljLThlNTUtZTQzNDBmM2ZkMDA5In1dLCJkYXNoYm9hcmRzIjpbXSwiZ3VpZCI6ImU4OTdjYjhhLWVlZjEtNDgyNi1hYWE3LTZlZWFkMjVmNWJlNyIsImdsb2JhbFZhcnMiOnt9LCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsImlucHV0V2lkZ2V0cyI6e30sIm5vdGVib29rTWV0YWRhdGEiOnsicHl0aG9uSW5kZW50VW5pdCI6NCwibW9zdFJlY2VudGx5RXhlY3V0ZWRDb21tYW5kV2l0aEltcGxpY2l0REYiOnsiY29tbWFuZElkIjozODQ0OTM5NDI4NzY5MTEzLCJkYXRhZnJhbWVzIjpbIl9zcWxkZiJdfX0sInJlcG9zRXhwb3J0Rm9ybWF0IjoiU09VUkNFIiwiZW52aXJvbm1lbnRNZXRhZGF0YSI6eyJjbGllbnQiOiIxIiwiYmFzZV9lbnZpcm9ubWVudCI6IiJ9LCJjb21wdXRlUHJlZmVyZW5jZXMiOm51bGwsImlucHV0V2lkZ2V0UHJlZmVyZW5jZXMiOm51bGwsImVudmlyb25tZW50U2VyaWFsaXphdGlvblByZWZlcmVuY2VzIjpudWxsfQ=="
+}

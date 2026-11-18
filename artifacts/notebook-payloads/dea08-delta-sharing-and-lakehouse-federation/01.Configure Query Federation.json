@@ -1,0 +1,1081 @@
+{
+  "document": {
+    "commands": [
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n## Configure Access to Azure SQL Database via Lakehouse Federation\n1. Create Connection - asql_gizmobox_db_conn_sql\n1. Create Foreign Catalog - asql_gizmobox_db_catalog_sql",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 4,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "43db6cf1-874a-40ce-8dc7-810e11fec002",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "d1fa6fc5-54b3-4a1d-ade8-8f9f419ab776",
+        "origId": 5663586643003024,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT p.*, r.*\n  FROM asql_gizmobox_db_catalog_sql.dbo.refunds r \n  JOIN gizmobox.silver.payments p ON r.payment_id = p.payment_id;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 17,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1754923410814,
+        "globalVars": {},
+        "guid": "31944159-65c6-4f46-b1b6-6c602aeecc1c",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            10
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "2ca1fb31-d663-4505-9f50-7afe2d0cc20a",
+        "origId": 7268638255804878,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 5.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  66,
+                  3,
+                  "2025-01-08",
+                  "23:45:00",
+                  "Failed",
+                  "Bank Transfer",
+                  1,
+                  66,
+                  "2025-01-10T11:30:00.000Z",
+                  "85.75",
+                  "Payment Error:Retailer"
+                ],
+                [
+                  69,
+                  14,
+                  "2025-01-01",
+                  "22:22:26",
+                  "Failed",
+                  "PayPal",
+                  2,
+                  69,
+                  "2025-01-03T12:40:15.000Z",
+                  "120.50",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  72,
+                  26,
+                  "2025-01-05",
+                  "22:01:25",
+                  "Pending",
+                  "Bank Transfer",
+                  3,
+                  72,
+                  "2025-01-06T14:45:30.000Z",
+                  "65.00",
+                  "Product Returned:Customer"
+                ],
+                [
+                  73,
+                  29,
+                  "2025-01-18",
+                  "05:05:04",
+                  "Failed",
+                  "Bank Transfer",
+                  4,
+                  73,
+                  "2025-01-07T16:10:45.000Z",
+                  "210.99",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  75,
+                  36,
+                  "2025-01-16",
+                  "23:15:43",
+                  "Pending",
+                  "PayPal",
+                  5,
+                  75,
+                  "2025-01-09T18:25:00.000Z",
+                  "45.20",
+                  "Payment Error:Retailer"
+                ],
+                [
+                  80,
+                  53,
+                  "2025-01-15",
+                  "07:40:19",
+                  "Failed",
+                  "Credit Card",
+                  6,
+                  80,
+                  "2025-01-10T09:35:20.000Z",
+                  "130.15",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  83,
+                  65,
+                  "2025-01-06",
+                  "20:30:10",
+                  "Failed",
+                  "PayPal",
+                  7,
+                  83,
+                  "2025-01-12T11:20:40.000Z",
+                  "150.00",
+                  "Product Returned:Customer"
+                ],
+                [
+                  85,
+                  71,
+                  "2025-01-07",
+                  "19:15:15",
+                  "Pending",
+                  "Credit Card",
+                  8,
+                  85,
+                  "2025-01-14T13:15:30.000Z",
+                  "89.99",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  89,
+                  85,
+                  "2025-01-16",
+                  "15:50:45",
+                  "Pending",
+                  "Bank Transfer",
+                  9,
+                  89,
+                  "2025-01-15T15:00:00.000Z",
+                  "78.50",
+                  "Payment Error:Retailer"
+                ],
+                [
+                  91,
+                  92,
+                  "2025-01-03",
+                  "16:20:25",
+                  "Failed",
+                  "PayPal",
+                  10,
+                  91,
+                  "2025-01-17T16:45:15.000Z",
+                  "250.75",
+                  "Product Returned:Customer"
+                ]
+              ],
+              "datasetInfos": [
+                {
+                  "name": "_sqldf",
+                  "schema": {
+                    "fields": [
+                      {
+                        "metadata": {},
+                        "name": "payment_id",
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "order_id",
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "payment_date",
+                        "nullable": true,
+                        "type": "date"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "payment_time",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "payment_status",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "payment_method",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "jdbcClientType": "int",
+                          "scale": 0,
+                          "signed": true
+                        },
+                        "name": "refund_id",
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "jdbcClientType": "int",
+                          "scale": 0,
+                          "signed": true
+                        },
+                        "name": "payment_id",
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "jdbcClientType": "datetime",
+                          "scale": 3,
+                          "signed": false
+                        },
+                        "name": "refund_timestamp",
+                        "nullable": true,
+                        "type": "timestamp"
+                      },
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "jdbcClientType": "decimal",
+                          "scale": 2,
+                          "signed": true
+                        },
+                        "name": "refund_amount",
+                        "nullable": true,
+                        "type": "decimal(10,2)"
+                      },
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "jdbcClientType": "nvarchar",
+                          "scale": 0,
+                          "signed": false
+                        },
+                        "name": "refund_reason",
+                        "nullable": true,
+                        "type": "string"
+                      }
+                    ],
+                    "type": "struct"
+                  },
+                  "tableIdentifier": null,
+                  "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+                }
+              ],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {
+                "createTempViewForImplicitDf": true,
+                "dataframeName": "_sqldf",
+                "executionCount": 6
+              },
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{}",
+                  "name": "payment_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "order_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "payment_date",
+                  "type": "\"date\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "payment_time",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "payment_status",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "payment_method",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{\"signed\": true, \"scale\": 0, \"isTimestampNTZ\": false, \"jdbcClientType\": \"int\"}",
+                  "name": "refund_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{\"signed\": true, \"scale\": 0, \"isTimestampNTZ\": false, \"jdbcClientType\": \"int\"}",
+                  "name": "payment_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{\"signed\": false, \"scale\": 3, \"isTimestampNTZ\": false, \"jdbcClientType\": \"datetime\"}",
+                  "name": "refund_timestamp",
+                  "type": "\"timestamp\""
+                },
+                {
+                  "metadata": "{\"signed\": true, \"scale\": 2, \"isTimestampNTZ\": false, \"jdbcClientType\": \"decimal\"}",
+                  "name": "refund_amount",
+                  "type": "\"decimal(10,2)\""
+                },
+                {
+                  "metadata": "{\"signed\": false, \"scale\": 0, \"isTimestampNTZ\": false, \"jdbcClientType\": \"nvarchar\"}",
+                  "name": "refund_reason",
+                  "type": "\"string\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "_sqldf",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "payment_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "order_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "payment_date",
+                    "nullable": true,
+                    "type": "date"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "payment_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "payment_status",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "payment_method",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "jdbcClientType": "int",
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "refund_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "jdbcClientType": "int",
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "payment_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "jdbcClientType": "datetime",
+                      "scale": 3,
+                      "signed": false
+                    },
+                    "name": "refund_timestamp",
+                    "nullable": true,
+                    "type": "timestamp"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "jdbcClientType": "decimal",
+                      "scale": 2,
+                      "signed": true
+                    },
+                    "name": "refund_amount",
+                    "nullable": true,
+                    "type": "decimal(10,2)"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "jdbcClientType": "nvarchar",
+                      "scale": 0,
+                      "signed": false
+                    },
+                    "name": "refund_reason",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1754923401397,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1754923400439,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "CREATE CONNECTION asql_gizmobox_db_conn_sql TYPE sqlserver\nOPTIONS (\n  host 'gizmobox-srv.database.windows.net',\n  port '1433',\n  user 'gizmoboxadm',\n  password 'Gizmobox@Adm'\n);",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 11,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1754923086173,
+        "globalVars": {},
+        "guid": "17d4a94e-737a-48ae-9603-4c48a4b70dfd",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            0
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "6c055924-0d2d-41f2-af21-8fb0ec2fd4d0",
+        "origId": 5663586643003026,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 2.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1754923084402,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1754923084322,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SHOW CATALOGS;\nUSE CATALOG asql_gizmobox_db_catalog_sql;\nSHOW SCHEMAS;\nUSE SCHEMA dbo;\nSHOW TABLES;\nSELECT * FROM refunds;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 13,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1754923305817,
+        "globalVars": {},
+        "guid": "5c22a869-8211-44ef-9add-699ee5d45a9f",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            10
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "8a373662-ea4d-4ea0-bdf3-ff38a2ae933e",
+        "origId": 7268638255804877,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 4.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  1,
+                  66,
+                  "2025-01-10T11:30:00.000Z",
+                  "85.75",
+                  "Payment Error:Retailer"
+                ],
+                [
+                  2,
+                  69,
+                  "2025-01-03T12:40:15.000Z",
+                  "120.50",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  3,
+                  72,
+                  "2025-01-06T14:45:30.000Z",
+                  "65.00",
+                  "Product Returned:Customer"
+                ],
+                [
+                  4,
+                  73,
+                  "2025-01-07T16:10:45.000Z",
+                  "210.99",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  5,
+                  75,
+                  "2025-01-09T18:25:00.000Z",
+                  "45.20",
+                  "Payment Error:Retailer"
+                ],
+                [
+                  6,
+                  80,
+                  "2025-01-10T09:35:20.000Z",
+                  "130.15",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  7,
+                  83,
+                  "2025-01-12T11:20:40.000Z",
+                  "150.00",
+                  "Product Returned:Customer"
+                ],
+                [
+                  8,
+                  85,
+                  "2025-01-14T13:15:30.000Z",
+                  "89.99",
+                  "Order Cancelled:Customer"
+                ],
+                [
+                  9,
+                  89,
+                  "2025-01-15T15:00:00.000Z",
+                  "78.50",
+                  "Payment Error:Retailer"
+                ],
+                [
+                  10,
+                  91,
+                  "2025-01-17T16:45:15.000Z",
+                  "250.75",
+                  "Product Returned:Customer"
+                ]
+              ],
+              "datasetInfos": [
+                {
+                  "name": "_sqldf",
+                  "schema": {
+                    "fields": [
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "jdbcClientType": "int",
+                          "scale": 0,
+                          "signed": true
+                        },
+                        "name": "refund_id",
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "jdbcClientType": "int",
+                          "scale": 0,
+                          "signed": true
+                        },
+                        "name": "payment_id",
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "jdbcClientType": "datetime",
+                          "scale": 3,
+                          "signed": false
+                        },
+                        "name": "refund_timestamp",
+                        "nullable": true,
+                        "type": "timestamp"
+                      },
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "jdbcClientType": "decimal",
+                          "scale": 2,
+                          "signed": true
+                        },
+                        "name": "refund_amount",
+                        "nullable": true,
+                        "type": "decimal(10,2)"
+                      },
+                      {
+                        "metadata": {
+                          "isTimestampNTZ": false,
+                          "jdbcClientType": "nvarchar",
+                          "scale": 0,
+                          "signed": false
+                        },
+                        "name": "refund_reason",
+                        "nullable": true,
+                        "type": "string"
+                      }
+                    ],
+                    "type": "struct"
+                  },
+                  "tableIdentifier": null,
+                  "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+                }
+              ],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {
+                "createTempViewForImplicitDf": true,
+                "dataframeName": "_sqldf",
+                "executionCount": 5
+              },
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{\"signed\": true, \"scale\": 0, \"isTimestampNTZ\": false, \"jdbcClientType\": \"int\"}",
+                  "name": "refund_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{\"signed\": true, \"scale\": 0, \"isTimestampNTZ\": false, \"jdbcClientType\": \"int\"}",
+                  "name": "payment_id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{\"signed\": false, \"scale\": 3, \"isTimestampNTZ\": false, \"jdbcClientType\": \"datetime\"}",
+                  "name": "refund_timestamp",
+                  "type": "\"timestamp\""
+                },
+                {
+                  "metadata": "{\"signed\": true, \"scale\": 2, \"isTimestampNTZ\": false, \"jdbcClientType\": \"decimal\"}",
+                  "name": "refund_amount",
+                  "type": "\"decimal(10,2)\""
+                },
+                {
+                  "metadata": "{\"signed\": false, \"scale\": 0, \"isTimestampNTZ\": false, \"jdbcClientType\": \"nvarchar\"}",
+                  "name": "refund_reason",
+                  "type": "\"string\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "_sqldf",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "jdbcClientType": "int",
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "refund_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "jdbcClientType": "int",
+                      "scale": 0,
+                      "signed": true
+                    },
+                    "name": "payment_id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "jdbcClientType": "datetime",
+                      "scale": 3,
+                      "signed": false
+                    },
+                    "name": "refund_timestamp",
+                    "nullable": true,
+                    "type": "timestamp"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "jdbcClientType": "decimal",
+                      "scale": 2,
+                      "signed": true
+                    },
+                    "name": "refund_amount",
+                    "nullable": true,
+                    "type": "decimal(10,2)"
+                  },
+                  {
+                    "metadata": {
+                      "isTimestampNTZ": false,
+                      "jdbcClientType": "nvarchar",
+                      "scale": 0,
+                      "signed": false
+                    },
+                    "name": "refund_reason",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1754923287549,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1754923286492,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "CREATE FOREIGN CATALOG IF NOT EXISTS asql_gizmobox_db_catalog_sql USING CONNECTION asql_gizmobox_db_conn_sql\nOPTIONS (database 'gizmobox-db');",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 8,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1754923176456,
+        "globalVars": {},
+        "guid": "8aa67d1f-31ab-4542-a76d-e7acb3d26ec9",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "b98c2cac-2b0d-4f2e-802e-e693a7ca6063",
+        "origId": 5663586643003027,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 3.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [],
+          "datasetInfos": [],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1754923154758,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1754923147409,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      }
+    ],
+    "computePreferences": null,
+    "dashboards": [],
+    "environmentMetadata": {
+      "base_environment": "",
+      "client": "2"
+    },
+    "environmentSerializationPreferences": null,
+    "globalVars": {},
+    "guid": "abd0e541-4233-49b3-b58a-7526bfa78821",
+    "iPythonMetadata": null,
+    "inputWidgetPreferences": null,
+    "inputWidgets": {},
+    "language": "sql",
+    "name": "01.Configure Query Federation",
+    "notebookMetadata": {
+      "pythonIndentUnit": 4
+    },
+    "origId": 644631640206958,
+    "reposExportFormat": "JUPYTER",
+    "version": "NotebookV1"
+  },
+  "provenance": {
+    "aliases": [],
+    "archive": "materials/archives/dea-course-v5.dbc",
+    "archive_sha256": "23908dc947dc9279b1176575fa5b0966281fca608509c6fed3deca7700146488",
+    "member": "dea-course/dea08-delta-sharing-and-lakehouse-federation/01.Configure Query Federation.sql",
+    "member_sha256": "b8fea0787119392081764ff338c42d6fe3aff4c156d4716a40cbb898435c36c5"
+  },
+  "schema_version": 1,
+  "source_base64": "eyJ2ZXJzaW9uIjoiTm90ZWJvb2tWMSIsIm9yaWdJZCI6NjQ0NjMxNjQwMjA2OTU4LCJuYW1lIjoiMDEuQ29uZmlndXJlIFF1ZXJ5IEZlZGVyYXRpb24iLCJsYW5ndWFnZSI6InNxbCIsImNvbW1hbmRzIjpbeyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo1NjYzNTg2NjQzMDAzMDI0LCJndWlkIjoiNDNkYjZjZjEtODc0YS00MGNlLThkYzctODEwZTExZmVjMDAyIiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MS4wLCJjb21tYW5kIjoiJW1kXG4jIyBDb25maWd1cmUgQWNjZXNzIHRvIEF6dXJlIFNRTCBEYXRhYmFzZSB2aWEgTGFrZWhvdXNlIEZlZGVyYXRpb25cbjEuIENyZWF0ZSBDb25uZWN0aW9uIC0gYXNxbF9naXptb2JveF9kYl9jb25uX3NxbFxuMS4gQ3JlYXRlIEZvcmVpZ24gQ2F0YWxvZyAtIGFzcWxfZ2l6bW9ib3hfZGJfY2F0YWxvZ19zcWwiLCJjb21tYW5kVmVyc2lvbiI6NCwic3RhdGUiOiJpbnB1dCIsInJlc3VsdHMiOm51bGwsInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjAsInN1Ym1pdFRpbWUiOjAsImZpbmlzaFRpbWUiOjAsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnt9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiZDFmYTZmYzUtNTRiMy00YTFkLWFkZTgtOGY5ZjQxOWFiNzc2In0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo3MjY4NjM4MjU1ODA0ODc4LCJndWlkIjoiMzE5NDQxNTktNjVjNi00ZjQ2LWIxYjYtNmM2MDJhZWVjYzFjIiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6NS4wLCJjb21tYW5kIjoiU0VMRUNUIHAuKiwgci4qXG4gIEZST00gYXNxbF9naXptb2JveF9kYl9jYXRhbG9nX3NxbC5kYm8ucmVmdW5kcyByIFxuICBKT0lOIGdpem1vYm94LnNpbHZlci5wYXltZW50cyBwIE9OIHIucGF5bWVudF9pZCA9IHAucGF5bWVudF9pZDsiLCJjb21tYW5kVmVyc2lvbiI6MTcsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJsaXN0UmVzdWx0cyIsImRhdGEiOlt7InR5cGUiOiJ0YWJsZSIsImRhdGEiOltbNjYsMywiMjAyNS0wMS0wOCIsIjIzOjQ1OjAwIiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciIsMSw2NiwiMjAyNS0wMS0xMFQxMTozMDowMC4wMDBaIiwiODUuNzUiLCJQYXltZW50IEVycm9yOlJldGFpbGVyIl0sWzY5LDE0LCIyMDI1LTAxLTAxIiwiMjI6MjI6MjYiLCJGYWlsZWQiLCJQYXlQYWwiLDIsNjksIjIwMjUtMDEtMDNUMTI6NDA6MTUuMDAwWiIsIjEyMC41MCIsIk9yZGVyIENhbmNlbGxlZDpDdXN0b21lciJdLFs3MiwyNiwiMjAyNS0wMS0wNSIsIjIyOjAxOjI1IiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiLDMsNzIsIjIwMjUtMDEtMDZUMTQ6NDU6MzAuMDAwWiIsIjY1LjAwIiwiUHJvZHVjdCBSZXR1cm5lZDpDdXN0b21lciJdLFs3MywyOSwiMjAyNS0wMS0xOCIsIjA1OjA1OjA0IiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciIsNCw3MywiMjAyNS0wMS0wN1QxNjoxMDo0NS4wMDBaIiwiMjEwLjk5IiwiT3JkZXIgQ2FuY2VsbGVkOkN1c3RvbWVyIl0sWzc1LDM2LCIyMDI1LTAxLTE2IiwiMjM6MTU6NDMiLCJQZW5kaW5nIiwiUGF5UGFsIiw1LDc1LCIyMDI1LTAxLTA5VDE4OjI1OjAwLjAwMFoiLCI0NS4yMCIsIlBheW1lbnQgRXJyb3I6UmV0YWlsZXIiXSxbODAsNTMsIjIwMjUtMDEtMTUiLCIwNzo0MDoxOSIsIkZhaWxlZCIsIkNyZWRpdCBDYXJkIiw2LDgwLCIyMDI1LTAxLTEwVDA5OjM1OjIwLjAwMFoiLCIxMzAuMTUiLCJPcmRlciBDYW5jZWxsZWQ6Q3VzdG9tZXIiXSxbODMsNjUsIjIwMjUtMDEtMDYiLCIyMDozMDoxMCIsIkZhaWxlZCIsIlBheVBhbCIsNyw4MywiMjAyNS0wMS0xMlQxMToyMDo0MC4wMDBaIiwiMTUwLjAwIiwiUHJvZHVjdCBSZXR1cm5lZDpDdXN0b21lciJdLFs4NSw3MSwiMjAyNS0wMS0wNyIsIjE5OjE1OjE1IiwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIiw4LDg1LCIyMDI1LTAxLTE0VDEzOjE1OjMwLjAwMFoiLCI4OS45OSIsIk9yZGVyIENhbmNlbGxlZDpDdXN0b21lciJdLFs4OSw4NSwiMjAyNS0wMS0xNiIsIjE1OjUwOjQ1IiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiLDksODksIjIwMjUtMDEtMTVUMTU6MDA6MDAuMDAwWiIsIjc4LjUwIiwiUGF5bWVudCBFcnJvcjpSZXRhaWxlciJdLFs5MSw5MiwiMjAyNS0wMS0wMyIsIjE2OjIwOjI1IiwiRmFpbGVkIiwiUGF5UGFsIiwxMCw5MSwiMjAyNS0wMS0xN1QxNjo0NToxNS4wMDBaIiwiMjUwLjc1IiwiUHJvZHVjdCBSZXR1cm5lZDpDdXN0b21lciJdXSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJzY2hlbWEiOlt7Im5hbWUiOiJwYXltZW50X2lkIiwidHlwZSI6IlwiaW50ZWdlclwiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6Im9yZGVyX2lkIiwidHlwZSI6IlwiaW50ZWdlclwiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InBheW1lbnRfZGF0ZSIsInR5cGUiOiJcImRhdGVcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwYXltZW50X3RpbWUiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwYXltZW50X3N0YXR1cyIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InBheW1lbnRfbWV0aG9kIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicmVmdW5kX2lkIiwidHlwZSI6IlwiaW50ZWdlclwiIiwibWV0YWRhdGEiOiJ7XCJzaWduZWRcIjogdHJ1ZSwgXCJzY2FsZVwiOiAwLCBcImlzVGltZXN0YW1wTlRaXCI6IGZhbHNlLCBcImpkYmNDbGllbnRUeXBlXCI6IFwiaW50XCJ9In0seyJuYW1lIjoicGF5bWVudF9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie1wic2lnbmVkXCI6IHRydWUsIFwic2NhbGVcIjogMCwgXCJpc1RpbWVzdGFtcE5UWlwiOiBmYWxzZSwgXCJqZGJjQ2xpZW50VHlwZVwiOiBcImludFwifSJ9LHsibmFtZSI6InJlZnVuZF90aW1lc3RhbXAiLCJ0eXBlIjoiXCJ0aW1lc3RhbXBcIiIsIm1ldGFkYXRhIjoie1wic2lnbmVkXCI6IGZhbHNlLCBcInNjYWxlXCI6IDMsIFwiaXNUaW1lc3RhbXBOVFpcIjogZmFsc2UsIFwiamRiY0NsaWVudFR5cGVcIjogXCJkYXRldGltZVwifSJ9LHsibmFtZSI6InJlZnVuZF9hbW91bnQiLCJ0eXBlIjoiXCJkZWNpbWFsKDEwLDIpXCIiLCJtZXRhZGF0YSI6IntcInNpZ25lZFwiOiB0cnVlLCBcInNjYWxlXCI6IDIsIFwiaXNUaW1lc3RhbXBOVFpcIjogZmFsc2UsIFwiamRiY0NsaWVudFR5cGVcIjogXCJkZWNpbWFsXCJ9In0seyJuYW1lIjoicmVmdW5kX3JlYXNvbiIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7XCJzaWduZWRcIjogZmFsc2UsIFwic2NhbGVcIjogMCwgXCJpc1RpbWVzdGFtcE5UWlwiOiBmYWxzZSwgXCJqZGJjQ2xpZW50VHlwZVwiOiBcIm52YXJjaGFyXCJ9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJfc3FsZGYiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuY29ubmVjdC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnt9LCJuYW1lIjoicGF5bWVudF9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoib3JkZXJfaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImludGVnZXIifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InBheW1lbnRfZGF0ZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiZGF0ZSJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoicGF5bWVudF90aW1lIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InBheW1lbnRfc3RhdHVzIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InBheW1lbnRfbWV0aG9kIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifSx7Im1ldGFkYXRhIjp7ImlzVGltZXN0YW1wTlRaIjpmYWxzZSwiamRiY0NsaWVudFR5cGUiOiJpbnQiLCJzY2FsZSI6MCwic2lnbmVkIjp0cnVlfSwibmFtZSI6InJlZnVuZF9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJqZGJjQ2xpZW50VHlwZSI6ImludCIsInNjYWxlIjowLCJzaWduZWQiOnRydWV9LCJuYW1lIjoicGF5bWVudF9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJqZGJjQ2xpZW50VHlwZSI6ImRhdGV0aW1lIiwic2NhbGUiOjMsInNpZ25lZCI6ZmFsc2V9LCJuYW1lIjoicmVmdW5kX3RpbWVzdGFtcCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoidGltZXN0YW1wIn0seyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsImpkYmNDbGllbnRUeXBlIjoiZGVjaW1hbCIsInNjYWxlIjoyLCJzaWduZWQiOnRydWV9LCJuYW1lIjoicmVmdW5kX2Ftb3VudCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiZGVjaW1hbCgxMCwyKSJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJqZGJjQ2xpZW50VHlwZSI6Im52YXJjaGFyIiwic2NhbGUiOjAsInNpZ25lZCI6ZmFsc2V9LCJuYW1lIjoicmVmdW5kX3JlYXNvbiIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJkYXRhZnJhbWVOYW1lIjoiX3NxbGRmIiwiZXhlY3V0aW9uQ291bnQiOjYsImNyZWF0ZVRlbXBWaWV3Rm9ySW1wbGljaXREZiI6dHJ1ZX19XSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJfc3FsZGYiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuY29ubmVjdC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnt9LCJuYW1lIjoicGF5bWVudF9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoib3JkZXJfaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImludGVnZXIifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InBheW1lbnRfZGF0ZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiZGF0ZSJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoicGF5bWVudF90aW1lIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InBheW1lbnRfc3RhdHVzIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InBheW1lbnRfbWV0aG9kIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifSx7Im1ldGFkYXRhIjp7ImlzVGltZXN0YW1wTlRaIjpmYWxzZSwiamRiY0NsaWVudFR5cGUiOiJpbnQiLCJzY2FsZSI6MCwic2lnbmVkIjp0cnVlfSwibmFtZSI6InJlZnVuZF9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJqZGJjQ2xpZW50VHlwZSI6ImludCIsInNjYWxlIjowLCJzaWduZWQiOnRydWV9LCJuYW1lIjoicGF5bWVudF9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJqZGJjQ2xpZW50VHlwZSI6ImRhdGV0aW1lIiwic2NhbGUiOjMsInNpZ25lZCI6ZmFsc2V9LCJuYW1lIjoicmVmdW5kX3RpbWVzdGFtcCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoidGltZXN0YW1wIn0seyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsImpkYmNDbGllbnRUeXBlIjoiZGVjaW1hbCIsInNjYWxlIjoyLCJzaWduZWQiOnRydWV9LCJuYW1lIjoicmVmdW5kX2Ftb3VudCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiZGVjaW1hbCgxMCwyKSJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJqZGJjQ2xpZW50VHlwZSI6Im52YXJjaGFyIiwic2NhbGUiOjAsInNpZ25lZCI6ZmFsc2V9LCJuYW1lIjoicmVmdW5kX3JlYXNvbiIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzU0OTIzNDAxMzk3LCJzdWJtaXRUaW1lIjoxNzU0OTIzNDAwNDM5LCJmaW5pc2hUaW1lIjoxNzU0OTIzNDEwODE0LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDEwXV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjJjYTFmYjMxLWQ2NjMtNDUwNS05ZjUwLTdhZmUyZDBjYzIwYSJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6NTY2MzU4NjY0MzAwMzAyNiwiZ3VpZCI6IjE3ZDRhOTRlLTczN2EtNDhhZS05NjAzLTRjNDhhNGI3MGRmZCIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjIuMCwiY29tbWFuZCI6IkNSRUFURSBDT05ORUNUSU9OIGFzcWxfZ2l6bW9ib3hfZGJfY29ubl9zcWwgVFlQRSBzcWxzZXJ2ZXJcbk9QVElPTlMgKFxuICBob3N0ICdnaXptb2JveC1zcnYuZGF0YWJhc2Uud2luZG93cy5uZXQnLFxuICBwb3J0ICcxNDMzJyxcbiAgdXNlciAnZ2l6bW9ib3hhZG0nLFxuICBwYXNzd29yZCAnR2l6bW9ib3hAQWRtJ1xuKTsiLCJjb21tYW5kVmVyc2lvbiI6MTEsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJ0YWJsZSIsImRhdGEiOltdLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sInNjaGVtYSI6W10sIm92ZXJmbG93IjpmYWxzZSwiYWdnRGF0YSI6W10sImFnZ1NjaGVtYSI6W10sImFnZ092ZXJmbG93IjpmYWxzZSwiYWdnU2VyaWVzTGltaXRSZWFjaGVkIjpmYWxzZSwiYWdnRXJyb3IiOiIiLCJhZ2dUeXBlIjoiIiwicGxvdE9wdGlvbnMiOm51bGwsImlzSnNvblNjaGVtYSI6dHJ1ZSwiZGJmc1Jlc3VsdFBhdGgiOm51bGwsImRhdGFzZXRJbmZvcyI6W10sImNvbHVtbkN1c3RvbURpc3BsYXlJbmZvcyI6e30sIm1ldGFkYXRhIjp7ImlzRGJmc0NvbW1hbmRSZXN1bHQiOmZhbHNlfX0sInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjE3NTQ5MjMwODQ0MDIsInN1Ym1pdFRpbWUiOjE3NTQ5MjMwODQzMjIsImZpbmlzaFRpbWUiOjE3NTQ5MjMwODYxNzMsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnsicm93TGltaXQiOjEwMDAwLCJieXRlTGltaXQiOjIwNDgwMDB9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbWyJ0YWJsZSIsMF1dLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiI2YzA1NTkyNC0wZDJkLTQxZjItYWYyMS04ZmIwZWMyZmQ0ZDAifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjcyNjg2MzgyNTU4MDQ4NzcsImd1aWQiOiI1YzIyYTg2OS04MjExLTQ0ZWYtOWFkZC02OTllZTVkNDVhOWYiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjo0LjAsImNvbW1hbmQiOiJTSE9XIENBVEFMT0dTO1xuVVNFIENBVEFMT0cgYXNxbF9naXptb2JveF9kYl9jYXRhbG9nX3NxbDtcblNIT1cgU0NIRU1BUztcblVTRSBTQ0hFTUEgZGJvO1xuU0hPVyBUQUJMRVM7XG5TRUxFQ1QgKiBGUk9NIHJlZnVuZHM7IiwiY29tbWFuZFZlcnNpb24iOjEzLCJzdGF0ZSI6ImZpbmlzaGVkIiwicmVzdWx0cyI6eyJ0eXBlIjoibGlzdFJlc3VsdHMiLCJkYXRhIjpbeyJ0eXBlIjoidGFibGUiLCJkYXRhIjpbWzEsNjYsIjIwMjUtMDEtMTBUMTE6MzA6MDAuMDAwWiIsIjg1Ljc1IiwiUGF5bWVudCBFcnJvcjpSZXRhaWxlciJdLFsyLDY5LCIyMDI1LTAxLTAzVDEyOjQwOjE1LjAwMFoiLCIxMjAuNTAiLCJPcmRlciBDYW5jZWxsZWQ6Q3VzdG9tZXIiXSxbMyw3MiwiMjAyNS0wMS0wNlQxNDo0NTozMC4wMDBaIiwiNjUuMDAiLCJQcm9kdWN0IFJldHVybmVkOkN1c3RvbWVyIl0sWzQsNzMsIjIwMjUtMDEtMDdUMTY6MTA6NDUuMDAwWiIsIjIxMC45OSIsIk9yZGVyIENhbmNlbGxlZDpDdXN0b21lciJdLFs1LDc1LCIyMDI1LTAxLTA5VDE4OjI1OjAwLjAwMFoiLCI0NS4yMCIsIlBheW1lbnQgRXJyb3I6UmV0YWlsZXIiXSxbNiw4MCwiMjAyNS0wMS0xMFQwOTozNToyMC4wMDBaIiwiMTMwLjE1IiwiT3JkZXIgQ2FuY2VsbGVkOkN1c3RvbWVyIl0sWzcsODMsIjIwMjUtMDEtMTJUMTE6MjA6NDAuMDAwWiIsIjE1MC4wMCIsIlByb2R1Y3QgUmV0dXJuZWQ6Q3VzdG9tZXIiXSxbOCw4NSwiMjAyNS0wMS0xNFQxMzoxNTozMC4wMDBaIiwiODkuOTkiLCJPcmRlciBDYW5jZWxsZWQ6Q3VzdG9tZXIiXSxbOSw4OSwiMjAyNS0wMS0xNVQxNTowMDowMC4wMDBaIiwiNzguNTAiLCJQYXltZW50IEVycm9yOlJldGFpbGVyIl0sWzEwLDkxLCIyMDI1LTAxLTE3VDE2OjQ1OjE1LjAwMFoiLCIyNTAuNzUiLCJQcm9kdWN0IFJldHVybmVkOkN1c3RvbWVyIl1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sInNjaGVtYSI6W3sibmFtZSI6InJlZnVuZF9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie1wic2lnbmVkXCI6IHRydWUsIFwic2NhbGVcIjogMCwgXCJpc1RpbWVzdGFtcE5UWlwiOiBmYWxzZSwgXCJqZGJjQ2xpZW50VHlwZVwiOiBcImludFwifSJ9LHsibmFtZSI6InBheW1lbnRfaWQiLCJ0eXBlIjoiXCJpbnRlZ2VyXCIiLCJtZXRhZGF0YSI6IntcInNpZ25lZFwiOiB0cnVlLCBcInNjYWxlXCI6IDAsIFwiaXNUaW1lc3RhbXBOVFpcIjogZmFsc2UsIFwiamRiY0NsaWVudFR5cGVcIjogXCJpbnRcIn0ifSx7Im5hbWUiOiJyZWZ1bmRfdGltZXN0YW1wIiwidHlwZSI6IlwidGltZXN0YW1wXCIiLCJtZXRhZGF0YSI6IntcInNpZ25lZFwiOiBmYWxzZSwgXCJzY2FsZVwiOiAzLCBcImlzVGltZXN0YW1wTlRaXCI6IGZhbHNlLCBcImpkYmNDbGllbnRUeXBlXCI6IFwiZGF0ZXRpbWVcIn0ifSx7Im5hbWUiOiJyZWZ1bmRfYW1vdW50IiwidHlwZSI6IlwiZGVjaW1hbCgxMCwyKVwiIiwibWV0YWRhdGEiOiJ7XCJzaWduZWRcIjogdHJ1ZSwgXCJzY2FsZVwiOiAyLCBcImlzVGltZXN0YW1wTlRaXCI6IGZhbHNlLCBcImpkYmNDbGllbnRUeXBlXCI6IFwiZGVjaW1hbFwifSJ9LHsibmFtZSI6InJlZnVuZF9yZWFzb24iLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie1wic2lnbmVkXCI6IGZhbHNlLCBcInNjYWxlXCI6IDAsIFwiaXNUaW1lc3RhbXBOVFpcIjogZmFsc2UsIFwiamRiY0NsaWVudFR5cGVcIjogXCJudmFyY2hhclwifSJ9XSwib3ZlcmZsb3ciOmZhbHNlLCJhZ2dEYXRhIjpbXSwiYWdnU2NoZW1hIjpbXSwiYWdnT3ZlcmZsb3ciOmZhbHNlLCJhZ2dTZXJpZXNMaW1pdFJlYWNoZWQiOmZhbHNlLCJhZ2dFcnJvciI6IiIsImFnZ1R5cGUiOiIiLCJwbG90T3B0aW9ucyI6bnVsbCwiaXNKc29uU2NoZW1hIjp0cnVlLCJkYmZzUmVzdWx0UGF0aCI6bnVsbCwiZGF0YXNldEluZm9zIjpbeyJuYW1lIjoiX3NxbGRmIiwidHlwZVN0ciI6InB5c3Bhcmsuc3FsLmNvbm5lY3QuZGF0YWZyYW1lLkRhdGFGcmFtZSIsInNjaGVtYSI6eyJmaWVsZHMiOlt7Im1ldGFkYXRhIjp7ImlzVGltZXN0YW1wTlRaIjpmYWxzZSwiamRiY0NsaWVudFR5cGUiOiJpbnQiLCJzY2FsZSI6MCwic2lnbmVkIjp0cnVlfSwibmFtZSI6InJlZnVuZF9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJqZGJjQ2xpZW50VHlwZSI6ImludCIsInNjYWxlIjowLCJzaWduZWQiOnRydWV9LCJuYW1lIjoicGF5bWVudF9pZCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJqZGJjQ2xpZW50VHlwZSI6ImRhdGV0aW1lIiwic2NhbGUiOjMsInNpZ25lZCI6ZmFsc2V9LCJuYW1lIjoicmVmdW5kX3RpbWVzdGFtcCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoidGltZXN0YW1wIn0seyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsImpkYmNDbGllbnRUeXBlIjoiZGVjaW1hbCIsInNjYWxlIjoyLCJzaWduZWQiOnRydWV9LCJuYW1lIjoicmVmdW5kX2Ftb3VudCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiZGVjaW1hbCgxMCwyKSJ9LHsibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJqZGJjQ2xpZW50VHlwZSI6Im52YXJjaGFyIiwic2NhbGUiOjAsInNpZ25lZCI6ZmFsc2V9LCJuYW1lIjoicmVmdW5kX3JlYXNvbiIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJkYXRhZnJhbWVOYW1lIjoiX3NxbGRmIiwiZXhlY3V0aW9uQ291bnQiOjUsImNyZWF0ZVRlbXBWaWV3Rm9ySW1wbGljaXREZiI6dHJ1ZX19XSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJfc3FsZGYiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuY29ubmVjdC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnsiaXNUaW1lc3RhbXBOVFoiOmZhbHNlLCJqZGJjQ2xpZW50VHlwZSI6ImludCIsInNjYWxlIjowLCJzaWduZWQiOnRydWV9LCJuYW1lIjoicmVmdW5kX2lkIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJpbnRlZ2VyIn0seyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsImpkYmNDbGllbnRUeXBlIjoiaW50Iiwic2NhbGUiOjAsInNpZ25lZCI6dHJ1ZX0sIm5hbWUiOiJwYXltZW50X2lkIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJpbnRlZ2VyIn0seyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsImpkYmNDbGllbnRUeXBlIjoiZGF0ZXRpbWUiLCJzY2FsZSI6Mywic2lnbmVkIjpmYWxzZX0sIm5hbWUiOiJyZWZ1bmRfdGltZXN0YW1wIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJ0aW1lc3RhbXAifSx7Im1ldGFkYXRhIjp7ImlzVGltZXN0YW1wTlRaIjpmYWxzZSwiamRiY0NsaWVudFR5cGUiOiJkZWNpbWFsIiwic2NhbGUiOjIsInNpZ25lZCI6dHJ1ZX0sIm5hbWUiOiJyZWZ1bmRfYW1vdW50IiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJkZWNpbWFsKDEwLDIpIn0seyJtZXRhZGF0YSI6eyJpc1RpbWVzdGFtcE5UWiI6ZmFsc2UsImpkYmNDbGllbnRUeXBlIjoibnZhcmNoYXIiLCJzY2FsZSI6MCwic2lnbmVkIjpmYWxzZX0sIm5hbWUiOiJyZWZ1bmRfcmVhc29uIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJzdHJpbmcifV0sInR5cGUiOiJzdHJ1Y3QifSwidGFibGVJZGVudGlmaWVyIjpudWxsfV0sIm1ldGFkYXRhIjp7ImlzRGJmc0NvbW1hbmRSZXN1bHQiOmZhbHNlfX0sInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjE3NTQ5MjMyODc1NDksInN1Ym1pdFRpbWUiOjE3NTQ5MjMyODY0OTIsImZpbmlzaFRpbWUiOjE3NTQ5MjMzMDU4MTcsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnsicm93TGltaXQiOjEwMDAwLCJieXRlTGltaXQiOjIwNDgwMDB9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbWyJ0YWJsZSIsMTBdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiOGEzNzM2NjItZWE0ZC00ZWEwLWJkZjMtZmYzOGEyYWU5MzNlIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo1NjYzNTg2NjQzMDAzMDI3LCJndWlkIjoiOGFhNjdkMWYtMzFhYi00NTQyLWE3NmQtZTdhY2IzZDI2ZWM5Iiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6My4wLCJjb21tYW5kIjoiQ1JFQVRFIEZPUkVJR04gQ0FUQUxPRyBJRiBOT1QgRVhJU1RTIGFzcWxfZ2l6bW9ib3hfZGJfY2F0YWxvZ19zcWwgVVNJTkcgQ09OTkVDVElPTiBhc3FsX2dpem1vYm94X2RiX2Nvbm5fc3FsXG5PUFRJT05TIChkYXRhYmFzZSAnZ2l6bW9ib3gtZGInKTsiLCJjb21tYW5kVmVyc2lvbiI6OCwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6Imxpc3RSZXN1bHRzIiwiZGF0YSI6W10sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbXSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTc1NDkyMzE1NDc1OCwic3VibWl0VGltZSI6MTc1NDkyMzE0NzQwOSwiZmluaXNoVGltZSI6MTc1NDkyMzE3NjQ1NiwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJyb3dMaW1pdCI6MTAwMDAsImJ5dGVMaW1pdCI6MjA0ODAwMH0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltdLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiJiOThjMmNhYy0yYjBkLTRmMmUtODAyZS1lNjkzYTdjYTYwNjMifV0sImRhc2hib2FyZHMiOltdLCJndWlkIjoiYWJkMGU1NDEtNDIzMy00OWIzLWI1OGEtNzUyNmJmYTc4ODIxIiwiZ2xvYmFsVmFycyI6e30sImlQeXRob25NZXRhZGF0YSI6bnVsbCwiaW5wdXRXaWRnZXRzIjp7fSwibm90ZWJvb2tNZXRhZGF0YSI6eyJweXRob25JbmRlbnRVbml0Ijo0fSwicmVwb3NFeHBvcnRGb3JtYXQiOiJKVVBZVEVSIiwiZW52aXJvbm1lbnRNZXRhZGF0YSI6eyJjbGllbnQiOiIyIiwiYmFzZV9lbnZpcm9ubWVudCI6IiJ9LCJjb21wdXRlUHJlZmVyZW5jZXMiOm51bGwsImlucHV0V2lkZ2V0UHJlZmVyZW5jZXMiOm51bGwsImVudmlyb25tZW50U2VyaWFsaXphdGlvblByZWZlcmVuY2VzIjpudWxsfQ=="
+}

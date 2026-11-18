@@ -1,0 +1,3569 @@
+{
+  "document": {
+    "commands": [
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT * FROM gizmobox.silver.payments;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 2,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1734961421961,
+        "globalVars": {},
+        "guid": "71d0da0a-c58d-403d-9310-94d12101517e",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            87
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "d1df1b70-4871-4db1-9367-a1f7d05c4906",
+        "origId": 2791000649022626,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 8.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [
+            [
+              65,
+              2,
+              "2025-01-19",
+              "05:05:13",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              66,
+              3,
+              "2025-01-08",
+              "23:45:00",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              67,
+              4,
+              "2025-01-05",
+              "10:49:26",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              68,
+              8,
+              "2025-01-02",
+              "16:11:15",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              69,
+              14,
+              "2025-01-01",
+              "22:22:26",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              70,
+              18,
+              "2025-01-22",
+              "23:12:08",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              71,
+              22,
+              "2025-01-01",
+              "18:49:19",
+              "Success",
+              "PayPal"
+            ],
+            [
+              72,
+              26,
+              "2025-01-05",
+              "22:01:25",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              73,
+              29,
+              "2025-01-18",
+              "05:05:04",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              74,
+              34,
+              "2025-01-12",
+              "11:30:15",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              75,
+              36,
+              "2025-01-16",
+              "23:15:43",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              76,
+              40,
+              "2025-01-08",
+              "13:22:51",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              77,
+              45,
+              "2025-01-03",
+              "15:10:25",
+              "Success",
+              "PayPal"
+            ],
+            [
+              78,
+              47,
+              "2025-01-11",
+              "20:20:20",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              79,
+              50,
+              "2025-01-17",
+              "12:30:00",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              80,
+              53,
+              "2025-01-15",
+              "07:40:19",
+              "Failed",
+              "Credit Card"
+            ],
+            [
+              81,
+              58,
+              "2025-01-04",
+              "18:49:33",
+              "Success",
+              "PayPal"
+            ],
+            [
+              82,
+              60,
+              "2025-01-20",
+              "14:10:25",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              83,
+              65,
+              "2025-01-06",
+              "20:30:10",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              84,
+              67,
+              "2025-01-14",
+              "16:00:00",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              85,
+              71,
+              "2025-01-07",
+              "19:15:15",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              86,
+              75,
+              "2025-01-21",
+              "12:50:30",
+              "Success",
+              "PayPal"
+            ],
+            [
+              87,
+              80,
+              "2025-01-19",
+              "09:40:40",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              88,
+              82,
+              "2025-01-10",
+              "08:20:00",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              89,
+              85,
+              "2025-01-16",
+              "15:50:45",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              90,
+              90,
+              "2025-01-22",
+              "21:00:15",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              91,
+              92,
+              "2025-01-03",
+              "16:20:25",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              35,
+              13,
+              "2024-12-17",
+              "05:25:34",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              36,
+              16,
+              "2024-12-09",
+              "10:45:56",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              37,
+              17,
+              "2024-12-02",
+              "13:50:20",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              38,
+              24,
+              "2024-12-22",
+              "08:30:55",
+              "Success",
+              "PayPal"
+            ],
+            [
+              39,
+              27,
+              "2024-12-03",
+              "11:45:30",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              40,
+              28,
+              "2024-12-27",
+              "05:40:10",
+              "Failed",
+              "Credit Card"
+            ],
+            [
+              41,
+              32,
+              "2024-12-29",
+              "09:20:40",
+              "Success",
+              "PayPal"
+            ],
+            [
+              42,
+              37,
+              "2024-12-23",
+              "12:10:05",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              43,
+              38,
+              "2024-12-26",
+              "20:15:15",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              44,
+              44,
+              "2024-12-21",
+              "14:25:45",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              45,
+              49,
+              "2024-12-08",
+              "16:40:35",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              46,
+              54,
+              "2024-12-21",
+              "13:10:25",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              47,
+              58,
+              "2024-12-10",
+              "11:50:20",
+              "Success",
+              "PayPal"
+            ],
+            [
+              48,
+              60,
+              "2024-12-14",
+              "18:30:15",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              49,
+              61,
+              "2024-12-08",
+              "14:45:50",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              50,
+              65,
+              "2024-12-10",
+              "12:35:05",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              51,
+              67,
+              "2024-12-20",
+              "09:40:25",
+              "Success",
+              "PayPal"
+            ],
+            [
+              52,
+              69,
+              "2024-12-31",
+              "10:15:50",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              53,
+              70,
+              "2024-12-05",
+              "13:50:35",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              54,
+              71,
+              "2024-12-28",
+              "11:05:40",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              55,
+              74,
+              "2024-12-23",
+              "14:25:25",
+              "Success",
+              "PayPal"
+            ],
+            [
+              56,
+              80,
+              "2024-12-12",
+              "08:30:55",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              57,
+              81,
+              "2024-12-28",
+              "16:45:30",
+              "Success",
+              "PayPal"
+            ],
+            [
+              58,
+              82,
+              "2024-12-29",
+              "18:50:10",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              59,
+              91,
+              "2024-12-18",
+              "19:20:40",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              60,
+              93,
+              "2024-12-23",
+              "11:10:05",
+              "Success",
+              "PayPal"
+            ],
+            [
+              61,
+              95,
+              "2024-12-29",
+              "13:15:15",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              62,
+              96,
+              "2024-12-03",
+              "15:25:45",
+              "Success",
+              "PayPal"
+            ],
+            [
+              63,
+              97,
+              "2024-12-08",
+              "12:10:35",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              15,
+              7,
+              "2024-11-19",
+              "19:18:48",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              16,
+              9,
+              "2024-11-27",
+              "13:15:29",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              17,
+              20,
+              "2024-11-18",
+              "02:38:21",
+              "Success",
+              "PayPal"
+            ],
+            [
+              18,
+              21,
+              "2024-11-21",
+              "11:25:35",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              19,
+              23,
+              "2024-11-22",
+              "16:04:05",
+              "Success",
+              "PayPal"
+            ],
+            [
+              20,
+              25,
+              "2024-11-05",
+              "11:45:31",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              21,
+              30,
+              "2024-11-12",
+              "03:20:29",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              22,
+              35,
+              "2024-11-20",
+              "19:09:04",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              23,
+              36,
+              "2024-11-02",
+              "10:39:46",
+              "Success",
+              "PayPal"
+            ],
+            [
+              24,
+              38,
+              "2024-11-15",
+              "15:12:23",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              25,
+              42,
+              "2024-11-26",
+              "09:40:55",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              26,
+              47,
+              "2024-11-28",
+              "12:18:39",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              27,
+              52,
+              "2024-11-17",
+              "07:45:14",
+              "Success",
+              "PayPal"
+            ],
+            [
+              28,
+              56,
+              "2024-11-23",
+              "14:03:20",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              29,
+              59,
+              "2024-11-19",
+              "18:22:33",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              30,
+              63,
+              "2024-11-20",
+              "20:40:09",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              31,
+              67,
+              "2024-11-13",
+              "16:50:26",
+              "Failed",
+              "Credit Card"
+            ],
+            [
+              32,
+              71,
+              "2024-11-18",
+              "11:09:18",
+              "Success",
+              "PayPal"
+            ],
+            [
+              33,
+              74,
+              "2024-11-12",
+              "08:05:46",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              2,
+              10,
+              "2024-10-09",
+              "22:09:27",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              3,
+              11,
+              "2024-10-15",
+              "17:34:19",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              4,
+              15,
+              "2024-10-22",
+              "01:47:25",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              5,
+              19,
+              "2024-10-15",
+              "12:40:26",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              6,
+              39,
+              "2024-10-31",
+              "21:39:19",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              7,
+              55,
+              "2024-10-27",
+              "05:49:16",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              8,
+              59,
+              "2024-10-25",
+              "02:51:05",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              9,
+              72,
+              "2024-10-08",
+              "10:23:28",
+              "Cancelled",
+              "PayPal"
+            ],
+            [
+              10,
+              77,
+              "2024-10-17",
+              "13:09:33",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              11,
+              84,
+              "2024-10-27",
+              "03:37:42",
+              "Success",
+              "PayPal"
+            ],
+            [
+              12,
+              85,
+              "2024-10-25",
+              "20:06:42",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              13,
+              86,
+              "2024-10-21",
+              "13:30:47",
+              "Success",
+              "PayPal"
+            ]
+          ],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [
+            {
+              "metadata": "{}",
+              "name": "payment_id",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "order_id",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_date",
+              "type": "\"date\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_time",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_status",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_method",
+              "type": "\"string\""
+            }
+          ],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1734961418193,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1734961418157,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n### 3. Write transformed data to the Silver schema ",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 12,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "1cb98872-539b-45e4-be61-68afc89046a6",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "134e8eb1-b003-45a1-b420-d13ca18d4c4d",
+        "origId": 2791000649022624,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 5.8125,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT payment_id,\n       order_id,\n       CAST(date_format(payment_timestamp,'yyyy-MM-dd') AS DATE) AS payment_date,\n       date_format(payment_timestamp,'HH:mm:ss') AS payment_time,\n       payment_status,\n       payment_method\n  FROM gizmobox.bronze.payments;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 33,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1734960716713,
+        "globalVars": {},
+        "guid": "aca35910-6f97-4b71-a70b-d76db1f69444",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            87
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "d3f09b94-cbd1-4f89-abe6-159901c7a1dc",
+        "origId": 2791000649022625,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.75,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [
+            [
+              35,
+              13,
+              "2024-12-17",
+              "05:25:34",
+              2,
+              "PayPal"
+            ],
+            [
+              36,
+              16,
+              "2024-12-09",
+              "10:45:56",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              37,
+              17,
+              "2024-12-02",
+              "13:50:20",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              38,
+              24,
+              "2024-12-22",
+              "08:30:55",
+              1,
+              "PayPal"
+            ],
+            [
+              39,
+              27,
+              "2024-12-03",
+              "11:45:30",
+              2,
+              "Credit Card"
+            ],
+            [
+              40,
+              28,
+              "2024-12-27",
+              "05:40:10",
+              4,
+              "Credit Card"
+            ],
+            [
+              41,
+              32,
+              "2024-12-29",
+              "09:20:40",
+              1,
+              "PayPal"
+            ],
+            [
+              42,
+              37,
+              "2024-12-23",
+              "12:10:05",
+              2,
+              "Credit Card"
+            ],
+            [
+              43,
+              38,
+              "2024-12-26",
+              "20:15:15",
+              1,
+              "Credit Card"
+            ],
+            [
+              44,
+              44,
+              "2024-12-21",
+              "14:25:45",
+              1,
+              "Credit Card"
+            ],
+            [
+              45,
+              49,
+              "2024-12-08",
+              "16:40:35",
+              4,
+              "PayPal"
+            ],
+            [
+              46,
+              54,
+              "2024-12-21",
+              "13:10:25",
+              2,
+              "Credit Card"
+            ],
+            [
+              47,
+              58,
+              "2024-12-10",
+              "11:50:20",
+              1,
+              "PayPal"
+            ],
+            [
+              48,
+              60,
+              "2024-12-14",
+              "18:30:15",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              49,
+              61,
+              "2024-12-08",
+              "14:45:50",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              50,
+              65,
+              "2024-12-10",
+              "12:35:05",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              51,
+              67,
+              "2024-12-20",
+              "09:40:25",
+              1,
+              "PayPal"
+            ],
+            [
+              52,
+              69,
+              "2024-12-31",
+              "10:15:50",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              53,
+              70,
+              "2024-12-05",
+              "13:50:35",
+              2,
+              "PayPal"
+            ],
+            [
+              54,
+              71,
+              "2024-12-28",
+              "11:05:40",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              55,
+              74,
+              "2024-12-23",
+              "14:25:25",
+              1,
+              "PayPal"
+            ],
+            [
+              56,
+              80,
+              "2024-12-12",
+              "08:30:55",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              57,
+              81,
+              "2024-12-28",
+              "16:45:30",
+              1,
+              "PayPal"
+            ],
+            [
+              58,
+              82,
+              "2024-12-29",
+              "18:50:10",
+              2,
+              "PayPal"
+            ],
+            [
+              59,
+              91,
+              "2024-12-18",
+              "19:20:40",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              60,
+              93,
+              "2024-12-23",
+              "11:10:05",
+              1,
+              "PayPal"
+            ],
+            [
+              61,
+              95,
+              "2024-12-29",
+              "13:15:15",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              62,
+              96,
+              "2024-12-03",
+              "15:25:45",
+              1,
+              "PayPal"
+            ],
+            [
+              63,
+              97,
+              "2024-12-08",
+              "12:10:35",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              65,
+              2,
+              "2025-01-19",
+              "05:05:13",
+              2,
+              "PayPal"
+            ],
+            [
+              66,
+              3,
+              "2025-01-08",
+              "23:45:00",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              67,
+              4,
+              "2025-01-05",
+              "10:49:26",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              68,
+              8,
+              "2025-01-02",
+              "16:11:15",
+              2,
+              "PayPal"
+            ],
+            [
+              69,
+              14,
+              "2025-01-01",
+              "22:22:26",
+              4,
+              "PayPal"
+            ],
+            [
+              70,
+              18,
+              "2025-01-22",
+              "23:12:08",
+              1,
+              "Credit Card"
+            ],
+            [
+              71,
+              22,
+              "2025-01-01",
+              "18:49:19",
+              1,
+              "PayPal"
+            ],
+            [
+              72,
+              26,
+              "2025-01-05",
+              "22:01:25",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              73,
+              29,
+              "2025-01-18",
+              "05:05:04",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              74,
+              34,
+              "2025-01-12",
+              "11:30:15",
+              1,
+              "Credit Card"
+            ],
+            [
+              75,
+              36,
+              "2025-01-16",
+              "23:15:43",
+              2,
+              "PayPal"
+            ],
+            [
+              76,
+              40,
+              "2025-01-08",
+              "13:22:51",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              77,
+              45,
+              "2025-01-03",
+              "15:10:25",
+              1,
+              "PayPal"
+            ],
+            [
+              78,
+              47,
+              "2025-01-11",
+              "20:20:20",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              79,
+              50,
+              "2025-01-17",
+              "12:30:00",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              80,
+              53,
+              "2025-01-15",
+              "07:40:19",
+              4,
+              "Credit Card"
+            ],
+            [
+              81,
+              58,
+              "2025-01-04",
+              "18:49:33",
+              1,
+              "PayPal"
+            ],
+            [
+              82,
+              60,
+              "2025-01-20",
+              "14:10:25",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              83,
+              65,
+              "2025-01-06",
+              "20:30:10",
+              4,
+              "PayPal"
+            ],
+            [
+              84,
+              67,
+              "2025-01-14",
+              "16:00:00",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              85,
+              71,
+              "2025-01-07",
+              "19:15:15",
+              2,
+              "Credit Card"
+            ],
+            [
+              86,
+              75,
+              "2025-01-21",
+              "12:50:30",
+              1,
+              "PayPal"
+            ],
+            [
+              87,
+              80,
+              "2025-01-19",
+              "09:40:40",
+              4,
+              "PayPal"
+            ],
+            [
+              88,
+              82,
+              "2025-01-10",
+              "08:20:00",
+              1,
+              "Credit Card"
+            ],
+            [
+              89,
+              85,
+              "2025-01-16",
+              "15:50:45",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              90,
+              90,
+              "2025-01-22",
+              "21:00:15",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              91,
+              92,
+              "2025-01-03",
+              "16:20:25",
+              4,
+              "PayPal"
+            ],
+            [
+              15,
+              7,
+              "2024-11-19",
+              "19:18:48",
+              2,
+              "Credit Card"
+            ],
+            [
+              16,
+              9,
+              "2024-11-27",
+              "13:15:29",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              17,
+              20,
+              "2024-11-18",
+              "02:38:21",
+              1,
+              "PayPal"
+            ],
+            [
+              18,
+              21,
+              "2024-11-21",
+              "11:25:35",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              19,
+              23,
+              "2024-11-22",
+              "16:04:05",
+              1,
+              "PayPal"
+            ],
+            [
+              20,
+              25,
+              "2024-11-05",
+              "11:45:31",
+              2,
+              "PayPal"
+            ],
+            [
+              21,
+              30,
+              "2024-11-12",
+              "03:20:29",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              22,
+              35,
+              "2024-11-20",
+              "19:09:04",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              23,
+              36,
+              "2024-11-02",
+              "10:39:46",
+              1,
+              "PayPal"
+            ],
+            [
+              24,
+              38,
+              "2024-11-15",
+              "15:12:23",
+              1,
+              "Credit Card"
+            ],
+            [
+              25,
+              42,
+              "2024-11-26",
+              "09:40:55",
+              2,
+              "PayPal"
+            ],
+            [
+              26,
+              47,
+              "2024-11-28",
+              "12:18:39",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              27,
+              52,
+              "2024-11-17",
+              "07:45:14",
+              1,
+              "PayPal"
+            ],
+            [
+              28,
+              56,
+              "2024-11-23",
+              "14:03:20",
+              1,
+              "Credit Card"
+            ],
+            [
+              29,
+              59,
+              "2024-11-19",
+              "18:22:33",
+              2,
+              "PayPal"
+            ],
+            [
+              30,
+              63,
+              "2024-11-20",
+              "20:40:09",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              31,
+              67,
+              "2024-11-13",
+              "16:50:26",
+              4,
+              "Credit Card"
+            ],
+            [
+              32,
+              71,
+              "2024-11-18",
+              "11:09:18",
+              1,
+              "PayPal"
+            ],
+            [
+              33,
+              74,
+              "2024-11-12",
+              "08:05:46",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              2,
+              10,
+              "2024-10-09",
+              "22:09:27",
+              2,
+              "Credit Card"
+            ],
+            [
+              3,
+              11,
+              "2024-10-15",
+              "17:34:19",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              4,
+              15,
+              "2024-10-22",
+              "01:47:25",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              5,
+              19,
+              "2024-10-15",
+              "12:40:26",
+              2,
+              "PayPal"
+            ],
+            [
+              6,
+              39,
+              "2024-10-31",
+              "21:39:19",
+              4,
+              "PayPal"
+            ],
+            [
+              7,
+              55,
+              "2024-10-27",
+              "05:49:16",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              8,
+              59,
+              "2024-10-25",
+              "02:51:05",
+              2,
+              "PayPal"
+            ],
+            [
+              9,
+              72,
+              "2024-10-08",
+              "10:23:28",
+              3,
+              "PayPal"
+            ],
+            [
+              10,
+              77,
+              "2024-10-17",
+              "13:09:33",
+              1,
+              "Credit Card"
+            ],
+            [
+              11,
+              84,
+              "2024-10-27",
+              "03:37:42",
+              1,
+              "PayPal"
+            ],
+            [
+              12,
+              85,
+              "2024-10-25",
+              "20:06:42",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              13,
+              86,
+              "2024-10-21",
+              "13:30:47",
+              1,
+              "PayPal"
+            ]
+          ],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [
+            {
+              "metadata": "{}",
+              "name": "payment_id",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "order_id",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_date",
+              "type": "\"date\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_time",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_status",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_method",
+              "type": "\"string\""
+            }
+          ],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1734960715781,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1734960715742,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "CREATE TABLE gizmobox.silver.payments\nAS\nSELECT payment_id,\n       order_id,\n       CAST(date_format(payment_timestamp,'yyyy-MM-dd') AS DATE) AS payment_date,\n       date_format(payment_timestamp,'HH:mm:ss') AS payment_time,\n       CASE payment_status\n         WHEN 1 THEN 'Success'\n         WHEN 2 THEN 'Pending'\n         WHEN 3 THEN 'Cancelled'\n         WHEN 4 THEN 'Failed'\n       END AS payment_status,  \n       payment_method\n  FROM gizmobox.bronze.payments;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 6,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1734961413137,
+        "globalVars": {},
+        "guid": "f8d55b4c-9b0f-414f-803c-89f09cc4df20",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            0
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "c06c925a-efe9-4183-9067-0d706c9a83d9",
+        "origId": 2791000649022620,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 7.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [
+            {
+              "metadata": "{}",
+              "name": "num_affected_rows",
+              "type": "\"long\""
+            },
+            {
+              "metadata": "{}",
+              "name": "num_inserted_rows",
+              "type": "\"long\""
+            }
+          ],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1734961393612,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1734961393572,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n### 2. Map payment_status to contain descriptive values  \n   (1-Success, 2-Pending, 3-Cancelled, 4-Failed)",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 8,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "0b42725f-775c-4472-8d7e-464bd4afd6a7",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "76b13e84-35a2-4c06-88fc-7577b9f7904d",
+        "origId": 2791000649022615,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 2.25,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": {
+          "addedWidgets": {},
+          "arguments": {},
+          "datasetInfos": [],
+          "jupyterProps": null,
+          "metadata": {},
+          "removedWidgets": [],
+          "sqlProps": {
+            "breakingChangeInfo": null,
+            "errorClass": "UNRESOLVED_COLUMN.WITH_SUGGESTION",
+            "pysparkCallSite": null,
+            "pysparkFragment": null,
+            "pysparkSummary": null,
+            "sqlState": "42703",
+            "stackTrace": null,
+            "startIndex": 69,
+            "stopIndex": 82
+          },
+          "stackFrames": [
+            "org.apache.spark.sql.catalyst.ExtendedAnalysisException: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `payment_status` cannot be resolved. Did you mean one of the following? [`payment_staus`, `payment_id`, `payment_method`, `payment_timestamp`, `order_id`]. SQLSTATE: 42703; line 4 pos 7;\n'Project [payment_id#522, order_id#523, payment_timestamp#524, 'payment_status, payment_method#526]\n+- SubqueryAlias gizmobox.bronze.payments\n   +- Relation gizmobox.bronze.payments[payment_id#522,order_id#523,payment_timestamp#524,payment_staus#525,payment_method#526] csv\n\n\tat org.apache.spark.sql.errors.QueryCompilationErrors$.unresolvedAttributeError(QueryCompilationErrors.scala:453)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.org$apache$spark$sql$catalyst$analysis$CheckAnalysis$$failUnresolvedAttribute(CheckAnalysis.scala:152)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$8(CheckAnalysis.scala:337)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$8$adapted(CheckAnalysis.scala:322)\n\tat org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:287)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$7(CheckAnalysis.scala:322)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$7$adapted(CheckAnalysis.scala:322)\n\tat scala.collection.immutable.Stream.foreach(Stream.scala:533)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$2(CheckAnalysis.scala:322)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$2$adapted(CheckAnalysis.scala:197)\n\tat org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:287)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis0(CheckAnalysis.scala:197)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis0$(CheckAnalysis.scala:179)\n\tat org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis0(Analyzer.scala:369)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis$1(CheckAnalysis.scala:167)\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)\n\tat com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:94)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis(CheckAnalysis.scala:155)\n\tat org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis$(CheckAnalysis.scala:155)\n\tat org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis(Analyzer.scala:369)\n\tat org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$2(Analyzer.scala:424)\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)\n\tat org.apache.spark.sql.catalyst.QueryPlanningTracker$.withTracker(QueryPlanningTracker.scala:182)\n\tat org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$1(Analyzer.scala:424)\n\tat org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:443)\n\tat org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:421)\n\tat org.apache.spark.sql.execution.QueryExecution.$anonfun$analyzed$1(QueryExecution.scala:262)\n\tat com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:94)\n\tat org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:458)\n\tat org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$5(QueryExecution.scala:613)\n\tat org.apache.spark.sql.execution.SQLExecution$.withExecutionPhase(SQLExecution.scala:144)\n\tat org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$4(QueryExecution.scala:613)\n\tat org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:1179)\n\tat org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$2(QueryExecution.scala:612)\n\tat com.databricks.util.LexicalThreadLocal$Handle.runWith(LexicalThreadLocal.scala:63)\n\tat org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:608)\n\tat org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:1180)\n\tat org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:608)\n\tat org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:256)\n\tat org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:255)\n\tat org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:237)\n\tat org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:130)\n\tat org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:1180)\n\tat org.apache.spark.sql.SparkSession.$anonfun$withActiveAndFrameProfiler$1(SparkSession.scala:1187)\n\tat com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:94)\n\tat org.apache.spark.sql.SparkSession.withActiveAndFrameProfiler(SparkSession.scala:1187)\n\tat org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:122)\n\tat org.apache.spark.sql.SparkSession.$anonfun$sql$4(SparkSession.scala:959)\n\tat org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:1180)\n\tat org.apache.spark.sql.SparkSession.sql(SparkSession.scala:947)\n\tat org.apache.spark.sql.SparkSession.sql(SparkSession.scala:982)\n\tat com.databricks.backend.daemon.driver.DriverLocal$DbClassicStrategy.executeSQLQuery(DriverLocal.scala:301)\n\tat com.databricks.backend.daemon.driver.DriverLocal.executeSQLSubCommand(DriverLocal.scala:401)\n\tat com.databricks.backend.daemon.driver.DriverLocal.$anonfun$executeSql$1(DriverLocal.scala:423)\n\tat scala.collection.immutable.List.map(List.scala:293)\n\tat com.databricks.backend.daemon.driver.DriverLocal.executeSql(DriverLocal.scala:418)\n\tat com.databricks.backend.daemon.driver.SQLDriverLocal.repl(SQLDriverLocal.scala:40)\n\tat com.databricks.backend.daemon.driver.DriverLocal.$anonfun$execute$33(DriverLocal.scala:1172)\n\tat com.databricks.unity.UCSEphemeralState$Handle.runWith(UCSEphemeralState.scala:51)\n\tat com.databricks.unity.HandleImpl.runWith(UCSHandle.scala:104)\n\tat com.databricks.backend.daemon.driver.DriverLocal.$anonfun$execute$28(DriverLocal.scala:1163)\n\tat com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:48)\n\tat com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:276)\n\tat scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)\n\tat com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:272)\n\tat com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:46)\n\tat com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:43)\n\tat com.databricks.backend.daemon.driver.DriverLocal.withAttributionContext(DriverLocal.scala:96)\n\tat com.databricks.logging.AttributionContextTracing.withAttributionTags(AttributionContextTracing.scala:95)\n\tat com.databricks.logging.AttributionContextTracing.withAttributionTags$(AttributionContextTracing.scala:76)\n\tat com.databricks.backend.daemon.driver.DriverLocal.withAttributionTags(DriverLocal.scala:96)\n\tat com.databricks.backend.daemon.driver.DriverLocal.$anonfun$execute$1(DriverLocal.scala:1099)\n\tat com.databricks.backend.daemon.driver.DriverLocal$.$anonfun$maybeSynchronizeExecution$4(DriverLocal.scala:1519)\n\tat com.databricks.backend.daemon.driver.DriverLocal.execute(DriverLocal.scala:776)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$tryExecutingCommand$2(DriverWrapper.scala:932)\n\tat scala.util.Try$.apply(Try.scala:213)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$tryExecutingCommand$1(DriverWrapper.scala:921)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$tryExecutingCommand$3(DriverWrapper.scala:967)\n\tat com.databricks.logging.UsageLogging.executeThunkAndCaptureResultTags$1(UsageLogging.scala:633)\n\tat com.databricks.logging.UsageLogging.$anonfun$recordOperationWithResultTags$4(UsageLogging.scala:656)\n\tat com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:48)\n\tat com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:276)\n\tat scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)\n\tat com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:272)\n\tat com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:46)\n\tat com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:43)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.withAttributionContext(DriverWrapper.scala:73)\n\tat com.databricks.logging.AttributionContextTracing.withAttributionTags(AttributionContextTracing.scala:95)\n\tat com.databricks.logging.AttributionContextTracing.withAttributionTags$(AttributionContextTracing.scala:76)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.withAttributionTags(DriverWrapper.scala:73)\n\tat com.databricks.logging.UsageLogging.recordOperationWithResultTags(UsageLogging.scala:628)\n\tat com.databricks.logging.UsageLogging.recordOperationWithResultTags$(UsageLogging.scala:537)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.recordOperationWithResultTags(DriverWrapper.scala:73)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.tryExecutingCommand(DriverWrapper.scala:967)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.executeCommandAndGetError(DriverWrapper.scala:717)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.executeCommand(DriverWrapper.scala:785)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.$anonfun$runInnerLoop$1(DriverWrapper.scala:590)\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)\n\tat com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:48)\n\tat com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:276)\n\tat scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)\n\tat com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:272)\n\tat com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:46)\n\tat com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:43)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.withAttributionContext(DriverWrapper.scala:73)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.runInnerLoop(DriverWrapper.scala:590)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.runInner(DriverWrapper.scala:512)\n\tat com.databricks.backend.daemon.driver.DriverWrapper.run(DriverWrapper.scala:306)\n\tat java.lang.Thread.run(Thread.java:750)\n"
+          ],
+          "type": "baseError"
+        },
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT payment_id,\n       order_id,\n       payment_timestamp,\n       payment_status,\n       payment_method\n  FROM gizmobox.bronze.payments;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 15,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1734959975404,
+        "globalVars": {},
+        "guid": "9bbe3b1b-57cd-4a98-8859-94e8c3482992",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            87
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "0f7ce34a-3a2d-4c65-ba6e-468efbb3b656",
+        "origId": 2791000649022612,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [
+            [
+              35,
+              13,
+              "2024-12-17T05:25:34Z",
+              2,
+              "PayPal"
+            ],
+            [
+              36,
+              16,
+              "2024-12-09T10:45:56Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              37,
+              17,
+              "2024-12-02T13:50:20Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              38,
+              24,
+              "2024-12-22T08:30:55Z",
+              1,
+              "PayPal"
+            ],
+            [
+              39,
+              27,
+              "2024-12-03T11:45:30Z",
+              2,
+              "Credit Card"
+            ],
+            [
+              40,
+              28,
+              "2024-12-27T05:40:10Z",
+              4,
+              "Credit Card"
+            ],
+            [
+              41,
+              32,
+              "2024-12-29T09:20:40Z",
+              1,
+              "PayPal"
+            ],
+            [
+              42,
+              37,
+              "2024-12-23T12:10:05Z",
+              2,
+              "Credit Card"
+            ],
+            [
+              43,
+              38,
+              "2024-12-26T20:15:15Z",
+              1,
+              "Credit Card"
+            ],
+            [
+              44,
+              44,
+              "2024-12-21T14:25:45Z",
+              1,
+              "Credit Card"
+            ],
+            [
+              45,
+              49,
+              "2024-12-08T16:40:35Z",
+              4,
+              "PayPal"
+            ],
+            [
+              46,
+              54,
+              "2024-12-21T13:10:25Z",
+              2,
+              "Credit Card"
+            ],
+            [
+              47,
+              58,
+              "2024-12-10T11:50:20Z",
+              1,
+              "PayPal"
+            ],
+            [
+              48,
+              60,
+              "2024-12-14T18:30:15Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              49,
+              61,
+              "2024-12-08T14:45:50Z",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              50,
+              65,
+              "2024-12-10T12:35:05Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              51,
+              67,
+              "2024-12-20T09:40:25Z",
+              1,
+              "PayPal"
+            ],
+            [
+              52,
+              69,
+              "2024-12-31T10:15:50Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              53,
+              70,
+              "2024-12-05T13:50:35Z",
+              2,
+              "PayPal"
+            ],
+            [
+              54,
+              71,
+              "2024-12-28T11:05:40Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              55,
+              74,
+              "2024-12-23T14:25:25Z",
+              1,
+              "PayPal"
+            ],
+            [
+              56,
+              80,
+              "2024-12-12T08:30:55Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              57,
+              81,
+              "2024-12-28T16:45:30Z",
+              1,
+              "PayPal"
+            ],
+            [
+              58,
+              82,
+              "2024-12-29T18:50:10Z",
+              2,
+              "PayPal"
+            ],
+            [
+              59,
+              91,
+              "2024-12-18T19:20:40Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              60,
+              93,
+              "2024-12-23T11:10:05Z",
+              1,
+              "PayPal"
+            ],
+            [
+              61,
+              95,
+              "2024-12-29T13:15:15Z",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              62,
+              96,
+              "2024-12-03T15:25:45Z",
+              1,
+              "PayPal"
+            ],
+            [
+              63,
+              97,
+              "2024-12-08T12:10:35Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              65,
+              2,
+              "2025-01-19T05:05:13Z",
+              2,
+              "PayPal"
+            ],
+            [
+              66,
+              3,
+              "2025-01-08T23:45:00Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              67,
+              4,
+              "2025-01-05T10:49:26Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              68,
+              8,
+              "2025-01-02T16:11:15Z",
+              2,
+              "PayPal"
+            ],
+            [
+              69,
+              14,
+              "2025-01-01T22:22:26Z",
+              4,
+              "PayPal"
+            ],
+            [
+              70,
+              18,
+              "2025-01-22T23:12:08Z",
+              1,
+              "Credit Card"
+            ],
+            [
+              71,
+              22,
+              "2025-01-01T18:49:19Z",
+              1,
+              "PayPal"
+            ],
+            [
+              72,
+              26,
+              "2025-01-05T22:01:25Z",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              73,
+              29,
+              "2025-01-18T05:05:04Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              74,
+              34,
+              "2025-01-12T11:30:15Z",
+              1,
+              "Credit Card"
+            ],
+            [
+              75,
+              36,
+              "2025-01-16T23:15:43Z",
+              2,
+              "PayPal"
+            ],
+            [
+              76,
+              40,
+              "2025-01-08T13:22:51Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              77,
+              45,
+              "2025-01-03T15:10:25Z",
+              1,
+              "PayPal"
+            ],
+            [
+              78,
+              47,
+              "2025-01-11T20:20:20Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              79,
+              50,
+              "2025-01-17T12:30:00Z",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              80,
+              53,
+              "2025-01-15T07:40:19Z",
+              4,
+              "Credit Card"
+            ],
+            [
+              81,
+              58,
+              "2025-01-04T18:49:33Z",
+              1,
+              "PayPal"
+            ],
+            [
+              82,
+              60,
+              "2025-01-20T14:10:25Z",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              83,
+              65,
+              "2025-01-06T20:30:10Z",
+              4,
+              "PayPal"
+            ],
+            [
+              84,
+              67,
+              "2025-01-14T16:00:00Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              85,
+              71,
+              "2025-01-07T19:15:15Z",
+              2,
+              "Credit Card"
+            ],
+            [
+              86,
+              75,
+              "2025-01-21T12:50:30Z",
+              1,
+              "PayPal"
+            ],
+            [
+              87,
+              80,
+              "2025-01-19T09:40:40Z",
+              4,
+              "PayPal"
+            ],
+            [
+              88,
+              82,
+              "2025-01-10T08:20:00Z",
+              1,
+              "Credit Card"
+            ],
+            [
+              89,
+              85,
+              "2025-01-16T15:50:45Z",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              90,
+              90,
+              "2025-01-22T21:00:15Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              91,
+              92,
+              "2025-01-03T16:20:25Z",
+              4,
+              "PayPal"
+            ],
+            [
+              15,
+              7,
+              "2024-11-19T19:18:48Z",
+              2,
+              "Credit Card"
+            ],
+            [
+              16,
+              9,
+              "2024-11-27T13:15:29Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              17,
+              20,
+              "2024-11-18T02:38:21Z",
+              1,
+              "PayPal"
+            ],
+            [
+              18,
+              21,
+              "2024-11-21T11:25:35Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              19,
+              23,
+              "2024-11-22T16:04:05Z",
+              1,
+              "PayPal"
+            ],
+            [
+              20,
+              25,
+              "2024-11-05T11:45:31Z",
+              2,
+              "PayPal"
+            ],
+            [
+              21,
+              30,
+              "2024-11-12T03:20:29Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              22,
+              35,
+              "2024-11-20T19:09:04Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              23,
+              36,
+              "2024-11-02T10:39:46Z",
+              1,
+              "PayPal"
+            ],
+            [
+              24,
+              38,
+              "2024-11-15T15:12:23Z",
+              1,
+              "Credit Card"
+            ],
+            [
+              25,
+              42,
+              "2024-11-26T09:40:55Z",
+              2,
+              "PayPal"
+            ],
+            [
+              26,
+              47,
+              "2024-11-28T12:18:39Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              27,
+              52,
+              "2024-11-17T07:45:14Z",
+              1,
+              "PayPal"
+            ],
+            [
+              28,
+              56,
+              "2024-11-23T14:03:20Z",
+              1,
+              "Credit Card"
+            ],
+            [
+              29,
+              59,
+              "2024-11-19T18:22:33Z",
+              2,
+              "PayPal"
+            ],
+            [
+              30,
+              63,
+              "2024-11-20T20:40:09Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              31,
+              67,
+              "2024-11-13T16:50:26Z",
+              4,
+              "Credit Card"
+            ],
+            [
+              32,
+              71,
+              "2024-11-18T11:09:18Z",
+              1,
+              "PayPal"
+            ],
+            [
+              33,
+              74,
+              "2024-11-12T08:05:46Z",
+              2,
+              "Bank Transfer"
+            ],
+            [
+              2,
+              10,
+              "2024-10-09T22:09:27Z",
+              2,
+              "Credit Card"
+            ],
+            [
+              3,
+              11,
+              "2024-10-15T17:34:19Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              4,
+              15,
+              "2024-10-22T01:47:25Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              5,
+              19,
+              "2024-10-15T12:40:26Z",
+              2,
+              "PayPal"
+            ],
+            [
+              6,
+              39,
+              "2024-10-31T21:39:19Z",
+              4,
+              "PayPal"
+            ],
+            [
+              7,
+              55,
+              "2024-10-27T05:49:16Z",
+              1,
+              "Bank Transfer"
+            ],
+            [
+              8,
+              59,
+              "2024-10-25T02:51:05Z",
+              2,
+              "PayPal"
+            ],
+            [
+              9,
+              72,
+              "2024-10-08T10:23:28Z",
+              3,
+              "PayPal"
+            ],
+            [
+              10,
+              77,
+              "2024-10-17T13:09:33Z",
+              1,
+              "Credit Card"
+            ],
+            [
+              11,
+              84,
+              "2024-10-27T03:37:42Z",
+              1,
+              "PayPal"
+            ],
+            [
+              12,
+              85,
+              "2024-10-25T20:06:42Z",
+              4,
+              "Bank Transfer"
+            ],
+            [
+              13,
+              86,
+              "2024-10-21T13:30:47Z",
+              1,
+              "PayPal"
+            ]
+          ],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [
+            {
+              "metadata": "{}",
+              "name": "payment_id",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "order_id",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_timestamp",
+              "type": "\"timestamp\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_status",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_method",
+              "type": "\"string\""
+            }
+          ],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1734959973319,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1734959973276,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n### 1. Extract Date and Time from payment_timestamp\n>  [Documentation for date_format function](https://learn.microsoft.com/en-us/azure/databricks/sql/language-manual/functions/date_format)",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 3,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "f9e11d75-8b28-4dcd-ac64-98704a14a38d",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "fb6e91b0-8404-4c48-8c22-add58d44b860",
+        "origId": 2791000649022611,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.25,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n## Transform Payments Data\n1. Extract Date and Time from payment_timestamp and create new columns payment_date and payment_time\n1. Map payment_status to contain descriptive values  \n   (1-Success, 2-Pending, 3-Cancelled, 4-Failed)\n1. Write transformed data to the Silver schema ",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 30,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "ae2a33e5-2418-45fa-96a3-4a0bd071c619",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [],
+        "metadata": {},
+        "nuid": "32a5da2d-e271-404b-afbe-e06ac512d1ec",
+        "origId": 2791000649022610,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 0.5,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT payment_id,\n       order_id,\n       CAST(date_format(payment_timestamp,'yyyy-MM-dd') AS DATE) AS payment_date,\n       date_format(payment_timestamp,'HH:mm:ss') AS payment_time,\n       CASE payment_status\n         WHEN 1 THEN 'Success'\n         WHEN 2 THEN 'Pending'\n         WHEN 3 THEN 'Cancelled'\n         WHEN 4 THEN 'Failed'\n       END AS payment_status,  \n       payment_method\n  FROM gizmobox.bronze.payments;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 38,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1734961328144,
+        "globalVars": {},
+        "guid": "735bb7ce-94a9-45c3-8432-3844877316d8",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            87
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "e865c595-da56-4146-9c1b-a50b7b24d11e",
+        "origId": 2791000649022622,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 4.625,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "aggData": [],
+          "aggError": "",
+          "aggOverflow": false,
+          "aggSchema": [],
+          "aggSeriesLimitReached": false,
+          "aggType": "",
+          "arguments": {},
+          "columnCustomDisplayInfos": {},
+          "data": [
+            [
+              35,
+              13,
+              "2024-12-17",
+              "05:25:34",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              36,
+              16,
+              "2024-12-09",
+              "10:45:56",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              37,
+              17,
+              "2024-12-02",
+              "13:50:20",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              38,
+              24,
+              "2024-12-22",
+              "08:30:55",
+              "Success",
+              "PayPal"
+            ],
+            [
+              39,
+              27,
+              "2024-12-03",
+              "11:45:30",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              40,
+              28,
+              "2024-12-27",
+              "05:40:10",
+              "Failed",
+              "Credit Card"
+            ],
+            [
+              41,
+              32,
+              "2024-12-29",
+              "09:20:40",
+              "Success",
+              "PayPal"
+            ],
+            [
+              42,
+              37,
+              "2024-12-23",
+              "12:10:05",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              43,
+              38,
+              "2024-12-26",
+              "20:15:15",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              44,
+              44,
+              "2024-12-21",
+              "14:25:45",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              45,
+              49,
+              "2024-12-08",
+              "16:40:35",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              46,
+              54,
+              "2024-12-21",
+              "13:10:25",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              47,
+              58,
+              "2024-12-10",
+              "11:50:20",
+              "Success",
+              "PayPal"
+            ],
+            [
+              48,
+              60,
+              "2024-12-14",
+              "18:30:15",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              49,
+              61,
+              "2024-12-08",
+              "14:45:50",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              50,
+              65,
+              "2024-12-10",
+              "12:35:05",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              51,
+              67,
+              "2024-12-20",
+              "09:40:25",
+              "Success",
+              "PayPal"
+            ],
+            [
+              52,
+              69,
+              "2024-12-31",
+              "10:15:50",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              53,
+              70,
+              "2024-12-05",
+              "13:50:35",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              54,
+              71,
+              "2024-12-28",
+              "11:05:40",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              55,
+              74,
+              "2024-12-23",
+              "14:25:25",
+              "Success",
+              "PayPal"
+            ],
+            [
+              56,
+              80,
+              "2024-12-12",
+              "08:30:55",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              57,
+              81,
+              "2024-12-28",
+              "16:45:30",
+              "Success",
+              "PayPal"
+            ],
+            [
+              58,
+              82,
+              "2024-12-29",
+              "18:50:10",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              59,
+              91,
+              "2024-12-18",
+              "19:20:40",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              60,
+              93,
+              "2024-12-23",
+              "11:10:05",
+              "Success",
+              "PayPal"
+            ],
+            [
+              61,
+              95,
+              "2024-12-29",
+              "13:15:15",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              62,
+              96,
+              "2024-12-03",
+              "15:25:45",
+              "Success",
+              "PayPal"
+            ],
+            [
+              63,
+              97,
+              "2024-12-08",
+              "12:10:35",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              65,
+              2,
+              "2025-01-19",
+              "05:05:13",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              66,
+              3,
+              "2025-01-08",
+              "23:45:00",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              67,
+              4,
+              "2025-01-05",
+              "10:49:26",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              68,
+              8,
+              "2025-01-02",
+              "16:11:15",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              69,
+              14,
+              "2025-01-01",
+              "22:22:26",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              70,
+              18,
+              "2025-01-22",
+              "23:12:08",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              71,
+              22,
+              "2025-01-01",
+              "18:49:19",
+              "Success",
+              "PayPal"
+            ],
+            [
+              72,
+              26,
+              "2025-01-05",
+              "22:01:25",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              73,
+              29,
+              "2025-01-18",
+              "05:05:04",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              74,
+              34,
+              "2025-01-12",
+              "11:30:15",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              75,
+              36,
+              "2025-01-16",
+              "23:15:43",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              76,
+              40,
+              "2025-01-08",
+              "13:22:51",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              77,
+              45,
+              "2025-01-03",
+              "15:10:25",
+              "Success",
+              "PayPal"
+            ],
+            [
+              78,
+              47,
+              "2025-01-11",
+              "20:20:20",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              79,
+              50,
+              "2025-01-17",
+              "12:30:00",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              80,
+              53,
+              "2025-01-15",
+              "07:40:19",
+              "Failed",
+              "Credit Card"
+            ],
+            [
+              81,
+              58,
+              "2025-01-04",
+              "18:49:33",
+              "Success",
+              "PayPal"
+            ],
+            [
+              82,
+              60,
+              "2025-01-20",
+              "14:10:25",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              83,
+              65,
+              "2025-01-06",
+              "20:30:10",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              84,
+              67,
+              "2025-01-14",
+              "16:00:00",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              85,
+              71,
+              "2025-01-07",
+              "19:15:15",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              86,
+              75,
+              "2025-01-21",
+              "12:50:30",
+              "Success",
+              "PayPal"
+            ],
+            [
+              87,
+              80,
+              "2025-01-19",
+              "09:40:40",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              88,
+              82,
+              "2025-01-10",
+              "08:20:00",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              89,
+              85,
+              "2025-01-16",
+              "15:50:45",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              90,
+              90,
+              "2025-01-22",
+              "21:00:15",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              91,
+              92,
+              "2025-01-03",
+              "16:20:25",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              15,
+              7,
+              "2024-11-19",
+              "19:18:48",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              16,
+              9,
+              "2024-11-27",
+              "13:15:29",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              17,
+              20,
+              "2024-11-18",
+              "02:38:21",
+              "Success",
+              "PayPal"
+            ],
+            [
+              18,
+              21,
+              "2024-11-21",
+              "11:25:35",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              19,
+              23,
+              "2024-11-22",
+              "16:04:05",
+              "Success",
+              "PayPal"
+            ],
+            [
+              20,
+              25,
+              "2024-11-05",
+              "11:45:31",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              21,
+              30,
+              "2024-11-12",
+              "03:20:29",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              22,
+              35,
+              "2024-11-20",
+              "19:09:04",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              23,
+              36,
+              "2024-11-02",
+              "10:39:46",
+              "Success",
+              "PayPal"
+            ],
+            [
+              24,
+              38,
+              "2024-11-15",
+              "15:12:23",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              25,
+              42,
+              "2024-11-26",
+              "09:40:55",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              26,
+              47,
+              "2024-11-28",
+              "12:18:39",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              27,
+              52,
+              "2024-11-17",
+              "07:45:14",
+              "Success",
+              "PayPal"
+            ],
+            [
+              28,
+              56,
+              "2024-11-23",
+              "14:03:20",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              29,
+              59,
+              "2024-11-19",
+              "18:22:33",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              30,
+              63,
+              "2024-11-20",
+              "20:40:09",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              31,
+              67,
+              "2024-11-13",
+              "16:50:26",
+              "Failed",
+              "Credit Card"
+            ],
+            [
+              32,
+              71,
+              "2024-11-18",
+              "11:09:18",
+              "Success",
+              "PayPal"
+            ],
+            [
+              33,
+              74,
+              "2024-11-12",
+              "08:05:46",
+              "Pending",
+              "Bank Transfer"
+            ],
+            [
+              2,
+              10,
+              "2024-10-09",
+              "22:09:27",
+              "Pending",
+              "Credit Card"
+            ],
+            [
+              3,
+              11,
+              "2024-10-15",
+              "17:34:19",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              4,
+              15,
+              "2024-10-22",
+              "01:47:25",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              5,
+              19,
+              "2024-10-15",
+              "12:40:26",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              6,
+              39,
+              "2024-10-31",
+              "21:39:19",
+              "Failed",
+              "PayPal"
+            ],
+            [
+              7,
+              55,
+              "2024-10-27",
+              "05:49:16",
+              "Success",
+              "Bank Transfer"
+            ],
+            [
+              8,
+              59,
+              "2024-10-25",
+              "02:51:05",
+              "Pending",
+              "PayPal"
+            ],
+            [
+              9,
+              72,
+              "2024-10-08",
+              "10:23:28",
+              "Cancelled",
+              "PayPal"
+            ],
+            [
+              10,
+              77,
+              "2024-10-17",
+              "13:09:33",
+              "Success",
+              "Credit Card"
+            ],
+            [
+              11,
+              84,
+              "2024-10-27",
+              "03:37:42",
+              "Success",
+              "PayPal"
+            ],
+            [
+              12,
+              85,
+              "2024-10-25",
+              "20:06:42",
+              "Failed",
+              "Bank Transfer"
+            ],
+            [
+              13,
+              86,
+              "2024-10-21",
+              "13:30:47",
+              "Success",
+              "PayPal"
+            ]
+          ],
+          "datasetInfos": [],
+          "dbfsResultPath": null,
+          "isJsonSchema": true,
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "overflow": false,
+          "plotOptions": null,
+          "removedWidgets": [],
+          "schema": [
+            {
+              "metadata": "{}",
+              "name": "payment_id",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "order_id",
+              "type": "\"integer\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_date",
+              "type": "\"date\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_time",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_status",
+              "type": "\"string\""
+            },
+            {
+              "metadata": "{}",
+              "name": "payment_method",
+              "type": "\"string\""
+            }
+          ],
+          "type": "table"
+        },
+        "showCommandTitle": false,
+        "startTime": 1734961326732,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1734961326627,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      }
+    ],
+    "computePreferences": null,
+    "dashboards": [],
+    "environmentMetadata": {
+      "base_environment": "",
+      "client": "1"
+    },
+    "environmentSerializationPreferences": null,
+    "globalVars": {},
+    "guid": "82face50-7993-460c-885c-e28226291229",
+    "iPythonMetadata": null,
+    "inputWidgetPreferences": null,
+    "inputWidgets": {},
+    "language": "sql",
+    "name": "11. Transform Payments Data",
+    "notebookMetadata": {
+      "pythonIndentUnit": 4
+    },
+    "origId": 2791000649022609,
+    "reposExportFormat": "SOURCE",
+    "version": "NotebookV1"
+  },
+  "provenance": {
+    "aliases": [],
+    "archive": "materials/archives/dea-course-v5.dbc",
+    "archive_sha256": "23908dc947dc9279b1176575fa5b0966281fca608509c6fed3deca7700146488",
+    "member": "dea-course/dea03-etl-with-apache-spark/11. Transform Payments Data.sql",
+    "member_sha256": "5dc1a33927f4efb28cc228a5501b243d723575a1547d80670a92183b5f8a5e15"
+  },
+  "schema_version": 1,
+  "source_base64": "eyJ2ZXJzaW9uIjoiTm90ZWJvb2tWMSIsIm9yaWdJZCI6Mjc5MTAwMDY0OTAyMjYwOSwibmFtZSI6IjExLiBUcmFuc2Zvcm0gUGF5bWVudHMgRGF0YSIsImxhbmd1YWdlIjoic3FsIiwiY29tbWFuZHMiOlt7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjI3OTEwMDA2NDkwMjI2MjYsImd1aWQiOiI3MWQwZGEwYS1jNThkLTQwM2QtOTMxMC05NGQxMjEwMTUxN2UiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjo4LjAsImNvbW1hbmQiOiJTRUxFQ1QgKiBGUk9NIGdpem1vYm94LnNpbHZlci5wYXltZW50czsiLCJjb21tYW5kVmVyc2lvbiI6Miwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6InRhYmxlIiwiZGF0YSI6W1s2NSwyLCIyMDI1LTAxLTE5IiwiMDU6MDU6MTMiLCJQZW5kaW5nIiwiUGF5UGFsIl0sWzY2LDMsIjIwMjUtMDEtMDgiLCIyMzo0NTowMCIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbNjcsNCwiMjAyNS0wMS0wNSIsIjEwOjQ5OjI2IiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbNjgsOCwiMjAyNS0wMS0wMiIsIjE2OjExOjE1IiwiUGVuZGluZyIsIlBheVBhbCJdLFs2OSwxNCwiMjAyNS0wMS0wMSIsIjIyOjIyOjI2IiwiRmFpbGVkIiwiUGF5UGFsIl0sWzcwLDE4LCIyMDI1LTAxLTIyIiwiMjM6MTI6MDgiLCJTdWNjZXNzIiwiQ3JlZGl0IENhcmQiXSxbNzEsMjIsIjIwMjUtMDEtMDEiLCIxODo0OToxOSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbNzIsMjYsIjIwMjUtMDEtMDUiLCIyMjowMToyNSIsIlBlbmRpbmciLCJCYW5rIFRyYW5zZmVyIl0sWzczLDI5LCIyMDI1LTAxLTE4IiwiMDU6MDU6MDQiLCJGYWlsZWQiLCJCYW5rIFRyYW5zZmVyIl0sWzc0LDM0LCIyMDI1LTAxLTEyIiwiMTE6MzA6MTUiLCJTdWNjZXNzIiwiQ3JlZGl0IENhcmQiXSxbNzUsMzYsIjIwMjUtMDEtMTYiLCIyMzoxNTo0MyIsIlBlbmRpbmciLCJQYXlQYWwiXSxbNzYsNDAsIjIwMjUtMDEtMDgiLCIxMzoyMjo1MSIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbNzcsNDUsIjIwMjUtMDEtMDMiLCIxNToxMDoyNSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbNzgsNDcsIjIwMjUtMDEtMTEiLCIyMDoyMDoyMCIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzc5LDUwLCIyMDI1LTAxLTE3IiwiMTI6MzA6MDAiLCJQZW5kaW5nIiwiQmFuayBUcmFuc2ZlciJdLFs4MCw1MywiMjAyNS0wMS0xNSIsIjA3OjQwOjE5IiwiRmFpbGVkIiwiQ3JlZGl0IENhcmQiXSxbODEsNTgsIjIwMjUtMDEtMDQiLCIxODo0OTozMyIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbODIsNjAsIjIwMjUtMDEtMjAiLCIxNDoxMDoyNSIsIlBlbmRpbmciLCJCYW5rIFRyYW5zZmVyIl0sWzgzLDY1LCIyMDI1LTAxLTA2IiwiMjA6MzA6MTAiLCJGYWlsZWQiLCJQYXlQYWwiXSxbODQsNjcsIjIwMjUtMDEtMTQiLCIxNjowMDowMCIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzg1LDcxLCIyMDI1LTAxLTA3IiwiMTk6MTU6MTUiLCJQZW5kaW5nIiwiQ3JlZGl0IENhcmQiXSxbODYsNzUsIjIwMjUtMDEtMjEiLCIxMjo1MDozMCIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbODcsODAsIjIwMjUtMDEtMTkiLCIwOTo0MDo0MCIsIkZhaWxlZCIsIlBheVBhbCJdLFs4OCw4MiwiMjAyNS0wMS0xMCIsIjA4OjIwOjAwIiwiU3VjY2VzcyIsIkNyZWRpdCBDYXJkIl0sWzg5LDg1LCIyMDI1LTAxLTE2IiwiMTU6NTA6NDUiLCJQZW5kaW5nIiwiQmFuayBUcmFuc2ZlciJdLFs5MCw5MCwiMjAyNS0wMS0yMiIsIjIxOjAwOjE1IiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbOTEsOTIsIjIwMjUtMDEtMDMiLCIxNjoyMDoyNSIsIkZhaWxlZCIsIlBheVBhbCJdLFszNSwxMywiMjAyNC0xMi0xNyIsIjA1OjI1OjM0IiwiUGVuZGluZyIsIlBheVBhbCJdLFszNiwxNiwiMjAyNC0xMi0wOSIsIjEwOjQ1OjU2IiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFszNywxNywiMjAyNC0xMi0wMiIsIjEzOjUwOjIwIiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbMzgsMjQsIjIwMjQtMTItMjIiLCIwODozMDo1NSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbMzksMjcsIjIwMjQtMTItMDMiLCIxMTo0NTozMCIsIlBlbmRpbmciLCJDcmVkaXQgQ2FyZCJdLFs0MCwyOCwiMjAyNC0xMi0yNyIsIjA1OjQwOjEwIiwiRmFpbGVkIiwiQ3JlZGl0IENhcmQiXSxbNDEsMzIsIjIwMjQtMTItMjkiLCIwOToyMDo0MCIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbNDIsMzcsIjIwMjQtMTItMjMiLCIxMjoxMDowNSIsIlBlbmRpbmciLCJDcmVkaXQgQ2FyZCJdLFs0MywzOCwiMjAyNC0xMi0yNiIsIjIwOjE1OjE1IiwiU3VjY2VzcyIsIkNyZWRpdCBDYXJkIl0sWzQ0LDQ0LCIyMDI0LTEyLTIxIiwiMTQ6MjU6NDUiLCJTdWNjZXNzIiwiQ3JlZGl0IENhcmQiXSxbNDUsNDksIjIwMjQtMTItMDgiLCIxNjo0MDozNSIsIkZhaWxlZCIsIlBheVBhbCJdLFs0Niw1NCwiMjAyNC0xMi0yMSIsIjEzOjEwOjI1IiwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIl0sWzQ3LDU4LCIyMDI0LTEyLTEwIiwiMTE6NTA6MjAiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzQ4LDYwLCIyMDI0LTEyLTE0IiwiMTg6MzA6MTUiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFs0OSw2MSwiMjAyNC0xMi0wOCIsIjE0OjQ1OjUwIiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiXSxbNTAsNjUsIjIwMjQtMTItMTAiLCIxMjozNTowNSIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbNTEsNjcsIjIwMjQtMTItMjAiLCIwOTo0MDoyNSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbNTIsNjksIjIwMjQtMTItMzEiLCIxMDoxNTo1MCIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzUzLDcwLCIyMDI0LTEyLTA1IiwiMTM6NTA6MzUiLCJQZW5kaW5nIiwiUGF5UGFsIl0sWzU0LDcxLCIyMDI0LTEyLTI4IiwiMTE6MDU6NDAiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFs1NSw3NCwiMjAyNC0xMi0yMyIsIjE0OjI1OjI1IiwiU3VjY2VzcyIsIlBheVBhbCJdLFs1Niw4MCwiMjAyNC0xMi0xMiIsIjA4OjMwOjU1IiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFs1Nyw4MSwiMjAyNC0xMi0yOCIsIjE2OjQ1OjMwIiwiU3VjY2VzcyIsIlBheVBhbCJdLFs1OCw4MiwiMjAyNC0xMi0yOSIsIjE4OjUwOjEwIiwiUGVuZGluZyIsIlBheVBhbCJdLFs1OSw5MSwiMjAyNC0xMi0xOCIsIjE5OjIwOjQwIiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFs2MCw5MywiMjAyNC0xMi0yMyIsIjExOjEwOjA1IiwiU3VjY2VzcyIsIlBheVBhbCJdLFs2MSw5NSwiMjAyNC0xMi0yOSIsIjEzOjE1OjE1IiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiXSxbNjIsOTYsIjIwMjQtMTItMDMiLCIxNToyNTo0NSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbNjMsOTcsIjIwMjQtMTItMDgiLCIxMjoxMDozNSIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbMTUsNywiMjAyNC0xMS0xOSIsIjE5OjE4OjQ4IiwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIl0sWzE2LDksIjIwMjQtMTEtMjciLCIxMzoxNToyOSIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbMTcsMjAsIjIwMjQtMTEtMTgiLCIwMjozODoyMSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbMTgsMjEsIjIwMjQtMTEtMjEiLCIxMToyNTozNSIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzE5LDIzLCIyMDI0LTExLTIyIiwiMTY6MDQ6MDUiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzIwLDI1LCIyMDI0LTExLTA1IiwiMTE6NDU6MzEiLCJQZW5kaW5nIiwiUGF5UGFsIl0sWzIxLDMwLCIyMDI0LTExLTEyIiwiMDM6MjA6MjkiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFsyMiwzNSwiMjAyNC0xMS0yMCIsIjE5OjA5OjA0IiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFsyMywzNiwiMjAyNC0xMS0wMiIsIjEwOjM5OjQ2IiwiU3VjY2VzcyIsIlBheVBhbCJdLFsyNCwzOCwiMjAyNC0xMS0xNSIsIjE1OjEyOjIzIiwiU3VjY2VzcyIsIkNyZWRpdCBDYXJkIl0sWzI1LDQyLCIyMDI0LTExLTI2IiwiMDk6NDA6NTUiLCJQZW5kaW5nIiwiUGF5UGFsIl0sWzI2LDQ3LCIyMDI0LTExLTI4IiwiMTI6MTg6MzkiLCJGYWlsZWQiLCJCYW5rIFRyYW5zZmVyIl0sWzI3LDUyLCIyMDI0LTExLTE3IiwiMDc6NDU6MTQiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzI4LDU2LCIyMDI0LTExLTIzIiwiMTQ6MDM6MjAiLCJTdWNjZXNzIiwiQ3JlZGl0IENhcmQiXSxbMjksNTksIjIwMjQtMTEtMTkiLCIxODoyMjozMyIsIlBlbmRpbmciLCJQYXlQYWwiXSxbMzAsNjMsIjIwMjQtMTEtMjAiLCIyMDo0MDowOSIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzMxLDY3LCIyMDI0LTExLTEzIiwiMTY6NTA6MjYiLCJGYWlsZWQiLCJDcmVkaXQgQ2FyZCJdLFszMiw3MSwiMjAyNC0xMS0xOCIsIjExOjA5OjE4IiwiU3VjY2VzcyIsIlBheVBhbCJdLFszMyw3NCwiMjAyNC0xMS0xMiIsIjA4OjA1OjQ2IiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiXSxbMiwxMCwiMjAyNC0xMC0wOSIsIjIyOjA5OjI3IiwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIl0sWzMsMTEsIjIwMjQtMTAtMTUiLCIxNzozNDoxOSIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbNCwxNSwiMjAyNC0xMC0yMiIsIjAxOjQ3OjI1IiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbNSwxOSwiMjAyNC0xMC0xNSIsIjEyOjQwOjI2IiwiUGVuZGluZyIsIlBheVBhbCJdLFs2LDM5LCIyMDI0LTEwLTMxIiwiMjE6Mzk6MTkiLCJGYWlsZWQiLCJQYXlQYWwiXSxbNyw1NSwiMjAyNC0xMC0yNyIsIjA1OjQ5OjE2IiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbOCw1OSwiMjAyNC0xMC0yNSIsIjAyOjUxOjA1IiwiUGVuZGluZyIsIlBheVBhbCJdLFs5LDcyLCIyMDI0LTEwLTA4IiwiMTA6MjM6MjgiLCJDYW5jZWxsZWQiLCJQYXlQYWwiXSxbMTAsNzcsIjIwMjQtMTAtMTciLCIxMzowOTozMyIsIlN1Y2Nlc3MiLCJDcmVkaXQgQ2FyZCJdLFsxMSw4NCwiMjAyNC0xMC0yNyIsIjAzOjM3OjQyIiwiU3VjY2VzcyIsIlBheVBhbCJdLFsxMiw4NSwiMjAyNC0xMC0yNSIsIjIwOjA2OjQyIiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFsxMyw4NiwiMjAyNC0xMC0yMSIsIjEzOjMwOjQ3IiwiU3VjY2VzcyIsIlBheVBhbCJdXSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJzY2hlbWEiOlt7Im5hbWUiOiJwYXltZW50X2lkIiwidHlwZSI6IlwiaW50ZWdlclwiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6Im9yZGVyX2lkIiwidHlwZSI6IlwiaW50ZWdlclwiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InBheW1lbnRfZGF0ZSIsInR5cGUiOiJcImRhdGVcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwYXltZW50X3RpbWUiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwYXltZW50X3N0YXR1cyIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InBheW1lbnRfbWV0aG9kIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzM0OTYxNDE4MTkzLCJzdWJtaXRUaW1lIjoxNzM0OTYxNDE4MTU3LCJmaW5pc2hUaW1lIjoxNzM0OTYxNDIxOTYxLCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDg3XV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6ImQxZGYxYjcwLTQ4NzEtNGRiMS05MzY3LWExZjdkMDVjNDkwNiJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6Mjc5MTAwMDY0OTAyMjYyNCwiZ3VpZCI6IjFjYjk4ODcyLTUzOWItNDVlNC1iZTYxLTY4YWZjODkwNDZhNiIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjUuODEyNSwiY29tbWFuZCI6IiVtZFxuIyMjIDMuIFdyaXRlIHRyYW5zZm9ybWVkIGRhdGEgdG8gdGhlIFNpbHZlciBzY2hlbWEgIiwiY29tbWFuZFZlcnNpb24iOjEyLCJzdGF0ZSI6ImlucHV0IiwicmVzdWx0cyI6bnVsbCwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MCwic3VibWl0VGltZSI6MCwiZmluaXNoVGltZSI6MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6e30sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltdLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiIxMzRlOGViMS1iMDAzLTQ1YTEtYjQyMC1kMTNjYTE4ZDRjNGQifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjI3OTEwMDA2NDkwMjI2MjUsImd1aWQiOiJhY2EzNTkxMC02Zjk3LTRiNzEtYTcwYi1kNzZkYjFmNjk0NDQiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjoxLjc1LCJjb21tYW5kIjoiU0VMRUNUIHBheW1lbnRfaWQsXG4gICAgICAgb3JkZXJfaWQsXG4gICAgICAgQ0FTVChkYXRlX2Zvcm1hdChwYXltZW50X3RpbWVzdGFtcCwneXl5eS1NTS1kZCcpIEFTIERBVEUpIEFTIHBheW1lbnRfZGF0ZSxcbiAgICAgICBkYXRlX2Zvcm1hdChwYXltZW50X3RpbWVzdGFtcCwnSEg6bW06c3MnKSBBUyBwYXltZW50X3RpbWUsXG4gICAgICAgcGF5bWVudF9zdGF0dXMsXG4gICAgICAgcGF5bWVudF9tZXRob2RcbiAgRlJPTSBnaXptb2JveC5icm9uemUucGF5bWVudHM7IiwiY29tbWFuZFZlcnNpb24iOjMzLCJzdGF0ZSI6ImZpbmlzaGVkIiwicmVzdWx0cyI6eyJ0eXBlIjoidGFibGUiLCJkYXRhIjpbWzM1LDEzLCIyMDI0LTEyLTE3IiwiMDU6MjU6MzQiLDIsIlBheVBhbCJdLFszNiwxNiwiMjAyNC0xMi0wOSIsIjEwOjQ1OjU2Iiw0LCJCYW5rIFRyYW5zZmVyIl0sWzM3LDE3LCIyMDI0LTEyLTAyIiwiMTM6NTA6MjAiLDEsIkJhbmsgVHJhbnNmZXIiXSxbMzgsMjQsIjIwMjQtMTItMjIiLCIwODozMDo1NSIsMSwiUGF5UGFsIl0sWzM5LDI3LCIyMDI0LTEyLTAzIiwiMTE6NDU6MzAiLDIsIkNyZWRpdCBDYXJkIl0sWzQwLDI4LCIyMDI0LTEyLTI3IiwiMDU6NDA6MTAiLDQsIkNyZWRpdCBDYXJkIl0sWzQxLDMyLCIyMDI0LTEyLTI5IiwiMDk6MjA6NDAiLDEsIlBheVBhbCJdLFs0MiwzNywiMjAyNC0xMi0yMyIsIjEyOjEwOjA1IiwyLCJDcmVkaXQgQ2FyZCJdLFs0MywzOCwiMjAyNC0xMi0yNiIsIjIwOjE1OjE1IiwxLCJDcmVkaXQgQ2FyZCJdLFs0NCw0NCwiMjAyNC0xMi0yMSIsIjE0OjI1OjQ1IiwxLCJDcmVkaXQgQ2FyZCJdLFs0NSw0OSwiMjAyNC0xMi0wOCIsIjE2OjQwOjM1Iiw0LCJQYXlQYWwiXSxbNDYsNTQsIjIwMjQtMTItMjEiLCIxMzoxMDoyNSIsMiwiQ3JlZGl0IENhcmQiXSxbNDcsNTgsIjIwMjQtMTItMTAiLCIxMTo1MDoyMCIsMSwiUGF5UGFsIl0sWzQ4LDYwLCIyMDI0LTEyLTE0IiwiMTg6MzA6MTUiLDEsIkJhbmsgVHJhbnNmZXIiXSxbNDksNjEsIjIwMjQtMTItMDgiLCIxNDo0NTo1MCIsMiwiQmFuayBUcmFuc2ZlciJdLFs1MCw2NSwiMjAyNC0xMi0xMCIsIjEyOjM1OjA1Iiw0LCJCYW5rIFRyYW5zZmVyIl0sWzUxLDY3LCIyMDI0LTEyLTIwIiwiMDk6NDA6MjUiLDEsIlBheVBhbCJdLFs1Miw2OSwiMjAyNC0xMi0zMSIsIjEwOjE1OjUwIiwxLCJCYW5rIFRyYW5zZmVyIl0sWzUzLDcwLCIyMDI0LTEyLTA1IiwiMTM6NTA6MzUiLDIsIlBheVBhbCJdLFs1NCw3MSwiMjAyNC0xMi0yOCIsIjExOjA1OjQwIiwxLCJCYW5rIFRyYW5zZmVyIl0sWzU1LDc0LCIyMDI0LTEyLTIzIiwiMTQ6MjU6MjUiLDEsIlBheVBhbCJdLFs1Niw4MCwiMjAyNC0xMi0xMiIsIjA4OjMwOjU1Iiw0LCJCYW5rIFRyYW5zZmVyIl0sWzU3LDgxLCIyMDI0LTEyLTI4IiwiMTY6NDU6MzAiLDEsIlBheVBhbCJdLFs1OCw4MiwiMjAyNC0xMi0yOSIsIjE4OjUwOjEwIiwyLCJQYXlQYWwiXSxbNTksOTEsIjIwMjQtMTItMTgiLCIxOToyMDo0MCIsNCwiQmFuayBUcmFuc2ZlciJdLFs2MCw5MywiMjAyNC0xMi0yMyIsIjExOjEwOjA1IiwxLCJQYXlQYWwiXSxbNjEsOTUsIjIwMjQtMTItMjkiLCIxMzoxNToxNSIsMiwiQmFuayBUcmFuc2ZlciJdLFs2Miw5NiwiMjAyNC0xMi0wMyIsIjE1OjI1OjQ1IiwxLCJQYXlQYWwiXSxbNjMsOTcsIjIwMjQtMTItMDgiLCIxMjoxMDozNSIsNCwiQmFuayBUcmFuc2ZlciJdLFs2NSwyLCIyMDI1LTAxLTE5IiwiMDU6MDU6MTMiLDIsIlBheVBhbCJdLFs2NiwzLCIyMDI1LTAxLTA4IiwiMjM6NDU6MDAiLDQsIkJhbmsgVHJhbnNmZXIiXSxbNjcsNCwiMjAyNS0wMS0wNSIsIjEwOjQ5OjI2IiwxLCJCYW5rIFRyYW5zZmVyIl0sWzY4LDgsIjIwMjUtMDEtMDIiLCIxNjoxMToxNSIsMiwiUGF5UGFsIl0sWzY5LDE0LCIyMDI1LTAxLTAxIiwiMjI6MjI6MjYiLDQsIlBheVBhbCJdLFs3MCwxOCwiMjAyNS0wMS0yMiIsIjIzOjEyOjA4IiwxLCJDcmVkaXQgQ2FyZCJdLFs3MSwyMiwiMjAyNS0wMS0wMSIsIjE4OjQ5OjE5IiwxLCJQYXlQYWwiXSxbNzIsMjYsIjIwMjUtMDEtMDUiLCIyMjowMToyNSIsMiwiQmFuayBUcmFuc2ZlciJdLFs3MywyOSwiMjAyNS0wMS0xOCIsIjA1OjA1OjA0Iiw0LCJCYW5rIFRyYW5zZmVyIl0sWzc0LDM0LCIyMDI1LTAxLTEyIiwiMTE6MzA6MTUiLDEsIkNyZWRpdCBDYXJkIl0sWzc1LDM2LCIyMDI1LTAxLTE2IiwiMjM6MTU6NDMiLDIsIlBheVBhbCJdLFs3Niw0MCwiMjAyNS0wMS0wOCIsIjEzOjIyOjUxIiw0LCJCYW5rIFRyYW5zZmVyIl0sWzc3LDQ1LCIyMDI1LTAxLTAzIiwiMTU6MTA6MjUiLDEsIlBheVBhbCJdLFs3OCw0NywiMjAyNS0wMS0xMSIsIjIwOjIwOjIwIiwxLCJCYW5rIFRyYW5zZmVyIl0sWzc5LDUwLCIyMDI1LTAxLTE3IiwiMTI6MzA6MDAiLDIsIkJhbmsgVHJhbnNmZXIiXSxbODAsNTMsIjIwMjUtMDEtMTUiLCIwNzo0MDoxOSIsNCwiQ3JlZGl0IENhcmQiXSxbODEsNTgsIjIwMjUtMDEtMDQiLCIxODo0OTozMyIsMSwiUGF5UGFsIl0sWzgyLDYwLCIyMDI1LTAxLTIwIiwiMTQ6MTA6MjUiLDIsIkJhbmsgVHJhbnNmZXIiXSxbODMsNjUsIjIwMjUtMDEtMDYiLCIyMDozMDoxMCIsNCwiUGF5UGFsIl0sWzg0LDY3LCIyMDI1LTAxLTE0IiwiMTY6MDA6MDAiLDEsIkJhbmsgVHJhbnNmZXIiXSxbODUsNzEsIjIwMjUtMDEtMDciLCIxOToxNToxNSIsMiwiQ3JlZGl0IENhcmQiXSxbODYsNzUsIjIwMjUtMDEtMjEiLCIxMjo1MDozMCIsMSwiUGF5UGFsIl0sWzg3LDgwLCIyMDI1LTAxLTE5IiwiMDk6NDA6NDAiLDQsIlBheVBhbCJdLFs4OCw4MiwiMjAyNS0wMS0xMCIsIjA4OjIwOjAwIiwxLCJDcmVkaXQgQ2FyZCJdLFs4OSw4NSwiMjAyNS0wMS0xNiIsIjE1OjUwOjQ1IiwyLCJCYW5rIFRyYW5zZmVyIl0sWzkwLDkwLCIyMDI1LTAxLTIyIiwiMjE6MDA6MTUiLDEsIkJhbmsgVHJhbnNmZXIiXSxbOTEsOTIsIjIwMjUtMDEtMDMiLCIxNjoyMDoyNSIsNCwiUGF5UGFsIl0sWzE1LDcsIjIwMjQtMTEtMTkiLCIxOToxODo0OCIsMiwiQ3JlZGl0IENhcmQiXSxbMTYsOSwiMjAyNC0xMS0yNyIsIjEzOjE1OjI5Iiw0LCJCYW5rIFRyYW5zZmVyIl0sWzE3LDIwLCIyMDI0LTExLTE4IiwiMDI6Mzg6MjEiLDEsIlBheVBhbCJdLFsxOCwyMSwiMjAyNC0xMS0yMSIsIjExOjI1OjM1IiwxLCJCYW5rIFRyYW5zZmVyIl0sWzE5LDIzLCIyMDI0LTExLTIyIiwiMTY6MDQ6MDUiLDEsIlBheVBhbCJdLFsyMCwyNSwiMjAyNC0xMS0wNSIsIjExOjQ1OjMxIiwyLCJQYXlQYWwiXSxbMjEsMzAsIjIwMjQtMTEtMTIiLCIwMzoyMDoyOSIsMSwiQmFuayBUcmFuc2ZlciJdLFsyMiwzNSwiMjAyNC0xMS0yMCIsIjE5OjA5OjA0Iiw0LCJCYW5rIFRyYW5zZmVyIl0sWzIzLDM2LCIyMDI0LTExLTAyIiwiMTA6Mzk6NDYiLDEsIlBheVBhbCJdLFsyNCwzOCwiMjAyNC0xMS0xNSIsIjE1OjEyOjIzIiwxLCJDcmVkaXQgQ2FyZCJdLFsyNSw0MiwiMjAyNC0xMS0yNiIsIjA5OjQwOjU1IiwyLCJQYXlQYWwiXSxbMjYsNDcsIjIwMjQtMTEtMjgiLCIxMjoxODozOSIsNCwiQmFuayBUcmFuc2ZlciJdLFsyNyw1MiwiMjAyNC0xMS0xNyIsIjA3OjQ1OjE0IiwxLCJQYXlQYWwiXSxbMjgsNTYsIjIwMjQtMTEtMjMiLCIxNDowMzoyMCIsMSwiQ3JlZGl0IENhcmQiXSxbMjksNTksIjIwMjQtMTEtMTkiLCIxODoyMjozMyIsMiwiUGF5UGFsIl0sWzMwLDYzLCIyMDI0LTExLTIwIiwiMjA6NDA6MDkiLDEsIkJhbmsgVHJhbnNmZXIiXSxbMzEsNjcsIjIwMjQtMTEtMTMiLCIxNjo1MDoyNiIsNCwiQ3JlZGl0IENhcmQiXSxbMzIsNzEsIjIwMjQtMTEtMTgiLCIxMTowOToxOCIsMSwiUGF5UGFsIl0sWzMzLDc0LCIyMDI0LTExLTEyIiwiMDg6MDU6NDYiLDIsIkJhbmsgVHJhbnNmZXIiXSxbMiwxMCwiMjAyNC0xMC0wOSIsIjIyOjA5OjI3IiwyLCJDcmVkaXQgQ2FyZCJdLFszLDExLCIyMDI0LTEwLTE1IiwiMTc6MzQ6MTkiLDQsIkJhbmsgVHJhbnNmZXIiXSxbNCwxNSwiMjAyNC0xMC0yMiIsIjAxOjQ3OjI1IiwxLCJCYW5rIFRyYW5zZmVyIl0sWzUsMTksIjIwMjQtMTAtMTUiLCIxMjo0MDoyNiIsMiwiUGF5UGFsIl0sWzYsMzksIjIwMjQtMTAtMzEiLCIyMTozOToxOSIsNCwiUGF5UGFsIl0sWzcsNTUsIjIwMjQtMTAtMjciLCIwNTo0OToxNiIsMSwiQmFuayBUcmFuc2ZlciJdLFs4LDU5LCIyMDI0LTEwLTI1IiwiMDI6NTE6MDUiLDIsIlBheVBhbCJdLFs5LDcyLCIyMDI0LTEwLTA4IiwiMTA6MjM6MjgiLDMsIlBheVBhbCJdLFsxMCw3NywiMjAyNC0xMC0xNyIsIjEzOjA5OjMzIiwxLCJDcmVkaXQgQ2FyZCJdLFsxMSw4NCwiMjAyNC0xMC0yNyIsIjAzOjM3OjQyIiwxLCJQYXlQYWwiXSxbMTIsODUsIjIwMjQtMTAtMjUiLCIyMDowNjo0MiIsNCwiQmFuayBUcmFuc2ZlciJdLFsxMyw4NiwiMjAyNC0xMC0yMSIsIjEzOjMwOjQ3IiwxLCJQYXlQYWwiXV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoicGF5bWVudF9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJvcmRlcl9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwYXltZW50X2RhdGUiLCJ0eXBlIjoiXCJkYXRlXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicGF5bWVudF90aW1lIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicGF5bWVudF9zdGF0dXMiLCJ0eXBlIjoiXCJpbnRlZ2VyXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoicGF5bWVudF9tZXRob2QiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifV0sIm92ZXJmbG93IjpmYWxzZSwiYWdnRGF0YSI6W10sImFnZ1NjaGVtYSI6W10sImFnZ092ZXJmbG93IjpmYWxzZSwiYWdnU2VyaWVzTGltaXRSZWFjaGVkIjpmYWxzZSwiYWdnRXJyb3IiOiIiLCJhZ2dUeXBlIjoiIiwicGxvdE9wdGlvbnMiOm51bGwsImlzSnNvblNjaGVtYSI6dHJ1ZSwiZGJmc1Jlc3VsdFBhdGgiOm51bGwsImRhdGFzZXRJbmZvcyI6W10sImNvbHVtbkN1c3RvbURpc3BsYXlJbmZvcyI6e30sIm1ldGFkYXRhIjp7ImlzRGJmc0NvbW1hbmRSZXN1bHQiOmZhbHNlfX0sInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjE3MzQ5NjA3MTU3ODEsInN1Ym1pdFRpbWUiOjE3MzQ5NjA3MTU3NDIsImZpbmlzaFRpbWUiOjE3MzQ5NjA3MTY3MTMsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnsicm93TGltaXQiOjEwMDAwLCJieXRlTGltaXQiOjIwNDgwMDB9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbWyJ0YWJsZSIsODddXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiZDNmMDliOTQtY2JkMS00Zjg5LWFiZTYtMTU5OTAxYzdhMWRjIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjoyNzkxMDAwNjQ5MDIyNjIwLCJndWlkIjoiZjhkNTViNGMtOWIwZi00MTRmLTgwM2MtODlmMDljYzRkZjIwIiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6Ny4wLCJjb21tYW5kIjoiQ1JFQVRFIFRBQkxFIGdpem1vYm94LnNpbHZlci5wYXltZW50c1xuQVNcblNFTEVDVCBwYXltZW50X2lkLFxuICAgICAgIG9yZGVyX2lkLFxuICAgICAgIENBU1QoZGF0ZV9mb3JtYXQocGF5bWVudF90aW1lc3RhbXAsJ3l5eXktTU0tZGQnKSBBUyBEQVRFKSBBUyBwYXltZW50X2RhdGUsXG4gICAgICAgZGF0ZV9mb3JtYXQocGF5bWVudF90aW1lc3RhbXAsJ0hIOm1tOnNzJykgQVMgcGF5bWVudF90aW1lLFxuICAgICAgIENBU0UgcGF5bWVudF9zdGF0dXNcbiAgICAgICAgIFdIRU4gMSBUSEVOICdTdWNjZXNzJ1xuICAgICAgICAgV0hFTiAyIFRIRU4gJ1BlbmRpbmcnXG4gICAgICAgICBXSEVOIDMgVEhFTiAnQ2FuY2VsbGVkJ1xuICAgICAgICAgV0hFTiA0IFRIRU4gJ0ZhaWxlZCdcbiAgICAgICBFTkQgQVMgcGF5bWVudF9zdGF0dXMsICBcbiAgICAgICBwYXltZW50X21ldGhvZFxuICBGUk9NIGdpem1vYm94LmJyb256ZS5wYXltZW50czsiLCJjb21tYW5kVmVyc2lvbiI6Niwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6InRhYmxlIiwiZGF0YSI6W10sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoibnVtX2FmZmVjdGVkX3Jvd3MiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoibnVtX2luc2VydGVkX3Jvd3MiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzM0OTYxMzkzNjEyLCJzdWJtaXRUaW1lIjoxNzM0OTYxMzkzNTcyLCJmaW5pc2hUaW1lIjoxNzM0OTYxNDEzMTM3LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDBdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiYzA2YzkyNWEtZWZlOS00MTgzLTkwNjctMGQ3MDZjOWE4M2Q5In0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjoyNzkxMDAwNjQ5MDIyNjE1LCJndWlkIjoiMGI0MjcyNWYtNzc1Yy00NDcyLThkN2UtNDY0YmQ0YWZkNmE3Iiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6Mi4yNSwiY29tbWFuZCI6IiVtZFxuIyMjIDIuIE1hcCBwYXltZW50X3N0YXR1cyB0byBjb250YWluIGRlc2NyaXB0aXZlIHZhbHVlcyAgXG4gICAoMS1TdWNjZXNzLCAyLVBlbmRpbmcsIDMtQ2FuY2VsbGVkLCA0LUZhaWxlZCkiLCJjb21tYW5kVmVyc2lvbiI6OCwic3RhdGUiOiJpbnB1dCIsInJlc3VsdHMiOm51bGwsInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjAsInN1Ym1pdFRpbWUiOjAsImZpbmlzaFRpbWUiOjAsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnt9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiNzZiMTNlODQtMzVhMi00YzA2LTg4ZmMtNzU3N2I5Zjc5MDRkIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjoyNzkxMDAwNjQ5MDIyNjEyLCJndWlkIjoiOWJiZTNiMWItNTdjZC00YTk4LTg4NTktOTRlOGMzNDgyOTkyIiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MS4wLCJjb21tYW5kIjoiU0VMRUNUIHBheW1lbnRfaWQsXG4gICAgICAgb3JkZXJfaWQsXG4gICAgICAgcGF5bWVudF90aW1lc3RhbXAsXG4gICAgICAgcGF5bWVudF9zdGF0dXMsXG4gICAgICAgcGF5bWVudF9tZXRob2RcbiAgRlJPTSBnaXptb2JveC5icm9uemUucGF5bWVudHM7IiwiY29tbWFuZFZlcnNpb24iOjE1LCJzdGF0ZSI6ImZpbmlzaGVkIiwicmVzdWx0cyI6eyJ0eXBlIjoidGFibGUiLCJkYXRhIjpbWzM1LDEzLCIyMDI0LTEyLTE3VDA1OjI1OjM0WiIsMiwiUGF5UGFsIl0sWzM2LDE2LCIyMDI0LTEyLTA5VDEwOjQ1OjU2WiIsNCwiQmFuayBUcmFuc2ZlciJdLFszNywxNywiMjAyNC0xMi0wMlQxMzo1MDoyMFoiLDEsIkJhbmsgVHJhbnNmZXIiXSxbMzgsMjQsIjIwMjQtMTItMjJUMDg6MzA6NTVaIiwxLCJQYXlQYWwiXSxbMzksMjcsIjIwMjQtMTItMDNUMTE6NDU6MzBaIiwyLCJDcmVkaXQgQ2FyZCJdLFs0MCwyOCwiMjAyNC0xMi0yN1QwNTo0MDoxMFoiLDQsIkNyZWRpdCBDYXJkIl0sWzQxLDMyLCIyMDI0LTEyLTI5VDA5OjIwOjQwWiIsMSwiUGF5UGFsIl0sWzQyLDM3LCIyMDI0LTEyLTIzVDEyOjEwOjA1WiIsMiwiQ3JlZGl0IENhcmQiXSxbNDMsMzgsIjIwMjQtMTItMjZUMjA6MTU6MTVaIiwxLCJDcmVkaXQgQ2FyZCJdLFs0NCw0NCwiMjAyNC0xMi0yMVQxNDoyNTo0NVoiLDEsIkNyZWRpdCBDYXJkIl0sWzQ1LDQ5LCIyMDI0LTEyLTA4VDE2OjQwOjM1WiIsNCwiUGF5UGFsIl0sWzQ2LDU0LCIyMDI0LTEyLTIxVDEzOjEwOjI1WiIsMiwiQ3JlZGl0IENhcmQiXSxbNDcsNTgsIjIwMjQtMTItMTBUMTE6NTA6MjBaIiwxLCJQYXlQYWwiXSxbNDgsNjAsIjIwMjQtMTItMTRUMTg6MzA6MTVaIiwxLCJCYW5rIFRyYW5zZmVyIl0sWzQ5LDYxLCIyMDI0LTEyLTA4VDE0OjQ1OjUwWiIsMiwiQmFuayBUcmFuc2ZlciJdLFs1MCw2NSwiMjAyNC0xMi0xMFQxMjozNTowNVoiLDQsIkJhbmsgVHJhbnNmZXIiXSxbNTEsNjcsIjIwMjQtMTItMjBUMDk6NDA6MjVaIiwxLCJQYXlQYWwiXSxbNTIsNjksIjIwMjQtMTItMzFUMTA6MTU6NTBaIiwxLCJCYW5rIFRyYW5zZmVyIl0sWzUzLDcwLCIyMDI0LTEyLTA1VDEzOjUwOjM1WiIsMiwiUGF5UGFsIl0sWzU0LDcxLCIyMDI0LTEyLTI4VDExOjA1OjQwWiIsMSwiQmFuayBUcmFuc2ZlciJdLFs1NSw3NCwiMjAyNC0xMi0yM1QxNDoyNToyNVoiLDEsIlBheVBhbCJdLFs1Niw4MCwiMjAyNC0xMi0xMlQwODozMDo1NVoiLDQsIkJhbmsgVHJhbnNmZXIiXSxbNTcsODEsIjIwMjQtMTItMjhUMTY6NDU6MzBaIiwxLCJQYXlQYWwiXSxbNTgsODIsIjIwMjQtMTItMjlUMTg6NTA6MTBaIiwyLCJQYXlQYWwiXSxbNTksOTEsIjIwMjQtMTItMThUMTk6MjA6NDBaIiw0LCJCYW5rIFRyYW5zZmVyIl0sWzYwLDkzLCIyMDI0LTEyLTIzVDExOjEwOjA1WiIsMSwiUGF5UGFsIl0sWzYxLDk1LCIyMDI0LTEyLTI5VDEzOjE1OjE1WiIsMiwiQmFuayBUcmFuc2ZlciJdLFs2Miw5NiwiMjAyNC0xMi0wM1QxNToyNTo0NVoiLDEsIlBheVBhbCJdLFs2Myw5NywiMjAyNC0xMi0wOFQxMjoxMDozNVoiLDQsIkJhbmsgVHJhbnNmZXIiXSxbNjUsMiwiMjAyNS0wMS0xOVQwNTowNToxM1oiLDIsIlBheVBhbCJdLFs2NiwzLCIyMDI1LTAxLTA4VDIzOjQ1OjAwWiIsNCwiQmFuayBUcmFuc2ZlciJdLFs2Nyw0LCIyMDI1LTAxLTA1VDEwOjQ5OjI2WiIsMSwiQmFuayBUcmFuc2ZlciJdLFs2OCw4LCIyMDI1LTAxLTAyVDE2OjExOjE1WiIsMiwiUGF5UGFsIl0sWzY5LDE0LCIyMDI1LTAxLTAxVDIyOjIyOjI2WiIsNCwiUGF5UGFsIl0sWzcwLDE4LCIyMDI1LTAxLTIyVDIzOjEyOjA4WiIsMSwiQ3JlZGl0IENhcmQiXSxbNzEsMjIsIjIwMjUtMDEtMDFUMTg6NDk6MTlaIiwxLCJQYXlQYWwiXSxbNzIsMjYsIjIwMjUtMDEtMDVUMjI6MDE6MjVaIiwyLCJCYW5rIFRyYW5zZmVyIl0sWzczLDI5LCIyMDI1LTAxLTE4VDA1OjA1OjA0WiIsNCwiQmFuayBUcmFuc2ZlciJdLFs3NCwzNCwiMjAyNS0wMS0xMlQxMTozMDoxNVoiLDEsIkNyZWRpdCBDYXJkIl0sWzc1LDM2LCIyMDI1LTAxLTE2VDIzOjE1OjQzWiIsMiwiUGF5UGFsIl0sWzc2LDQwLCIyMDI1LTAxLTA4VDEzOjIyOjUxWiIsNCwiQmFuayBUcmFuc2ZlciJdLFs3Nyw0NSwiMjAyNS0wMS0wM1QxNToxMDoyNVoiLDEsIlBheVBhbCJdLFs3OCw0NywiMjAyNS0wMS0xMVQyMDoyMDoyMFoiLDEsIkJhbmsgVHJhbnNmZXIiXSxbNzksNTAsIjIwMjUtMDEtMTdUMTI6MzA6MDBaIiwyLCJCYW5rIFRyYW5zZmVyIl0sWzgwLDUzLCIyMDI1LTAxLTE1VDA3OjQwOjE5WiIsNCwiQ3JlZGl0IENhcmQiXSxbODEsNTgsIjIwMjUtMDEtMDRUMTg6NDk6MzNaIiwxLCJQYXlQYWwiXSxbODIsNjAsIjIwMjUtMDEtMjBUMTQ6MTA6MjVaIiwyLCJCYW5rIFRyYW5zZmVyIl0sWzgzLDY1LCIyMDI1LTAxLTA2VDIwOjMwOjEwWiIsNCwiUGF5UGFsIl0sWzg0LDY3LCIyMDI1LTAxLTE0VDE2OjAwOjAwWiIsMSwiQmFuayBUcmFuc2ZlciJdLFs4NSw3MSwiMjAyNS0wMS0wN1QxOToxNToxNVoiLDIsIkNyZWRpdCBDYXJkIl0sWzg2LDc1LCIyMDI1LTAxLTIxVDEyOjUwOjMwWiIsMSwiUGF5UGFsIl0sWzg3LDgwLCIyMDI1LTAxLTE5VDA5OjQwOjQwWiIsNCwiUGF5UGFsIl0sWzg4LDgyLCIyMDI1LTAxLTEwVDA4OjIwOjAwWiIsMSwiQ3JlZGl0IENhcmQiXSxbODksODUsIjIwMjUtMDEtMTZUMTU6NTA6NDVaIiwyLCJCYW5rIFRyYW5zZmVyIl0sWzkwLDkwLCIyMDI1LTAxLTIyVDIxOjAwOjE1WiIsMSwiQmFuayBUcmFuc2ZlciJdLFs5MSw5MiwiMjAyNS0wMS0wM1QxNjoyMDoyNVoiLDQsIlBheVBhbCJdLFsxNSw3LCIyMDI0LTExLTE5VDE5OjE4OjQ4WiIsMiwiQ3JlZGl0IENhcmQiXSxbMTYsOSwiMjAyNC0xMS0yN1QxMzoxNToyOVoiLDQsIkJhbmsgVHJhbnNmZXIiXSxbMTcsMjAsIjIwMjQtMTEtMThUMDI6Mzg6MjFaIiwxLCJQYXlQYWwiXSxbMTgsMjEsIjIwMjQtMTEtMjFUMTE6MjU6MzVaIiwxLCJCYW5rIFRyYW5zZmVyIl0sWzE5LDIzLCIyMDI0LTExLTIyVDE2OjA0OjA1WiIsMSwiUGF5UGFsIl0sWzIwLDI1LCIyMDI0LTExLTA1VDExOjQ1OjMxWiIsMiwiUGF5UGFsIl0sWzIxLDMwLCIyMDI0LTExLTEyVDAzOjIwOjI5WiIsMSwiQmFuayBUcmFuc2ZlciJdLFsyMiwzNSwiMjAyNC0xMS0yMFQxOTowOTowNFoiLDQsIkJhbmsgVHJhbnNmZXIiXSxbMjMsMzYsIjIwMjQtMTEtMDJUMTA6Mzk6NDZaIiwxLCJQYXlQYWwiXSxbMjQsMzgsIjIwMjQtMTEtMTVUMTU6MTI6MjNaIiwxLCJDcmVkaXQgQ2FyZCJdLFsyNSw0MiwiMjAyNC0xMS0yNlQwOTo0MDo1NVoiLDIsIlBheVBhbCJdLFsyNiw0NywiMjAyNC0xMS0yOFQxMjoxODozOVoiLDQsIkJhbmsgVHJhbnNmZXIiXSxbMjcsNTIsIjIwMjQtMTEtMTdUMDc6NDU6MTRaIiwxLCJQYXlQYWwiXSxbMjgsNTYsIjIwMjQtMTEtMjNUMTQ6MDM6MjBaIiwxLCJDcmVkaXQgQ2FyZCJdLFsyOSw1OSwiMjAyNC0xMS0xOVQxODoyMjozM1oiLDIsIlBheVBhbCJdLFszMCw2MywiMjAyNC0xMS0yMFQyMDo0MDowOVoiLDEsIkJhbmsgVHJhbnNmZXIiXSxbMzEsNjcsIjIwMjQtMTEtMTNUMTY6NTA6MjZaIiw0LCJDcmVkaXQgQ2FyZCJdLFszMiw3MSwiMjAyNC0xMS0xOFQxMTowOToxOFoiLDEsIlBheVBhbCJdLFszMyw3NCwiMjAyNC0xMS0xMlQwODowNTo0NloiLDIsIkJhbmsgVHJhbnNmZXIiXSxbMiwxMCwiMjAyNC0xMC0wOVQyMjowOToyN1oiLDIsIkNyZWRpdCBDYXJkIl0sWzMsMTEsIjIwMjQtMTAtMTVUMTc6MzQ6MTlaIiw0LCJCYW5rIFRyYW5zZmVyIl0sWzQsMTUsIjIwMjQtMTAtMjJUMDE6NDc6MjVaIiwxLCJCYW5rIFRyYW5zZmVyIl0sWzUsMTksIjIwMjQtMTAtMTVUMTI6NDA6MjZaIiwyLCJQYXlQYWwiXSxbNiwzOSwiMjAyNC0xMC0zMVQyMTozOToxOVoiLDQsIlBheVBhbCJdLFs3LDU1LCIyMDI0LTEwLTI3VDA1OjQ5OjE2WiIsMSwiQmFuayBUcmFuc2ZlciJdLFs4LDU5LCIyMDI0LTEwLTI1VDAyOjUxOjA1WiIsMiwiUGF5UGFsIl0sWzksNzIsIjIwMjQtMTAtMDhUMTA6MjM6MjhaIiwzLCJQYXlQYWwiXSxbMTAsNzcsIjIwMjQtMTAtMTdUMTM6MDk6MzNaIiwxLCJDcmVkaXQgQ2FyZCJdLFsxMSw4NCwiMjAyNC0xMC0yN1QwMzozNzo0MloiLDEsIlBheVBhbCJdLFsxMiw4NSwiMjAyNC0xMC0yNVQyMDowNjo0MloiLDQsIkJhbmsgVHJhbnNmZXIiXSxbMTMsODYsIjIwMjQtMTAtMjFUMTM6MzA6NDdaIiwxLCJQYXlQYWwiXV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoicGF5bWVudF9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJvcmRlcl9pZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwYXltZW50X3RpbWVzdGFtcCIsInR5cGUiOiJcInRpbWVzdGFtcFwiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InBheW1lbnRfc3RhdHVzIiwidHlwZSI6IlwiaW50ZWdlclwiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InBheW1lbnRfbWV0aG9kIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6eyJ0eXBlIjoiYmFzZUVycm9yIiwic3RhY2tGcmFtZXMiOlsib3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QuRXh0ZW5kZWRBbmFseXNpc0V4Y2VwdGlvbjogW1VOUkVTT0xWRURfQ09MVU1OLldJVEhfU1VHR0VTVElPTl0gQSBjb2x1bW4sIHZhcmlhYmxlLCBvciBmdW5jdGlvbiBwYXJhbWV0ZXIgd2l0aCBuYW1lIGBwYXltZW50X3N0YXR1c2AgY2Fubm90IGJlIHJlc29sdmVkLiBEaWQgeW91IG1lYW4gb25lIG9mIHRoZSBmb2xsb3dpbmc/IFtgcGF5bWVudF9zdGF1c2AsIGBwYXltZW50X2lkYCwgYHBheW1lbnRfbWV0aG9kYCwgYHBheW1lbnRfdGltZXN0YW1wYCwgYG9yZGVyX2lkYF0uIFNRTFNUQVRFOiA0MjcwMzsgbGluZSA0IHBvcyA3O1xuJ1Byb2plY3QgW3BheW1lbnRfaWQjNTIyLCBvcmRlcl9pZCM1MjMsIHBheW1lbnRfdGltZXN0YW1wIzUyNCwgJ3BheW1lbnRfc3RhdHVzLCBwYXltZW50X21ldGhvZCM1MjZdXG4rLSBTdWJxdWVyeUFsaWFzIGdpem1vYm94LmJyb256ZS5wYXltZW50c1xuICAgKy0gUmVsYXRpb24gZ2l6bW9ib3guYnJvbnplLnBheW1lbnRzW3BheW1lbnRfaWQjNTIyLG9yZGVyX2lkIzUyMyxwYXltZW50X3RpbWVzdGFtcCM1MjQscGF5bWVudF9zdGF1cyM1MjUscGF5bWVudF9tZXRob2QjNTI2XSBjc3ZcblxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5lcnJvcnMuUXVlcnlDb21waWxhdGlvbkVycm9ycyQudW5yZXNvbHZlZEF0dHJpYnV0ZUVycm9yKFF1ZXJ5Q29tcGlsYXRpb25FcnJvcnMuc2NhbGE6NDUzKVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5hbmFseXNpcy5DaGVja0FuYWx5c2lzLm9yZyRhcGFjaGUkc3Bhcmskc3FsJGNhdGFseXN0JGFuYWx5c2lzJENoZWNrQW5hbHlzaXMkJGZhaWxVbnJlc29sdmVkQXR0cmlidXRlKENoZWNrQW5hbHlzaXMuc2NhbGE6MTUyKVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5hbmFseXNpcy5DaGVja0FuYWx5c2lzLiRhbm9uZnVuJGNoZWNrQW5hbHlzaXMwJDgoQ2hlY2tBbmFseXNpcy5zY2FsYTozMzcpXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LmFuYWx5c2lzLkNoZWNrQW5hbHlzaXMuJGFub25mdW4kY2hlY2tBbmFseXNpczAkOCRhZGFwdGVkKENoZWNrQW5hbHlzaXMuc2NhbGE6MzIyKVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC50cmVlcy5UcmVlTm9kZS5mb3JlYWNoVXAoVHJlZU5vZGUuc2NhbGE6Mjg3KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5hbmFseXNpcy5DaGVja0FuYWx5c2lzLiRhbm9uZnVuJGNoZWNrQW5hbHlzaXMwJDcoQ2hlY2tBbmFseXNpcy5zY2FsYTozMjIpXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LmFuYWx5c2lzLkNoZWNrQW5hbHlzaXMuJGFub25mdW4kY2hlY2tBbmFseXNpczAkNyRhZGFwdGVkKENoZWNrQW5hbHlzaXMuc2NhbGE6MzIyKVxuXHRhdCBzY2FsYS5jb2xsZWN0aW9uLmltbXV0YWJsZS5TdHJlYW0uZm9yZWFjaChTdHJlYW0uc2NhbGE6NTMzKVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5hbmFseXNpcy5DaGVja0FuYWx5c2lzLiRhbm9uZnVuJGNoZWNrQW5hbHlzaXMwJDIoQ2hlY2tBbmFseXNpcy5zY2FsYTozMjIpXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LmFuYWx5c2lzLkNoZWNrQW5hbHlzaXMuJGFub25mdW4kY2hlY2tBbmFseXNpczAkMiRhZGFwdGVkKENoZWNrQW5hbHlzaXMuc2NhbGE6MTk3KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC50cmVlcy5UcmVlTm9kZS5mb3JlYWNoVXAoVHJlZU5vZGUuc2NhbGE6Mjg3KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5hbmFseXNpcy5DaGVja0FuYWx5c2lzLmNoZWNrQW5hbHlzaXMwKENoZWNrQW5hbHlzaXMuc2NhbGE6MTk3KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5hbmFseXNpcy5DaGVja0FuYWx5c2lzLmNoZWNrQW5hbHlzaXMwJChDaGVja0FuYWx5c2lzLnNjYWxhOjE3OSlcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QuYW5hbHlzaXMuQW5hbHl6ZXIuY2hlY2tBbmFseXNpczAoQW5hbHl6ZXIuc2NhbGE6MzY5KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5hbmFseXNpcy5DaGVja0FuYWx5c2lzLiRhbm9uZnVuJGNoZWNrQW5hbHlzaXMkMShDaGVja0FuYWx5c2lzLnNjYWxhOjE2Nylcblx0YXQgc2NhbGEucnVudGltZS5qYXZhOC5KRnVuY3Rpb24wJG1jViRzcC5hcHBseShKRnVuY3Rpb24wJG1jViRzcC5qYXZhOjIzKVxuXHRhdCBjb20uZGF0YWJyaWNrcy5zcGFyay51dGlsLkZyYW1lUHJvZmlsZXIkLnJlY29yZChGcmFtZVByb2ZpbGVyLnNjYWxhOjk0KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5hbmFseXNpcy5DaGVja0FuYWx5c2lzLmNoZWNrQW5hbHlzaXMoQ2hlY2tBbmFseXNpcy5zY2FsYToxNTUpXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LmFuYWx5c2lzLkNoZWNrQW5hbHlzaXMuY2hlY2tBbmFseXNpcyQoQ2hlY2tBbmFseXNpcy5zY2FsYToxNTUpXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LmFuYWx5c2lzLkFuYWx5emVyLmNoZWNrQW5hbHlzaXMoQW5hbHl6ZXIuc2NhbGE6MzY5KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5hbmFseXNpcy5BbmFseXplci4kYW5vbmZ1biRleGVjdXRlQW5kQ2hlY2skMihBbmFseXplci5zY2FsYTo0MjQpXG5cdGF0IHNjYWxhLnJ1bnRpbWUuamF2YTguSkZ1bmN0aW9uMCRtY1Ykc3AuYXBwbHkoSkZ1bmN0aW9uMCRtY1Ykc3AuamF2YToyMylcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QuUXVlcnlQbGFubmluZ1RyYWNrZXIkLndpdGhUcmFja2VyKFF1ZXJ5UGxhbm5pbmdUcmFja2VyLnNjYWxhOjE4Milcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QuYW5hbHlzaXMuQW5hbHl6ZXIuJGFub25mdW4kZXhlY3V0ZUFuZENoZWNrJDEoQW5hbHl6ZXIuc2NhbGE6NDI0KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5jYXRhbHlzdC5wbGFucy5sb2dpY2FsLkFuYWx5c2lzSGVscGVyJC5tYXJrSW5BbmFseXplcihBbmFseXNpc0hlbHBlci5zY2FsYTo0NDMpXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmNhdGFseXN0LmFuYWx5c2lzLkFuYWx5emVyLmV4ZWN1dGVBbmRDaGVjayhBbmFseXplci5zY2FsYTo0MjEpXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5RdWVyeUV4ZWN1dGlvbi4kYW5vbmZ1biRhbmFseXplZCQxKFF1ZXJ5RXhlY3V0aW9uLnNjYWxhOjI2Milcblx0YXQgY29tLmRhdGFicmlja3Muc3BhcmsudXRpbC5GcmFtZVByb2ZpbGVyJC5yZWNvcmQoRnJhbWVQcm9maWxlci5zY2FsYTo5NClcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuY2F0YWx5c3QuUXVlcnlQbGFubmluZ1RyYWNrZXIubWVhc3VyZVBoYXNlKFF1ZXJ5UGxhbm5pbmdUcmFja2VyLnNjYWxhOjQ1OClcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLlF1ZXJ5RXhlY3V0aW9uLiRhbm9uZnVuJGV4ZWN1dGVQaGFzZSQ1KFF1ZXJ5RXhlY3V0aW9uLnNjYWxhOjYxMylcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLlNRTEV4ZWN1dGlvbiQud2l0aEV4ZWN1dGlvblBoYXNlKFNRTEV4ZWN1dGlvbi5zY2FsYToxNDQpXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5RdWVyeUV4ZWN1dGlvbi4kYW5vbmZ1biRleGVjdXRlUGhhc2UkNChRdWVyeUV4ZWN1dGlvbi5zY2FsYTo2MTMpXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5RdWVyeUV4ZWN1dGlvbiQud2l0aEludGVybmFsRXJyb3IoUXVlcnlFeGVjdXRpb24uc2NhbGE6MTE3OSlcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLlF1ZXJ5RXhlY3V0aW9uLiRhbm9uZnVuJGV4ZWN1dGVQaGFzZSQyKFF1ZXJ5RXhlY3V0aW9uLnNjYWxhOjYxMilcblx0YXQgY29tLmRhdGFicmlja3MudXRpbC5MZXhpY2FsVGhyZWFkTG9jYWwkSGFuZGxlLnJ1bldpdGgoTGV4aWNhbFRocmVhZExvY2FsLnNjYWxhOjYzKVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5leGVjdXRpb24uUXVlcnlFeGVjdXRpb24uJGFub25mdW4kZXhlY3V0ZVBoYXNlJDEoUXVlcnlFeGVjdXRpb24uc2NhbGE6NjA4KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5TcGFya1Nlc3Npb24ud2l0aEFjdGl2ZShTcGFya1Nlc3Npb24uc2NhbGE6MTE4MClcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLlF1ZXJ5RXhlY3V0aW9uLmV4ZWN1dGVQaGFzZShRdWVyeUV4ZWN1dGlvbi5zY2FsYTo2MDgpXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLmV4ZWN1dGlvbi5RdWVyeUV4ZWN1dGlvbi5hbmFseXplZCRsenljb21wdXRlKFF1ZXJ5RXhlY3V0aW9uLnNjYWxhOjI1Nilcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLlF1ZXJ5RXhlY3V0aW9uLmFuYWx5emVkKFF1ZXJ5RXhlY3V0aW9uLnNjYWxhOjI1NSlcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuZXhlY3V0aW9uLlF1ZXJ5RXhlY3V0aW9uLmFzc2VydEFuYWx5emVkKFF1ZXJ5RXhlY3V0aW9uLnNjYWxhOjIzNylcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuRGF0YXNldCQuJGFub25mdW4kb2ZSb3dzJDIoRGF0YXNldC5zY2FsYToxMzApXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLlNwYXJrU2Vzc2lvbi53aXRoQWN0aXZlKFNwYXJrU2Vzc2lvbi5zY2FsYToxMTgwKVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5TcGFya1Nlc3Npb24uJGFub25mdW4kd2l0aEFjdGl2ZUFuZEZyYW1lUHJvZmlsZXIkMShTcGFya1Nlc3Npb24uc2NhbGE6MTE4Nylcblx0YXQgY29tLmRhdGFicmlja3Muc3BhcmsudXRpbC5GcmFtZVByb2ZpbGVyJC5yZWNvcmQoRnJhbWVQcm9maWxlci5zY2FsYTo5NClcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuU3BhcmtTZXNzaW9uLndpdGhBY3RpdmVBbmRGcmFtZVByb2ZpbGVyKFNwYXJrU2Vzc2lvbi5zY2FsYToxMTg3KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5EYXRhc2V0JC5vZlJvd3MoRGF0YXNldC5zY2FsYToxMjIpXG5cdGF0IG9yZy5hcGFjaGUuc3Bhcmsuc3FsLlNwYXJrU2Vzc2lvbi4kYW5vbmZ1biRzcWwkNChTcGFya1Nlc3Npb24uc2NhbGE6OTU5KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5TcGFya1Nlc3Npb24ud2l0aEFjdGl2ZShTcGFya1Nlc3Npb24uc2NhbGE6MTE4MClcblx0YXQgb3JnLmFwYWNoZS5zcGFyay5zcWwuU3BhcmtTZXNzaW9uLnNxbChTcGFya1Nlc3Npb24uc2NhbGE6OTQ3KVxuXHRhdCBvcmcuYXBhY2hlLnNwYXJrLnNxbC5TcGFya1Nlc3Npb24uc3FsKFNwYXJrU2Vzc2lvbi5zY2FsYTo5ODIpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJMb2NhbCREYkNsYXNzaWNTdHJhdGVneS5leGVjdXRlU1FMUXVlcnkoRHJpdmVyTG9jYWwuc2NhbGE6MzAxKVxuXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwuZXhlY3V0ZVNRTFN1YkNvbW1hbmQoRHJpdmVyTG9jYWwuc2NhbGE6NDAxKVxuXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwuJGFub25mdW4kZXhlY3V0ZVNxbCQxKERyaXZlckxvY2FsLnNjYWxhOjQyMylcblx0YXQgc2NhbGEuY29sbGVjdGlvbi5pbW11dGFibGUuTGlzdC5tYXAoTGlzdC5zY2FsYToyOTMpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJMb2NhbC5leGVjdXRlU3FsKERyaXZlckxvY2FsLnNjYWxhOjQxOClcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLlNRTERyaXZlckxvY2FsLnJlcGwoU1FMRHJpdmVyTG9jYWwuc2NhbGE6NDApXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJMb2NhbC4kYW5vbmZ1biRleGVjdXRlJDMzKERyaXZlckxvY2FsLnNjYWxhOjExNzIpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLnVuaXR5LlVDU0VwaGVtZXJhbFN0YXRlJEhhbmRsZS5ydW5XaXRoKFVDU0VwaGVtZXJhbFN0YXRlLnNjYWxhOjUxKVxuXHRhdCBjb20uZGF0YWJyaWNrcy51bml0eS5IYW5kbGVJbXBsLnJ1bldpdGgoVUNTSGFuZGxlLnNjYWxhOjEwNClcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlckxvY2FsLiRhbm9uZnVuJGV4ZWN1dGUkMjgoRHJpdmVyTG9jYWwuc2NhbGE6MTE2Mylcblx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLiRhbm9uZnVuJHdpdGhBdHRyaWJ1dGlvbkNvbnRleHQkMShBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjQ4KVxuXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dCQuJGFub25mdW4kd2l0aFZhbHVlJDEoQXR0cmlidXRpb25Db250ZXh0LnNjYWxhOjI3Nilcblx0YXQgc2NhbGEudXRpbC5EeW5hbWljVmFyaWFibGUud2l0aFZhbHVlKER5bmFtaWNWYXJpYWJsZS5zY2FsYTo2Milcblx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHQkLndpdGhWYWx1ZShBdHRyaWJ1dGlvbkNvbnRleHQuc2NhbGE6MjcyKVxuXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uQ29udGV4dChBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjQ2KVxuXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uQ29udGV4dCQoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo0Mylcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlckxvY2FsLndpdGhBdHRyaWJ1dGlvbkNvbnRleHQoRHJpdmVyTG9jYWwuc2NhbGE6OTYpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy53aXRoQXR0cmlidXRpb25UYWdzKEF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuc2NhbGE6OTUpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy53aXRoQXR0cmlidXRpb25UYWdzJChBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjc2KVxuXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwud2l0aEF0dHJpYnV0aW9uVGFncyhEcml2ZXJMb2NhbC5zY2FsYTo5Nilcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlckxvY2FsLiRhbm9uZnVuJGV4ZWN1dGUkMShEcml2ZXJMb2NhbC5zY2FsYToxMDk5KVxuXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwkLiRhbm9uZnVuJG1heWJlU3luY2hyb25pemVFeGVjdXRpb24kNChEcml2ZXJMb2NhbC5zY2FsYToxNTE5KVxuXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyTG9jYWwuZXhlY3V0ZShEcml2ZXJMb2NhbC5zY2FsYTo3NzYpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJXcmFwcGVyLiRhbm9uZnVuJHRyeUV4ZWN1dGluZ0NvbW1hbmQkMihEcml2ZXJXcmFwcGVyLnNjYWxhOjkzMilcblx0YXQgc2NhbGEudXRpbC5UcnkkLmFwcGx5KFRyeS5zY2FsYToyMTMpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJXcmFwcGVyLiRhbm9uZnVuJHRyeUV4ZWN1dGluZ0NvbW1hbmQkMShEcml2ZXJXcmFwcGVyLnNjYWxhOjkyMSlcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIuJGFub25mdW4kdHJ5RXhlY3V0aW5nQ29tbWFuZCQzKERyaXZlcldyYXBwZXIuc2NhbGE6OTY3KVxuXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLlVzYWdlTG9nZ2luZy5leGVjdXRlVGh1bmtBbmRDYXB0dXJlUmVzdWx0VGFncyQxKFVzYWdlTG9nZ2luZy5zY2FsYTo2MzMpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuVXNhZ2VMb2dnaW5nLiRhbm9uZnVuJHJlY29yZE9wZXJhdGlvbldpdGhSZXN1bHRUYWdzJDQoVXNhZ2VMb2dnaW5nLnNjYWxhOjY1Nilcblx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLiRhbm9uZnVuJHdpdGhBdHRyaWJ1dGlvbkNvbnRleHQkMShBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjQ4KVxuXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dCQuJGFub25mdW4kd2l0aFZhbHVlJDEoQXR0cmlidXRpb25Db250ZXh0LnNjYWxhOjI3Nilcblx0YXQgc2NhbGEudXRpbC5EeW5hbWljVmFyaWFibGUud2l0aFZhbHVlKER5bmFtaWNWYXJpYWJsZS5zY2FsYTo2Milcblx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHQkLndpdGhWYWx1ZShBdHRyaWJ1dGlvbkNvbnRleHQuc2NhbGE6MjcyKVxuXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uQ29udGV4dChBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjQ2KVxuXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uQ29udGV4dCQoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo0Mylcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIud2l0aEF0dHJpYnV0aW9uQ29udGV4dChEcml2ZXJXcmFwcGVyLnNjYWxhOjczKVxuXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uVGFncyhBdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLnNjYWxhOjk1KVxuXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLkF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcud2l0aEF0dHJpYnV0aW9uVGFncyQoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo3Nilcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIud2l0aEF0dHJpYnV0aW9uVGFncyhEcml2ZXJXcmFwcGVyLnNjYWxhOjczKVxuXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLlVzYWdlTG9nZ2luZy5yZWNvcmRPcGVyYXRpb25XaXRoUmVzdWx0VGFncyhVc2FnZUxvZ2dpbmcuc2NhbGE6NjI4KVxuXHRhdCBjb20uZGF0YWJyaWNrcy5sb2dnaW5nLlVzYWdlTG9nZ2luZy5yZWNvcmRPcGVyYXRpb25XaXRoUmVzdWx0VGFncyQoVXNhZ2VMb2dnaW5nLnNjYWxhOjUzNylcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIucmVjb3JkT3BlcmF0aW9uV2l0aFJlc3VsdFRhZ3MoRHJpdmVyV3JhcHBlci5zY2FsYTo3Mylcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIudHJ5RXhlY3V0aW5nQ29tbWFuZChEcml2ZXJXcmFwcGVyLnNjYWxhOjk2Nylcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIuZXhlY3V0ZUNvbW1hbmRBbmRHZXRFcnJvcihEcml2ZXJXcmFwcGVyLnNjYWxhOjcxNylcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIuZXhlY3V0ZUNvbW1hbmQoRHJpdmVyV3JhcHBlci5zY2FsYTo3ODUpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJXcmFwcGVyLiRhbm9uZnVuJHJ1bklubmVyTG9vcCQxKERyaXZlcldyYXBwZXIuc2NhbGE6NTkwKVxuXHRhdCBzY2FsYS5ydW50aW1lLmphdmE4LkpGdW5jdGlvbjAkbWNWJHNwLmFwcGx5KEpGdW5jdGlvbjAkbWNWJHNwLmphdmE6MjMpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy4kYW5vbmZ1biR3aXRoQXR0cmlidXRpb25Db250ZXh0JDEoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo0OClcblx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHQkLiRhbm9uZnVuJHdpdGhWYWx1ZSQxKEF0dHJpYnV0aW9uQ29udGV4dC5zY2FsYToyNzYpXG5cdGF0IHNjYWxhLnV0aWwuRHluYW1pY1ZhcmlhYmxlLndpdGhWYWx1ZShEeW5hbWljVmFyaWFibGUuc2NhbGE6NjIpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmxvZ2dpbmcuQXR0cmlidXRpb25Db250ZXh0JC53aXRoVmFsdWUoQXR0cmlidXRpb25Db250ZXh0LnNjYWxhOjI3Milcblx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLndpdGhBdHRyaWJ1dGlvbkNvbnRleHQoQXR0cmlidXRpb25Db250ZXh0VHJhY2luZy5zY2FsYTo0Nilcblx0YXQgY29tLmRhdGFicmlja3MubG9nZ2luZy5BdHRyaWJ1dGlvbkNvbnRleHRUcmFjaW5nLndpdGhBdHRyaWJ1dGlvbkNvbnRleHQkKEF0dHJpYnV0aW9uQ29udGV4dFRyYWNpbmcuc2NhbGE6NDMpXG5cdGF0IGNvbS5kYXRhYnJpY2tzLmJhY2tlbmQuZGFlbW9uLmRyaXZlci5Ecml2ZXJXcmFwcGVyLndpdGhBdHRyaWJ1dGlvbkNvbnRleHQoRHJpdmVyV3JhcHBlci5zY2FsYTo3Mylcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIucnVuSW5uZXJMb29wKERyaXZlcldyYXBwZXIuc2NhbGE6NTkwKVxuXHRhdCBjb20uZGF0YWJyaWNrcy5iYWNrZW5kLmRhZW1vbi5kcml2ZXIuRHJpdmVyV3JhcHBlci5ydW5Jbm5lcihEcml2ZXJXcmFwcGVyLnNjYWxhOjUxMilcblx0YXQgY29tLmRhdGFicmlja3MuYmFja2VuZC5kYWVtb24uZHJpdmVyLkRyaXZlcldyYXBwZXIucnVuKERyaXZlcldyYXBwZXIuc2NhbGE6MzA2KVxuXHRhdCBqYXZhLmxhbmcuVGhyZWFkLnJ1bihUaHJlYWQuamF2YTo3NTApXG4iXSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJkYXRhc2V0SW5mb3MiOltdLCJtZXRhZGF0YSI6e30sImp1cHl0ZXJQcm9wcyI6bnVsbCwic3FsUHJvcHMiOnsic3FsU3RhdGUiOiI0MjcwMyIsImVycm9yQ2xhc3MiOiJVTlJFU09MVkVEX0NPTFVNTi5XSVRIX1NVR0dFU1RJT04iLCJzdGFja1RyYWNlIjpudWxsLCJzdGFydEluZGV4Ijo2OSwic3RvcEluZGV4Ijo4MiwicHlzcGFya0NhbGxTaXRlIjpudWxsLCJweXNwYXJrRnJhZ21lbnQiOm51bGwsInB5c3BhcmtTdW1tYXJ5IjpudWxsLCJicmVha2luZ0NoYW5nZUluZm8iOm51bGx9fSwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzM0OTU5OTczMzE5LCJzdWJtaXRUaW1lIjoxNzM0OTU5OTczMjc2LCJmaW5pc2hUaW1lIjoxNzM0OTU5OTc1NDA0LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDg3XV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjBmN2NlMzRhLTNhMmQtNGM2NS1iYTZlLTQ2OGVmYmIzYjY1NiJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6Mjc5MTAwMDY0OTAyMjYxMSwiZ3VpZCI6ImY5ZTExZDc1LThiMjgtNGRjZC1hYzY0LTk4NzA0YTE0YTM4ZCIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjEuMjUsImNvbW1hbmQiOiIlbWRcbiMjIyAxLiBFeHRyYWN0IERhdGUgYW5kIFRpbWUgZnJvbSBwYXltZW50X3RpbWVzdGFtcFxuPiAgW0RvY3VtZW50YXRpb24gZm9yIGRhdGVfZm9ybWF0IGZ1bmN0aW9uXShodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvYXp1cmUvZGF0YWJyaWNrcy9zcWwvbGFuZ3VhZ2UtbWFudWFsL2Z1bmN0aW9ucy9kYXRlX2Zvcm1hdCkiLCJjb21tYW5kVmVyc2lvbiI6Mywic3RhdGUiOiJpbnB1dCIsInJlc3VsdHMiOm51bGwsInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjAsInN1Ym1pdFRpbWUiOjAsImZpbmlzaFRpbWUiOjAsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnt9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiZmI2ZTkxYjAtODQwNC00YzQ4LThjMjItYWRkNThkNDRiODYwIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjoyNzkxMDAwNjQ5MDIyNjEwLCJndWlkIjoiYWUyYTMzZTUtMjQxOC00NWZhLTk2YTMtNGEwYmQwNzFjNjE5Iiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MC41LCJjb21tYW5kIjoiJW1kXG4jIyBUcmFuc2Zvcm0gUGF5bWVudHMgRGF0YVxuMS4gRXh0cmFjdCBEYXRlIGFuZCBUaW1lIGZyb20gcGF5bWVudF90aW1lc3RhbXAgYW5kIGNyZWF0ZSBuZXcgY29sdW1ucyBwYXltZW50X2RhdGUgYW5kIHBheW1lbnRfdGltZVxuMS4gTWFwIHBheW1lbnRfc3RhdHVzIHRvIGNvbnRhaW4gZGVzY3JpcHRpdmUgdmFsdWVzICBcbiAgICgxLVN1Y2Nlc3MsIDItUGVuZGluZywgMy1DYW5jZWxsZWQsIDQtRmFpbGVkKVxuMS4gV3JpdGUgdHJhbnNmb3JtZWQgZGF0YSB0byB0aGUgU2lsdmVyIHNjaGVtYSAiLCJjb21tYW5kVmVyc2lvbiI6MzAsInN0YXRlIjoiaW5wdXQiLCJyZXN1bHRzIjpudWxsLCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjowLCJzdWJtaXRUaW1lIjowLCJmaW5pc2hUaW1lIjowLCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7fSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W10sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjMyYTVkYTJkLWUyNzEtNDA0Yi1hZmJlLWUwNmFjNTEyZDFlYyJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6Mjc5MTAwMDY0OTAyMjYyMiwiZ3VpZCI6IjczNWJiN2NlLTk0YTktNDVjMy04NDMyLTM4NDQ4NzczMTZkOCIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjQuNjI1LCJjb21tYW5kIjoiU0VMRUNUIHBheW1lbnRfaWQsXG4gICAgICAgb3JkZXJfaWQsXG4gICAgICAgQ0FTVChkYXRlX2Zvcm1hdChwYXltZW50X3RpbWVzdGFtcCwneXl5eS1NTS1kZCcpIEFTIERBVEUpIEFTIHBheW1lbnRfZGF0ZSxcbiAgICAgICBkYXRlX2Zvcm1hdChwYXltZW50X3RpbWVzdGFtcCwnSEg6bW06c3MnKSBBUyBwYXltZW50X3RpbWUsXG4gICAgICAgQ0FTRSBwYXltZW50X3N0YXR1c1xuICAgICAgICAgV0hFTiAxIFRIRU4gJ1N1Y2Nlc3MnXG4gICAgICAgICBXSEVOIDIgVEhFTiAnUGVuZGluZydcbiAgICAgICAgIFdIRU4gMyBUSEVOICdDYW5jZWxsZWQnXG4gICAgICAgICBXSEVOIDQgVEhFTiAnRmFpbGVkJ1xuICAgICAgIEVORCBBUyBwYXltZW50X3N0YXR1cywgIFxuICAgICAgIHBheW1lbnRfbWV0aG9kXG4gIEZST00gZ2l6bW9ib3guYnJvbnplLnBheW1lbnRzOyIsImNvbW1hbmRWZXJzaW9uIjozOCwic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6InRhYmxlIiwiZGF0YSI6W1szNSwxMywiMjAyNC0xMi0xNyIsIjA1OjI1OjM0IiwiUGVuZGluZyIsIlBheVBhbCJdLFszNiwxNiwiMjAyNC0xMi0wOSIsIjEwOjQ1OjU2IiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFszNywxNywiMjAyNC0xMi0wMiIsIjEzOjUwOjIwIiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbMzgsMjQsIjIwMjQtMTItMjIiLCIwODozMDo1NSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbMzksMjcsIjIwMjQtMTItMDMiLCIxMTo0NTozMCIsIlBlbmRpbmciLCJDcmVkaXQgQ2FyZCJdLFs0MCwyOCwiMjAyNC0xMi0yNyIsIjA1OjQwOjEwIiwiRmFpbGVkIiwiQ3JlZGl0IENhcmQiXSxbNDEsMzIsIjIwMjQtMTItMjkiLCIwOToyMDo0MCIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbNDIsMzcsIjIwMjQtMTItMjMiLCIxMjoxMDowNSIsIlBlbmRpbmciLCJDcmVkaXQgQ2FyZCJdLFs0MywzOCwiMjAyNC0xMi0yNiIsIjIwOjE1OjE1IiwiU3VjY2VzcyIsIkNyZWRpdCBDYXJkIl0sWzQ0LDQ0LCIyMDI0LTEyLTIxIiwiMTQ6MjU6NDUiLCJTdWNjZXNzIiwiQ3JlZGl0IENhcmQiXSxbNDUsNDksIjIwMjQtMTItMDgiLCIxNjo0MDozNSIsIkZhaWxlZCIsIlBheVBhbCJdLFs0Niw1NCwiMjAyNC0xMi0yMSIsIjEzOjEwOjI1IiwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIl0sWzQ3LDU4LCIyMDI0LTEyLTEwIiwiMTE6NTA6MjAiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzQ4LDYwLCIyMDI0LTEyLTE0IiwiMTg6MzA6MTUiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFs0OSw2MSwiMjAyNC0xMi0wOCIsIjE0OjQ1OjUwIiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiXSxbNTAsNjUsIjIwMjQtMTItMTAiLCIxMjozNTowNSIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbNTEsNjcsIjIwMjQtMTItMjAiLCIwOTo0MDoyNSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbNTIsNjksIjIwMjQtMTItMzEiLCIxMDoxNTo1MCIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzUzLDcwLCIyMDI0LTEyLTA1IiwiMTM6NTA6MzUiLCJQZW5kaW5nIiwiUGF5UGFsIl0sWzU0LDcxLCIyMDI0LTEyLTI4IiwiMTE6MDU6NDAiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFs1NSw3NCwiMjAyNC0xMi0yMyIsIjE0OjI1OjI1IiwiU3VjY2VzcyIsIlBheVBhbCJdLFs1Niw4MCwiMjAyNC0xMi0xMiIsIjA4OjMwOjU1IiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFs1Nyw4MSwiMjAyNC0xMi0yOCIsIjE2OjQ1OjMwIiwiU3VjY2VzcyIsIlBheVBhbCJdLFs1OCw4MiwiMjAyNC0xMi0yOSIsIjE4OjUwOjEwIiwiUGVuZGluZyIsIlBheVBhbCJdLFs1OSw5MSwiMjAyNC0xMi0xOCIsIjE5OjIwOjQwIiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFs2MCw5MywiMjAyNC0xMi0yMyIsIjExOjEwOjA1IiwiU3VjY2VzcyIsIlBheVBhbCJdLFs2MSw5NSwiMjAyNC0xMi0yOSIsIjEzOjE1OjE1IiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiXSxbNjIsOTYsIjIwMjQtMTItMDMiLCIxNToyNTo0NSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbNjMsOTcsIjIwMjQtMTItMDgiLCIxMjoxMDozNSIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbNjUsMiwiMjAyNS0wMS0xOSIsIjA1OjA1OjEzIiwiUGVuZGluZyIsIlBheVBhbCJdLFs2NiwzLCIyMDI1LTAxLTA4IiwiMjM6NDU6MDAiLCJGYWlsZWQiLCJCYW5rIFRyYW5zZmVyIl0sWzY3LDQsIjIwMjUtMDEtMDUiLCIxMDo0OToyNiIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzY4LDgsIjIwMjUtMDEtMDIiLCIxNjoxMToxNSIsIlBlbmRpbmciLCJQYXlQYWwiXSxbNjksMTQsIjIwMjUtMDEtMDEiLCIyMjoyMjoyNiIsIkZhaWxlZCIsIlBheVBhbCJdLFs3MCwxOCwiMjAyNS0wMS0yMiIsIjIzOjEyOjA4IiwiU3VjY2VzcyIsIkNyZWRpdCBDYXJkIl0sWzcxLDIyLCIyMDI1LTAxLTAxIiwiMTg6NDk6MTkiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzcyLDI2LCIyMDI1LTAxLTA1IiwiMjI6MDE6MjUiLCJQZW5kaW5nIiwiQmFuayBUcmFuc2ZlciJdLFs3MywyOSwiMjAyNS0wMS0xOCIsIjA1OjA1OjA0IiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFs3NCwzNCwiMjAyNS0wMS0xMiIsIjExOjMwOjE1IiwiU3VjY2VzcyIsIkNyZWRpdCBDYXJkIl0sWzc1LDM2LCIyMDI1LTAxLTE2IiwiMjM6MTU6NDMiLCJQZW5kaW5nIiwiUGF5UGFsIl0sWzc2LDQwLCIyMDI1LTAxLTA4IiwiMTM6MjI6NTEiLCJGYWlsZWQiLCJCYW5rIFRyYW5zZmVyIl0sWzc3LDQ1LCIyMDI1LTAxLTAzIiwiMTU6MTA6MjUiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzc4LDQ3LCIyMDI1LTAxLTExIiwiMjA6MjA6MjAiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFs3OSw1MCwiMjAyNS0wMS0xNyIsIjEyOjMwOjAwIiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiXSxbODAsNTMsIjIwMjUtMDEtMTUiLCIwNzo0MDoxOSIsIkZhaWxlZCIsIkNyZWRpdCBDYXJkIl0sWzgxLDU4LCIyMDI1LTAxLTA0IiwiMTg6NDk6MzMiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzgyLDYwLCIyMDI1LTAxLTIwIiwiMTQ6MTA6MjUiLCJQZW5kaW5nIiwiQmFuayBUcmFuc2ZlciJdLFs4Myw2NSwiMjAyNS0wMS0wNiIsIjIwOjMwOjEwIiwiRmFpbGVkIiwiUGF5UGFsIl0sWzg0LDY3LCIyMDI1LTAxLTE0IiwiMTY6MDA6MDAiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFs4NSw3MSwiMjAyNS0wMS0wNyIsIjE5OjE1OjE1IiwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIl0sWzg2LDc1LCIyMDI1LTAxLTIxIiwiMTI6NTA6MzAiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzg3LDgwLCIyMDI1LTAxLTE5IiwiMDk6NDA6NDAiLCJGYWlsZWQiLCJQYXlQYWwiXSxbODgsODIsIjIwMjUtMDEtMTAiLCIwODoyMDowMCIsIlN1Y2Nlc3MiLCJDcmVkaXQgQ2FyZCJdLFs4OSw4NSwiMjAyNS0wMS0xNiIsIjE1OjUwOjQ1IiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiXSxbOTAsOTAsIjIwMjUtMDEtMjIiLCIyMTowMDoxNSIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzkxLDkyLCIyMDI1LTAxLTAzIiwiMTY6MjA6MjUiLCJGYWlsZWQiLCJQYXlQYWwiXSxbMTUsNywiMjAyNC0xMS0xOSIsIjE5OjE4OjQ4IiwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIl0sWzE2LDksIjIwMjQtMTEtMjciLCIxMzoxNToyOSIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbMTcsMjAsIjIwMjQtMTEtMTgiLCIwMjozODoyMSIsIlN1Y2Nlc3MiLCJQYXlQYWwiXSxbMTgsMjEsIjIwMjQtMTEtMjEiLCIxMToyNTozNSIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzE5LDIzLCIyMDI0LTExLTIyIiwiMTY6MDQ6MDUiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzIwLDI1LCIyMDI0LTExLTA1IiwiMTE6NDU6MzEiLCJQZW5kaW5nIiwiUGF5UGFsIl0sWzIxLDMwLCIyMDI0LTExLTEyIiwiMDM6MjA6MjkiLCJTdWNjZXNzIiwiQmFuayBUcmFuc2ZlciJdLFsyMiwzNSwiMjAyNC0xMS0yMCIsIjE5OjA5OjA0IiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFsyMywzNiwiMjAyNC0xMS0wMiIsIjEwOjM5OjQ2IiwiU3VjY2VzcyIsIlBheVBhbCJdLFsyNCwzOCwiMjAyNC0xMS0xNSIsIjE1OjEyOjIzIiwiU3VjY2VzcyIsIkNyZWRpdCBDYXJkIl0sWzI1LDQyLCIyMDI0LTExLTI2IiwiMDk6NDA6NTUiLCJQZW5kaW5nIiwiUGF5UGFsIl0sWzI2LDQ3LCIyMDI0LTExLTI4IiwiMTI6MTg6MzkiLCJGYWlsZWQiLCJCYW5rIFRyYW5zZmVyIl0sWzI3LDUyLCIyMDI0LTExLTE3IiwiMDc6NDU6MTQiLCJTdWNjZXNzIiwiUGF5UGFsIl0sWzI4LDU2LCIyMDI0LTExLTIzIiwiMTQ6MDM6MjAiLCJTdWNjZXNzIiwiQ3JlZGl0IENhcmQiXSxbMjksNTksIjIwMjQtMTEtMTkiLCIxODoyMjozMyIsIlBlbmRpbmciLCJQYXlQYWwiXSxbMzAsNjMsIjIwMjQtMTEtMjAiLCIyMDo0MDowOSIsIlN1Y2Nlc3MiLCJCYW5rIFRyYW5zZmVyIl0sWzMxLDY3LCIyMDI0LTExLTEzIiwiMTY6NTA6MjYiLCJGYWlsZWQiLCJDcmVkaXQgQ2FyZCJdLFszMiw3MSwiMjAyNC0xMS0xOCIsIjExOjA5OjE4IiwiU3VjY2VzcyIsIlBheVBhbCJdLFszMyw3NCwiMjAyNC0xMS0xMiIsIjA4OjA1OjQ2IiwiUGVuZGluZyIsIkJhbmsgVHJhbnNmZXIiXSxbMiwxMCwiMjAyNC0xMC0wOSIsIjIyOjA5OjI3IiwiUGVuZGluZyIsIkNyZWRpdCBDYXJkIl0sWzMsMTEsIjIwMjQtMTAtMTUiLCIxNzozNDoxOSIsIkZhaWxlZCIsIkJhbmsgVHJhbnNmZXIiXSxbNCwxNSwiMjAyNC0xMC0yMiIsIjAxOjQ3OjI1IiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbNSwxOSwiMjAyNC0xMC0xNSIsIjEyOjQwOjI2IiwiUGVuZGluZyIsIlBheVBhbCJdLFs2LDM5LCIyMDI0LTEwLTMxIiwiMjE6Mzk6MTkiLCJGYWlsZWQiLCJQYXlQYWwiXSxbNyw1NSwiMjAyNC0xMC0yNyIsIjA1OjQ5OjE2IiwiU3VjY2VzcyIsIkJhbmsgVHJhbnNmZXIiXSxbOCw1OSwiMjAyNC0xMC0yNSIsIjAyOjUxOjA1IiwiUGVuZGluZyIsIlBheVBhbCJdLFs5LDcyLCIyMDI0LTEwLTA4IiwiMTA6MjM6MjgiLCJDYW5jZWxsZWQiLCJQYXlQYWwiXSxbMTAsNzcsIjIwMjQtMTAtMTciLCIxMzowOTozMyIsIlN1Y2Nlc3MiLCJDcmVkaXQgQ2FyZCJdLFsxMSw4NCwiMjAyNC0xMC0yNyIsIjAzOjM3OjQyIiwiU3VjY2VzcyIsIlBheVBhbCJdLFsxMiw4NSwiMjAyNC0xMC0yNSIsIjIwOjA2OjQyIiwiRmFpbGVkIiwiQmFuayBUcmFuc2ZlciJdLFsxMyw4NiwiMjAyNC0xMC0yMSIsIjEzOjMwOjQ3IiwiU3VjY2VzcyIsIlBheVBhbCJdXSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJzY2hlbWEiOlt7Im5hbWUiOiJwYXltZW50X2lkIiwidHlwZSI6IlwiaW50ZWdlclwiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6Im9yZGVyX2lkIiwidHlwZSI6IlwiaW50ZWdlclwiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InBheW1lbnRfZGF0ZSIsInR5cGUiOiJcImRhdGVcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwYXltZW50X3RpbWUiLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJwYXltZW50X3N0YXR1cyIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InBheW1lbnRfbWV0aG9kIiwidHlwZSI6Ilwic3RyaW5nXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOltdLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzM0OTYxMzI2NzMyLCJzdWJtaXRUaW1lIjoxNzM0OTYxMzI2NjI3LCJmaW5pc2hUaW1lIjoxNzM0OTYxMzI4MTQ0LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7InJvd0xpbWl0IjoxMDAwMCwiYnl0ZUxpbWl0IjoyMDQ4MDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDg3XV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6ImU4NjVjNTk1LWRhNTYtNDE0Ni05YzFiLWE1MGI3YjI0ZDExZSJ9XSwiZGFzaGJvYXJkcyI6W10sImd1aWQiOiI4MmZhY2U1MC03OTkzLTQ2MGMtODg1Yy1lMjgyMjYyOTEyMjkiLCJnbG9iYWxWYXJzIjp7fSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJpbnB1dFdpZGdldHMiOnt9LCJub3RlYm9va01ldGFkYXRhIjp7InB5dGhvbkluZGVudFVuaXQiOjR9LCJyZXBvc0V4cG9ydEZvcm1hdCI6IlNPVVJDRSIsImVudmlyb25tZW50TWV0YWRhdGEiOnsiY2xpZW50IjoiMSIsImJhc2VfZW52aXJvbm1lbnQiOiIifSwiY29tcHV0ZVByZWZlcmVuY2VzIjpudWxsLCJpbnB1dFdpZGdldFByZWZlcmVuY2VzIjpudWxsLCJlbnZpcm9ubWVudFNlcmlhbGl6YXRpb25QcmVmZXJlbmNlcyI6bnVsbH0="
+}

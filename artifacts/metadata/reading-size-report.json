@@ -1,0 +1,23 @@
+{
+  "before": {
+    "notebooks": 71,
+    "total_bytes": 25476602,
+    "total_cells": 1803,
+    "embedded_input_snapshot_cells": 357,
+    "duplicated_results_bytes": 6570267
+  },
+  "after": {
+    "notebooks": 71,
+    "total_bytes": 2909649,
+    "total_cells": 1149,
+    "embedded_input_snapshot_cells": 0,
+    "duplicated_results_bytes": 0
+  },
+  "notebook_bytes_reduction_percent": 88.58,
+  "course_code_executed": false,
+  "application_tests": {
+    "VSCode": "not performed",
+    "Jupyter": "not installed; not performed"
+  },
+  "static_browser_check": "synthetic Chromium passed"
+}

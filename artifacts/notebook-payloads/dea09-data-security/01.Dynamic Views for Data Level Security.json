@@ -1,0 +1,1577 @@
+{
+  "document": {
+    "commands": [
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n# Data-Level Security Using Dynamic Views\n\nThis notebook demonstrates how data-level security can be implemented using dynamic views.\n\nThe implementation covers two key capabilities:\n\n- Row-Level Security: Controls which rows are visible to a user  \n- Column-Level Masking: Controls how sensitive values are displayed  \n\nA simple sales dataset is used to illustrate how different users receive different results when querying the same view.",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 1,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "7a3ae574-ca1a-4dc7-b5a6-11e5eb98c388",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "fca47478-b2b4-4317-a01d-36259b3386bb",
+        "origId": 4924261081336369,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 1.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n#### Step 1: Set up the schema for the table",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 1,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "0465277d-25ad-4911-ba9f-419ce028e7e6",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "cade77b4-a39a-41ae-951c-b2a1d4efb156",
+        "origId": 4924261081336370,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 2.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "USE CATALOG demo;\nCREATE SCHEMA IF NOT EXISTS data_security;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 3,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1778180582574,
+        "globalVars": {},
+        "guid": "eb4e72a8-5a9d-4e5a-be46-41e7ddf2b466",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "mimeBundle",
+            null
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "7b23cc78-2169-4018-8519-ddb5df252950",
+        "origId": 4924261081336371,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 3.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "arguments": {},
+              "data": {
+                "application/vnd.databricks.empty-table+json": {
+                  "directive_name": "NoDirective"
+                }
+              },
+              "datasetInfos": [],
+              "executionCount": null,
+              "metadata": {
+                "kernelSessionId": "3310e9a9-c7391dff45935b90176df666"
+              },
+              "removedWidgets": [],
+              "type": "mimeBundle"
+            }
+          ],
+          "datasetInfos": [],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1778180568695,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1778180553525,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "USE SCHEMA data_security;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 2,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1778180597548,
+        "globalVars": {},
+        "guid": "3ac14198-4c61-4d82-9800-730fa3ad8604",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "mimeBundle",
+            null
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "48953914-5db7-4f99-a85f-9b7ba560befc",
+        "origId": 4924261081336372,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 4.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "arguments": {},
+              "data": {
+                "application/vnd.databricks.empty-table+json": {
+                  "directive_name": "NoDirective"
+                }
+              },
+              "datasetInfos": [],
+              "executionCount": null,
+              "metadata": {
+                "kernelSessionId": "3310e9a9-c7391dff45935b90176df666"
+              },
+              "removedWidgets": [],
+              "type": "mimeBundle"
+            }
+          ],
+          "datasetInfos": [],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1778180596543,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1778180596458,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n#### Step 2: Create the table\nA table is defined to represent sales data across multiple regions.",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 1,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "7d4a45c2-f29b-4cef-a3af-e1e293e8a248",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "307d1921-5fe3-4222-b795-d25af948e6c0",
+        "origId": 4924261081336373,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 5.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "CREATE OR REPLACE TABLE sales_dynamic (\n  id INT,\n  region STRING,\n  email STRING,\n  revenue INT\n);",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 1,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1778180624176,
+        "globalVars": {},
+        "guid": "7b204934-2fa6-4024-a491-660fd6ec37f2",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "mimeBundle",
+            null
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "59db272f-9384-4ba7-8bfc-09b0ab300616",
+        "origId": 4924261081336374,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 6.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "arguments": {},
+              "data": {
+                "application/vnd.databricks.empty-table+json": {
+                  "directive_name": "NoDirective"
+                }
+              },
+              "datasetInfos": [],
+              "executionCount": null,
+              "metadata": {
+                "kernelSessionId": "3310e9a9-c7391dff45935b90176df666"
+              },
+              "removedWidgets": [],
+              "type": "mimeBundle"
+            }
+          ],
+          "datasetInfos": [],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1778180612724,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1778180612615,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n#### Step 3: Insert sample data\nThe dataset includes records from both UK and US regions.\n\nThis enables validation of row-level security by ensuring that different users see only relevant regional data.",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 1,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "8911c9d6-837b-4121-954f-eb8251b7d29a",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "c0e7208a-b329-4b6b-9936-62acd1b722fc",
+        "origId": 4924261081336375,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 7.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "INSERT INTO sales_dynamic VALUES\n  (1, 'UK', 'john.doe@email.com', 10000),\n  (2, 'US', 'mike.smith@email.com', 20000),\n  (3, 'UK', 'sara.jones@email.com', 15000),\n  (4, 'US', 'david.brown@email.com', 25000),\n  (5, 'UK', 'emma.wilson@email.com', 18000);",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 1,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1778180640599,
+        "globalVars": {},
+        "guid": "9e92a6a6-14f0-4d77-922f-8c8acc2f9830",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            1
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "53042acd-0f81-44b8-9b8e-5565c6c329d4",
+        "origId": 4924261081336376,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 8.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  5,
+                  5
+                ]
+              ],
+              "datasetInfos": [
+                {
+                  "name": "_sqldf",
+                  "schema": {
+                    "fields": [
+                      {
+                        "metadata": {},
+                        "name": "num_affected_rows",
+                        "nullable": true,
+                        "type": "long"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "num_inserted_rows",
+                        "nullable": true,
+                        "type": "long"
+                      }
+                    ],
+                    "type": "struct"
+                  },
+                  "tableIdentifier": null,
+                  "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+                }
+              ],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {
+                "createTempViewForImplicitDf": true,
+                "dataframeName": "_sqldf",
+                "executionCount": 4
+              },
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{}",
+                  "name": "num_affected_rows",
+                  "type": "\"long\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "num_inserted_rows",
+                  "type": "\"long\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "_sqldf",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "num_affected_rows",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "num_inserted_rows",
+                    "nullable": true,
+                    "type": "long"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1778180631041,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1778180630980,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT * FROM sales_dynamic;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 1,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1778180732126,
+        "globalVars": {},
+        "guid": "f1da809b-806e-4557-a375-2ebe9b7e8e23",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            5
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "c8b5225f-5308-41bc-a7f5-d5b787d9a2ba",
+        "origId": 4924261081336377,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 9.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  1,
+                  "UK",
+                  "john.doe@email.com",
+                  10000
+                ],
+                [
+                  2,
+                  "US",
+                  "mike.smith@email.com",
+                  20000
+                ],
+                [
+                  3,
+                  "UK",
+                  "sara.jones@email.com",
+                  15000
+                ],
+                [
+                  4,
+                  "US",
+                  "david.brown@email.com",
+                  25000
+                ],
+                [
+                  5,
+                  "UK",
+                  "emma.wilson@email.com",
+                  18000
+                ]
+              ],
+              "datasetInfos": [
+                {
+                  "name": "_sqldf",
+                  "schema": {
+                    "fields": [
+                      {
+                        "metadata": {},
+                        "name": "id",
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "region",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "email",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "revenue",
+                        "nullable": true,
+                        "type": "integer"
+                      }
+                    ],
+                    "type": "struct"
+                  },
+                  "tableIdentifier": null,
+                  "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+                }
+              ],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {
+                "createTempViewForImplicitDf": true,
+                "dataframeName": "_sqldf",
+                "executionCount": 5
+              },
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{}",
+                  "name": "id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "region",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "email",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "revenue",
+                  "type": "\"integer\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "_sqldf",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "region",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "email",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "revenue",
+                    "nullable": true,
+                    "type": "integer"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1778180725604,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1778180725513,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n#### Step 4: Create the dynamic view\nThe dynamic view implements both row-level security and column-level masking.\n\n##### Row-Level Security\n\n- UK group → returns only rows where region = 'UK'  \n- US group → returns only rows where region = 'US'  \n- Admin group → returns all rows  \n\n##### Column-Level Masking\n\n- Admin group → full email visible  \n- Other users → email is masked  \n\n##### Key Function: is_account_group_member()\n\nThis function evaluates whether the current user belongs to a specified group.\n\nExamples:\n\n- is_account_group_member('uk-sg') \n- is_account_group_member('us-sg') \n- is_account_group_member('admin-sg')  \n\nThe function returns TRUE or FALSE and is used to drive conditional logic inside the view.",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 5,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "d05723df-06a7-4571-8723-322d5a8a935f",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "d225ed1d-44de-4dda-a427-241eeadd867e",
+        "origId": 4924261081336378,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 10.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT is_account_group_member('admin-sg'), is_account_group_member('uk-sg')",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 7,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1778181598781,
+        "globalVars": {},
+        "guid": "8baa3412-7f41-4ea1-aefc-ba0f43b84b94",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            1
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "f7c2eacf-d373-490b-a4a2-8e8aea965dbb",
+        "origId": 4924261081336379,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 11.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  false,
+                  true
+                ]
+              ],
+              "datasetInfos": [
+                {
+                  "name": "_sqldf",
+                  "schema": {
+                    "fields": [
+                      {
+                        "metadata": {
+                          "__autoGeneratedAlias": "true"
+                        },
+                        "name": "is_account_group_member(admin-sg)",
+                        "nullable": false,
+                        "type": "boolean"
+                      },
+                      {
+                        "metadata": {
+                          "__autoGeneratedAlias": "true"
+                        },
+                        "name": "is_account_group_member(uk-sg)",
+                        "nullable": false,
+                        "type": "boolean"
+                      }
+                    ],
+                    "type": "struct"
+                  },
+                  "tableIdentifier": null,
+                  "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+                }
+              ],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {
+                "createTempViewForImplicitDf": true,
+                "dataframeName": "_sqldf",
+                "executionCount": 12
+              },
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{\"__autoGeneratedAlias\":\"true\"}",
+                  "name": "is_account_group_member(admin-sg)",
+                  "type": "\"boolean\""
+                },
+                {
+                  "metadata": "{\"__autoGeneratedAlias\":\"true\"}",
+                  "name": "is_account_group_member(uk-sg)",
+                  "type": "\"boolean\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "_sqldf",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {
+                      "__autoGeneratedAlias": "true"
+                    },
+                    "name": "is_account_group_member(admin-sg)",
+                    "nullable": false,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {
+                      "__autoGeneratedAlias": "true"
+                    },
+                    "name": "is_account_group_member(uk-sg)",
+                    "nullable": false,
+                    "type": "boolean"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1778181597622,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1778181597567,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {
+          "0": {
+            "dataGridStateBlob": "{\"version\":1,\"tableState\":{\"columnPinning\":{\"left\":[\"#row_number#\"],\"right\":[]},\"columnSizing\":{},\"columnVisibility\":{}},\"settings\":{\"columns\":{}},\"syncTimestamp\":1778181554157}",
+            "filterBlob": null,
+            "queryPlanFiltersBlob": null,
+            "tableResultIndex": 0
+          }
+        },
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "%md\n#### Step 5: Query the dynamic view",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 1,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 0,
+        "globalVars": {},
+        "guid": "8a18112f-6227-4216-b580-6882d31ccda6",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": null,
+        "metadata": {},
+        "nuid": "e505ad58-f0ec-43ce-b692-88ae0497e0f7",
+        "origId": 4924261081336380,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 12.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": null,
+        "showCommandTitle": false,
+        "startTime": 0,
+        "state": "input",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 0,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "SELECT * FROM vw_sales_dynamic;",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 3,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1778183386113,
+        "globalVars": {},
+        "guid": "89247823-63a4-4cdc-ab04-20ee03f0208a",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "table",
+            3
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "b137a7e0-cec0-4e2b-a1b9-96abf320c235",
+        "origId": 4924261081336381,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 13.0,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "aggData": [],
+              "aggError": "",
+              "aggOverflow": false,
+              "aggSchema": [],
+              "aggSeriesLimitReached": false,
+              "aggType": "",
+              "arguments": {},
+              "columnCustomDisplayInfos": {},
+              "data": [
+                [
+                  1,
+                  "UK",
+                  "j***@email.com",
+                  10000
+                ],
+                [
+                  3,
+                  "UK",
+                  "s***@email.com",
+                  15000
+                ],
+                [
+                  5,
+                  "UK",
+                  "e***@email.com",
+                  18000
+                ]
+              ],
+              "datasetInfos": [
+                {
+                  "name": "_sqldf",
+                  "schema": {
+                    "fields": [
+                      {
+                        "metadata": {},
+                        "name": "id",
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "region",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "email",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "metadata": {},
+                        "name": "revenue",
+                        "nullable": true,
+                        "type": "integer"
+                      }
+                    ],
+                    "type": "struct"
+                  },
+                  "tableIdentifier": null,
+                  "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+                }
+              ],
+              "dbfsResultPath": null,
+              "isJsonSchema": true,
+              "metadata": {
+                "createTempViewForImplicitDf": true,
+                "dataframeName": "_sqldf",
+                "executionCount": 16
+              },
+              "overflow": false,
+              "plotOptions": null,
+              "removedWidgets": [],
+              "schema": [
+                {
+                  "metadata": "{}",
+                  "name": "id",
+                  "type": "\"integer\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "region",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "email",
+                  "type": "\"string\""
+                },
+                {
+                  "metadata": "{}",
+                  "name": "revenue",
+                  "type": "\"integer\""
+                }
+              ],
+              "type": "table"
+            }
+          ],
+          "datasetInfos": [
+            {
+              "name": "_sqldf",
+              "schema": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "id",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "region",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "email",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "revenue",
+                    "nullable": true,
+                    "type": "integer"
+                  }
+                ],
+                "type": "struct"
+              },
+              "tableIdentifier": null,
+              "typeStr": "pyspark.sql.connect.dataframe.DataFrame"
+            }
+          ],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1778183383420,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1778183383341,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {
+          "0": {
+            "dataGridStateBlob": "{\"version\":1,\"tableState\":{\"columnPinning\":{\"left\":[\"#row_number#\"],\"right\":[]},\"columnSizing\":{\"email\":271},\"columnVisibility\":{}},\"settings\":{\"columns\":{}},\"syncTimestamp\":1778181465767}",
+            "filterBlob": null,
+            "queryPlanFiltersBlob": null,
+            "tableResultIndex": 0
+          }
+        },
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      },
+      {
+        "baseErrorDetails": null,
+        "bindings": {},
+        "collapsed": false,
+        "command": "CREATE OR REPLACE VIEW vw_sales_dynamic AS\nSELECT id,\n       region,\n       CASE \n         WHEN is_account_group_member('admin-sg') THEN email\n         ELSE concat(substr(email, 1, 1), '***@', split(email, '@')[1])\n       END AS email,  \n       revenue\nFROM sales_dynamic\nWHERE is_account_group_member('admin-sg')\nOR (is_account_group_member('uk-sg') AND region = 'UK')\nOR (is_account_group_member('us-sg') AND region = 'US');",
+        "commandTitle": "",
+        "commandType": "auto",
+        "commandVersion": 43,
+        "commentThread": [],
+        "commentsVisible": false,
+        "contentSha256Hex": null,
+        "customPlotOptions": {},
+        "datasetPreviewNameToCmdIdMap": {},
+        "diffDeletes": [],
+        "diffInserts": [],
+        "displayType": "table",
+        "error": null,
+        "errorDetails": null,
+        "errorSummary": null,
+        "errorTraceType": null,
+        "finishTime": 1778181776554,
+        "globalVars": {},
+        "guid": "fce065ea-5696-452e-9ef2-4ca6da00527f",
+        "height": "auto",
+        "hideCommandCode": false,
+        "hideCommandResult": false,
+        "iPythonMetadata": null,
+        "inputWidgets": {},
+        "isLockedInExamMode": false,
+        "latestAssumeRoleInfo": null,
+        "latestUser": "a user",
+        "latestUserId": null,
+        "listResultMetadata": [
+          [
+            "mimeBundle",
+            null
+          ]
+        ],
+        "metadata": {
+          "byteLimit": 2048000,
+          "rowLimit": 10000
+        },
+        "nuid": "aacc60e5-cadd-4328-9ae5-9bb8423c797c",
+        "origId": 4924261081336386,
+        "parentHierarchy": [],
+        "pivotAggregation": null,
+        "pivotColumns": null,
+        "position": 11.5,
+        "resultDbfsErrorMessage": null,
+        "resultDbfsStatus": "INLINED_IN_TREE",
+        "results": {
+          "addedWidgets": {},
+          "arguments": {},
+          "data": [
+            {
+              "addedWidgets": {},
+              "arguments": {},
+              "data": {
+                "application/vnd.databricks.empty-table+json": {
+                  "directive_name": "NoDirective"
+                }
+              },
+              "datasetInfos": [],
+              "executionCount": null,
+              "metadata": {
+                "kernelSessionId": "3310e9a9-c7391dff45935b90176df666"
+              },
+              "removedWidgets": [],
+              "type": "mimeBundle"
+            }
+          ],
+          "datasetInfos": [],
+          "metadata": {
+            "isDbfsCommandResult": false
+          },
+          "removedWidgets": [],
+          "type": "listResults"
+        },
+        "showCommandTitle": false,
+        "startTime": 1778181775235,
+        "state": "finished",
+        "streamStates": {},
+        "subcommandOptions": null,
+        "submitTime": 1778181775144,
+        "subtype": "command",
+        "tableResultIndex": null,
+        "tableResultSettingsMap": {},
+        "useConsistentColors": false,
+        "version": "CommandV1",
+        "width": "auto",
+        "workflows": [],
+        "xColumns": null,
+        "yColumns": null
+      }
+    ],
+    "computePreferences": {
+      "hardware": {
+        "accelerator": null,
+        "gpuPoolId": null,
+        "memory": null
+      },
+      "software": {
+        "pinSparkToX86": null
+      }
+    },
+    "dashboards": [],
+    "environmentMetadata": {
+      "base_environment": "",
+      "client": "5"
+    },
+    "environmentSerializationPreferences": null,
+    "globalVars": {},
+    "guid": "a646b8e6-0c20-4bba-b588-74ddd4dfb17d",
+    "iPythonMetadata": {
+      "IPythonMetadata": {
+        "language_info": {
+          "name": "sql"
+        }
+      },
+      "nbformat": 4
+    },
+    "inputWidgetPreferences": null,
+    "inputWidgets": {},
+    "language": "sql",
+    "name": "01.Dynamic Views for Data Level Security",
+    "notebookMetadata": {
+      "mostRecentlyExecutedCommandWithImplicitDF": {
+        "commandId": -1,
+        "dataframes": [
+          "_sqldf"
+        ]
+      },
+      "pythonIndentUnit": 4
+    },
+    "origId": 3946453339950560,
+    "reposExportFormat": "JUPYTER",
+    "version": "NotebookV1"
+  },
+  "provenance": {
+    "aliases": [],
+    "archive": "materials/archives/dea-course-v5.dbc",
+    "archive_sha256": "23908dc947dc9279b1176575fa5b0966281fca608509c6fed3deca7700146488",
+    "member": "dea-course/dea09-data-security/01.Dynamic Views for Data Level Security.sql",
+    "member_sha256": "622b29d590d29f1e7b969cfc50097e326898d1e923eaff0581a876fc9a197af3"
+  },
+  "schema_version": 1,
+  "source_base64": "eyJ2ZXJzaW9uIjoiTm90ZWJvb2tWMSIsIm9yaWdJZCI6Mzk0NjQ1MzMzOTk1MDU2MCwibmFtZSI6IjAxLkR5bmFtaWMgVmlld3MgZm9yIERhdGEgTGV2ZWwgU2VjdXJpdHkiLCJsYW5ndWFnZSI6InNxbCIsImNvbW1hbmRzIjpbeyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo0OTI0MjYxMDgxMzM2MzY5LCJndWlkIjoiN2EzYWU1NzQtY2ExYS00ZGM3LWI1YTYtMTFlNWViOThjMzg4Iiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MS4wLCJjb21tYW5kIjoiJW1kXG4jIERhdGEtTGV2ZWwgU2VjdXJpdHkgVXNpbmcgRHluYW1pYyBWaWV3c1xuXG5UaGlzIG5vdGVib29rIGRlbW9uc3RyYXRlcyBob3cgZGF0YS1sZXZlbCBzZWN1cml0eSBjYW4gYmUgaW1wbGVtZW50ZWQgdXNpbmcgZHluYW1pYyB2aWV3cy5cblxuVGhlIGltcGxlbWVudGF0aW9uIGNvdmVycyB0d28ga2V5IGNhcGFiaWxpdGllczpcblxuLSBSb3ctTGV2ZWwgU2VjdXJpdHk6IENvbnRyb2xzIHdoaWNoIHJvd3MgYXJlIHZpc2libGUgdG8gYSB1c2VyICBcbi0gQ29sdW1uLUxldmVsIE1hc2tpbmc6IENvbnRyb2xzIGhvdyBzZW5zaXRpdmUgdmFsdWVzIGFyZSBkaXNwbGF5ZWQgIFxuXG5BIHNpbXBsZSBzYWxlcyBkYXRhc2V0IGlzIHVzZWQgdG8gaWxsdXN0cmF0ZSBob3cgZGlmZmVyZW50IHVzZXJzIHJlY2VpdmUgZGlmZmVyZW50IHJlc3VsdHMgd2hlbiBxdWVyeWluZyB0aGUgc2FtZSB2aWV3LiIsImNvbW1hbmRWZXJzaW9uIjoxLCJzdGF0ZSI6ImlucHV0IiwicmVzdWx0cyI6bnVsbCwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MCwic3VibWl0VGltZSI6MCwiZmluaXNoVGltZSI6MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6e30sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOm51bGwsInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6ImZjYTQ3NDc4LWIyYjQtNDMxNy1hMDFkLTM2MjU5YjMzODZiYiJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6NDkyNDI2MTA4MTMzNjM3MCwiZ3VpZCI6IjA0NjUyNzdkLTI1YWQtNDkxMS1iYTlmLTQxOWNlMDI4ZTdlNiIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjIuMCwiY29tbWFuZCI6IiVtZFxuIyMjIyBTdGVwIDE6IFNldCB1cCB0aGUgc2NoZW1hIGZvciB0aGUgdGFibGUiLCJjb21tYW5kVmVyc2lvbiI6MSwic3RhdGUiOiJpbnB1dCIsInJlc3VsdHMiOm51bGwsInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjAsInN1Ym1pdFRpbWUiOjAsImZpbmlzaFRpbWUiOjAsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnt9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpudWxsLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiJjYWRlNzdiNC1hMzlhLTQxYWUtOTUxYy1iMmExZDRlZmIxNTYifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjQ5MjQyNjEwODEzMzYzNzEsImd1aWQiOiJlYjRlNzJhOC01YTlkLTRlNWEtYmU0Ni00MWU3ZGRmMmI0NjYiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjozLjAsImNvbW1hbmQiOiJVU0UgQ0FUQUxPRyBkZW1vO1xuQ1JFQVRFIFNDSEVNQSBJRiBOT1QgRVhJU1RTIGRhdGFfc2VjdXJpdHk7IiwiY29tbWFuZFZlcnNpb24iOjMsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJsaXN0UmVzdWx0cyIsImRhdGEiOlt7InR5cGUiOiJtaW1lQnVuZGxlIiwiZGF0YSI6eyJhcHBsaWNhdGlvbi92bmQuZGF0YWJyaWNrcy5lbXB0eS10YWJsZStqc29uIjp7ImRpcmVjdGl2ZV9uYW1lIjoiTm9EaXJlY3RpdmUifX0sImV4ZWN1dGlvbkNvdW50IjpudWxsLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sImRhdGFzZXRJbmZvcyI6W10sIm1ldGFkYXRhIjp7Imtlcm5lbFNlc3Npb25JZCI6IjMzMTBlOWE5LWM3MzkxZGZmNDU5MzViOTAxNzZkZjY2NiJ9fV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbXSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTc3ODE4MDU2ODY5NSwic3VibWl0VGltZSI6MTc3ODE4MDU1MzUyNSwiZmluaXNoVGltZSI6MTc3ODE4MDU4MjU3NCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJieXRlTGltaXQiOjIwNDgwMDAsInJvd0xpbWl0IjoxMDAwMH0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltbIm1pbWVCdW5kbGUiLG51bGxdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiN2IyM2NjNzgtMjE2OS00MDE4LTg1MTktZGRiNWRmMjUyOTUwIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo0OTI0MjYxMDgxMzM2MzcyLCJndWlkIjoiM2FjMTQxOTgtNGM2MS00ZDgyLTk4MDAtNzMwZmEzYWQ4NjA0Iiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6NC4wLCJjb21tYW5kIjoiVVNFIFNDSEVNQSBkYXRhX3NlY3VyaXR5OyIsImNvbW1hbmRWZXJzaW9uIjoyLCJzdGF0ZSI6ImZpbmlzaGVkIiwicmVzdWx0cyI6eyJ0eXBlIjoibGlzdFJlc3VsdHMiLCJkYXRhIjpbeyJ0eXBlIjoibWltZUJ1bmRsZSIsImRhdGEiOnsiYXBwbGljYXRpb24vdm5kLmRhdGFicmlja3MuZW1wdHktdGFibGUranNvbiI6eyJkaXJlY3RpdmVfbmFtZSI6Ik5vRGlyZWN0aXZlIn19LCJleGVjdXRpb25Db3VudCI6bnVsbCwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJkYXRhc2V0SW5mb3MiOltdLCJtZXRhZGF0YSI6eyJrZXJuZWxTZXNzaW9uSWQiOiIzMzEwZTlhOS1jNzM5MWRmZjQ1OTM1YjkwMTc2ZGY2NjYifX1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sImRhdGFzZXRJbmZvcyI6W10sIm1ldGFkYXRhIjp7ImlzRGJmc0NvbW1hbmRSZXN1bHQiOmZhbHNlfX0sInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjE3NzgxODA1OTY1NDMsInN1Ym1pdFRpbWUiOjE3NzgxODA1OTY0NTgsImZpbmlzaFRpbWUiOjE3NzgxODA1OTc1NDgsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnsiYnl0ZUxpbWl0IjoyMDQ4MDAwLCJyb3dMaW1pdCI6MTAwMDB9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbWyJtaW1lQnVuZGxlIixudWxsXV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjQ4OTUzOTE0LTVkYjctNGY5OS1hODVmLTliN2JhNTYwYmVmYyJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6NDkyNDI2MTA4MTMzNjM3MywiZ3VpZCI6IjdkNGE0NWMyLWYyOWItNGNlZi1hM2FmLWUxZTI5M2U4YTI0OCIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjUuMCwiY29tbWFuZCI6IiVtZFxuIyMjIyBTdGVwIDI6IENyZWF0ZSB0aGUgdGFibGVcbkEgdGFibGUgaXMgZGVmaW5lZCB0byByZXByZXNlbnQgc2FsZXMgZGF0YSBhY3Jvc3MgbXVsdGlwbGUgcmVnaW9ucy4iLCJjb21tYW5kVmVyc2lvbiI6MSwic3RhdGUiOiJpbnB1dCIsInJlc3VsdHMiOm51bGwsInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjAsInN1Ym1pdFRpbWUiOjAsImZpbmlzaFRpbWUiOjAsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnt9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpudWxsLCJzdWJjb21tYW5kT3B0aW9ucyI6bnVsbCwiY29udGVudFNoYTI1NkhleCI6bnVsbCwidGFibGVSZXN1bHRTZXR0aW5nc01hcCI6e30sIm51aWQiOiIzMDdkMTkyMS01ZmUzLTQyMjItYjc5NS1kMjVhZjk0OGU2YzAifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjQ5MjQyNjEwODEzMzYzNzQsImd1aWQiOiI3YjIwNDkzNC0yZmE2LTQwMjQtYTQ5MS02NjBmZDZlYzM3ZjIiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjo2LjAsImNvbW1hbmQiOiJDUkVBVEUgT1IgUkVQTEFDRSBUQUJMRSBzYWxlc19keW5hbWljIChcbiAgaWQgSU5ULFxuICByZWdpb24gU1RSSU5HLFxuICBlbWFpbCBTVFJJTkcsXG4gIHJldmVudWUgSU5UXG4pOyIsImNvbW1hbmRWZXJzaW9uIjoxLCJzdGF0ZSI6ImZpbmlzaGVkIiwicmVzdWx0cyI6eyJ0eXBlIjoibGlzdFJlc3VsdHMiLCJkYXRhIjpbeyJ0eXBlIjoibWltZUJ1bmRsZSIsImRhdGEiOnsiYXBwbGljYXRpb24vdm5kLmRhdGFicmlja3MuZW1wdHktdGFibGUranNvbiI6eyJkaXJlY3RpdmVfbmFtZSI6Ik5vRGlyZWN0aXZlIn19LCJleGVjdXRpb25Db3VudCI6bnVsbCwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJkYXRhc2V0SW5mb3MiOltdLCJtZXRhZGF0YSI6eyJrZXJuZWxTZXNzaW9uSWQiOiIzMzEwZTlhOS1jNzM5MWRmZjQ1OTM1YjkwMTc2ZGY2NjYifX1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sImRhdGFzZXRJbmZvcyI6W10sIm1ldGFkYXRhIjp7ImlzRGJmc0NvbW1hbmRSZXN1bHQiOmZhbHNlfX0sInJlc3VsdERiZnNTdGF0dXMiOiJJTkxJTkVEX0lOX1RSRUUiLCJyZXN1bHREYmZzRXJyb3JNZXNzYWdlIjpudWxsLCJlcnJvclN1bW1hcnkiOm51bGwsImVycm9yVHJhY2VUeXBlIjpudWxsLCJlcnJvciI6bnVsbCwiZXJyb3JEZXRhaWxzIjpudWxsLCJiYXNlRXJyb3JEZXRhaWxzIjpudWxsLCJ3b3JrZmxvd3MiOltdLCJzdGFydFRpbWUiOjE3NzgxODA2MTI3MjQsInN1Ym1pdFRpbWUiOjE3NzgxODA2MTI2MTUsImZpbmlzaFRpbWUiOjE3NzgxODA2MjQxNzYsImNvbGxhcHNlZCI6ZmFsc2UsImJpbmRpbmdzIjp7fSwiaW5wdXRXaWRnZXRzIjp7fSwiZGlzcGxheVR5cGUiOiJ0YWJsZSIsIndpZHRoIjoiYXV0byIsImhlaWdodCI6ImF1dG8iLCJ4Q29sdW1ucyI6bnVsbCwieUNvbHVtbnMiOm51bGwsInBpdm90Q29sdW1ucyI6bnVsbCwicGl2b3RBZ2dyZWdhdGlvbiI6bnVsbCwidXNlQ29uc2lzdGVudENvbG9ycyI6ZmFsc2UsImN1c3RvbVBsb3RPcHRpb25zIjp7fSwiY29tbWVudFRocmVhZCI6W10sImNvbW1lbnRzVmlzaWJsZSI6ZmFsc2UsInBhcmVudEhpZXJhcmNoeSI6W10sImRpZmZJbnNlcnRzIjpbXSwiZGlmZkRlbGV0ZXMiOltdLCJnbG9iYWxWYXJzIjp7fSwibGF0ZXN0VXNlciI6ImEgdXNlciIsImxhdGVzdFVzZXJJZCI6bnVsbCwibGF0ZXN0QXNzdW1lUm9sZUluZm8iOm51bGwsImNvbW1hbmRUaXRsZSI6IiIsInNob3dDb21tYW5kVGl0bGUiOmZhbHNlLCJoaWRlQ29tbWFuZENvZGUiOmZhbHNlLCJoaWRlQ29tbWFuZFJlc3VsdCI6ZmFsc2UsImlzTG9ja2VkSW5FeGFtTW9kZSI6ZmFsc2UsImlQeXRob25NZXRhZGF0YSI6bnVsbCwibWV0YWRhdGEiOnsiYnl0ZUxpbWl0IjoyMDQ4MDAwLCJyb3dMaW1pdCI6MTAwMDB9LCJzdHJlYW1TdGF0ZXMiOnt9LCJkYXRhc2V0UHJldmlld05hbWVUb0NtZElkTWFwIjp7fSwidGFibGVSZXN1bHRJbmRleCI6bnVsbCwibGlzdFJlc3VsdE1ldGFkYXRhIjpbWyJtaW1lQnVuZGxlIixudWxsXV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6IjU5ZGIyNzJmLTkzODQtNGJhNy04YmZjLTA5YjBhYjMwMDYxNiJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6NDkyNDI2MTA4MTMzNjM3NSwiZ3VpZCI6Ijg5MTFjOWQ2LTgzN2ItNDEyMS05NTRmLWViODI1MWI3ZDI5YSIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjcuMCwiY29tbWFuZCI6IiVtZFxuIyMjIyBTdGVwIDM6IEluc2VydCBzYW1wbGUgZGF0YVxuVGhlIGRhdGFzZXQgaW5jbHVkZXMgcmVjb3JkcyBmcm9tIGJvdGggVUsgYW5kIFVTIHJlZ2lvbnMuXG5cblRoaXMgZW5hYmxlcyB2YWxpZGF0aW9uIG9mIHJvdy1sZXZlbCBzZWN1cml0eSBieSBlbnN1cmluZyB0aGF0IGRpZmZlcmVudCB1c2VycyBzZWUgb25seSByZWxldmFudCByZWdpb25hbCBkYXRhLiIsImNvbW1hbmRWZXJzaW9uIjoxLCJzdGF0ZSI6ImlucHV0IiwicmVzdWx0cyI6bnVsbCwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MCwic3VibWl0VGltZSI6MCwiZmluaXNoVGltZSI6MCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6e30sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOm51bGwsInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7fSwibnVpZCI6ImMwZTcyMDhhLWIzMjktNGI2Yi05OTM2LTYyYWNkMWI3MjJmYyJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6NDkyNDI2MTA4MTMzNjM3NiwiZ3VpZCI6IjllOTJhNmE2LTE0ZjAtNGQ3Ny05MjJmLThjOGFjYzJmOTgzMCIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjguMCwiY29tbWFuZCI6IklOU0VSVCBJTlRPIHNhbGVzX2R5bmFtaWMgVkFMVUVTXG4gICgxLCAnVUsnLCAnam9obi5kb2VAZW1haWwuY29tJywgMTAwMDApLFxuICAoMiwgJ1VTJywgJ21pa2Uuc21pdGhAZW1haWwuY29tJywgMjAwMDApLFxuICAoMywgJ1VLJywgJ3NhcmEuam9uZXNAZW1haWwuY29tJywgMTUwMDApLFxuICAoNCwgJ1VTJywgJ2RhdmlkLmJyb3duQGVtYWlsLmNvbScsIDI1MDAwKSxcbiAgKDUsICdVSycsICdlbW1hLndpbHNvbkBlbWFpbC5jb20nLCAxODAwMCk7IiwiY29tbWFuZFZlcnNpb24iOjEsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJsaXN0UmVzdWx0cyIsImRhdGEiOlt7InR5cGUiOiJ0YWJsZSIsImRhdGEiOltbNSw1XV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoibnVtX2FmZmVjdGVkX3Jvd3MiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In0seyJuYW1lIjoibnVtX2luc2VydGVkX3Jvd3MiLCJ0eXBlIjoiXCJsb25nXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJfc3FsZGYiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuY29ubmVjdC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnt9LCJuYW1lIjoibnVtX2FmZmVjdGVkX3Jvd3MiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImxvbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6Im51bV9pbnNlcnRlZF9yb3dzIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJsb25nIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJkYXRhZnJhbWVOYW1lIjoiX3NxbGRmIiwiZXhlY3V0aW9uQ291bnQiOjQsImNyZWF0ZVRlbXBWaWV3Rm9ySW1wbGljaXREZiI6dHJ1ZX19XSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJfc3FsZGYiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuY29ubmVjdC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnt9LCJuYW1lIjoibnVtX2FmZmVjdGVkX3Jvd3MiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImxvbmcifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6Im51bV9pbnNlcnRlZF9yb3dzIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJsb25nIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzc4MTgwNjMxMDQxLCJzdWJtaXRUaW1lIjoxNzc4MTgwNjMwOTgwLCJmaW5pc2hUaW1lIjoxNzc4MTgwNjQwNTk5LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7ImJ5dGVMaW1pdCI6MjA0ODAwMCwicm93TGltaXQiOjEwMDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDFdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiNTMwNDJhY2QtMGY4MS00NGI4LTliOGUtNTU2NWM2YzMyOWQ0In0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo0OTI0MjYxMDgxMzM2Mzc3LCJndWlkIjoiZjFkYTgwOWItODA2ZS00NTU3LWEzNzUtMmViZTliN2U4ZTIzIiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6OS4wLCJjb21tYW5kIjoiU0VMRUNUICogRlJPTSBzYWxlc19keW5hbWljOyIsImNvbW1hbmRWZXJzaW9uIjoxLCJzdGF0ZSI6ImZpbmlzaGVkIiwicmVzdWx0cyI6eyJ0eXBlIjoibGlzdFJlc3VsdHMiLCJkYXRhIjpbeyJ0eXBlIjoidGFibGUiLCJkYXRhIjpbWzEsIlVLIiwiam9obi5kb2VAZW1haWwuY29tIiwxMDAwMF0sWzIsIlVTIiwibWlrZS5zbWl0aEBlbWFpbC5jb20iLDIwMDAwXSxbMywiVUsiLCJzYXJhLmpvbmVzQGVtYWlsLmNvbSIsMTUwMDBdLFs0LCJVUyIsImRhdmlkLmJyb3duQGVtYWlsLmNvbSIsMjUwMDBdLFs1LCJVSyIsImVtbWEud2lsc29uQGVtYWlsLmNvbSIsMTgwMDBdXSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJzY2hlbWEiOlt7Im5hbWUiOiJpZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJyZWdpb24iLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJlbWFpbCIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InJldmVudWUiLCJ0eXBlIjoiXCJpbnRlZ2VyXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJfc3FsZGYiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuY29ubmVjdC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnt9LCJuYW1lIjoiaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImludGVnZXIifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InJlZ2lvbiIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJlbWFpbCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJyZXZlbnVlIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJpbnRlZ2VyIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJkYXRhZnJhbWVOYW1lIjoiX3NxbGRmIiwiZXhlY3V0aW9uQ291bnQiOjUsImNyZWF0ZVRlbXBWaWV3Rm9ySW1wbGljaXREZiI6dHJ1ZX19XSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJfc3FsZGYiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuY29ubmVjdC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnt9LCJuYW1lIjoiaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImludGVnZXIifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InJlZ2lvbiIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJlbWFpbCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJyZXZlbnVlIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJpbnRlZ2VyIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJtZXRhZGF0YSI6eyJpc0RiZnNDb21tYW5kUmVzdWx0IjpmYWxzZX19LCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjoxNzc4MTgwNzI1NjA0LCJzdWJtaXRUaW1lIjoxNzc4MTgwNzI1NTEzLCJmaW5pc2hUaW1lIjoxNzc4MTgwNzMyMTI2LCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7ImJ5dGVMaW1pdCI6MjA0ODAwMCwicm93TGltaXQiOjEwMDAwfSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6W1sidGFibGUiLDVdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiYzhiNTIyNWYtNTMwOC00MWJjLWE3ZjUtZDViNzg3ZDlhMmJhIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo0OTI0MjYxMDgxMzM2Mzc4LCJndWlkIjoiZDA1NzIzZGYtMDZhNy00NTcxLTg3MjMtMzIyZDVhOGE5MzVmIiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MTAuMCwiY29tbWFuZCI6IiVtZFxuIyMjIyBTdGVwIDQ6IENyZWF0ZSB0aGUgZHluYW1pYyB2aWV3XG5UaGUgZHluYW1pYyB2aWV3IGltcGxlbWVudHMgYm90aCByb3ctbGV2ZWwgc2VjdXJpdHkgYW5kIGNvbHVtbi1sZXZlbCBtYXNraW5nLlxuXG4jIyMjIyBSb3ctTGV2ZWwgU2VjdXJpdHlcblxuLSBVSyBncm91cCDihpIgcmV0dXJucyBvbmx5IHJvd3Mgd2hlcmUgcmVnaW9uID0gJ1VLJyAgXG4tIFVTIGdyb3VwIOKGkiByZXR1cm5zIG9ubHkgcm93cyB3aGVyZSByZWdpb24gPSAnVVMnICBcbi0gQWRtaW4gZ3JvdXAg4oaSIHJldHVybnMgYWxsIHJvd3MgIFxuXG4jIyMjIyBDb2x1bW4tTGV2ZWwgTWFza2luZ1xuXG4tIEFkbWluIGdyb3VwIOKGkiBmdWxsIGVtYWlsIHZpc2libGUgIFxuLSBPdGhlciB1c2VycyDihpIgZW1haWwgaXMgbWFza2VkICBcblxuIyMjIyMgS2V5IEZ1bmN0aW9uOiBpc19hY2NvdW50X2dyb3VwX21lbWJlcigpXG5cblRoaXMgZnVuY3Rpb24gZXZhbHVhdGVzIHdoZXRoZXIgdGhlIGN1cnJlbnQgdXNlciBiZWxvbmdzIHRvIGEgc3BlY2lmaWVkIGdyb3VwLlxuXG5FeGFtcGxlczpcblxuLSBpc19hY2NvdW50X2dyb3VwX21lbWJlcigndWstc2cnKSBcbi0gaXNfYWNjb3VudF9ncm91cF9tZW1iZXIoJ3VzLXNnJykgXG4tIGlzX2FjY291bnRfZ3JvdXBfbWVtYmVyKCdhZG1pbi1zZycpICBcblxuVGhlIGZ1bmN0aW9uIHJldHVybnMgVFJVRSBvciBGQUxTRSBhbmQgaXMgdXNlZCB0byBkcml2ZSBjb25kaXRpb25hbCBsb2dpYyBpbnNpZGUgdGhlIHZpZXcuIiwiY29tbWFuZFZlcnNpb24iOjUsInN0YXRlIjoiaW5wdXQiLCJyZXN1bHRzIjpudWxsLCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjowLCJzdWJtaXRUaW1lIjowLCJmaW5pc2hUaW1lIjowLCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7fSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6bnVsbCwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiZDIyNWVkMWQtNDRkZS00ZGRhLWE0MjctMjQxZWVhZGQ4NjdlIn0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo0OTI0MjYxMDgxMzM2Mzc5LCJndWlkIjoiOGJhYTM0MTItN2Y0MS00ZWExLWFlZmMtYmEwZjQzYjg0Yjk0Iiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MTEuMCwiY29tbWFuZCI6IlNFTEVDVCBpc19hY2NvdW50X2dyb3VwX21lbWJlcignYWRtaW4tc2cnKSwgaXNfYWNjb3VudF9ncm91cF9tZW1iZXIoJ3VrLXNnJykiLCJjb21tYW5kVmVyc2lvbiI6Nywic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6Imxpc3RSZXN1bHRzIiwiZGF0YSI6W3sidHlwZSI6InRhYmxlIiwiZGF0YSI6W1tmYWxzZSx0cnVlXV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwic2NoZW1hIjpbeyJuYW1lIjoiaXNfYWNjb3VudF9ncm91cF9tZW1iZXIoYWRtaW4tc2cpIiwidHlwZSI6IlwiYm9vbGVhblwiIiwibWV0YWRhdGEiOiJ7XCJfX2F1dG9HZW5lcmF0ZWRBbGlhc1wiOlwidHJ1ZVwifSJ9LHsibmFtZSI6ImlzX2FjY291bnRfZ3JvdXBfbWVtYmVyKHVrLXNnKSIsInR5cGUiOiJcImJvb2xlYW5cIiIsIm1ldGFkYXRhIjoie1wiX19hdXRvR2VuZXJhdGVkQWxpYXNcIjpcInRydWVcIn0ifV0sIm92ZXJmbG93IjpmYWxzZSwiYWdnRGF0YSI6W10sImFnZ1NjaGVtYSI6W10sImFnZ092ZXJmbG93IjpmYWxzZSwiYWdnU2VyaWVzTGltaXRSZWFjaGVkIjpmYWxzZSwiYWdnRXJyb3IiOiIiLCJhZ2dUeXBlIjoiIiwicGxvdE9wdGlvbnMiOm51bGwsImlzSnNvblNjaGVtYSI6dHJ1ZSwiZGJmc1Jlc3VsdFBhdGgiOm51bGwsImRhdGFzZXRJbmZvcyI6W3sibmFtZSI6Il9zcWxkZiIsInR5cGVTdHIiOiJweXNwYXJrLnNxbC5jb25uZWN0LmRhdGFmcmFtZS5EYXRhRnJhbWUiLCJzY2hlbWEiOnsiZmllbGRzIjpbeyJtZXRhZGF0YSI6eyJfX2F1dG9HZW5lcmF0ZWRBbGlhcyI6InRydWUifSwibmFtZSI6ImlzX2FjY291bnRfZ3JvdXBfbWVtYmVyKGFkbWluLXNnKSIsIm51bGxhYmxlIjpmYWxzZSwidHlwZSI6ImJvb2xlYW4ifSx7Im1ldGFkYXRhIjp7Il9fYXV0b0dlbmVyYXRlZEFsaWFzIjoidHJ1ZSJ9LCJuYW1lIjoiaXNfYWNjb3VudF9ncm91cF9tZW1iZXIodWstc2cpIiwibnVsbGFibGUiOmZhbHNlLCJ0eXBlIjoiYm9vbGVhbiJ9XSwidHlwZSI6InN0cnVjdCJ9LCJ0YWJsZUlkZW50aWZpZXIiOm51bGx9XSwiY29sdW1uQ3VzdG9tRGlzcGxheUluZm9zIjp7fSwibWV0YWRhdGEiOnsiZGF0YWZyYW1lTmFtZSI6Il9zcWxkZiIsImV4ZWN1dGlvbkNvdW50IjoxMiwiY3JlYXRlVGVtcFZpZXdGb3JJbXBsaWNpdERmIjp0cnVlfX1dLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sImRhdGFzZXRJbmZvcyI6W3sibmFtZSI6Il9zcWxkZiIsInR5cGVTdHIiOiJweXNwYXJrLnNxbC5jb25uZWN0LmRhdGFmcmFtZS5EYXRhRnJhbWUiLCJzY2hlbWEiOnsiZmllbGRzIjpbeyJtZXRhZGF0YSI6eyJfX2F1dG9HZW5lcmF0ZWRBbGlhcyI6InRydWUifSwibmFtZSI6ImlzX2FjY291bnRfZ3JvdXBfbWVtYmVyKGFkbWluLXNnKSIsIm51bGxhYmxlIjpmYWxzZSwidHlwZSI6ImJvb2xlYW4ifSx7Im1ldGFkYXRhIjp7Il9fYXV0b0dlbmVyYXRlZEFsaWFzIjoidHJ1ZSJ9LCJuYW1lIjoiaXNfYWNjb3VudF9ncm91cF9tZW1iZXIodWstc2cpIiwibnVsbGFibGUiOmZhbHNlLCJ0eXBlIjoiYm9vbGVhbiJ9XSwidHlwZSI6InN0cnVjdCJ9LCJ0YWJsZUlkZW50aWZpZXIiOm51bGx9XSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTc3ODE4MTU5NzYyMiwic3VibWl0VGltZSI6MTc3ODE4MTU5NzU2NywiZmluaXNoVGltZSI6MTc3ODE4MTU5ODc4MSwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJieXRlTGltaXQiOjIwNDgwMDAsInJvd0xpbWl0IjoxMDAwMH0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltbInRhYmxlIiwxXV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7IjAiOnsidGFibGVSZXN1bHRJbmRleCI6MCwiZmlsdGVyQmxvYiI6bnVsbCwiZGF0YUdyaWRTdGF0ZUJsb2IiOiJ7XCJ2ZXJzaW9uXCI6MSxcInRhYmxlU3RhdGVcIjp7XCJjb2x1bW5QaW5uaW5nXCI6e1wibGVmdFwiOltcIiNyb3dfbnVtYmVyI1wiXSxcInJpZ2h0XCI6W119LFwiY29sdW1uU2l6aW5nXCI6e30sXCJjb2x1bW5WaXNpYmlsaXR5XCI6e319LFwic2V0dGluZ3NcIjp7XCJjb2x1bW5zXCI6e319LFwic3luY1RpbWVzdGFtcFwiOjE3NzgxODE1NTQxNTd9IiwicXVlcnlQbGFuRmlsdGVyc0Jsb2IiOm51bGx9fSwibnVpZCI6ImY3YzJlYWNmLWQzNzMtNDkwYi1hNGEyLThlOGFlYTk2NWRiYiJ9LHsidmVyc2lvbiI6IkNvbW1hbmRWMSIsIm9yaWdJZCI6NDkyNDI2MTA4MTMzNjM4MCwiZ3VpZCI6IjhhMTgxMTJmLTYyMjctNDIxNi1iNTgwLTY4ODJkMzFjY2RhNiIsInN1YnR5cGUiOiJjb21tYW5kIiwiY29tbWFuZFR5cGUiOiJhdXRvIiwicG9zaXRpb24iOjEyLjAsImNvbW1hbmQiOiIlbWRcbiMjIyMgU3RlcCA1OiBRdWVyeSB0aGUgZHluYW1pYyB2aWV3IiwiY29tbWFuZFZlcnNpb24iOjEsInN0YXRlIjoiaW5wdXQiLCJyZXN1bHRzIjpudWxsLCJyZXN1bHREYmZzU3RhdHVzIjoiSU5MSU5FRF9JTl9UUkVFIiwicmVzdWx0RGJmc0Vycm9yTWVzc2FnZSI6bnVsbCwiZXJyb3JTdW1tYXJ5IjpudWxsLCJlcnJvclRyYWNlVHlwZSI6bnVsbCwiZXJyb3IiOm51bGwsImVycm9yRGV0YWlscyI6bnVsbCwiYmFzZUVycm9yRGV0YWlscyI6bnVsbCwid29ya2Zsb3dzIjpbXSwic3RhcnRUaW1lIjowLCJzdWJtaXRUaW1lIjowLCJmaW5pc2hUaW1lIjowLCJjb2xsYXBzZWQiOmZhbHNlLCJiaW5kaW5ncyI6e30sImlucHV0V2lkZ2V0cyI6e30sImRpc3BsYXlUeXBlIjoidGFibGUiLCJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOiJhdXRvIiwieENvbHVtbnMiOm51bGwsInlDb2x1bW5zIjpudWxsLCJwaXZvdENvbHVtbnMiOm51bGwsInBpdm90QWdncmVnYXRpb24iOm51bGwsInVzZUNvbnNpc3RlbnRDb2xvcnMiOmZhbHNlLCJjdXN0b21QbG90T3B0aW9ucyI6e30sImNvbW1lbnRUaHJlYWQiOltdLCJjb21tZW50c1Zpc2libGUiOmZhbHNlLCJwYXJlbnRIaWVyYXJjaHkiOltdLCJkaWZmSW5zZXJ0cyI6W10sImRpZmZEZWxldGVzIjpbXSwiZ2xvYmFsVmFycyI6e30sImxhdGVzdFVzZXIiOiJhIHVzZXIiLCJsYXRlc3RVc2VySWQiOm51bGwsImxhdGVzdEFzc3VtZVJvbGVJbmZvIjpudWxsLCJjb21tYW5kVGl0bGUiOiIiLCJzaG93Q29tbWFuZFRpdGxlIjpmYWxzZSwiaGlkZUNvbW1hbmRDb2RlIjpmYWxzZSwiaGlkZUNvbW1hbmRSZXN1bHQiOmZhbHNlLCJpc0xvY2tlZEluRXhhbU1vZGUiOmZhbHNlLCJpUHl0aG9uTWV0YWRhdGEiOm51bGwsIm1ldGFkYXRhIjp7fSwic3RyZWFtU3RhdGVzIjp7fSwiZGF0YXNldFByZXZpZXdOYW1lVG9DbWRJZE1hcCI6e30sInRhYmxlUmVzdWx0SW5kZXgiOm51bGwsImxpc3RSZXN1bHRNZXRhZGF0YSI6bnVsbCwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiZTUwNWFkNTgtZjBlYy00M2NlLWI2OTItODhhZTA0OTdlMGY3In0seyJ2ZXJzaW9uIjoiQ29tbWFuZFYxIiwib3JpZ0lkIjo0OTI0MjYxMDgxMzM2MzgxLCJndWlkIjoiODkyNDc4MjMtNjNhNC00Y2RjLWFiMDQtMjBlZTAzZjAyMDhhIiwic3VidHlwZSI6ImNvbW1hbmQiLCJjb21tYW5kVHlwZSI6ImF1dG8iLCJwb3NpdGlvbiI6MTMuMCwiY29tbWFuZCI6IlNFTEVDVCAqIEZST00gdndfc2FsZXNfZHluYW1pYzsiLCJjb21tYW5kVmVyc2lvbiI6Mywic3RhdGUiOiJmaW5pc2hlZCIsInJlc3VsdHMiOnsidHlwZSI6Imxpc3RSZXN1bHRzIiwiZGF0YSI6W3sidHlwZSI6InRhYmxlIiwiZGF0YSI6W1sxLCJVSyIsImoqKipAZW1haWwuY29tIiwxMDAwMF0sWzMsIlVLIiwicyoqKkBlbWFpbC5jb20iLDE1MDAwXSxbNSwiVUsiLCJlKioqQGVtYWlsLmNvbSIsMTgwMDBdXSwiYXJndW1lbnRzIjp7fSwiYWRkZWRXaWRnZXRzIjp7fSwicmVtb3ZlZFdpZGdldHMiOltdLCJzY2hlbWEiOlt7Im5hbWUiOiJpZCIsInR5cGUiOiJcImludGVnZXJcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJyZWdpb24iLCJ0eXBlIjoiXCJzdHJpbmdcIiIsIm1ldGFkYXRhIjoie30ifSx7Im5hbWUiOiJlbWFpbCIsInR5cGUiOiJcInN0cmluZ1wiIiwibWV0YWRhdGEiOiJ7fSJ9LHsibmFtZSI6InJldmVudWUiLCJ0eXBlIjoiXCJpbnRlZ2VyXCIiLCJtZXRhZGF0YSI6Int9In1dLCJvdmVyZmxvdyI6ZmFsc2UsImFnZ0RhdGEiOltdLCJhZ2dTY2hlbWEiOltdLCJhZ2dPdmVyZmxvdyI6ZmFsc2UsImFnZ1Nlcmllc0xpbWl0UmVhY2hlZCI6ZmFsc2UsImFnZ0Vycm9yIjoiIiwiYWdnVHlwZSI6IiIsInBsb3RPcHRpb25zIjpudWxsLCJpc0pzb25TY2hlbWEiOnRydWUsImRiZnNSZXN1bHRQYXRoIjpudWxsLCJkYXRhc2V0SW5mb3MiOlt7Im5hbWUiOiJfc3FsZGYiLCJ0eXBlU3RyIjoicHlzcGFyay5zcWwuY29ubmVjdC5kYXRhZnJhbWUuRGF0YUZyYW1lIiwic2NoZW1hIjp7ImZpZWxkcyI6W3sibWV0YWRhdGEiOnt9LCJuYW1lIjoiaWQiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6ImludGVnZXIifSx7Im1ldGFkYXRhIjp7fSwibmFtZSI6InJlZ2lvbiIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJlbWFpbCIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoic3RyaW5nIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJyZXZlbnVlIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJpbnRlZ2VyIn1dLCJ0eXBlIjoic3RydWN0In0sInRhYmxlSWRlbnRpZmllciI6bnVsbH1dLCJjb2x1bW5DdXN0b21EaXNwbGF5SW5mb3MiOnt9LCJtZXRhZGF0YSI6eyJkYXRhZnJhbWVOYW1lIjoiX3NxbGRmIiwiZXhlY3V0aW9uQ291bnQiOjE2LCJjcmVhdGVUZW1wVmlld0ZvckltcGxpY2l0RGYiOnRydWV9fV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbeyJuYW1lIjoiX3NxbGRmIiwidHlwZVN0ciI6InB5c3Bhcmsuc3FsLmNvbm5lY3QuZGF0YWZyYW1lLkRhdGFGcmFtZSIsInNjaGVtYSI6eyJmaWVsZHMiOlt7Im1ldGFkYXRhIjp7fSwibmFtZSI6ImlkIiwibnVsbGFibGUiOnRydWUsInR5cGUiOiJpbnRlZ2VyIn0seyJtZXRhZGF0YSI6e30sIm5hbWUiOiJyZWdpb24iLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoiZW1haWwiLCJudWxsYWJsZSI6dHJ1ZSwidHlwZSI6InN0cmluZyJ9LHsibWV0YWRhdGEiOnt9LCJuYW1lIjoicmV2ZW51ZSIsIm51bGxhYmxlIjp0cnVlLCJ0eXBlIjoiaW50ZWdlciJ9XSwidHlwZSI6InN0cnVjdCJ9LCJ0YWJsZUlkZW50aWZpZXIiOm51bGx9XSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTc3ODE4MzM4MzQyMCwic3VibWl0VGltZSI6MTc3ODE4MzM4MzM0MSwiZmluaXNoVGltZSI6MTc3ODE4MzM4NjExMywiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJieXRlTGltaXQiOjIwNDgwMDAsInJvd0xpbWl0IjoxMDAwMH0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltbInRhYmxlIiwzXV0sInN1YmNvbW1hbmRPcHRpb25zIjpudWxsLCJjb250ZW50U2hhMjU2SGV4IjpudWxsLCJ0YWJsZVJlc3VsdFNldHRpbmdzTWFwIjp7IjAiOnsidGFibGVSZXN1bHRJbmRleCI6MCwiZmlsdGVyQmxvYiI6bnVsbCwiZGF0YUdyaWRTdGF0ZUJsb2IiOiJ7XCJ2ZXJzaW9uXCI6MSxcInRhYmxlU3RhdGVcIjp7XCJjb2x1bW5QaW5uaW5nXCI6e1wibGVmdFwiOltcIiNyb3dfbnVtYmVyI1wiXSxcInJpZ2h0XCI6W119LFwiY29sdW1uU2l6aW5nXCI6e1wiZW1haWxcIjoyNzF9LFwiY29sdW1uVmlzaWJpbGl0eVwiOnt9fSxcInNldHRpbmdzXCI6e1wiY29sdW1uc1wiOnt9fSxcInN5bmNUaW1lc3RhbXBcIjoxNzc4MTgxNDY1NzY3fSIsInF1ZXJ5UGxhbkZpbHRlcnNCbG9iIjpudWxsfX0sIm51aWQiOiJiMTM3YTdlMC1jZWMwLTRlMmItYTFiOS05NmFiZjMyMGMyMzUifSx7InZlcnNpb24iOiJDb21tYW5kVjEiLCJvcmlnSWQiOjQ5MjQyNjEwODEzMzYzODYsImd1aWQiOiJmY2UwNjVlYS01Njk2LTQ1MmUtOWVmMi00Y2E2ZGEwMDUyN2YiLCJzdWJ0eXBlIjoiY29tbWFuZCIsImNvbW1hbmRUeXBlIjoiYXV0byIsInBvc2l0aW9uIjoxMS41LCJjb21tYW5kIjoiQ1JFQVRFIE9SIFJFUExBQ0UgVklFVyB2d19zYWxlc19keW5hbWljIEFTXG5TRUxFQ1QgaWQsXG4gICAgICAgcmVnaW9uLFxuICAgICAgIENBU0UgXG4gICAgICAgICBXSEVOIGlzX2FjY291bnRfZ3JvdXBfbWVtYmVyKCdhZG1pbi1zZycpIFRIRU4gZW1haWxcbiAgICAgICAgIEVMU0UgY29uY2F0KHN1YnN0cihlbWFpbCwgMSwgMSksICcqKipAJywgc3BsaXQoZW1haWwsICdAJylbMV0pXG4gICAgICAgRU5EIEFTIGVtYWlsLCAgXG4gICAgICAgcmV2ZW51ZVxuRlJPTSBzYWxlc19keW5hbWljXG5XSEVSRSBpc19hY2NvdW50X2dyb3VwX21lbWJlcignYWRtaW4tc2cnKVxuT1IgKGlzX2FjY291bnRfZ3JvdXBfbWVtYmVyKCd1ay1zZycpIEFORCByZWdpb24gPSAnVUsnKVxuT1IgKGlzX2FjY291bnRfZ3JvdXBfbWVtYmVyKCd1cy1zZycpIEFORCByZWdpb24gPSAnVVMnKTsiLCJjb21tYW5kVmVyc2lvbiI6NDMsInN0YXRlIjoiZmluaXNoZWQiLCJyZXN1bHRzIjp7InR5cGUiOiJsaXN0UmVzdWx0cyIsImRhdGEiOlt7InR5cGUiOiJtaW1lQnVuZGxlIiwiZGF0YSI6eyJhcHBsaWNhdGlvbi92bmQuZGF0YWJyaWNrcy5lbXB0eS10YWJsZStqc29uIjp7ImRpcmVjdGl2ZV9uYW1lIjoiTm9EaXJlY3RpdmUifX0sImV4ZWN1dGlvbkNvdW50IjpudWxsLCJhcmd1bWVudHMiOnt9LCJhZGRlZFdpZGdldHMiOnt9LCJyZW1vdmVkV2lkZ2V0cyI6W10sImRhdGFzZXRJbmZvcyI6W10sIm1ldGFkYXRhIjp7Imtlcm5lbFNlc3Npb25JZCI6IjMzMTBlOWE5LWM3MzkxZGZmNDU5MzViOTAxNzZkZjY2NiJ9fV0sImFyZ3VtZW50cyI6e30sImFkZGVkV2lkZ2V0cyI6e30sInJlbW92ZWRXaWRnZXRzIjpbXSwiZGF0YXNldEluZm9zIjpbXSwibWV0YWRhdGEiOnsiaXNEYmZzQ29tbWFuZFJlc3VsdCI6ZmFsc2V9fSwicmVzdWx0RGJmc1N0YXR1cyI6IklOTElORURfSU5fVFJFRSIsInJlc3VsdERiZnNFcnJvck1lc3NhZ2UiOm51bGwsImVycm9yU3VtbWFyeSI6bnVsbCwiZXJyb3JUcmFjZVR5cGUiOm51bGwsImVycm9yIjpudWxsLCJlcnJvckRldGFpbHMiOm51bGwsImJhc2VFcnJvckRldGFpbHMiOm51bGwsIndvcmtmbG93cyI6W10sInN0YXJ0VGltZSI6MTc3ODE4MTc3NTIzNSwic3VibWl0VGltZSI6MTc3ODE4MTc3NTE0NCwiZmluaXNoVGltZSI6MTc3ODE4MTc3NjU1NCwiY29sbGFwc2VkIjpmYWxzZSwiYmluZGluZ3MiOnt9LCJpbnB1dFdpZGdldHMiOnt9LCJkaXNwbGF5VHlwZSI6InRhYmxlIiwid2lkdGgiOiJhdXRvIiwiaGVpZ2h0IjoiYXV0byIsInhDb2x1bW5zIjpudWxsLCJ5Q29sdW1ucyI6bnVsbCwicGl2b3RDb2x1bW5zIjpudWxsLCJwaXZvdEFnZ3JlZ2F0aW9uIjpudWxsLCJ1c2VDb25zaXN0ZW50Q29sb3JzIjpmYWxzZSwiY3VzdG9tUGxvdE9wdGlvbnMiOnt9LCJjb21tZW50VGhyZWFkIjpbXSwiY29tbWVudHNWaXNpYmxlIjpmYWxzZSwicGFyZW50SGllcmFyY2h5IjpbXSwiZGlmZkluc2VydHMiOltdLCJkaWZmRGVsZXRlcyI6W10sImdsb2JhbFZhcnMiOnt9LCJsYXRlc3RVc2VyIjoiYSB1c2VyIiwibGF0ZXN0VXNlcklkIjpudWxsLCJsYXRlc3RBc3N1bWVSb2xlSW5mbyI6bnVsbCwiY29tbWFuZFRpdGxlIjoiIiwic2hvd0NvbW1hbmRUaXRsZSI6ZmFsc2UsImhpZGVDb21tYW5kQ29kZSI6ZmFsc2UsImhpZGVDb21tYW5kUmVzdWx0IjpmYWxzZSwiaXNMb2NrZWRJbkV4YW1Nb2RlIjpmYWxzZSwiaVB5dGhvbk1ldGFkYXRhIjpudWxsLCJtZXRhZGF0YSI6eyJyb3dMaW1pdCI6MTAwMDAsImJ5dGVMaW1pdCI6MjA0ODAwMH0sInN0cmVhbVN0YXRlcyI6e30sImRhdGFzZXRQcmV2aWV3TmFtZVRvQ21kSWRNYXAiOnt9LCJ0YWJsZVJlc3VsdEluZGV4IjpudWxsLCJsaXN0UmVzdWx0TWV0YWRhdGEiOltbIm1pbWVCdW5kbGUiLG51bGxdXSwic3ViY29tbWFuZE9wdGlvbnMiOm51bGwsImNvbnRlbnRTaGEyNTZIZXgiOm51bGwsInRhYmxlUmVzdWx0U2V0dGluZ3NNYXAiOnt9LCJudWlkIjoiYWFjYzYwZTUtY2FkZC00MzI4LTlhZTUtOWJiODQyM2M3OTdjIn1dLCJkYXNoYm9hcmRzIjpbXSwiZ3VpZCI6ImE2NDZiOGU2LTBjMjAtNGJiYS1iNTg4LTc0ZGRkNGRmYjE3ZCIsImdsb2JhbFZhcnMiOnt9LCJpUHl0aG9uTWV0YWRhdGEiOnsibmJmb3JtYXQiOjQsIklQeXRob25NZXRhZGF0YSI6eyJsYW5ndWFnZV9pbmZvIjp7Im5hbWUiOiJzcWwifX19LCJpbnB1dFdpZGdldHMiOnt9LCJub3RlYm9va01ldGFkYXRhIjp7Im1vc3RSZWNlbnRseUV4ZWN1dGVkQ29tbWFuZFdpdGhJbXBsaWNpdERGIjp7ImNvbW1hbmRJZCI6LTEsImRhdGFmcmFtZXMiOlsiX3NxbGRmIl19LCJweXRob25JbmRlbnRVbml0Ijo0fSwicmVwb3NFeHBvcnRGb3JtYXQiOiJKVVBZVEVSIiwiZW52aXJvbm1lbnRNZXRhZGF0YSI6eyJjbGllbnQiOiI1IiwiYmFzZV9lbnZpcm9ubWVudCI6IiJ9LCJjb21wdXRlUHJlZmVyZW5jZXMiOnsiaGFyZHdhcmUiOnsiYWNjZWxlcmF0b3IiOm51bGwsImdwdVBvb2xJZCI6bnVsbCwibWVtb3J5IjpudWxsfSwic29mdHdhcmUiOnsicGluU3BhcmtUb1g4NiI6bnVsbH19LCJpbnB1dFdpZGdldFByZWZlcmVuY2VzIjpudWxsLCJlbnZpcm9ubWVudFNlcmlhbGl6YXRpb25QcmVmZXJlbmNlcyI6bnVsbH0="
+}
