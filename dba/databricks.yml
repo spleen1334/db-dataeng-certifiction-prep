@@ -1,0 +1,30 @@
+# Databricks Asset Bundle for dab_demo_project
+bundle:
+  name: dab_demo_project
+
+resources:
+  jobs:
+    dab_demo_project_job:
+      name: dab_demo_project_job
+      tasks:
+        - task_key: dab_demo_notebook
+          notebook_task:
+            notebook_path: src/notebooks/dab_demo_notebook.ipynb
+          job_cluster_key: job_cluster
+      job_clusters:
+        - job_cluster_key: job_cluster
+          new_cluster:
+            spark_version: 15.4.x-scala2.12
+            node_type_id: Standard_DS3_v2
+            data_security_mode: SINGLE_USER
+            num_workers: 1
+
+targets:
+  dev:
+    default: true
+    mode: development
+    workspace:
+      host: https://adb-3312650539267414.14.azuredatabricks.net
+  prod:
+    workspace:
+      host: https://adb-4310180783435194.14.azuredatabricks.net/
