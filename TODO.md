@@ -54,33 +54,38 @@ duplicate refunds SQL. No notebook execution was performed.
 
 ## Stage 1 — Structure and readable learning materials
 
-- [ ] Organize datasets under `data/`, notebooks under `notebooks/`, scripts and
+- [x] Organize datasets under `data/`, notebooks under `notebooks/`, scripts and
   SQL queries under `scripts/`, and reference material/documentation under `docs/`.
-- [ ] Preserve original PDFs and DBC archives with source mappings and checksums.
-- [ ] Check path dependencies before relocating standalone examples/configuration.
-- [ ] Add root and directory README files with a clear study path.
-- [ ] Catalog datasets, formats, relationships, provenance, and relevant lessons.
-- [ ] Expose maintenance and validation activities as Makefile targets; keep
+- [x] Preserve original PDFs and DBC archives with source mappings and checksums.
+- [x] Check path dependencies before relocating standalone examples/configuration.
+- [x] Add root and directory README files with a clear study path.
+- [x] Catalog datasets, formats, relationships, provenance, and relevant lessons.
+- [x] Expose maintenance and validation activities as Makefile targets; keep
   implementation scripts in `scripts/`.
-- [ ] Convert representative DBC notebooks first, then validate before bulk conversion.
-- [ ] Preserve source cells and all available archived results in readable notebooks.
+- [x] Convert representative DBC notebooks first, then validate before bulk conversion.
+- [x] Preserve source cells and all available archived results in readable notebooks.
   Explicitly identify missing, truncated, or externally stored results.
-- [ ] Determine which supplied input data can usefully be embedded for reading.
+- [x] Determine which supplied input data can usefully be embedded for reading.
   Do not invent missing data or claim that external cloud datasets are included.
-- [ ] Write page-referenced Markdown learning notes from the lecture slides and
+- [x] Write page-referenced Markdown learning notes from the lecture slides and
   guides, distinguishing source content from added explanations.
-- [ ] Document differences between the V7 slides, V5 archive, and exam guide.
-- [ ] Map inspected material to the seven May 2026 exam domains; explicitly mark
+- [x] Document differences between the V7 slides, V5 archive, and exam guide.
+- [x] Map inspected material to the seven May 2026 exam domains; explicitly mark
   unknown/partial coverage and documentation-verification items.
-- [ ] Validate archive coverage, notebook format, source/output preservation,
+- [x] Validate archive coverage, notebook format, source/output preservation,
   internal links, dataset catalog, and unchanged original content.
+
+Final verification: `make verify` exited 0 (24 tests passed, index current,
+71 enriched notebooks current, repository validation passed). The machine report
+is [docs/validation-report.json](docs/validation-report.json).
 
 ## Stage 2 — Educational enrichment
 
-- [ ] Review every notebook for learning clarity.
-- [ ] Add clearly identified explanatory Markdown and code comments without
-  changing the original course behavior.
-- [ ] Explain difficult concepts with small, clearly labelled teaching examples.
+- [x] Apply a source-aware explanatory pass across every notebook and spot-check
+  representative output. This is not an execution-based correctness review.
+- [x] Add clearly identified explanatory Markdown before original operations,
+  without changing original source, code comments, outputs, or behavior.
+- [x] Explain difficult concepts with small, clearly labelled unexecuted teaching examples.
 - [x] Defer all AI-assisted preparation to
   [docs/AI-PREPARATION-TODO.md](docs/AI-PREPARATION-TODO.md); do not initiate it.
 - [ ] Recheck the official exam guide two weeks before the learner's exam.

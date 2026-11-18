@@ -1,0 +1,17 @@
+{
+  "errors": [],
+  "evidence": {
+    "aliases": 3,
+    "broken_links": 0,
+    "canonical": 71,
+    "catalog": true,
+    "enriched_notebooks": 71,
+    "historical_errors": 3,
+    "input_snapshots": 357,
+    "original_commands": 690,
+    "original_inventory": true,
+    "primary": 69,
+    "result_containers": 373
+  },
+  "ok": true
+}
