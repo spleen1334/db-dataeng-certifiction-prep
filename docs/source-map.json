@@ -1,0 +1,683 @@
+{
+  "version": 1,
+  "notes": [
+    "Original assets preserved byte-for-byte.",
+    "config/bundle-demo/databricks.yml retains its original, already broken notebook reference; relocation does not repair it."
+  ],
+  "assets": [
+    {
+      "old": "Databricks+Certified+Data+Engineer+Associate+Course+V7.pdf",
+      "new": "docs/originals/Databricks+Certified+Data+Engineer+Associate+Course+V7.pdf",
+      "sha256": "36e1e1491b20661ec191a047424720e9464d5273ef3bc2ba2bfecd859167512b",
+      "size": 17523309,
+      "role": "course-document"
+    },
+    {
+      "old": "certification_guide/ai-prep-guide-any-databricks-certification.pdf",
+      "new": "docs/originals/certification_guide/ai-prep-guide-any-databricks-certification.pdf",
+      "sha256": "3ed978d150e466932b66e1a95f33292a2a78171696568af7bf3b79c967c7251a",
+      "size": 181486,
+      "role": "certification-guide"
+    },
+    {
+      "old": "certification_guide/databricks-certified-data-engineer-associate-exam-guide-may-2026-000.pdf",
+      "new": "docs/originals/certification_guide/databricks-certified-data-engineer-associate-exam-guide-may-2026-000.pdf",
+      "sha256": "a09a645247097016ad70986f6af2c8d7503047162ac6b7e1142492566fc70600",
+      "size": 223871,
+      "role": "certification-guide"
+    },
+    {
+      "old": "circuitbox/addresses/addresses_day1.csv",
+      "new": "data/circuitbox/addresses/addresses_day1.csv",
+      "sha256": "52ef2bd805cb67c39f04fa83c36b3820627e709904520858f1d79fd54671a327",
+      "size": 772,
+      "role": "sample-data"
+    },
+    {
+      "old": "circuitbox/addresses/addresses_day2.csv",
+      "new": "data/circuitbox/addresses/addresses_day2.csv",
+      "sha256": "b39f1e2d89f68564db4df92102118c8270a1ac7190494c7dc5488f2b3c3fd8c6",
+      "size": 479,
+      "role": "sample-data"
+    },
+    {
+      "old": "circuitbox/customers/customers_day1.json",
+      "new": "data/circuitbox/customers/customers_day1.json",
+      "sha256": "877701de9fc03ce84fb0c14c7a64a48444595a9251b9f2bd4414a6b6a0ad0512",
+      "size": 1743,
+      "role": "sample-data"
+    },
+    {
+      "old": "circuitbox/customers/customers_day2.json",
+      "new": "data/circuitbox/customers/customers_day2.json",
+      "sha256": "b24ecb34aaee37bda161ef5798360dbc94b6abbfc8413d91c7f0c0d73d4d4d39",
+      "size": 1277,
+      "role": "sample-data"
+    },
+    {
+      "old": "circuitbox/orders/orders_day1.json",
+      "new": "data/circuitbox/orders/orders_day1.json",
+      "sha256": "e653657907fe6cbaeeec87124fb53c86a955f26add32da619eac1c5d5f5e9904",
+      "size": 3152,
+      "role": "sample-data"
+    },
+    {
+      "old": "circuitbox/orders/orders_day2.json",
+      "new": "data/circuitbox/orders/orders_day2.json",
+      "sha256": "814e6982853274d17de0e58559268b915725e6803d70c99011fff199a852fadf",
+      "size": 985,
+      "role": "sample-data"
+    },
+    {
+      "old": "db connect/companies_report.ipynb",
+      "new": "docs/originals/standalone/db-connect/companies_report.ipynb",
+      "sha256": "10f73264bf3bc799a3dc16ecbf2007548278c658a4d9df499da1fef641b30c6b",
+      "size": 1622,
+      "role": "notebook",
+      "study_copy": "notebooks/db-connect/companies_report.ipynb"
+    },
+    {
+      "old": "db connect/companies_report.py",
+      "new": "scripts/examples/companies_report.py",
+      "sha256": "2b293fdc521909b1224e565d185db7be67b3abc5814b208626b90413ae2790e4",
+      "size": 301,
+      "role": "example-script"
+    },
+    {
+      "old": "dba/dab_demo_notebook.ipynb",
+      "new": "docs/originals/standalone/bundle-demo/dab_demo_notebook.ipynb",
+      "sha256": "0d14fa394d9cf1331fb3251dffa6c08688e7fac60e3064a3549ae54e8c1dc515",
+      "size": 11330,
+      "role": "notebook",
+      "study_copy": "notebooks/bundle-demo/dab_demo_notebook.ipynb"
+    },
+    {
+      "old": "dba/databricks.yml",
+      "new": "config/bundle-demo/databricks.yml",
+      "sha256": "a9bcb136c38f903affd46b034a776b1508e78f602be573381592d5e4f0fd9d2c",
+      "size": 802,
+      "role": "bundle-configuration"
+    },
+    {
+      "old": "dea-course-v5.dbc",
+      "new": "docs/originals/dea-course-v5.dbc",
+      "sha256": "23908dc947dc9279b1176575fa5b0966281fca608509c6fed3deca7700146488",
+      "size": 2784146,
+      "role": "notebook-archive"
+    },
+    {
+      "old": "dea05-databricks-jobs.dbc",
+      "new": "docs/originals/dea05-databricks-jobs.dbc",
+      "sha256": "cc4cf3b3febeb14b92cc04421b326601d023025aa5393c53578eebf379a4718d",
+      "size": 11829,
+      "role": "notebook-archive"
+    },
+    {
+      "old": "gizmobox/addresses/addresses_2024_10.tsv",
+      "new": "data/gizmobox/addresses/addresses_2024_10.tsv",
+      "sha256": "d0f4b133989d5dd066a2e55c38311a4eb608ea4576f1c9db8dcda9c9d9714c74",
+      "size": 2361,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/addresses/addresses_2024_11.tsv",
+      "new": "data/gizmobox/addresses/addresses_2024_11.tsv",
+      "sha256": "75fb10dfa3f34b860121b016d6244c4f387205b4f5ceaaf583314f7062ab3645",
+      "size": 1735,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/addresses/addresses_2024_12.tsv",
+      "new": "data/gizmobox/addresses/addresses_2024_12.tsv",
+      "sha256": "06d7613373a872a3814f678c90d35022dc42ed08569d1c638591d38270fe6f98",
+      "size": 1706,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/addresses/addresses_2025_01.tsv",
+      "new": "data/gizmobox/addresses/addresses_2025_01.tsv",
+      "sha256": "e2b9d6003690d9a36ddf5809fd0c1ebc0c69b50e0fff0bb31e67f5b397b24dde",
+      "size": 1136,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers/customers_2024_10.json",
+      "new": "data/gizmobox/customers/customers_2024_10.json",
+      "sha256": "5bffe1ac1be63e53e5b83f9e7a2d2772f0a6a828a4abd987ed3b4e6ade71c51f",
+      "size": 4389,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers/customers_2024_11.json",
+      "new": "data/gizmobox/customers/customers_2024_11.json",
+      "sha256": "0975ad63cfa55e46459057fc15f8cd08e2acbe2b0a7adfaf5af1c413d286f0e8",
+      "size": 3327,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers/customers_2024_12.json",
+      "new": "data/gizmobox/customers/customers_2024_12.json",
+      "sha256": "15d60911a261098d415d009b534c406eaa1b414b32a8b6dd0e787c3ce183c8df",
+      "size": 3081,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers/customers_2025_01.json",
+      "new": "data/gizmobox/customers/customers_2025_01.json",
+      "sha256": "40102069938c0783dde49047c9dcf9015113aa828ff6f6c176c9a1355422131c",
+      "size": 2868,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers_autoloader/customers_2024_10.json",
+      "new": "data/gizmobox/customers_autoloader/customers_2024_10.json",
+      "sha256": "5bffe1ac1be63e53e5b83f9e7a2d2772f0a6a828a4abd987ed3b4e6ade71c51f",
+      "size": 4389,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers_autoloader/customers_2024_11.json",
+      "new": "data/gizmobox/customers_autoloader/customers_2024_11.json",
+      "sha256": "0975ad63cfa55e46459057fc15f8cd08e2acbe2b0a7adfaf5af1c413d286f0e8",
+      "size": 3327,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers_autoloader/customers_2024_12.json",
+      "new": "data/gizmobox/customers_autoloader/customers_2024_12.json",
+      "sha256": "15d60911a261098d415d009b534c406eaa1b414b32a8b6dd0e787c3ce183c8df",
+      "size": 3081,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers_autoloader/customers_2025_01.json",
+      "new": "data/gizmobox/customers_autoloader/customers_2025_01.json",
+      "sha256": "40102069938c0783dde49047c9dcf9015113aa828ff6f6c176c9a1355422131c",
+      "size": 2868,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers_stream/customers_2024_10.json",
+      "new": "data/gizmobox/customers_stream/customers_2024_10.json",
+      "sha256": "5bffe1ac1be63e53e5b83f9e7a2d2772f0a6a828a4abd987ed3b4e6ade71c51f",
+      "size": 4389,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers_stream/customers_2024_11.json",
+      "new": "data/gizmobox/customers_stream/customers_2024_11.json",
+      "sha256": "0975ad63cfa55e46459057fc15f8cd08e2acbe2b0a7adfaf5af1c413d286f0e8",
+      "size": 3327,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers_stream/customers_2024_12.json",
+      "new": "data/gizmobox/customers_stream/customers_2024_12.json",
+      "sha256": "15d60911a261098d415d009b534c406eaa1b414b32a8b6dd0e787c3ce183c8df",
+      "size": 3081,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/customers_stream/customers_2025_01.json",
+      "new": "data/gizmobox/customers_stream/customers_2025_01.json",
+      "sha256": "40102069938c0783dde49047c9dcf9015113aa828ff6f6c176c9a1355422131c",
+      "size": 2868,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/2344.png",
+      "new": "data/gizmobox/memberships/2024-10/2344.png",
+      "sha256": "0952ac19c3e470ab96537ca443165f7025838657565b2f1acd1e134cd886451a",
+      "size": 28051,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/3409.png",
+      "new": "data/gizmobox/memberships/2024-10/3409.png",
+      "sha256": "aa633fde3bbff037e178ce7f2610a284725fff3d2e7a024f8aefa4741f03ec5f",
+      "size": 30053,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/3889.png",
+      "new": "data/gizmobox/memberships/2024-10/3889.png",
+      "sha256": "d7c1e08e185673927f4933167c52042024f7afd2f09ac41f369f3ca5003c01f9",
+      "size": 26708,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/4858.png",
+      "new": "data/gizmobox/memberships/2024-10/4858.png",
+      "sha256": "aaffd5e0fbccf82c00e8c2f3467293174c0c73334be1f8ad6098719a257da024",
+      "size": 28578,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/5011.png",
+      "new": "data/gizmobox/memberships/2024-10/5011.png",
+      "sha256": "26c004714d3bf73455b7c724d7ea4ff51bc15d50ed5de1a47cae9d6dfb10ca12",
+      "size": 27999,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/5028.png",
+      "new": "data/gizmobox/memberships/2024-10/5028.png",
+      "sha256": "f6b3d385d5b03361cbf81f48fb70056f7a9cbbf043520a2e51e6e97a1737b3fa",
+      "size": 26098,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/5816.png",
+      "new": "data/gizmobox/memberships/2024-10/5816.png",
+      "sha256": "6eb5378b1ecc797a2014a117ca09dc776f9c0ba5b0d7dffd6fd25a5b655a3abf",
+      "size": 28393,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/6627.png",
+      "new": "data/gizmobox/memberships/2024-10/6627.png",
+      "sha256": "e5f2cf2d089e42dba32b2ca0c22e4e4c7afb1ec6b01926ca5bdeb8311826f1d2",
+      "size": 28367,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/7207.png",
+      "new": "data/gizmobox/memberships/2024-10/7207.png",
+      "sha256": "2069a2174fe571e1c4db526092eeaace5b1dd2ad16bfcdbd21fc4dfad825e0d1",
+      "size": 28981,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/8539.png",
+      "new": "data/gizmobox/memberships/2024-10/8539.png",
+      "sha256": "aa47ecd075762e08abc29459852e39e492d904b2173996fcb54b788db588b5b2",
+      "size": 28550,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/8580.png",
+      "new": "data/gizmobox/memberships/2024-10/8580.png",
+      "sha256": "678c356edc2f11edf380fcfce1ab7417c0b48295acaa9295c8b6608dac460e8c",
+      "size": 28454,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/9018.png",
+      "new": "data/gizmobox/memberships/2024-10/9018.png",
+      "sha256": "2b2e72fec8382088601f69314662d63820664aaf7aae0d9c18862c0d93604e62",
+      "size": 28641,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/9084.png",
+      "new": "data/gizmobox/memberships/2024-10/9084.png",
+      "sha256": "e993009cb1c60624776a2eb98cbca95cfd0aeb7046fe12299add503e993143d2",
+      "size": 27683,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/9179.png",
+      "new": "data/gizmobox/memberships/2024-10/9179.png",
+      "sha256": "76bb787aeb19f24dc86efecd6642c46f78b1400ac6004471fcd65d752e7256de",
+      "size": 29127,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/9247.png",
+      "new": "data/gizmobox/memberships/2024-10/9247.png",
+      "sha256": "613cc639dad38f2f6812853483c81d47fa323bd8b3f48c49859794897decb0db",
+      "size": 27285,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/9263.png",
+      "new": "data/gizmobox/memberships/2024-10/9263.png",
+      "sha256": "db3a6b2cd09eaa6a990e68a06e50a6478f5864f0ba06500adadeb7da88f29d9b",
+      "size": 25608,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-10/9706.png",
+      "new": "data/gizmobox/memberships/2024-10/9706.png",
+      "sha256": "c164ccf6eabc2285be8ce9d42c52e9870624b81129c4b884e898b722ec0553ee",
+      "size": 27980,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/1987.png",
+      "new": "data/gizmobox/memberships/2024-11/1987.png",
+      "sha256": "04d885e81bf3497482b9dc164e9a58e62d2fdabaa7a4b0841d7c8d65433c463a",
+      "size": 27988,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/2054.png",
+      "new": "data/gizmobox/memberships/2024-11/2054.png",
+      "sha256": "f09b92a9d75a1a50d009bf06e965297d1dbc093b36c683c61eab1553ca877970",
+      "size": 28186,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/2703.png",
+      "new": "data/gizmobox/memberships/2024-11/2703.png",
+      "sha256": "4ce67069dde6a1f63079fd36855e13b5c4aab6f166af2224842629220ea53fcd",
+      "size": 26446,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/3712.png",
+      "new": "data/gizmobox/memberships/2024-11/3712.png",
+      "sha256": "2b7df22ab75d5700305490677ae9e7fbf776fe7230175d2fccf0dc33688c7717",
+      "size": 28137,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/3892.png",
+      "new": "data/gizmobox/memberships/2024-11/3892.png",
+      "sha256": "a35bdcfabd7829b50609494bef8c3470281483d19bdd1fd3850e8f118f494db5",
+      "size": 28423,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/4468.png",
+      "new": "data/gizmobox/memberships/2024-11/4468.png",
+      "sha256": "7792f2763b8f9cab520843498f17d98b9aa292aa7398e3bfc3d02c15e92f613e",
+      "size": 27066,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/4761.png",
+      "new": "data/gizmobox/memberships/2024-11/4761.png",
+      "sha256": "252337172046664f85908384d6d0e0247bd409bd55c701afb5abe365fa37dfe8",
+      "size": 28498,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/4914.png",
+      "new": "data/gizmobox/memberships/2024-11/4914.png",
+      "sha256": "b330ce5fb4b58c644f3d0a7b4d2b2735f2d76c5c9fb0b5dc7d2a1a747a1a9b70",
+      "size": 28665,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/4996.png",
+      "new": "data/gizmobox/memberships/2024-11/4996.png",
+      "sha256": "46dce76d9ec535f924f29f224f3f4855430f24b26aafc2f2884399c89cb30f9f",
+      "size": 28124,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/5204.png",
+      "new": "data/gizmobox/memberships/2024-11/5204.png",
+      "sha256": "73c962eea3c678f1f45ba79220ec0ff6ba22fadfc79c363fb14ca2e015b141c9",
+      "size": 29873,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/7123.png",
+      "new": "data/gizmobox/memberships/2024-11/7123.png",
+      "sha256": "f5e8bb94aa23c6d2fcb0f6a0c664a8cb7720fa70577f6546796b6995759e7a8e",
+      "size": 29529,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/7295.png",
+      "new": "data/gizmobox/memberships/2024-11/7295.png",
+      "sha256": "1717053c49f2193345b28f0de0a80327a31326c9317bef5eebb5feb37c715fd3",
+      "size": 28032,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-11/7803.png",
+      "new": "data/gizmobox/memberships/2024-11/7803.png",
+      "sha256": "efbe16523164bfb2b84af9f37ec4a3acdefe485a5dcc85d2bf056561262a6afb",
+      "size": 27702,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/1211.png",
+      "new": "data/gizmobox/memberships/2024-12/1211.png",
+      "sha256": "ed70939ab3cebe6d5c5b9544d8954484af682f2d801238dd38b6d8125f68d60a",
+      "size": 27806,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/2141.png",
+      "new": "data/gizmobox/memberships/2024-12/2141.png",
+      "sha256": "a98e83bf81eaabc12fbd3eddf07c729027254f2b47b3de0c5838a86e7ebc5c88",
+      "size": 28278,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/2639.png",
+      "new": "data/gizmobox/memberships/2024-12/2639.png",
+      "sha256": "cccec8e4d44ea1e31edd440937803c12a780e8aaecdb289dcd95082a344d67ab",
+      "size": 28689,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/3084.png",
+      "new": "data/gizmobox/memberships/2024-12/3084.png",
+      "sha256": "6eee2209c2dd8a44191fbe626e41ece3883ef0b5378289eb06407aa379f7a0f3",
+      "size": 26340,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/3532.png",
+      "new": "data/gizmobox/memberships/2024-12/3532.png",
+      "sha256": "c2ed296b2dd254c2bc367442f76c881ea65db5f51811cef2f1ba406824494c76",
+      "size": 27212,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/5592.png",
+      "new": "data/gizmobox/memberships/2024-12/5592.png",
+      "sha256": "33954f39410d23b6cd7b7788d9e2bb30d6668cf440669b6cd140977d93dc1f1c",
+      "size": 27914,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/6384.png",
+      "new": "data/gizmobox/memberships/2024-12/6384.png",
+      "sha256": "d1089bfc4268552c3999e56f46c8e277d067597e3f8dd23b47b276c3854682ec",
+      "size": 28866,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/6406.png",
+      "new": "data/gizmobox/memberships/2024-12/6406.png",
+      "sha256": "32a8701384f934cb05c3ab456e9fe438e0e488618593f98babf80bf37f13fca7",
+      "size": 25106,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/6973.png",
+      "new": "data/gizmobox/memberships/2024-12/6973.png",
+      "sha256": "7f96a50d5e360aaf2075ca218266daa059f55d42ad60a46a0e07c98b1a301cd0",
+      "size": 28739,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/7829.png",
+      "new": "data/gizmobox/memberships/2024-12/7829.png",
+      "sha256": "4cafdd7566f065e80cfa877a554b8b9cab31386ff8ef294b6d8983f08a44de3e",
+      "size": 29480,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/7997.png",
+      "new": "data/gizmobox/memberships/2024-12/7997.png",
+      "sha256": "e978b3a8784b4e76eb2a3ca5dea7ad8463d0b2ee13b4bdacdc47569d7adce686",
+      "size": 28400,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2024-12/9687.png",
+      "new": "data/gizmobox/memberships/2024-12/9687.png",
+      "sha256": "30bf0cc0ca8caf437c0ac14a12d3ba667aace279b5c80c522c5715b5b980c6e0",
+      "size": 29911,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2025-01/3295.png",
+      "new": "data/gizmobox/memberships/2025-01/3295.png",
+      "sha256": "fcfc1cb83a41cce8e142f6f38804496085d3484c980d7d461ab28d0e9531f795",
+      "size": 28333,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2025-01/4973.png",
+      "new": "data/gizmobox/memberships/2025-01/4973.png",
+      "sha256": "cd3748b2b42d319a3c67695e234bae6717a08d0700296e22dcfd303b7405c001",
+      "size": 28818,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2025-01/5953.png",
+      "new": "data/gizmobox/memberships/2025-01/5953.png",
+      "sha256": "4088cbd06e9b1c0dc31213f16d55537275ec801a44670d7ac64e99a24860584a",
+      "size": 27550,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2025-01/6167.png",
+      "new": "data/gizmobox/memberships/2025-01/6167.png",
+      "sha256": "cce086c03446db9318970bfbc76e68b25ea4b33858ec34007b7590c2faaf2d9a",
+      "size": 27761,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2025-01/7007.png",
+      "new": "data/gizmobox/memberships/2025-01/7007.png",
+      "sha256": "c82d49c9410c648d17b954c17d806e21b6a51ec57d783fb6d1d15bac3aa659be",
+      "size": 28248,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2025-01/8845.png",
+      "new": "data/gizmobox/memberships/2025-01/8845.png",
+      "sha256": "7a207efdb136cde5415e67de21af3dc142fd3518fe0b570d38f3378247bb69dc",
+      "size": 28669,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2025-01/9150.png",
+      "new": "data/gizmobox/memberships/2025-01/9150.png",
+      "sha256": "95e5cd104355a51811ac46e18b3b622273c6fc7e98eec899f5220633a508b5b5",
+      "size": 28012,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/memberships/2025-01/9605.png",
+      "new": "data/gizmobox/memberships/2025-01/9605.png",
+      "sha256": "a602ff60e520641c08256218a4f0e7b91c99945340ea84bf607f13766b604fd9",
+      "size": 28858,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/orders/orders_2024_10.json",
+      "new": "data/gizmobox/orders/orders_2024_10.json",
+      "sha256": "568dd65befa095ec25a2fa9a50953dd071fee4dc2811ebf9b5c13b57dd84c519",
+      "size": 4844,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/orders/orders_2024_11.json",
+      "new": "data/gizmobox/orders/orders_2024_11.json",
+      "sha256": "3a5c22cf352300a2dd9f9083ee6cbedba5006dd1e6dbadff0b24d41670c98504",
+      "size": 8515,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/orders/orders_2024_12.json",
+      "new": "data/gizmobox/orders/orders_2024_12.json",
+      "sha256": "7fb460c1a55cec94bfbdef77639b16a20101496552ebf18a1433f6f4e0f3d922",
+      "size": 11443,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/orders/orders_2025_01.json",
+      "new": "data/gizmobox/orders/orders_2025_01.json",
+      "sha256": "72634bb3207bddbc9c211b20997f1cce4d373539a303f3c2b1c80dd8fd079255",
+      "size": 14231,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/payments/payments_2024_10.csv",
+      "new": "data/gizmobox/payments/payments_2024_10.csv",
+      "sha256": "e3f38e0aa9ca86ccd43051fd5a3c4be0027a90e298667bf498045f7392e3814a",
+      "size": 487,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/payments/payments_2024_11.csv",
+      "new": "data/gizmobox/payments/payments_2024_11.csv",
+      "sha256": "29d152e9f625d7d02396e6278f52eb1d72b89522435e2f6adc10ef911faeb3cc",
+      "size": 773,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/payments/payments_2024_12.csv",
+      "new": "data/gizmobox/payments/payments_2024_12.csv",
+      "sha256": "6c93a96b2d30d8b6d42acb02f3a02638720d2a9bcea8a9f9db8b878652b520cf",
+      "size": 1157,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/payments/payments_2025_01.csv",
+      "new": "data/gizmobox/payments/payments_2025_01.csv",
+      "sha256": "cf063b145affe0e5f3e8ce4eb97889a3cd7d09ae7ef958da20703221789caaeb",
+      "size": 1084,
+      "role": "sample-data"
+    },
+    {
+      "old": "gizmobox/refunds/refunds_azure_sql_ddl.sql",
+      "new": "data/gizmobox/refunds/refunds_azure_sql_ddl.sql",
+      "sha256": "381b2dd0af7030cf52c46a562645ca7177b1cdbadea55cb453577694a1949feb",
+      "size": 1016,
+      "role": "sql-ddl"
+    },
+    {
+      "old": "refunds_azure_sql_ddl.sql",
+      "new": "scripts/sql/refunds_azure_sql_ddl.sql",
+      "sha256": "381b2dd0af7030cf52c46a562645ca7177b1cdbadea55cb453577694a1949feb",
+      "size": 1016,
+      "role": "sql-ddl"
+    },
+    {
+      "old": "stock_prices/stock_prices_day1.json",
+      "new": "data/stock_prices/stock_prices_day1.json",
+      "sha256": "fa5587aa3a3844d9b6a344e13c691e750e72b16ac5a95c97cc8d29995306101d",
+      "size": 242,
+      "role": "sample-data"
+    },
+    {
+      "old": "stock_prices/stock_prices_day2.json",
+      "new": "data/stock_prices/stock_prices_day2.json",
+      "sha256": "756bbae2da3113c44d94e4b4862899cc69de371747e26b78a35d2f1fbbe07b5c",
+      "size": 160,
+      "role": "sample-data"
+    },
+    {
+      "old": "stock_prices/stock_prices_day3.json",
+      "new": "data/stock_prices/stock_prices_day3.json",
+      "sha256": "bedaa05d4909b2e605cb6811802d928f68e2e802092c0ebf9ff4ca945ecca11d",
+      "size": 483,
+      "role": "sample-data"
+    },
+    {
+      "old": "top_tech_companies/top_tech_companies_1.csv",
+      "new": "data/top_tech_companies/top_tech_companies_1.csv",
+      "sha256": "e58e21ac0019eecab8cd299b9d773e575f9303124c951faeacb9e7d1870eb5a8",
+      "size": 148,
+      "role": "sample-data"
+    },
+    {
+      "old": "top_tech_companies/top_tech_companies_2.csv",
+      "new": "data/top_tech_companies/top_tech_companies_2.csv",
+      "sha256": "4d598a00ccbc321c9358c82537a93d96c21c5faaec143d40b96a7a3737bb31a3",
+      "size": 64,
+      "role": "sample-data"
+    }
+  ]
+}
