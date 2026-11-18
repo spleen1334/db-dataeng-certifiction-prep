@@ -36,7 +36,7 @@ def render():
               "- [Databricks Connect report](../notebooks/db-connect/companies_report.ipynb)",
               "- [Bundle demo](../notebooks/bundle-demo/dab_demo_notebook.ipynb)", "",
               "## Jobs archive aliases", ""]
-    manifest = json.loads((ROOT / "docs/conversion-manifest.json").read_text())
+    manifest = json.loads((ROOT / "artifacts/metadata/conversion-manifest.json").read_text())
     for entry in manifest["notebooks"]:
         for alias in entry["aliases"]:
             lines.append(f"- `{alias['member']}` → "

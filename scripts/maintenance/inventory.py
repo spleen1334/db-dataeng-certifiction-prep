@@ -10,7 +10,7 @@ import sys
 def main():
     root = Path(__file__).resolve().parents[2]
     try:
-        manifest = json.loads((root / "docs/source-map.json").read_text())
+        manifest = json.loads((root / "artifacts/metadata/source-map.json").read_text())
         assets = manifest["assets"]
         if not isinstance(assets, list):
             raise ValueError("invalid assets")

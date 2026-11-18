@@ -227,13 +227,13 @@ def validate(root):
                                 cwd=root, capture_output=True, text=True)
         evidence[key] = result.returncode == 0
         check(result.returncode == 0, key + " failed")
-    assets = load(root / "docs/source-map.json")["assets"]
+    assets = load(root / "artifacts/metadata/source-map.json")["assets"]
     primary = next(a for a in assets if a["old"] == "dea-course-v5.dbc")
     jobs = next(a for a in assets if a["old"] == "dea05-databricks-jobs.dbc")
     archive = safe(primary["new"])
     records = {name: (raw, doc) for name, raw, doc in convert_dbc.members(archive)}
     aliases = {name: (raw, doc) for name, raw, doc in convert_dbc.members(safe(jobs["new"]))}
-    entries = load(root / "docs/conversion-manifest.json")["notebooks"]
+    entries = load(root / "artifacts/metadata/conversion-manifest.json")["notebooks"]
     check(len(records) == len(entries) == 69, "primary count")
     check({e["member"] for e in entries} == set(records), "primary membership")
     destinations, seen_members, seen_aliases = set(), set(), set()
@@ -296,7 +296,7 @@ def validate(root):
     evidence.update(original_commands=command_count, result_containers=result_count,
                     historical_errors=error_count)
     check((command_count, result_count, error_count) == (690, 373, 3), "historical evidence counts")
-    reports = load(root / "docs/enrichment-report.json")["notebooks"]
+    reports = load(root / "artifacts/metadata/enrichment-report.json")["notebooks"]
     snapshot_records = {safe(item["path"]): item for item in reports}
     check(len(reports) == len(snapshot_records) == 71 and set(snapshot_records) == destinations,
           "enrichment report coverage")
@@ -326,7 +326,7 @@ def validate(root):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--report", type=Path, nargs="?", const=Path("docs/validation-report.json"))
+    parser.add_argument("--report", type=Path, nargs="?", const=Path("artifacts/metadata/validation-report.json"))
     args = parser.parse_args(argv)
     try:
         report = validate(ROOT)

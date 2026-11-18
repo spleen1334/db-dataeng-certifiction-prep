@@ -70,7 +70,7 @@
     },
     {
       "old": "db connect/companies_report.ipynb",
-      "new": "docs/originals/standalone/db-connect/companies_report.ipynb",
+      "new": "materials/originals/standalone/db-connect/companies_report.ipynb",
       "sha256": "10f73264bf3bc799a3dc16ecbf2007548278c658a4d9df499da1fef641b30c6b",
       "size": 1622,
       "role": "notebook",
@@ -85,7 +85,7 @@
     },
     {
       "old": "dba/dab_demo_notebook.ipynb",
-      "new": "docs/originals/standalone/bundle-demo/dab_demo_notebook.ipynb",
+      "new": "materials/originals/standalone/bundle-demo/dab_demo_notebook.ipynb",
       "sha256": "0d14fa394d9cf1331fb3251dffa6c08688e7fac60e3064a3549ae54e8c1dc515",
       "size": 11330,
       "role": "notebook",
@@ -100,14 +100,14 @@
     },
     {
       "old": "dea-course-v5.dbc",
-      "new": "docs/originals/dea-course-v5.dbc",
+      "new": "materials/archives/dea-course-v5.dbc",
       "sha256": "23908dc947dc9279b1176575fa5b0966281fca608509c6fed3deca7700146488",
       "size": 2784146,
       "role": "notebook-archive"
     },
     {
       "old": "dea05-databricks-jobs.dbc",
-      "new": "docs/originals/dea05-databricks-jobs.dbc",
+      "new": "materials/archives/dea05-databricks-jobs.dbc",
       "sha256": "cc4cf3b3febeb14b92cc04421b326601d023025aa5393c53578eebf379a4718d",
       "size": 11829,
       "role": "notebook-archive"

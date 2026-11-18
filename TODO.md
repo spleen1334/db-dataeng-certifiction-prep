@@ -77,7 +77,7 @@ duplicate refunds SQL. No notebook execution was performed.
 
 Final verification: `make verify` exited 0 (24 tests passed, index current,
 71 enriched notebooks current, repository validation passed). The machine report
-is [docs/validation-report.json](docs/validation-report.json).
+is [artifacts/metadata/validation-report.json](artifacts/metadata/validation-report.json).
 
 ## Stage 2 — Educational enrichment
 

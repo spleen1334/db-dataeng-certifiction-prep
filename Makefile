@@ -11,7 +11,7 @@ convert-sample:
 	$(PYTHON) scripts/maintenance/convert_dbc.py --sample --output .work/sample-notebooks --manifest .work/sample-conversion.json
 
 convert:
-	$(PYTHON) scripts/maintenance/convert_dbc.py --manifest docs/conversion-manifest.json
+	$(PYTHON) scripts/maintenance/convert_dbc.py --manifest artifacts/metadata/conversion-manifest.json
 
 catalog:
 	$(PYTHON) scripts/maintenance/catalog_data.py
@@ -29,7 +29,7 @@ index-check:
 	$(PYTHON) scripts/maintenance/index_notebooks.py --check
 
 enrich:
-	$(PYTHON) scripts/maintenance/enrich_notebooks.py --output docs/enrichment-report.json
+	$(PYTHON) scripts/maintenance/enrich_notebooks.py --output artifacts/metadata/enrichment-report.json
 
 enrich-check:
 	$(PYTHON) scripts/maintenance/enrich_notebooks.py --check

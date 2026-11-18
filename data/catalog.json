@@ -2935,7 +2935,7 @@
     }
   ],
   "provenance": {
-    "archive": "docs/originals/dea-course-v5.dbc",
+    "archive": "materials/archives/dea-course-v5.dbc",
     "relationships": "Command-source token matches; not execution verification",
     "archived_outputs": "Excluded: notebook results are historical, not local inputs",
     "external_state": "Cloud storage, catalogs, tables, checkpoints and JDBC databases are external state, not supplied local datasets"

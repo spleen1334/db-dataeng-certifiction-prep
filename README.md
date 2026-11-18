@@ -21,8 +21,10 @@ Examples may require Databricks and external services to execute.
 | `notebooks/` | Readable course notebooks and existing standalone examples |
 | `scripts/` | Maintenance scripts, standalone Python examples, SQL queries |
 | `config/` | Original Databricks bundle configuration |
-| `docs/originals/` | Unmodified lecture slides, guides, and DBC archives |
-| `docs/` | Learning notes, provenance, limitations, and validation reports |
+| `docs/originals/` | Unmodified lecture slides and PDF guides |
+| `docs/` | Human-readable learning notes, navigation, and limitations |
+| `materials/` | Preserved DBC archives and original standalone notebooks |
+| `artifacts/` | Local maintenance metadata and reports |
 
 Maintenance activities are exposed through `make help`. Reading the files does
 not execute them, contact cloud services, or deploy resources.

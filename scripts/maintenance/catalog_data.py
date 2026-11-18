@@ -85,7 +85,7 @@ def archive_lessons(archive):
 
 
 def build(root):
-    lessons = archive_lessons(root / "docs/originals/dea-course-v5.dbc")
+    lessons = archive_lessons(root / "materials/archives/dea-course-v5.dbc")
     files = []
     for path in sorted((root / "data").rglob("*")):
         if not path.is_file() or path.name in EXCLUDED:
@@ -119,7 +119,7 @@ def build(root):
                                for family in sorted({f["family"] for f in files})},
                 intentional_duplicate_sets=duplicates,
                 provenance={
-                    "archive": "docs/originals/dea-course-v5.dbc",
+                    "archive": "materials/archives/dea-course-v5.dbc",
                     "relationships": "Command-source token matches; not execution verification",
                     "archived_outputs": "Excluded: notebook results are historical, not local inputs",
                     "external_state": "Cloud storage, catalogs, tables, checkpoints and JDBC databases "

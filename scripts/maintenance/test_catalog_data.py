@@ -33,11 +33,11 @@ class CatalogTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             (root / "data/gizmobox/payments").mkdir(parents=True)
-            (root / "docs/originals").mkdir(parents=True)
+            (root / "materials/archives").mkdir(parents=True)
             path = root / "data/gizmobox/payments/p.csv"
             path.write_bytes(b"1,2\n")
             (root / "data/README.md").write_text("ignored")
-            with zipfile.ZipFile(root / "docs/originals/dea-course-v5.dbc", "w") as archive:
+            with zipfile.ZipFile(root / "materials/archives/dea-course-v5.dbc", "w") as archive:
                 archive.writestr("lesson.python", json.dumps({"commands": [
                     {"command": "gizmobox payments", "results": "secret-marker"}]}))
             first = catalog_data.generated(root)

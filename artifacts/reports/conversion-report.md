@@ -38,7 +38,7 @@ They are **inputs**, not executed results. Matching uses source references and
 catalog evidence; a related input snapshot does not recreate an intermediate
 Delta table, external database, catalog, or checkpoint.
 
-The per-notebook additions are recorded in `enrichment-report.json`.
+The per-notebook additions are recorded in [enrichment-report.json](../metadata/enrichment-report.json).
 Regeneration cannot overwrite enriched notebooks through the converter, even
 with its overwrite flag. The enrichment command itself is deterministic and
 replaces only its own labelled cells.
@@ -55,6 +55,7 @@ replaces only its own labelled cells.
 - Original credentials remain in local source assets and faithful exports.
   Publication is blocked pending a separate sanitization policy.
 
-See [known limitations](known-limitations.md) for details,
-`source-map.json` for relocation provenance, `conversion-manifest.json` for
-archive-member mappings, and `validation-report.json` for final machine checks.
+See [known limitations](../../docs/known-limitations.md) for details,
+[source-map.json](../metadata/source-map.json) for relocation provenance,
+[conversion-manifest.json](../metadata/conversion-manifest.json) for archive-member
+mappings, and [validation-report.json](../metadata/validation-report.json) for final machine checks.

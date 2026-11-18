@@ -169,7 +169,7 @@ def members(path):
 
 
 def resolve_archive(name):
-    for path in (Path("docs/originals") / name, Path(name)):
+    for path in (Path("materials/archives") / name, Path(name)):
         if path.exists():
             return path
     raise FileNotFoundError(name)

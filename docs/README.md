@@ -5,9 +5,10 @@
 - [Notebook index](notebook-index.md): course-ordered lesson links and Jobs aliases.
 - [Exam coverage map](certification/coverage.md): partial topic-level alignment.
 - [Known limitations](known-limitations.md): missing assets and original defects.
-- [Conversion report](conversion-report.md): representation, preserved outputs, and exceptions.
-- [Original assets](originals/): lecture slides, certification guides, and DBC archives.
-- `source-map.json`: original paths, relocated paths, sizes, and SHA-256 checksums.
+- [Conversion report](../artifacts/reports/conversion-report.md): representation, preserved outputs, and exceptions.
+- [Original PDFs](originals/): lecture slides and certification guides.
+- [Preserved source materials](../materials/README.md): DBC archives and original standalone notebooks.
+- [Maintenance artifacts](../artifacts/README.md): relocation provenance, checksums, manifests, and validation reports.
 - [Main work checklist](../TODO.md).
 - [Deferred AI preparation](AI-PREPARATION-TODO.md): requires separate approval.
 

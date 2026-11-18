@@ -15,7 +15,7 @@ Paths below are relative to `data/`. SHA-256 and schema hints are in `catalog.js
 
 ## Provenance and lessons
 
-- docs/originals/dea-course-v5.dbc
+- materials/archives/dea-course-v5.dbc
 - Command-source token matches; not execution verification
 - Excluded: notebook results are historical, not local inputs
 - Cloud storage, catalogs, tables, checkpoints and JDBC databases are external state, not supplied local datasets
