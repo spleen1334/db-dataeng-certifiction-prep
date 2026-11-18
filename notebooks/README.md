@@ -1,5 +1,8 @@
 # Readable notebooks
 
+Open the [complete notebook index](../docs/notebook-index.md) for course-ordered
+links and lecture-slide page ranges.
+
 - `course/`: converted course notebooks in original section/lesson order.
 - `db-connect/`: original Databricks Connect reporting notebook.
 - `bundle-demo/`: original bundle demonstration notebook.
